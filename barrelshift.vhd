@@ -1,0 +1,10 @@
+-- barrelshift.vhd
+-------------------------------------------------------------------------
+-- DESCRIPTION: This file contains an implementation of a barrel shifter
+-- for a 32-bit binary input with support for shifting in either
+-- direction, both logically and arithmetically.
+--
+--
+-- NOTES:
+-- 2/21/2020 by zbesta::Design created.
+-------------------------------------------------------------------------
