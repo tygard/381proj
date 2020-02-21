@@ -1,0 +1,400 @@
+m255
+K4
+z2
+!s11e vcom 2019.3 2019.07, Jul 24 2019
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dU:/Desktop/c3812020/firsttwoWeeks/Lab1/Mux
+T_opt
+!s110 1580361612
+V_VhkBjDchi@PoUhd5I48o3
+04 15 5 work tb_mux2t1normal mixed 1
+=1-509a4c476620-5e32678b-2a9-3f04
+Z1 o-quiet -auto_acc_if_foreign -work work +acc
+Z2 tCvgOpt 0
+n@_opt
+Z3 OL;O;2019.3;69
+T_opt1
+!s110 1580256739
+V:QMWA^oh?fZ`e8K>O02eO0
+04 8 10 work mux2t1_n structural 1
+=1-509a4c4739ef-5e30cde2-2eb-17ac
+R1
+R2
+n@_opt1
+R3
+R0
+T_opt2
+!s110 1580258432
+VDj3[RA7`36QDB<>NODOHU1
+04 18 5 work tb_mux2t1n_element mixed 1
+=1-509a4c4739ef-5e30d47f-313-4ac
+R1
+R2
+n@_opt2
+R3
+R0
+Eandg2
+Z4 w1575899277
+Z5 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z6 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 -1
+R0
+Z7 8U:/Desktop/c3812020/firsttwoWeeks/Lab1/Mux/andg2.vhd
+Z8 FU:/Desktop/c3812020/firsttwoWeeks/Lab1/Mux/andg2.vhd
+l0
+L23
+VzJ2OoPJ=<ja2?Y;OcjQk;3
+!s100 YT?bGzEmcFo:DlnoC^B4_0
+Z9 OL;C;2019.3;69
+33
+!s110 1580361593
+!i10b 1
+Z10 !s108 1580361593.000000
+Z11 !s90 -reportprogress|300|-work|work|U:/Desktop/c3812020/firsttwoWeeks/Lab1/Mux/andg2.vhd|
+Z12 !s107 U:/Desktop/c3812020/firsttwoWeeks/Lab1/Mux/andg2.vhd|
+!i113 0
+Z13 o-work work
+Z14 tExplicit 1 NoCoverage 1 CvgOpt 0
+Adataflow
+R5
+R6
+DEx4 work 5 andg2 0 22 zJ2OoPJ=<ja2?Y;OcjQk;3
+!i122 -1
+l32
+L31
+V3oa1[>iDZj;2zVo:oz1>e2
+!s100 I`@Z@UBObS]<7m8bPgKUS1
+R9
+33
+Z15 !s110 1580361594
+!i10b 1
+R10
+R11
+R12
+!i113 0
+R13
+R14
+Edataflow21mux
+Z16 w1580360083
+R5
+R6
+!i122 -1
+R0
+Z17 8U:/Desktop/c3812020/firsttwoWeeks/Lab1/Mux/dataflow21mux.vhd
+Z18 FU:/Desktop/c3812020/firsttwoWeeks/Lab1/Mux/dataflow21mux.vhd
+l0
+L4
+VQJVI?B]bkdGIYPb_a<^N90
+!s100 DTcBPcoRGKJ]HmNLBF;Wa0
+R9
+33
+R15
+!i10b 1
+Z19 !s108 1580361594.000000
+Z20 !s90 -reportprogress|300|-work|work|U:/Desktop/c3812020/firsttwoWeeks/Lab1/Mux/dataflow21mux.vhd|
+Z21 !s107 U:/Desktop/c3812020/firsttwoWeeks/Lab1/Mux/dataflow21mux.vhd|
+!i113 0
+R13
+R14
+Adataflow
+R5
+R6
+DEx4 work 13 dataflow21mux 0 22 QJVI?B]bkdGIYPb_a<^N90
+!i122 -1
+l14
+L11
+Vn4O]VciMTQM8VI92b5WYA0
+!s100 2YSATbG7Hz9>cHQbmm;[f2
+R9
+33
+R15
+!i10b 1
+R19
+R20
+R21
+!i113 0
+R13
+R14
+Einvg
+R4
+R5
+R6
+!i122 -1
+R0
+Z22 8U:/Desktop/c3812020/firsttwoWeeks/Lab1/Mux/invg.vhd
+Z23 FU:/Desktop/c3812020/firsttwoWeeks/Lab1/Mux/invg.vhd
+l0
+L23
+VzJhOLc0g_4RfSF]IXa;:73
+!s100 _XK?_^5z0Rm1<k12?;5R?2
+R9
+33
+R15
+!i10b 1
+R19
+Z24 !s90 -reportprogress|300|-work|work|U:/Desktop/c3812020/firsttwoWeeks/Lab1/Mux/invg.vhd|
+Z25 !s107 U:/Desktop/c3812020/firsttwoWeeks/Lab1/Mux/invg.vhd|
+!i113 0
+R13
+R14
+Adataflow
+R5
+R6
+DEx4 work 4 invg 0 22 zJhOLc0g_4RfSF]IXa;:73
+!i122 -1
+l31
+L30
+VT@AA60h>IXVJ?D^`RRiZk1
+!s100 bk7I76o8e1LURdoZEQb8H0
+R9
+33
+R15
+!i10b 1
+R19
+R24
+R25
+!i113 0
+R13
+R14
+Emux2t1
+Z26 w1580178418
+R5
+R6
+!i122 -1
+R0
+Z27 8U:/Desktop/c3812020/firsttwoWeeks/Lab1/Mux/mux2t1.vhd
+Z28 FU:/Desktop/c3812020/firsttwoWeeks/Lab1/Mux/mux2t1.vhd
+l0
+L6
+VPk>h1l=lOGN3U=c@M>:l22
+!s100 K>6<OCe@ccUf48<SZSAId3
+R9
+33
+Z29 !s110 1580361595
+!i10b 1
+Z30 !s108 1580361595.000000
+Z31 !s90 -reportprogress|300|-work|work|U:/Desktop/c3812020/firsttwoWeeks/Lab1/Mux/mux2t1.vhd|
+Z32 !s107 U:/Desktop/c3812020/firsttwoWeeks/Lab1/Mux/mux2t1.vhd|
+!i113 0
+R13
+R14
+Astructure
+R5
+R6
+DEx4 work 6 mux2t1 0 22 Pk>h1l=lOGN3U=c@M>:l22
+!i122 -1
+l40
+L15
+VWJM`S@DoG641=3=Ko4>f?2
+!s100 a6eQ?JINGEnghNS>QhKCd1
+R9
+33
+R29
+!i10b 1
+R30
+R31
+R32
+!i113 0
+R13
+R14
+Emux2t1_n
+Z33 w1580256577
+R5
+R6
+!i122 -1
+R0
+Z34 8U:/Desktop/c3812020/firsttwoWeeks/Lab1/Mux/mux2t1_N.vhd
+Z35 FU:/Desktop/c3812020/firsttwoWeeks/Lab1/Mux/mux2t1_N.vhd
+l0
+L21
+VDk6W_YlM7aaW[_dI]K4K>1
+!s100 BKZeKCAB2i6lge3>7TA3d3
+R9
+33
+R29
+!i10b 1
+R30
+Z36 !s90 -reportprogress|300|-work|work|U:/Desktop/c3812020/firsttwoWeeks/Lab1/Mux/mux2t1_N.vhd|
+Z37 !s107 U:/Desktop/c3812020/firsttwoWeeks/Lab1/Mux/mux2t1_N.vhd|
+!i113 0
+R13
+R14
+Astructural
+R5
+R6
+DEx4 work 8 mux2t1_n 0 22 Dk6W_YlM7aaW[_dI]K4K>1
+!i122 -1
+l39
+L30
+VS;7^3=hDiT7zH78Vm1Xhk1
+!s100 W>5MMWO2LBg`K8[P>h>Ye1
+R9
+33
+Z38 !s110 1580361596
+!i10b 1
+R30
+R36
+R37
+!i113 0
+R13
+R14
+Eorg2
+R4
+R5
+R6
+!i122 -1
+R0
+Z39 8U:/Desktop/c3812020/firsttwoWeeks/Lab1/Mux/org2.vhd
+Z40 FU:/Desktop/c3812020/firsttwoWeeks/Lab1/Mux/org2.vhd
+l0
+L23
+V0FzB9ATDX9TV=M:n@=VB83
+!s100 bGQ1F9eW^Q17OoL9h4g7z2
+R9
+33
+R38
+!i10b 1
+Z41 !s108 1580361596.000000
+Z42 !s90 -reportprogress|300|-work|work|U:/Desktop/c3812020/firsttwoWeeks/Lab1/Mux/org2.vhd|
+Z43 !s107 U:/Desktop/c3812020/firsttwoWeeks/Lab1/Mux/org2.vhd|
+!i113 0
+R13
+R14
+Adataflow
+R5
+R6
+DEx4 work 4 org2 0 22 0FzB9ATDX9TV=M:n@=VB83
+!i122 -1
+l32
+L31
+V0JC>N7cRXc=9bni@>dg7o3
+!s100 h5_AzR3TdRA0a_K=dQ>mI2
+R9
+33
+R38
+!i10b 1
+R41
+R42
+R43
+!i113 0
+R13
+R14
+Etb_mux2t1n_element
+Z44 w1580258401
+Z45 DPx3 std 3 env 0 22 d?`1ck@NdeD@H3RZG7FgZ2
+Z46 DPx4 ieee 16 std_logic_textio 0 22 V5TSK`;aJKC<l]CEg1>mz1
+R5
+R6
+!i122 -1
+R0
+Z47 8U:/Desktop/c3812020/firsttwoWeeks/Lab1/Mux/tb_mux2t1_N.vhd
+Z48 FU:/Desktop/c3812020/firsttwoWeeks/Lab1/Mux/tb_mux2t1_N.vhd
+l0
+L22
+VEGb3jmTz3mn2R0YB6cU:K1
+!s100 :bj4bXTbL5S^n7HK_aVAI0
+R9
+33
+R38
+!i10b 1
+R41
+Z49 !s90 -reportprogress|300|-work|work|U:/Desktop/c3812020/firsttwoWeeks/Lab1/Mux/tb_mux2t1_N.vhd|
+Z50 !s107 U:/Desktop/c3812020/firsttwoWeeks/Lab1/Mux/tb_mux2t1_N.vhd|
+!i113 0
+R13
+R14
+Amixed
+R45
+R46
+R5
+R6
+DEx4 work 18 tb_mux2t1n_element 0 22 EGb3jmTz3mn2R0YB6cU:K1
+!i122 -1
+l53
+L26
+VBkzNBR9TJF_;MYHhjW^4]3
+!s100 aWn]63<L`KIooKEV29=YV1
+R9
+33
+R38
+!i10b 1
+R41
+R49
+R50
+!i113 0
+R13
+R14
+Etb_mux2t1normal
+Z51 w1580361580
+R45
+R46
+R5
+R6
+!i122 -1
+R0
+Z52 8U:/Desktop/c3812020/firsttwoWeeks/Lab1/Mux/TB_NORMAL_2t1_mux.vhd
+Z53 FU:/Desktop/c3812020/firsttwoWeeks/Lab1/Mux/TB_NORMAL_2t1_mux.vhd
+l0
+L22
+VMz]FoTBcoRj0mc^V:VjFl2
+!s100 fH_XEl7eZ[WeO6I[oAXa`2
+R9
+33
+Z54 !s110 1580361597
+!i10b 1
+Z55 !s108 1580361597.000000
+Z56 !s90 -reportprogress|300|-work|work|U:/Desktop/c3812020/firsttwoWeeks/Lab1/Mux/TB_NORMAL_2t1_mux.vhd|
+Z57 !s107 U:/Desktop/c3812020/firsttwoWeeks/Lab1/Mux/TB_NORMAL_2t1_mux.vhd|
+!i113 0
+R13
+R14
+Amixed
+R45
+R46
+R5
+R6
+DEx4 work 15 tb_mux2t1normal 0 22 Mz]FoTBcoRj0mc^V:VjFl2
+!i122 -1
+l53
+L26
+VdoSdkWGVQUJ27OJ:W`U8`2
+!s100 5MLmKLh60O?KTl5L21lh?3
+R9
+33
+R54
+!i10b 1
+R55
+R56
+R57
+!i113 0
+R13
+R14
+Etb_tpu_mv_element
+w1579993147
+R45
+R46
+R5
+R6
+!i122 -1
+R0
+8U:/Desktop/c3812020/firsttwoWeeks/Lab1/Mux/tb_mux2t1.vhd
+FU:/Desktop/c3812020/firsttwoWeeks/Lab1/Mux/tb_mux2t1.vhd
+l0
+L22
+V@39J]mnV]zaIn0Lllc?bL1
+!s100 2247Pdg=3;dO^4[:MF3II2
+R9
+32
+!s110 1580178726
+!i10b 1
+!s108 1580178726.000000
+!s90 -reportprogress|300|-work|work|U:/Desktop/c3812020/firsttwoWeeks/Lab1/Mux/tb_mux2t1.vhd|
+!s107 U:/Desktop/c3812020/firsttwoWeeks/Lab1/Mux/tb_mux2t1.vhd|
+!i113 0
+R13
+tExplicit 1 CvgOpt 0

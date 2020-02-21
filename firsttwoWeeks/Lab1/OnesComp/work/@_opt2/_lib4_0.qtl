@@ -1,0 +1,443 @@
+9
+R3
+8vhdl_src/vital2000/prmtvs_p_2000.vhd
+Fvhdl_src/vital2000/prmtvs_p_2000.vhd
+l0
+L50
+VG>kiXP8Q9dRClKfK1Zn7j1
+!s100 G>kiXP8Q9dRClKfK1Zn7j1
+R6
+31
+b1
+R104
+!i10b 1
+R91
+!s90 -debug|-suppress|12110|-93|-work|ieee|-novital|-dirpath|$MODEL_TECH/..|vhdl_src/vital2000/prmtvs_p_2000.vhd|
+!s107 vhdl_src/vital2000/prmtvs_p_2000.vhd|
+!i113 1
+R106
+R12
+Bbody
+DPx4 work 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
+R103
+R19
+R18
+!i122 -1
+8vhdl_src/vital2000/prmtvs_b_2000.vhd
+Fvhdl_src/vital2000/prmtvs_b_2000.vhd
+l0
+L33
+VL8@OL8nfVkLF;7TL8_DPa1
+!s100 L8@OL8nfVkLF;7TL8_DPa1
+R6
+31
+R104
+!i10b 1
+R105
+!s90 -debug|-suppress|12110|-93|-work|ieee|-novital|-dirpath|$MODEL_TECH/..|vhdl_src/vital2000/prmtvs_b_2000.vhd|
+!s107 vhdl_src/vital2000/prmtvs_b_2000.vhd|
+!i113 1
+R106
+R12
+Pvital_timing
+R19
+R18
+!i122 -1
+R29
+R3
+8vhdl_src/vital2000/timing_p_2000.vhd
+Fvhdl_src/vital2000/timing_p_2000.vhd
+l0
+L70
+VJ>EBealN09f8GzldA[z2>3
+!s100 J>EBealN09f8GzldA[z2>3
+R6
+31
+b1
+R90
+!i10b 1
+R91
+!s90 -debug|-suppress|12110|-93|-work|ieee|-novital|-dirpath|$MODEL_TECH/..|vhdl_src/vital2000/timing_p_2000.vhd|
+!s107 vhdl_src/vital2000/timing_p_2000.vhd|
+!i113 1
+R106
+R12
+Bbody
+DPx4 work 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
+R19
+R18
+!i122 -1
+8vhdl_src/vital2000/timing_b_2000.vhd
+Fvhdl_src/vital2000/timing_b_2000.vhd
+l0
+L49
+VKEim8d[eJ5dE^:mEG0P3S0
+!s100 KEim8d[eJ5dE^:mEG0P3S0
+R6
+31
+R90
+!i10b 1
+R91
+!s90 -debug|-suppress|12110|-93|-work|ieee|-novital|-dirpath|$MODEL_TECH/..|vhdl_src/vital2000/timing_b_2000.vhd|
+!s107 vhdl_src/vital2000/timing_b_2000.vhd|
+!i113 1
+R106
+R12
+m255
+K4
+z2
+!s8c locked
+!s11e vcom 2019.3 2019.07, Jul 24 2019
+!s95 MTI
+cModel Technology Builtin Library
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+dC:/cygwin/pc_home/rhino/buildsites/2019.p/builds/win64/modeltech
+Penv
+!i122 -1
+Z0 w1563993204
+Z1 d$MODEL_TECH/..
+Z2 8vhdl_src/std/env.vhd
+Z3 Fvhdl_src/std/env.vhd
+l0
+L1
+Vd?`1ck@NdeD@H3RZG7FgZ2
+!s100 d?`1ck@NdeD@H3RZG7FgZ2
+Z4 OL;C;2019.3;69
+32
+b1
+Z5 !s110 1563993679
+!i10b 1
+Z6 !s108 1563993679.000000
+Z7 !s90 -debug|-suppress|12110|-work|std|-dirpath|$MODEL_TECH/..|vhdl_src/std/env.vhd|
+Z8 !s107 vhdl_src/std/env.vhd|
+!i113 1
+Z9 o-suppress 12110 -debug -work std -dirpath {$MODEL_TECH/..}
+Z10 tExplicit 1 CvgOpt 0
+Bbody
+DPx4 work 3 env 0 22 d?`1ck@NdeD@H3RZG7FgZ2
+!i122 -1
+l0
+L15
+VGO=IeNa]6JLe2BRN4G<kA2
+!s100 GO=IeNa]6JLe2BRN4G<kA2
+R4
+32
+R5
+!i10b 1
+R6
+R7
+R8
+!i113 1
+R9
+R10
+Pstandard
+!i122 -1
+R0
+R1
+8vhdl_src/std/standard.vhd
+Fvhdl_src/std/standard.vhd
+l0
+L8
+VofRa6alAEoSE^5WcJ^O]C2
+!s100 ofRa6alAEoSE^5WcJ^O]C2
+R4
+33
+R5
+!i10b 1
+!s108 1563993678.000000
+!s90 -debug|-suppress|12110|-s|-2008|-work|std|-dirpath|$MODEL_TECH/..|vhdl_src/std/standard.vhd|
+!s107 vhdl_src/std/standard.vhd|
+!i113 1
+o-suppress 12110 -debug -s -2008 -work std -dirpath {$MODEL_TECH/..}
+R10
+Ptextio
+!i122 -1
+Z11 w1546310146
+R1
+Z12 8vhdl_src/std/textio.vhd
+Z13 Fvhdl_src/std/textio.vhd
+l0
+L1
+VzE1`LPoLg^DX3Oz^4Fj1K3
+!s100 zE1`LPoLg^DX3Oz^4Fj1K3
+R4
+33
+b1
+R5
+!i10b 1
+R6
+Z14 !s90 -debug|-suppress|12110|-2008|-work|std|-dirpath|$MODEL_TECH/..|vhdl_src/std/textio.vhd|
+Z15 !s107 vhdl_src/std/textio.vhd|
+!i113 1
+Z16 o-suppress 12110 -debug -2008 -work std -dirpath {$MODEL_TECH/..}
+R10
+Bbody
+DPx4 work 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+!i122 -1
+l0
+L186
+VOBFf4Pj<FG4ZXfzD:k]VN1
+!s100 OBFf4Pj<FG4ZXfzD:k]VN1
+R4
+33
+R5
+!i10b 1
+R6
+R14
+R15
+!i113 1
+R16
+R10
+m255
+K4
+z2
+!s11e vcom 2019.3 2019.07, Jul 24 2019
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dU:/Desktop/c3812020/firsttwoWeeks/Lab1/OnesComp
+T_opt
+!s110 1580259343
+V2LBPim6Ni94H`n]DDLb=o1
+04 5 10 work oc_ps structural 1
+=1-509a4c4739ef-5e30d80f-44-1cb8
+Z1 o-quiet -auto_acc_if_foreign -work work +acc
+Z2 tCvgOpt 0
+n@_opt
+Z3 OL;O;2019.3;69
+R0
+T_opt1
+!s110 1580259715
+V>26gCIMk:CPoTc3Elj?B02
+04 5 10 work oc_p2 structural 1
+=1-509a4c4739ef-5e30d982-29e-1158
+R1
+R2
+n@_opt1
+R3
+R0
+T_opt2
+!s110 1580260023
+VN_f^`3aR@A@g1Jgb^Uhmm2
+04 8 5 work tb_oc_p2 mixed 1
+=1-509a4c4739ef-5e30dab6-2a2-2c2c
+R1
+R2
+n@_opt2
+R3
+Einvg
+Z4 w1575899277
+Z5 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z6 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 -1
+R0
+Z7 8U:/Desktop/c3812020/firsttwoWeeks/Lab1/OnesComp/invg.vhd
+Z8 FU:/Desktop/c3812020/firsttwoWeeks/Lab1/OnesComp/invg.vhd
+l0
+L23
+VQ?6hb9ePk@>kZZ9k]hNSO3
+!s100 _XK?_^5z0Rm1<k12?;5R?2
+Z9 OL;C;2019.3;69
+32
+Z10 !s110 1580259567
+!i10b 1
+Z11 !s108 1580259567.000000
+Z12 !s90 -reportprogress|300|-work|work|U:/Desktop/c3812020/firsttwoWeeks/Lab1/OnesComp/invg.vhd|
+Z13 !s107 U:/Desktop/c3812020/firsttwoWeeks/Lab1/OnesComp/invg.vhd|
+!i113 0
+Z14 o-work work
+Z15 tExplicit 1 CvgOpt 0
+Adataflow
+R5
+R6
+DEx4 work 4 invg 0 22 Q?6hb9ePk@>kZZ9k]hNSO3
+!i122 -1
+l31
+L30
+Vch>li:oKYZkCO5]GamViK1
+!s100 bk7I76o8e1LURdoZEQb8H0
+R9
+32
+R10
+!i10b 1
+R11
+R12
+R13
+!i113 0
+R14
+R15
+Eoc_p2
+Z16 w1580259693
+R5
+R6
+!i122 -1
+R0
+Z17 8U:/Desktop/c3812020/firsttwoWeeks/Lab1/OnesComp/oc_p2.vhd
+Z18 FU:/Desktop/c3812020/firsttwoWeeks/Lab1/OnesComp/oc_p2.vhd
+l0
+L21
+VP6ULVI@<W5T_]^N0TZ5l02
+!s100 z;O;KfOM1=Q3cCDO?3aM90
+R9
+32
+Z19 !s110 1580259704
+!i10b 1
+Z20 !s108 1580259703.000000
+Z21 !s90 -reportprogress|300|-work|work|U:/Desktop/c3812020/firsttwoWeeks/Lab1/OnesComp/oc_p2.vhd|
+Z22 !s107 U:/Desktop/c3812020/firsttwoWeeks/Lab1/OnesComp/oc_p2.vhd|
+!i113 0
+R14
+R15
+Astructural
+R5
+R6
+DEx4 work 5 oc_p2 0 22 P6ULVI@<W5T_]^N0TZ5l02
+!i122 -1
+l35
+L28
+V2YfN=VGI[[8Xnk?nU8[d<0
+!s100 <gX>kOfI1N`[LH<Q0oj^71
+R9
+32
+R19
+!i10b 1
+R20
+R21
+R22
+!i113 0
+R14
+R15
+Eoc_ps
+Z23 w1580258782
+R5
+R6
+!i122 -1
+R0
+R17
+R18
+l0
+L21
+VKD23O:jTBYM09gM6<hI2:0
+!s100 U9Wen[:bEn?kEG2DOe]3H0
+R9
+32
+Z24 !s110 1580259330
+!i10b 1
+Z25 !s108 1580259330.000000
+R21
+R22
+!i113 0
+R14
+R15
+Astructural
+R5
+R6
+DEx4 work 5 oc_ps 0 22 KD23O:jTBYM09gM6<hI2:0
+!i122 -1
+l35
+L28
+VLEIcB@7US`_3Oci^Qc3UZ0
+!s100 52OiEa?WJc>IcnQT:8DcN1
+R9
+32
+R24
+!i10b 1
+R25
+R21
+R22
+!i113 0
+R14
+R15
+Eonescomplemntor
+Z26 w1580182314
+R5
+R6
+!i122 -1
+R0
+Z27 8U:/Desktop/c3812020/firsttwoWeeks/Lab1/OnesComp/onesComplementopr.vhd
+Z28 FU:/Desktop/c3812020/firsttwoWeeks/Lab1/OnesComp/onesComplementopr.vhd
+l0
+L6
+VNklM`8>CXLaE?MOcC<J;Z2
+!s100 Fc[Wd4RABnl;bFEzEP=oo0
+R9
+32
+Z29 !s110 1580258611
+!i10b 1
+Z30 !s108 1580258611.000000
+Z31 !s90 -reportprogress|300|-work|work|U:/Desktop/c3812020/firsttwoWeeks/Lab1/OnesComp/onesComplementopr.vhd|
+Z32 !s107 U:/Desktop/c3812020/firsttwoWeeks/Lab1/OnesComp/onesComplementopr.vhd|
+!i113 0
+R14
+R15
+Astructure
+R5
+R6
+DEx4 work 15 onescomplemntor 0 22 NklM`8>CXLaE?MOcC<J;Z2
+!i122 -1
+l22
+L13
+VFn=8?eX7W5Ob>b9WhgWHl2
+!s100 m<R7i1;8l3@FA@A`;hjZn1
+R9
+32
+R29
+!i10b 1
+R30
+R31
+R32
+!i113 0
+R14
+R15
+Etb_oc_p2
+Z33 w1580260001
+Z34 DPx3 std 3 env 0 22 d?`1ck@NdeD@H3RZG7FgZ2
+Z35 DPx4 ieee 16 std_logic_textio 0 22 V5TSK`;aJKC<l]CEg1>mz1
+R5
+R6
+!i122 -1
+R0
+Z36 8U:/Desktop/c3812020/firsttwoWeeks/Lab1/OnesComp/tb_oc_p2.vhd
+Z37 FU:/Desktop/c3812020/firsttwoWeeks/Lab1/OnesComp/tb_oc_p2.vhd
+l0
+L22
+VQ:2YB`9SG2^_P7I5U@AZ[0
+!s100 KLV`ZPO<XQiC8bn[=_7lC1
+R9
+32
+Z38 !s110 1580260007
+!i10b 1
+Z39 !s108 1580260007.000000
+Z40 !s90 -reportprogress|300|-work|work|U:/Desktop/c3812020/firsttwoWeeks/Lab1/OnesComp/tb_oc_p2.vhd|
+Z41 !s107 U:/Desktop/c3812020/firsttwoWeeks/Lab1/OnesComp/tb_oc_p2.vhd|
+!i113 0
+R14
+R15
+Amixed
+R34
+R35
+R5
+R6
+DEx4 work 8 tb_oc_p2 0 22 Q:2YB`9SG2^_P7I5U@AZ[0
+!i122 -1
+l45
+L26
+V1RoJYVWmlFM[iYaz@^AJD2
+!s100 R626n@cT7jE@LJS_<Y4ha0
+R9
+32
+R38
+!i10b 1
+R39
+R40
+R41
+!i113 0
+R14
+R15

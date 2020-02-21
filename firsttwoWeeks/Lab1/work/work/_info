@@ -1,0 +1,486 @@
+m255
+K4
+z2
+!s11e vcom 2019.3 2019.07, Jul 24 2019
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dU:/Desktop/c3812020/firsttwoWeeks/Lab1/work
+T_opt
+!s110 1579884882
+VzzL?;MZQ>NPm5WKZalgDm1
+Z1 04 17 5 work tb_tpu_mv_element mixed 1
+=3-509a4c476620-5e2b214f-88-3fac
+o-quiet -auto_acc_if_foreign -work work +acc
+Z2 tCvgOpt 0
+n@_opt
+Z3 OL;O;2019.3;69
+R0
+T_opt1
+!s110 1579883933
+VL@3:`ZYbbNo_heD5R`dNP2
+R1
+=1-509a4c476620-5e2b1d9d-233-2dac
+o-quiet -auto_acc_if_foreign -work work
+R2
+n@_opt1
+R3
+R0
+Eadder
+Z4 w1578332330
+Z5 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z6 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 -1
+R0
+Z7 8U:/Desktop/c3812020/firsttwoWeeks/Lab1/Adder.vhd
+Z8 FU:/Desktop/c3812020/firsttwoWeeks/Lab1/Adder.vhd
+l0
+L26
+Va]bmQmLQ2P_Ad>?i1V_H63
+!s100 ?M@C[n:@^fhmgGDG`5ibH3
+Z9 OL;C;2019.3;69
+33
+Z10 !s110 1579886961
+!i10b 1
+Z11 !s108 1579886960.000000
+Z12 !s90 -reportprogress|300|-work|work|U:/Desktop/c3812020/firsttwoWeeks/Lab1/Adder.vhd|
+Z13 !s107 U:/Desktop/c3812020/firsttwoWeeks/Lab1/Adder.vhd|
+!i113 0
+Z14 o-work work
+Z15 tExplicit 1 NoCoverage 1 CvgOpt 0
+Abehavior
+R5
+R6
+DEx4 work 5 adder 0 22 a]bmQmLQ2P_Ad>?i1V_H63
+!i122 -1
+l36
+L35
+V?]hja<;e8e:0Y[naAgl943
+!s100 cB67aGlEFcN>h>lDnF1Sh3
+R9
+33
+R10
+!i10b 1
+R11
+R12
+R13
+!i113 0
+R14
+R15
+Eandg2
+Z16 w1575899277
+R5
+R6
+!i122 -1
+R0
+Z17 8U:/Desktop/c3812020/firsttwoWeeks/Lab1/andg2.vhd
+Z18 FU:/Desktop/c3812020/firsttwoWeeks/Lab1/andg2.vhd
+l0
+L23
+VzJ2OoPJ=<ja2?Y;OcjQk;3
+!s100 YT?bGzEmcFo:DlnoC^B4_0
+R9
+33
+R10
+!i10b 1
+Z19 !s108 1579886961.000000
+Z20 !s90 -reportprogress|300|-work|work|U:/Desktop/c3812020/firsttwoWeeks/Lab1/andg2.vhd|
+Z21 !s107 U:/Desktop/c3812020/firsttwoWeeks/Lab1/andg2.vhd|
+!i113 0
+R14
+R15
+Adataflow
+R5
+R6
+DEx4 work 5 andg2 0 22 zJ2OoPJ=<ja2?Y;OcjQk;3
+!i122 -1
+l32
+L31
+V3oa1[>iDZj;2zVo:oz1>e2
+!s100 I`@Z@UBObS]<7m8bPgKUS1
+R9
+33
+R10
+!i10b 1
+R19
+R20
+R21
+!i113 0
+R14
+R15
+Einvg
+R16
+R5
+R6
+!i122 -1
+R0
+Z22 8U:/Desktop/c3812020/firsttwoWeeks/Lab1/invg.vhd
+Z23 FU:/Desktop/c3812020/firsttwoWeeks/Lab1/invg.vhd
+l0
+L23
+VzJhOLc0g_4RfSF]IXa;:73
+!s100 _XK?_^5z0Rm1<k12?;5R?2
+R9
+33
+Z24 !s110 1579886962
+!i10b 1
+R19
+Z25 !s90 -reportprogress|300|-work|work|U:/Desktop/c3812020/firsttwoWeeks/Lab1/invg.vhd|
+Z26 !s107 U:/Desktop/c3812020/firsttwoWeeks/Lab1/invg.vhd|
+!i113 0
+R14
+R15
+Adataflow
+R5
+R6
+DEx4 work 4 invg 0 22 zJhOLc0g_4RfSF]IXa;:73
+!i122 -1
+l31
+L30
+VT@AA60h>IXVJ?D^`RRiZk1
+!s100 bk7I76o8e1LURdoZEQb8H0
+R9
+33
+R24
+!i10b 1
+R19
+R25
+R26
+!i113 0
+R14
+R15
+Emultiplier
+R4
+R5
+R6
+!i122 -1
+R0
+Z27 8U:/Desktop/c3812020/firsttwoWeeks/Lab1/Multiplier.vhd
+Z28 FU:/Desktop/c3812020/firsttwoWeeks/Lab1/Multiplier.vhd
+l0
+L26
+VjHm2jMe9M7@j3_BD0E74i3
+!s100 _?e0QXZc1];i5lJhWOb7@0
+R9
+33
+R24
+!i10b 1
+Z29 !s108 1579886962.000000
+Z30 !s90 -reportprogress|300|-work|work|U:/Desktop/c3812020/firsttwoWeeks/Lab1/Multiplier.vhd|
+Z31 !s107 U:/Desktop/c3812020/firsttwoWeeks/Lab1/Multiplier.vhd|
+!i113 0
+R14
+R15
+Abehavior
+R5
+R6
+DEx4 work 10 multiplier 0 22 jHm2jMe9M7@j3_BD0E74i3
+!i122 -1
+l36
+L35
+V;Dz6LVdZC^_^Y4ZIEPX@c0
+!s100 Q4UZP;mn^zJ6k_M>:>EDR3
+R9
+33
+R24
+!i10b 1
+R29
+R30
+R31
+!i113 0
+R14
+R15
+Emux2t1_n
+Z32 w1578340150
+R5
+R6
+!i122 -1
+R0
+Z33 8U:/Desktop/c3812020/firsttwoWeeks/Lab1/mux2t1_N.vhd
+Z34 FU:/Desktop/c3812020/firsttwoWeeks/Lab1/mux2t1_N.vhd
+l0
+L21
+VDk6W_YlM7aaW[_dI]K4K>1
+!s100 BKZeKCAB2i6lge3>7TA3d3
+R9
+33
+R24
+!i10b 1
+R29
+Z35 !s90 -reportprogress|300|-work|work|U:/Desktop/c3812020/firsttwoWeeks/Lab1/mux2t1_N.vhd|
+Z36 !s107 U:/Desktop/c3812020/firsttwoWeeks/Lab1/mux2t1_N.vhd|
+!i113 0
+R14
+R15
+Astructural
+R5
+R6
+DEx4 work 8 mux2t1_n 0 22 Dk6W_YlM7aaW[_dI]K4K>1
+!i122 -1
+l39
+L30
+VS;7^3=hDiT7zH78Vm1Xhk1
+!s100 W>5MMWO2LBg`K8[P>h>Ye1
+R9
+33
+Z37 !s110 1579886963
+!i10b 1
+R29
+R35
+R36
+!i113 0
+R14
+R15
+Eorg2
+R16
+R5
+R6
+!i122 -1
+R0
+Z38 8U:/Desktop/c3812020/firsttwoWeeks/Lab1/org2.vhd
+Z39 FU:/Desktop/c3812020/firsttwoWeeks/Lab1/org2.vhd
+l0
+L23
+V0FzB9ATDX9TV=M:n@=VB83
+!s100 bGQ1F9eW^Q17OoL9h4g7z2
+R9
+33
+R37
+!i10b 1
+Z40 !s108 1579886963.000000
+Z41 !s90 -reportprogress|300|-work|work|U:/Desktop/c3812020/firsttwoWeeks/Lab1/org2.vhd|
+Z42 !s107 U:/Desktop/c3812020/firsttwoWeeks/Lab1/org2.vhd|
+!i113 0
+R14
+R15
+Adataflow
+R5
+R6
+DEx4 work 4 org2 0 22 0FzB9ATDX9TV=M:n@=VB83
+!i122 -1
+l32
+L31
+V0JC>N7cRXc=9bni@>dg7o3
+!s100 h5_AzR3TdRA0a_K=dQ>mI2
+R9
+33
+R37
+!i10b 1
+R40
+R41
+R42
+!i113 0
+R14
+R15
+Ereg
+Z43 w1578332352
+R5
+R6
+!i122 -1
+R0
+Z44 8U:/Desktop/c3812020/firsttwoWeeks/Lab1/Reg.vhd
+Z45 FU:/Desktop/c3812020/firsttwoWeeks/Lab1/Reg.vhd
+l0
+L26
+V=cNM7U4JUA92af_DI5Q331
+!s100 E9z>_TV2g>C<MzZoC?1li2
+R9
+33
+R37
+!i10b 1
+R40
+Z46 !s90 -reportprogress|300|-work|work|U:/Desktop/c3812020/firsttwoWeeks/Lab1/Reg.vhd|
+Z47 !s107 U:/Desktop/c3812020/firsttwoWeeks/Lab1/Reg.vhd|
+!i113 0
+R14
+R15
+Abehavior
+R5
+R6
+DEx4 work 3 reg 0 22 =cNM7U4JUA92af_DI5Q331
+!i122 -1
+l35
+L34
+Vo62<:G^Mog3_e:RP9nR>m2
+!s100 dHocUXGB0kBOnJjmSVlk:0
+R9
+33
+R37
+!i10b 1
+R40
+R46
+R47
+!i113 0
+R14
+R15
+Eregld
+R43
+R5
+R6
+!i122 -1
+R0
+Z48 8U:/Desktop/c3812020/firsttwoWeeks/Lab1/RegLd.vhd
+Z49 FU:/Desktop/c3812020/firsttwoWeeks/Lab1/RegLd.vhd
+l0
+L26
+V1Sf4jH?e]bez4OI8Xnj4=3
+!s100 eFCNAJnYb8oNMfYL4XmV<1
+R9
+33
+Z50 !s110 1579886964
+!i10b 1
+R40
+Z51 !s90 -reportprogress|300|-work|work|U:/Desktop/c3812020/firsttwoWeeks/Lab1/RegLd.vhd|
+Z52 !s107 U:/Desktop/c3812020/firsttwoWeeks/Lab1/RegLd.vhd|
+!i113 0
+R14
+R15
+Abehavior
+R5
+R6
+DEx4 work 5 regld 0 22 1Sf4jH?e]bez4OI8Xnj4=3
+!i122 -1
+l38
+L35
+V`H?OF`=3zNFNOZIPAP@2d0
+!s100 9KBklh@44H8];KOTMDXH]0
+R9
+33
+R50
+!i10b 1
+R40
+R51
+R52
+!i113 0
+R14
+R15
+Etb_tpu_mv_element
+Z53 w1579884831
+Z54 DPx3 std 3 env 0 22 d?`1ck@NdeD@H3RZG7FgZ2
+Z55 DPx4 ieee 16 std_logic_textio 0 22 V5TSK`;aJKC<l]CEg1>mz1
+R5
+R6
+!i122 -1
+R0
+Z56 8U:/Desktop/c3812020/firsttwoWeeks/Lab1/tb_TPU_MV_Element.vhd
+Z57 FU:/Desktop/c3812020/firsttwoWeeks/Lab1/tb_TPU_MV_Element.vhd
+l0
+L22
+VTNOI2zmVH`g4W8:QNX?Ug0
+!s100 2247Pdg=3;dO^4[:MF3II2
+R9
+33
+R50
+!i10b 1
+Z58 !s108 1579886964.000000
+Z59 !s90 -reportprogress|300|-work|work|U:/Desktop/c3812020/firsttwoWeeks/Lab1/tb_TPU_MV_Element.vhd|
+Z60 !s107 U:/Desktop/c3812020/firsttwoWeeks/Lab1/tb_TPU_MV_Element.vhd|
+!i113 0
+R14
+R15
+Amixed
+R54
+R55
+R5
+R6
+DEx4 work 17 tb_tpu_mv_element 0 22 TNOI2zmVH`g4W8:QNX?Ug0
+!i122 -1
+l56
+L26
+VSO7@4MfG8c_BEKV5_N=;h1
+!s100 XQ1OfJcVK:OMX_4L2lBVi1
+R9
+33
+R50
+!i10b 1
+R58
+R59
+R60
+!i113 0
+R14
+R15
+Etpu_mv_element
+Z61 w1579282335
+R5
+R6
+!i122 -1
+R0
+Z62 8U:/Desktop/c3812020/firsttwoWeeks/Lab1/TPU_MV_Element.vhd
+Z63 FU:/Desktop/c3812020/firsttwoWeeks/Lab1/TPU_MV_Element.vhd
+l0
+L23
+V7WXCKRK6`^WQdP:^<Xj;72
+!s100 WDmB@>zG:Em==Znf^[=Mo0
+R9
+33
+Z64 !s110 1579886965
+!i10b 1
+R58
+Z65 !s90 -reportprogress|300|-work|work|U:/Desktop/c3812020/firsttwoWeeks/Lab1/TPU_MV_Element.vhd|
+Z66 !s107 U:/Desktop/c3812020/firsttwoWeeks/Lab1/TPU_MV_Element.vhd|
+!i113 0
+R14
+R15
+Astructure
+R5
+R6
+DEx4 work 14 tpu_mv_element 0 22 7WXCKRK6`^WQdP:^<Xj;72
+!i122 -1
+l76
+L35
+V>1JM`=>SbHlY2^hXYQ5jL1
+!s100 S]`R_9HQdValEm2U=7bY;3
+R9
+33
+R64
+!i10b 1
+R58
+R65
+R66
+!i113 0
+R14
+R15
+Exorg2
+R16
+R5
+R6
+!i122 -1
+R0
+Z67 8U:/Desktop/c3812020/firsttwoWeeks/Lab1/xorg2.vhd
+Z68 FU:/Desktop/c3812020/firsttwoWeeks/Lab1/xorg2.vhd
+l0
+L23
+VV6C:miP5l_oAXXFV_WP4`3
+!s100 [hI[mXFH4_j16U;>U1Lfn2
+R9
+33
+R64
+!i10b 1
+Z69 !s108 1579886965.000000
+Z70 !s90 -reportprogress|300|-work|work|U:/Desktop/c3812020/firsttwoWeeks/Lab1/xorg2.vhd|
+Z71 !s107 U:/Desktop/c3812020/firsttwoWeeks/Lab1/xorg2.vhd|
+!i113 0
+R14
+R15
+Adataflow
+R5
+R6
+Z72 DEx4 work 5 xorg2 0 22 V6C:miP5l_oAXXFV_WP4`3
+!i122 -1
+l32
+L31
+Z73 V0<8Ik`hGa2ooIj9K`Y3Wc0
+Z74 !s100 Z6[FAPS4fBLB`F?OO<AY72
+R9
+33
+R64
+!i10b 1
+R69
+R70
+R71
+!i113 0
+R14
+R15
