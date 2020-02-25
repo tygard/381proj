@@ -1,12 +1,10 @@
 -- barrelshift.vhd
 -------------------------------------------------------------------------
--- DESCRIPTION: This file contains an implementation of a barrel shifter
--- for a 32-bit binary input with support for shifting in either
--- direction, both logically and arithmetically.
---
+-- DESCRIPTION: This file contains a test bench for the 32-bit barrel-
+-- shifter defined in barrelshift.vhd.
 --
 -- NOTES:
--- 2/21/2020 by zbesta::Design created.
+-- 2/23/2020 by zbesta::File created.
 -------------------------------------------------------------------------
 
 library IEEE;
@@ -25,14 +23,6 @@ end barrelshift;
 
 architecture structural of barrelshift is
 
-	component mux2t1
-		port(i_S                  : in std_logic;
-			 i_D0                 : in std_logic;
-			 i_D1                 : in std_logic;
-			 o_O                  : out std_logic);
-	end component;
-	begin
+-- Todo: structural architecture, test process
 
-		-- Todo: define connections
-  
 end structural;
