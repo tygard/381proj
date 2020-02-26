@@ -1,4 +1,4 @@
--- barrelshift.vhd
+-- tb_barrelshift_32.vhd
 -------------------------------------------------------------------------
 -- DESCRIPTION: This file contains a test bench for the 32-bit barrel-
 -- shifter defined in barrelshift.vhd.
@@ -10,7 +10,7 @@
 library IEEE;
 use IEEE.std_logic_1164.all;
 
-entity barrelshift is
+entity barrelshift_32 is
   generic(N : integer := 4); -- Generic of type integer for input/output data width. Default value is 32.
   
   port(i_SHAMT      : in std_logic_vector(1 downto 0)		 -- Shift amount input
@@ -19,9 +19,9 @@ entity barrelshift is
 	   i_X          : in std_logic_vector(N-1 downto 0);     -- Data value input
        o_Y          : out std_logic_vector(N-1 downto 0));   -- Data value output
 
-end barrelshift;
+end barrelshift_32;
 
-architecture structural of barrelshift is
+architecture structural of barrelshift_32 is
 
 -- Todo: structural architecture, test process
 
