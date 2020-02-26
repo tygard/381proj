@@ -1,0 +1,52 @@
+m255
+K4
+z2
+!s11e MIXED_VERSIONS
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dU:/cpre381/381proj/381proj
+Ebarrelshift
+Z1 w1582677705
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 -1
+R0
+Z4 8barrelshift.vhd
+Z5 Fbarrelshift.vhd
+l0
+L15
+V3o:L;ASd`RC1C?A93S:E^3
+!s100 9Se2zXo27H_l?`e1C7CMg2
+Z6 OL;C;2019.3;69
+33
+Z7 !s110 1582677705
+!i10b 1
+Z8 !s108 1582677705.000000
+Z9 !s90 -reportprogress|300|-2008|-work|work|barrelshift.vhd|
+!s107 barrelshift.vhd|
+!i113 0
+Z10 o-2008 -work work
+Z11 tExplicit 1 CvgOpt 0
+Astructural
+R2
+R3
+DEx4 work 11 barrelshift 0 22 3o:L;ASd`RC1C?A93S:E^3
+!i122 -1
+l44
+L26
+VO>DK5zAb1cg=Po?75U_8C0
+!s100 W=ocg89@==6FXdg10?5983
+R6
+33
+R7
+!i10b 1
+R8
+R9
+Z12 !s107 barrelshift.vhd|
+!i113 0
+R10
+R11
