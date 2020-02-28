@@ -1,0 +1,156 @@
+m255
+K4
+z2
+!s11e vcom 2019.3 2019.07, Jul 24 2019
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dU:/ISU/2020 Spring/cpre381/381proj/fetch
+Eadder_n_bit
+Z1 w1582307033
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 -1
+R0
+Z4 8U:/ISU/2020 Spring/cpre381/381proj/fetch/adder_N_bit.vhd
+Z5 FU:/ISU/2020 Spring/cpre381/381proj/fetch/adder_N_bit.vhd
+l0
+L21
+V3b850IP==^E`km@T^5bQm0
+!s100 SkFzhO0?eDWPLIW5:e4jV1
+Z6 OL;C;2019.3;69
+32
+Z7 !s110 1582911863
+!i10b 1
+Z8 !s108 1582911863.000000
+Z9 !s90 -reportprogress|300|-work|work|U:/ISU/2020 Spring/cpre381/381proj/fetch/adder_N_bit.vhd|
+Z10 !s107 U:/ISU/2020 Spring/cpre381/381proj/fetch/adder_N_bit.vhd|
+!i113 0
+Z11 o-work work
+Z12 tExplicit 1 CvgOpt 0
+Astructural
+R2
+R3
+DEx4 work 11 adder_n_bit 0 22 3b850IP==^E`km@T^5bQm0
+!i122 -1
+l43
+L31
+V;F?=:A280ZA4J^IUD^o=30
+!s100 ao46hIzFW1JjP07=`dP=O2
+R6
+32
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 0
+R11
+R12
+Eextender
+Z13 w1582596296
+R2
+R3
+!i122 -1
+R0
+Z14 8U:/ISU/2020 Spring/cpre381/381proj/fetch/extender.vhd
+Z15 FU:/ISU/2020 Spring/cpre381/381proj/fetch/extender.vhd
+l0
+L5
+VR16WODR11b`<MjEIb=2?82
+!s100 Zf_LJ^=Nkg:1N]Sj>b7[<0
+R6
+32
+R7
+!i10b 1
+R8
+Z16 !s90 -reportprogress|300|-work|work|U:/ISU/2020 Spring/cpre381/381proj/fetch/extender.vhd|
+Z17 !s107 U:/ISU/2020 Spring/cpre381/381proj/fetch/extender.vhd|
+!i113 0
+R11
+R12
+Adataflow
+R2
+R3
+DEx4 work 8 extender 0 22 R16WODR11b`<MjEIb=2?82
+!i122 -1
+l15
+L13
+V]`TUDG^Xc<BYSgFY2Zdz42
+!s100 ZG]X^gl7F^GU0S2JlnKVa0
+R6
+32
+R7
+!i10b 1
+R8
+R16
+R17
+!i113 0
+R11
+R12
+Efetch_logic
+w1582912540
+R2
+R3
+!i122 -1
+R0
+8U:/ISU/2020 Spring/cpre381/381proj/fetch/fetch_logic.vhd
+FU:/ISU/2020 Spring/cpre381/381proj/fetch/fetch_logic.vhd
+l0
+L11
+VBMND`AH>]2Blnjh8OWe4=2
+!s100 Wd^QzMX;8XFz6U<;EN_0L1
+R6
+32
+!s110 1582912543
+!i10b 1
+!s108 1582912543.000000
+!s90 -reportprogress|300|-work|work|U:/ISU/2020 Spring/cpre381/381proj/fetch/fetch_logic.vhd|
+!s107 U:/ISU/2020 Spring/cpre381/381proj/fetch/fetch_logic.vhd|
+!i113 0
+R11
+R12
+Emux2t1_n
+Z18 w1582307034
+R2
+R3
+!i122 -1
+R0
+Z19 8U:/ISU/2020 Spring/cpre381/381proj/fetch/mux2t1_N.vhd
+Z20 FU:/ISU/2020 Spring/cpre381/381proj/fetch/mux2t1_N.vhd
+l0
+L21
+VFY=Tc@WO1TP4Z42>dBMei3
+!s100 BKZeKCAB2i6lge3>7TA3d3
+R6
+32
+Z21 !s110 1582911864
+!i10b 1
+R8
+Z22 !s90 -reportprogress|300|-work|work|U:/ISU/2020 Spring/cpre381/381proj/fetch/mux2t1_N.vhd|
+Z23 !s107 U:/ISU/2020 Spring/cpre381/381proj/fetch/mux2t1_N.vhd|
+!i113 0
+R11
+R12
+Astructural
+R2
+R3
+DEx4 work 8 mux2t1_n 0 22 FY=Tc@WO1TP4Z42>dBMei3
+!i122 -1
+l39
+L30
+V42CUQBzm6g@LDm29Dc=NM3
+!s100 W>5MMWO2LBg`K8[P>h>Ye1
+R6
+32
+R21
+!i10b 1
+R8
+R22
+R23
+!i113 0
+R11
+R12
