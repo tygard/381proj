@@ -23,9 +23,9 @@ use IEEE.std_logic_1164.all;
 entity Mult32t1 is
 
   port(
-       i_A 				: in std_logic_vector(31 downto 0);
-	   i_B				: in std_logic;
-	   i_CIN			: in std_logic;
+       i_A 				: in std_logic_vector(31 downto 0); -- M
+	   i_B				: in std_logic; -- Q
+	   i_CIN			: in std_logic; -- 
 	   i_FA_IN			: in std_logic_vector(31 downto 0);
        o_FA 		    : out std_logic_vector(31 downto 0);
 	   o_FA_P			: out std_logic;			
