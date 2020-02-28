@@ -28,7 +28,7 @@ entity Mult32t1 is
 	   i_CIN			: in std_logic;
 	   i_FA_IN			: in std_logic_vector(31 downto 0);
        o_FA 		    : out std_logic_vector(31 downto 0);
-	   o_FA_P			: out std_logic);			
+	   o_FA_P			: out std_logic;			
 	   o_COUT			: out std_logic);
 end Mult32t1;
 
@@ -83,7 +83,7 @@ begin
 			i_B       => i_FA_IN(0),   
 			i_Cin     => '0',
 			o_S       => o_FA_P,
-			o_Cout    => s_o_COUT(0);
+			o_Cout    => s_o_COUT(0));
     
   g_part3: for i in 1 to 30 generate
 	adder_1_bit_i: adder_1_bit
@@ -92,8 +92,8 @@ begin
 			i_B       => i_FA_IN(i),   
 			i_Cin     => s_o_COUT(i-1),
 			o_S       => o_FA(i),
-			o_Cout    => s_o_COUT(i);
-	end generate
+			o_Cout    => s_o_COUT(i));
+	end generate;
 
    g_part4:
 	adder_1_bit 
@@ -102,6 +102,6 @@ begin
 			i_B       => i_CIN,   
 			i_Cin     => s_o_COUT(30),
 			o_S       => o_FA(31),
-			o_Cout    => o_COUT;
+			o_Cout    => o_COUT);
 		
   end structure;

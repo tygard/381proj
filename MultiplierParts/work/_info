@@ -1,0 +1,225 @@
+m255
+K4
+z2
+!s11e vcom 2019.3 2019.07, Jul 24 2019
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dU:/CPRE 381/381proj/MultiplierParts
+T_opt
+!s110 1582906650
+V5hZ^iCLo<EfX]zLmaB3K;2
+04 8 9 work mult32t1 structure 1
+=1-509a4c47638a-5e593d1a-83-2d4c
+o-quiet -auto_acc_if_foreign -work work
+tCvgOpt 0
+n@_opt
+OL;O;2019.3;69
+Eadder_1_bit
+Z1 w1580355440
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 -1
+R0
+Z4 8U:/CPRE 381/381proj/MultiplierParts/adder_1_bit.vhd
+Z5 FU:/CPRE 381/381proj/MultiplierParts/adder_1_bit.vhd
+l0
+L6
+VDABhbYJSZflClX5:;d5HO0
+!s100 BA]9I11l9iPPiAGm6VIO_3
+Z6 OL;C;2019.3;69
+33
+Z7 !s110 1582906481
+!i10b 1
+Z8 !s108 1582906481.000000
+Z9 !s90 -reportprogress|300|-work|work|U:/CPRE 381/381proj/MultiplierParts/adder_1_bit.vhd|
+Z10 !s107 U:/CPRE 381/381proj/MultiplierParts/adder_1_bit.vhd|
+!i113 0
+Z11 o-work work
+Z12 tExplicit 1 NoCoverage 1 CvgOpt 0
+Astructure
+R2
+R3
+DEx4 work 11 adder_1_bit 0 22 DABhbYJSZflClX5:;d5HO0
+!i122 -1
+l44
+L16
+VXzaL1_EUZa97nnBQ8OfdB3
+!s100 7^<2f`1O04lUb2kzEnK2V0
+R6
+33
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 0
+R11
+R12
+Eandg2
+Z13 w1575899278
+R2
+R3
+!i122 -1
+R0
+Z14 8U:/CPRE 381/381proj/MultiplierParts/andg2.vhd
+Z15 FU:/CPRE 381/381proj/MultiplierParts/andg2.vhd
+l0
+L23
+VzJ2OoPJ=<ja2?Y;OcjQk;3
+!s100 YT?bGzEmcFo:DlnoC^B4_0
+R6
+33
+Z16 !s110 1582906482
+!i10b 1
+R8
+Z17 !s90 -reportprogress|300|-work|work|U:/CPRE 381/381proj/MultiplierParts/andg2.vhd|
+Z18 !s107 U:/CPRE 381/381proj/MultiplierParts/andg2.vhd|
+!i113 0
+R11
+R12
+Adataflow
+R2
+R3
+DEx4 work 5 andg2 0 22 zJ2OoPJ=<ja2?Y;OcjQk;3
+!i122 -1
+l32
+L31
+V3oa1[>iDZj;2zVo:oz1>e2
+!s100 I`@Z@UBObS]<7m8bPgKUS1
+R6
+33
+R16
+!i10b 1
+R8
+R17
+R18
+!i113 0
+R11
+R12
+Emult32t1
+Z19 w1582906639
+R2
+R3
+!i122 -1
+R0
+Z20 8U:/CPRE 381/381proj/MultiplierParts/Mult32t1.vhd
+Z21 FU:/CPRE 381/381proj/MultiplierParts/Mult32t1.vhd
+l0
+L23
+V>;n@BQQlPEnEaTCFbcO]=0
+!s100 BKeEMm_4img0PYJFeK3>n2
+R6
+33
+Z22 !s110 1582906640
+!i10b 1
+Z23 !s108 1582906640.000000
+Z24 !s90 -reportprogress|300|-work|work|U:/CPRE 381/381proj/MultiplierParts/Mult32t1.vhd|
+Z25 !s107 U:/CPRE 381/381proj/MultiplierParts/Mult32t1.vhd|
+!i113 0
+R11
+R12
+Astructure
+R2
+R3
+DEx4 work 8 mult32t1 0 22 >;n@BQQlPEnEaTCFbcO]=0
+!i122 -1
+l63
+L35
+VOX`OlE0GVeceZ^^SP_iEn0
+!s100 h6Xgh2mJ^hC847H:T7VHz0
+R6
+33
+R22
+!i10b 1
+R23
+R24
+R25
+!i113 0
+R11
+R12
+Eorg2
+R13
+R2
+R3
+!i122 -1
+R0
+Z26 8U:/CPRE 381/381proj/MultiplierParts/org2.vhd
+Z27 FU:/CPRE 381/381proj/MultiplierParts/org2.vhd
+l0
+L23
+V0FzB9ATDX9TV=M:n@=VB83
+!s100 bGQ1F9eW^Q17OoL9h4g7z2
+R6
+33
+R16
+!i10b 1
+Z28 !s108 1582906482.000000
+Z29 !s90 -reportprogress|300|-work|work|U:/CPRE 381/381proj/MultiplierParts/org2.vhd|
+Z30 !s107 U:/CPRE 381/381proj/MultiplierParts/org2.vhd|
+!i113 0
+R11
+R12
+Adataflow
+R2
+R3
+DEx4 work 4 org2 0 22 0FzB9ATDX9TV=M:n@=VB83
+!i122 -1
+l32
+L31
+V0JC>N7cRXc=9bni@>dg7o3
+!s100 h5_AzR3TdRA0a_K=dQ>mI2
+R6
+33
+R16
+!i10b 1
+R28
+R29
+R30
+!i113 0
+R11
+R12
+Exorg2
+R13
+R2
+R3
+!i122 -1
+R0
+Z31 8U:/CPRE 381/381proj/MultiplierParts/xorg2.vhd
+Z32 FU:/CPRE 381/381proj/MultiplierParts/xorg2.vhd
+l0
+L23
+VV6C:miP5l_oAXXFV_WP4`3
+!s100 [hI[mXFH4_j16U;>U1Lfn2
+R6
+33
+Z33 !s110 1582906483
+!i10b 1
+R28
+Z34 !s90 -reportprogress|300|-work|work|U:/CPRE 381/381proj/MultiplierParts/xorg2.vhd|
+Z35 !s107 U:/CPRE 381/381proj/MultiplierParts/xorg2.vhd|
+!i113 0
+R11
+R12
+Adataflow
+R2
+R3
+DEx4 work 5 xorg2 0 22 V6C:miP5l_oAXXFV_WP4`3
+!i122 -1
+l32
+L31
+V0<8Ik`hGa2ooIj9K`Y3Wc0
+!s100 Z6[FAPS4fBLB`F?OO<AY72
+R6
+33
+R33
+!i10b 1
+R28
+R34
+R35
+!i113 0
+R11
+R12
