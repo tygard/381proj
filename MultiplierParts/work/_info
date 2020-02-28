@@ -1,0 +1,289 @@
+m255
+K4
+z2
+!s11e vcom 2019.3 2019.07, Jul 24 2019
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dU:/CPRE 381/381proj/MultiplierParts
+T_opt
+!s110 1582906650
+V5hZ^iCLo<EfX]zLmaB3K;2
+04 8 9 work mult32t1 structure 1
+=1-509a4c47638a-5e593d1a-83-2d4c
+o-quiet -auto_acc_if_foreign -work work
+tCvgOpt 0
+n@_opt
+OL;O;2019.3;69
+R0
+Eadder_1_bit
+Z1 w1582682892
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 -1
+Z4 dU:/Desktop/c3812020/proj1/381proj/MultiplierParts
+Z5 8U:/Desktop/c3812020/proj1/381proj/MultiplierParts/adder_1_bit.vhd
+Z6 FU:/Desktop/c3812020/proj1/381proj/MultiplierParts/adder_1_bit.vhd
+l0
+L6
+VDABhbYJSZflClX5:;d5HO0
+!s100 BA]9I11l9iPPiAGm6VIO_3
+Z7 OL;C;2019.3;69
+33
+Z8 !s110 1582907423
+!i10b 1
+Z9 !s108 1582907423.000000
+Z10 !s90 -reportprogress|300|-work|work|U:/Desktop/c3812020/proj1/381proj/MultiplierParts/adder_1_bit.vhd|
+Z11 !s107 U:/Desktop/c3812020/proj1/381proj/MultiplierParts/adder_1_bit.vhd|
+!i113 0
+Z12 o-work work
+Z13 tExplicit 1 NoCoverage 1 CvgOpt 0
+Astructure
+R2
+R3
+DEx4 work 11 adder_1_bit 0 22 DABhbYJSZflClX5:;d5HO0
+!i122 -1
+l44
+L16
+VXzaL1_EUZa97nnBQ8OfdB3
+!s100 7^<2f`1O04lUb2kzEnK2V0
+R7
+33
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 0
+R12
+R13
+Eandg2
+R1
+R2
+R3
+!i122 -1
+R4
+Z14 8U:/Desktop/c3812020/proj1/381proj/MultiplierParts/andg2.vhd
+Z15 FU:/Desktop/c3812020/proj1/381proj/MultiplierParts/andg2.vhd
+l0
+L23
+VzJ2OoPJ=<ja2?Y;OcjQk;3
+!s100 YT?bGzEmcFo:DlnoC^B4_0
+R7
+33
+R8
+!i10b 1
+R9
+Z16 !s90 -reportprogress|300|-work|work|U:/Desktop/c3812020/proj1/381proj/MultiplierParts/andg2.vhd|
+Z17 !s107 U:/Desktop/c3812020/proj1/381proj/MultiplierParts/andg2.vhd|
+!i113 0
+R12
+R13
+Adataflow
+R2
+R3
+DEx4 work 5 andg2 0 22 zJ2OoPJ=<ja2?Y;OcjQk;3
+!i122 -1
+l32
+L31
+V3oa1[>iDZj;2zVo:oz1>e2
+!s100 I`@Z@UBObS]<7m8bPgKUS1
+R7
+33
+R8
+!i10b 1
+R9
+R16
+R17
+!i113 0
+R12
+R13
+Em_n_bit
+w1582911271
+R2
+R3
+!i122 -1
+R4
+8U:/Desktop/c3812020/proj1/381proj/MultiplierParts/final_mult.vhd
+FU:/Desktop/c3812020/proj1/381proj/MultiplierParts/final_mult.vhd
+l0
+L4
+Vz1kTZgAKG3LjiEB4n[mI^2
+!s100 =M^oQGDHX@agJ=6eo9H_g0
+R7
+33
+!s110 1582911620
+!i10b 1
+!s108 1582911620.000000
+!s90 -reportprogress|300|-work|work|U:/Desktop/c3812020/proj1/381proj/MultiplierParts/final_mult.vhd|
+!s107 U:/Desktop/c3812020/proj1/381proj/MultiplierParts/final_mult.vhd|
+!i113 0
+R12
+R13
+Emult32t1
+Z18 w1582911610
+R2
+R3
+!i122 -1
+R4
+Z19 8U:/Desktop/c3812020/proj1/381proj/MultiplierParts/Mult32t1.vhd
+Z20 FU:/Desktop/c3812020/proj1/381proj/MultiplierParts/Mult32t1.vhd
+l0
+L23
+V>;n@BQQlPEnEaTCFbcO]=0
+!s100 BKeEMm_4img0PYJFeK3>n2
+R7
+33
+Z21 !s110 1582911616
+!i10b 1
+Z22 !s108 1582911615.000000
+Z23 !s90 -reportprogress|300|-work|work|U:/Desktop/c3812020/proj1/381proj/MultiplierParts/Mult32t1.vhd|
+Z24 !s107 U:/Desktop/c3812020/proj1/381proj/MultiplierParts/Mult32t1.vhd|
+!i113 0
+R12
+R13
+Astructure
+R2
+R3
+DEx4 work 8 mult32t1 0 22 >;n@BQQlPEnEaTCFbcO]=0
+!i122 -1
+l63
+L35
+VOX`OlE0GVeceZ^^SP_iEn0
+!s100 h6Xgh2mJ^hC847H:T7VHz0
+R7
+33
+R21
+!i10b 1
+R22
+R23
+R24
+!i113 0
+R12
+R13
+Eonescomplemntor
+Z25 w1580182314
+R2
+R3
+!i122 -1
+R4
+Z26 8U:/Desktop/c3812020/proj1/381proj/firsttwoWeeks/Lab1/AddSub/onesComplementopr.vhd
+Z27 FU:/Desktop/c3812020/proj1/381proj/firsttwoWeeks/Lab1/AddSub/onesComplementopr.vhd
+l0
+L6
+VHL`QNCBW4NX_k2mZhFm<l1
+!s100 Fc[Wd4RABnl;bFEzEP=oo0
+R7
+33
+Z28 !s110 1582909634
+!i10b 1
+Z29 !s108 1582909634.000000
+Z30 !s90 -reportprogress|300|-work|work|U:/Desktop/c3812020/proj1/381proj/firsttwoWeeks/Lab1/AddSub/onesComplementopr.vhd|
+Z31 !s107 U:/Desktop/c3812020/proj1/381proj/firsttwoWeeks/Lab1/AddSub/onesComplementopr.vhd|
+!i113 0
+R12
+R13
+Astructure
+R2
+R3
+DEx4 work 15 onescomplemntor 0 22 HL`QNCBW4NX_k2mZhFm<l1
+!i122 -1
+l22
+L13
+VX1KQE0DeJTH>ZSZXlMfk93
+!s100 m<R7i1;8l3@FA@A`;hjZn1
+R7
+33
+R28
+!i10b 1
+R29
+R30
+R31
+!i113 0
+R12
+R13
+Eorg2
+R1
+R2
+R3
+!i122 -1
+R4
+Z32 8U:/Desktop/c3812020/proj1/381proj/MultiplierParts/org2.vhd
+Z33 FU:/Desktop/c3812020/proj1/381proj/MultiplierParts/org2.vhd
+l0
+L23
+V0FzB9ATDX9TV=M:n@=VB83
+!s100 bGQ1F9eW^Q17OoL9h4g7z2
+R7
+33
+Z34 !s110 1582907422
+!i10b 1
+Z35 !s108 1582907421.000000
+Z36 !s90 -reportprogress|300|-work|work|U:/Desktop/c3812020/proj1/381proj/MultiplierParts/org2.vhd|
+Z37 !s107 U:/Desktop/c3812020/proj1/381proj/MultiplierParts/org2.vhd|
+!i113 0
+R12
+R13
+Adataflow
+R2
+R3
+DEx4 work 4 org2 0 22 0FzB9ATDX9TV=M:n@=VB83
+!i122 -1
+l32
+L31
+V0JC>N7cRXc=9bni@>dg7o3
+!s100 h5_AzR3TdRA0a_K=dQ>mI2
+R7
+33
+R34
+!i10b 1
+R35
+R36
+R37
+!i113 0
+R12
+R13
+Exorg2
+R1
+R2
+R3
+!i122 -1
+R4
+Z38 8U:/Desktop/c3812020/proj1/381proj/MultiplierParts/xorg2.vhd
+Z39 FU:/Desktop/c3812020/proj1/381proj/MultiplierParts/xorg2.vhd
+l0
+L23
+VV6C:miP5l_oAXXFV_WP4`3
+!s100 [hI[mXFH4_j16U;>U1Lfn2
+R7
+33
+Z40 !s110 1582907421
+!i10b 1
+R35
+Z41 !s90 -reportprogress|300|-work|work|U:/Desktop/c3812020/proj1/381proj/MultiplierParts/xorg2.vhd|
+Z42 !s107 U:/Desktop/c3812020/proj1/381proj/MultiplierParts/xorg2.vhd|
+!i113 0
+R12
+R13
+Adataflow
+R2
+R3
+DEx4 work 5 xorg2 0 22 V6C:miP5l_oAXXFV_WP4`3
+!i122 -1
+l32
+L31
+V0<8Ik`hGa2ooIj9K`Y3Wc0
+!s100 Z6[FAPS4fBLB`F?OO<AY72
+R7
+33
+R40
+!i10b 1
+R35
+R41
+R42
+!i113 0
+R12
+R13
