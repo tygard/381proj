@@ -2,7 +2,7 @@
 -------------------------------------------------------------------------
 -- DESCRIPTION: This file contains the fetch logic for the single-cycle MIPS Processor
 
--- 01/29/2019 by H3::Design created.
+-- 02/29/2020 by tygard:Design created.
 -------------------------------------------------------------------------
 
 library IEEE;
@@ -59,14 +59,19 @@ signal s_PC4		: std_logic_vector(31 downto 0);
 
 begin 
 	-- shift left SEBA, store in SEABSL2
-		s_SEBASL2 <= s_SEBA(29 downto 0) & "00";
-			
+	s_SEBASL2(31 downto 2) 	<= s_SEBA(29 downto 0);
+	s_SEBASL2(1) 			<= '0';
+	s_SEBASL2(0) 			<= '0';
+	
 	-- shift left inst[25:0] by 2 bits, store in JASL2
-		s_JASL2 <= i_instr(25 downto 0) & "00";
+	s_JASL2 <= i_instr(25 downto 0) & "00";
+	s_JASL2(27 downto 2) 	<= i_instr(25 downto 0);
+	s_JASL2(1) 				<= '0';
+	s_JASL2(0) 				<= '0';
 
 
 	-- concatenate PC+4 and JASL2
-		s_JA <= s_PC4(31 downto 28) & s_JASL2(27 downto 0);
+	s_JA <= s_PC4(31 downto 28) & s_JASL2(27 downto 0);
 		
 		
 	extender0 : extender
@@ -80,7 +85,7 @@ begin
 	port MAP(
 		i_A		=> i_PC,
 		i_B     => "100",	-- add 4 to the PC
-		i_Cin   => "0",		-- no carry in
+		i_Cin   => '0',		-- no carry in
 		o_S     => s_PC4,
 		o_Cout  => open	-- we dont use the Cout because the PC will never have its MSB increased
 		);
@@ -90,7 +95,7 @@ begin
 	port MAP(
 		i_A		=> s_SEBASL2,
 		i_B     => s_PC4,	-- branch address after shift left 2 in overall design		
-		i_Cin   => "0",		-- no carry in
+		i_Cin   => '0',		-- no carry in
 		o_S     => s_BA,
 		o_Cout  => open		-- we dont use the Cout because the PC will never have its MSB increased
 		);
