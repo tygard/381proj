@@ -27,8 +27,7 @@ entity Mult32t1 is
 	   i_B				: in std_logic; -- Q
 	   i_CIN			: in std_logic; -- 
 	   i_FA_IN			: in std_logic_vector(31 downto 0);
-       o_FA 		    : out std_logic_vector(31 downto 0);
-	   o_FA_P			: out std_logic;			
+      	 o_FA 		    : out std_logic_vector(31 downto 0);			
 	   o_COUT			: out std_logic);
 end Mult32t1;
 
@@ -82,7 +81,7 @@ begin
 			i_A       => s_o_F(0),   
 			i_B       => i_FA_IN(0),   
 			i_Cin     => '0',
-			o_S       => o_FA_P,
+			o_S       => o_FA(0),
 			o_Cout    => s_o_COUT(0));
     
   g_part3: for i in 1 to 30 generate
@@ -99,7 +98,7 @@ begin
 	adder_1_bit 
 		port map(    					    
 			i_A       => s_o_F(31),   
-			i_B       => i_CIN,   
+			i_B       => i_FA_IN(31),   
 			i_Cin     => s_o_COUT(30),
 			o_S       => o_FA(31),
 			o_Cout    => o_COUT);
