@@ -41,7 +41,41 @@ begin
   process
     begin
 	-- test run command fo modelsim: vsim -voptargs="+acc" fetch_logic_tb
-	-- TEST 1: INCREMENT THE PC
+	
+		-- TEST 1: INCREMENT THE PC
+	i_tBranch 	<= '0';			-- disable branch
+	i_tJump 	<= '0';			-- disable jump
+	-- when both jump and branch are diabled we just increment the PC by 4
+	
+	i_tPC		<= x"00000000";	-- PC = 0 for easy testing
+	i_tinstr 	<= x"33333333";	-- for this test inst doesnt matter, just PC+4
+	-- ^^^ instruction input (when branch the address is lower 16 bits, when jump is lower 26 bits)
+	
+	wait for 100 ns;
+	
+		-- TEST 1: INCREMENT THE PC
+	i_tBranch 	<= '1';			-- enable branch
+	i_tJump 	<= '0';			-- disable jump
+	-- branch using the 16 bit immediate 
+	
+	i_tPC		<= x"00000000";	-- PC = 0 for easy testing
+	i_tinstr 	<= x"33333333";	-- for this test inst doesnt matter, just PC+4
+	-- ^^^ instruction input (when branch the address is lower 16 bits, when jump is lower 26 bits)
+	
+	wait for 100 ns;
+	
+		-- TEST 1: INCREMENT THE PC
+	i_tBranch 	<= '0';			-- disable branch
+	i_tJump 	<= '0';			-- disable jump
+	-- when both jump and branch are diabled we just increment the PC by 4
+	
+	i_tPC		<= x"00000000";	-- PC = 0 for easy testing
+	i_tinstr 	<= x"33333333";	-- for this test inst doesnt matter, just PC+4
+	-- ^^^ instruction input (when branch the address is lower 16 bits, when jump is lower 26 bits)
+	
+	wait for 100 ns;
+	
+		-- TEST 1: INCREMENT THE PC
 	i_tBranch 	<= '0';			-- disable branch
 	i_tJump 	<= '0';			-- disable jump
 	-- when both jump and branch are diabled we just increment the PC by 4
