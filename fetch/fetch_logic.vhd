@@ -23,27 +23,29 @@ end  fetch_logic;
 architecture structure of fetch_logic is
 
 component adder_N_bit is
+  generic(N : integer := 32);
 	port(	
-		i_A    : in std_logic_vector(N-1 downto 0);
-		i_B    : in std_logic_vector(N-1 downto 0);
+		i_A    : in std_logic_vector(31 downto 0);
+		i_B    : in std_logic_vector(31 downto 0);
 		i_Cin  : in std_logic;
-		o_S    : out std_logic_vector(N-1 downto 0);
+		o_S    : out std_logic_vector(31 downto 0);
 		o_Cout : out std_logic
 		);
 end component;
 
 component mux2t1_N is
+  generic(N : integer := 32);
 	port(
 		i_S     : in std_logic;
-		i_D0    : in std_logic_vector(N-1 downto 0);
-		i_D1    : in std_logic_vector(N-1 downto 0);
-		o_O     : out std_logic_vector(N-1 downto 0)
+		i_D0    : in std_logic_vector(31 downto 0);
+		i_D1    : in std_logic_vector(31 downto 0);
+		o_O     : out std_logic_vector(31 downto 0)
 		);
 end component;
 
 component  extender is
   generic(Y : integer := 16);
-  port(input : in std_logic_vector(Y-1 downto 0);
+  port(input : in std_logic_vector(15 downto 0);
        sign  : in std_logic;
       output: out std_logic_vector(31 downto 0));
 end component;
@@ -84,7 +86,7 @@ begin
 	adder0 : adder_N_bit
 	port MAP(
 		i_A		=> i_PC,
-		i_B     => "100",	-- add 4 to the PC
+		i_B     => x"00000001",	-- add 4 to the PC
 		i_Cin   => '0',		-- no carry in
 		o_S     => s_PC4,
 		o_Cout  => open	-- we dont use the Cout because the PC will never have its MSB increased
