@@ -9,19 +9,27 @@
 
 library IEEE;
 use IEEE.std_logic_1164.all;
+use IEEE.std_logic_textio.all;  -- For logic types I/O
+library std;
+use std.env.all;                -- For hierarchical/external signals
+use std.textio.all;             -- For basic I/O
+
+entity tb_barrelshift_32 is
+	generic(gCLK_HPER   : time := 10 ns);   -- Generic for half of the clock cycle period
+end tb_barrelshift_32;
 
 architecture mixed of tb_barrelshift_32 is
 
 	-- Define the total clock period time
-
-	component barrelshift_32 
-  
-		port(i_SHAMT      : in std_logic_vector(4 downto 0);	 -- Shift amount input
-			 i_D	      : in std_logic;     					 -- Shift direction input (0: left, 1: right)
+	constant cCLK_PER  : time := gCLK_HPER * 2;
+	component barrelshift_32 is
+		generic(N : integer := 32); -- Generic of type integer for input/output data width. Default value is 32.
+		port(i_SHAMT      : in std_logic_vector(4 downto 0);		 -- Shift amount input
+			 i_D	        : in std_logic;     					 -- Shift direction input (0: left, 1: right)
 			 i_T          : in std_logic;     					 -- Shift type input (0: logical, 1: arith.)
-			 i_X          : in std_logic_vector(31 downto 0);   -- Data value input
-			 o_Y          : out std_logic_vector(31 downto 0));  -- Data value output
-			 
+			 i_X          : in std_logic_vector(31 downto 0);     -- Data value input
+			 o_Y          : out std_logic_vector(31 downto 0));   -- Data value output
+
 	end component;
 	
 	-- Define test signals
@@ -46,26 +54,26 @@ architecture mixed of tb_barrelshift_32 is
 		begin
 			-- Test case 1:
 			-- Shift an input of 2 right by 3
-			wait for 50 ns;
+			wait for gCLK_HPER;
 			
 			s_iSHAMT    <= "00011";  
 			s_iD	    <= '0';
 			s_iT 		<= '0';
 			s_iX	    <= "00000000000000000000000000000010";
-			s_oY 		<= "00000000000000000000000000000000";
+			--s_oY 		<= "00000000000000000000000000000000";
 			
-			wait for 50 ns;
+			wait for gCLK_HPER;
 			-- Expected output: s_oY = 0
 			
 			-- Test case 2:
 			-- Shift an input of 0xF0000000 right by 31
-			wait for 50 ns;
+			wait for gCLK_HPER;
 			s_iSHAMT    <= "11111";  
 			s_iD	    <= '0';
 			s_iT 		<= '0';
 			s_iX	    <= "11110000000000000000000000000000";
-			s_oY 		<= "00000000000000000000000000000000";
-			wait for 50 ns;
+			--s_oY 		<= "00000000000000000000000000000000";
+			wait for gCLK_HPER;
 			-- Expected output: s_oY = 1
 
     

@@ -25,11 +25,11 @@ end barrelshift_32;
 architecture structural of barrelshift_32 is
 
 	-- Signals to handle connections between the MUX rows
-	signal s_iA : std_logic_vector(31 downto 0);		-- output of MUX A
-	signal s_iB : std_logic_vector(31 downto 0);		-- output of MUX B
-	signal s_iC : std_logic_vector(31 downto 0);		-- output of MUX C
-	signal s_iD : std_logic_vector(31 downto 0);		-- output of MUX D
-	signal s_iE : std_logic_vector(31 downto 0);		-- output of MUX E (test signal)
+	signal s_iA : std_logic_vector(N-1 downto 0);		-- output of MUX A
+	signal s_iB : std_logic_vector(N-1 downto 0);		-- output of MUX B
+	signal s_iC : std_logic_vector(N-1 downto 0);		-- output of MUX C
+	signal s_iD : std_logic_vector(N-1 downto 0);		-- output of MUX D
+	signal s_iE : std_logic_vector(N-1 downto 0);		-- output of MUX E (test signal)
 	
 	
 	-- N-bit 2:1 MUX
@@ -86,7 +86,7 @@ architecture structural of barrelshift_32 is
 		port MAP(i_S               => i_SHAMT(4),
 				 i_D0			   => s_iD,
 				 i_D1              => "0000000000000000" & s_iD(31 downto 16),
-				 o_O               => s_iE);		-- final stage, so output to component output
+				 o_O               => o_Y);		-- final stage, so output to component output
 				 
 		
 end structural;
