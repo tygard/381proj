@@ -60,7 +60,6 @@ architecture mixed of tb_barrelshift_32 is
 			s_iD	    <= '0';
 			s_iT 		<= '0';
 			s_iX	    <= "00000000000000000000000000000010";
-			--s_oY 		<= "00000000000000000000000000000000";
 			
 			wait for gCLK_HPER;
 			-- Expected output: s_oY = 0
@@ -72,9 +71,28 @@ architecture mixed of tb_barrelshift_32 is
 			s_iD	    <= '0';
 			s_iT 		<= '0';
 			s_iX	    <= "11110000000000000000000000000000";
-			--s_oY 		<= "00000000000000000000000000000000";
 			wait for gCLK_HPER;
 			-- Expected output: s_oY = 1
+			
+			-- Test case 3:
+			-- Shift an input of 0x80000000 right by 31 arithmetically
+			wait for gCLK_HPER;
+			s_iSHAMT    <= "11111";  
+			s_iD	    <= '0';
+			s_iT 		<= '1';
+			s_iX	    <= "10000000000000000000000000000000";
+			wait for gCLK_HPER;
+			-- Expected output: s_oY = 0xFFFFFFFF
+			
+			-- Test case 4:
+			-- Shift an input of 0x40000000 right by 8 arithmetically
+			wait for gCLK_HPER;
+			s_iSHAMT    <= "01000";  
+			s_iD	    <= '0';
+			s_iT 		<= '1';
+			s_iX	    <= "01000000000000000000000000000000";
+			wait for gCLK_HPER;
+			-- Expected output: s_oY = 0x00400000
 
     
 	end process;
