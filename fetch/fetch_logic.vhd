@@ -8,6 +8,11 @@
 library IEEE;
 use IEEE.std_logic_1164.all;
 
+
+-- Branch & Jump = Jump
+-- Branch uses 16 bit imm, left shift 2 is taken care of in this component : 1 binary bit per address
+-- Jump uses 26 bit imm, left shift 2 is taken care of in this component : 1 binary bit per address
+-- if neither jump or branch is selected then we increment the PC by 4 : one address location
 entity fetch_logic is
   generic(N : integer := 32);
 	port(

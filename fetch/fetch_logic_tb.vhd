@@ -45,7 +45,7 @@ begin
 		-- TEST 1: INCREMENT THE PC
 	i_tBranch 	<= '0';			-- disable branch
 	i_tJump 	<= '0';			-- disable jump
-	-- when both jump and branch are diabled we just increment the PC by 4
+	-- when both jump and branch are disabled we just increment the PC by 4
 	
 	i_tPC		<= x"00000000";	-- PC = 0 for easy testing
 	i_tinstr 	<= x"33333333";	-- for this test inst doesnt matter, just PC+4
@@ -53,35 +53,46 @@ begin
 	
 	wait for 100 ns;
 	
-		-- TEST 1: INCREMENT THE PC
+		-- TEST 2: BRANCH
 	i_tBranch 	<= '1';			-- enable branch
 	i_tJump 	<= '0';			-- disable jump
 	-- branch using the 16 bit immediate 
-	
+
 	i_tPC		<= x"00000000";	-- PC = 0 for easy testing
-	i_tinstr 	<= x"33333333";	-- for this test inst doesnt matter, just PC+4
+	i_tinstr 	<= x"00001111";	-- branch address is 16 bit imm, o_PC should be driven to i_PC+4 + 0x00004444 = 0x00004445 
 	-- ^^^ instruction input (when branch the address is lower 16 bits, when jump is lower 26 bits)
 	
 	wait for 100 ns;
 	
-		-- TEST 1: INCREMENT THE PC
-	i_tBranch 	<= '0';			-- disable branch
+		-- TEST 3: BRANCH
+	i_tBranch 	<= '1';			-- enable branch
 	i_tJump 	<= '0';			-- disable jump
-	-- when both jump and branch are diabled we just increment the PC by 4
-	
+	-- branch using the 16 bit immediate 
+
 	i_tPC		<= x"00000000";	-- PC = 0 for easy testing
-	i_tinstr 	<= x"33333333";	-- for this test inst doesnt matter, just PC+4
+	i_tinstr 	<= x"00001010";	-- branch address is 16 bit imm, o_PC should be driven to i_PC+4 + 0x00004040 = 0x00004041 
 	-- ^^^ instruction input (when branch the address is lower 16 bits, when jump is lower 26 bits)
 	
 	wait for 100 ns;
 	
-		-- TEST 1: INCREMENT THE PC
+		-- TEST 4: JUMP
 	i_tBranch 	<= '0';			-- disable branch
-	i_tJump 	<= '0';			-- disable jump
-	-- when both jump and branch are diabled we just increment the PC by 4
+	i_tJump 	<= '1';			-- enable jump
+	-- jump using the 26 bit immediate 
 	
-	i_tPC		<= x"00000000";	-- PC = 0 for easy testing
-	i_tinstr 	<= x"33333333";	-- for this test inst doesnt matter, just PC+4
+	i_tPC		<= x"F0000000";	-- top 4 bits are set to 1's to test concatenation
+	i_tinstr 	<= x"02222222";	-- jump address is 26 bit imm, o_PC should be driven to i_instr(31-28) & 0x08888888 = 0xF8888888
+	-- ^^^ instruction input (when jump the address is lower 26 bits, when jump is lower 26 bits)
+	
+	wait for 100 ns;
+	
+		-- TEST 5:	BRANCH AND JUMP
+	i_tBranch 	<= '1';			-- disable branch
+	i_tJump 	<= '1';			-- disable jump
+	-- when both jump and branch are enabled we just increment the PC by 4
+	
+	i_tPC		<= x"E1111111";	-- PC = 0 for easy testing
+	i_tinstr 	<= x"11111111";	-- jump address is 26 bit imm, o_PC should be driven to i_instr(31-28) & 0x01111111 = 0xE4444444
 	-- ^^^ instruction input (when branch the address is lower 16 bits, when jump is lower 26 bits)
 	
 	wait for 100 ns;
