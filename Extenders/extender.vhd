@@ -22,5 +22,3 @@ end generate;
    end generate;
 
 end dataflow;
-
-
