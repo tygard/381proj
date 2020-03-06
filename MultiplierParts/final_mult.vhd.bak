@@ -59,7 +59,7 @@ port MAP (    i_FA_IN   => secondlevel,--treating like the fa
 			  o_COUT    => o_wire(0)(32));   
 			  
 --CASES FOR ROWS 2-30			  
-G_r2t32: for i in 2 to N-1 generate
+G_r2t32: for i in 1 to N-1 generate
     ADDERII: Mult32t1 port map(i_FA_IN   => o_wire(i-1)(32 downto 1), --Takes the inputs from previous FA + the COUT (This syntax might be wrong may have to flip it to go 1 to 32)
 			                     i_A       => i_A,--original 32 bit M inputs
 			                     i_B       => i_B(i),    --	Q2 i generate per bit
@@ -82,9 +82,9 @@ port MAP (    i_FA_IN   => o_wire(30)(32 downto 1),--treating like the fa
               o_FA      => o_wire(31)(31 downto 0),                  --fa takes previous
 			  o_COUT    => o_wire(31)(32)); 
 			  
-o_S(63) <= o_wire(30)(32);
-o_S(62 downto 31) <= o_wire(30)(31 downto 0);
-G_rt32: for i in 0 to 29 generate
+o_S(63) <= o_wire(31)(32);
+o_S(62 downto 31) <= o_wire(31)(31 downto 0);
+G_rt32: for i in 1 to 30 generate
 o_S(i) <= o_wire(i)(0);
 end generate G_rt32;
 	  
