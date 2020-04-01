@@ -66,7 +66,57 @@ architecture structure of MIPS_Processor is
 
   -- TODO: You may add any additional signals or components your implementation 
   --       requires below this comment
+  
+  -- signals
+  
+  
+  -- components
+  
+	component fetch_logic is 
+		generic(N : integer := 32);
+		port(
+			i_Branch: in std_logic;
+			i_Jump  : in std_logic;
+			i_instr	: in std_logic_vector(31 downto 0); -- 32 instruction
+			i_PC	: in std_logic_vector(31 downto 0); -- the PC value
+			o_PC	: out std_logic_vector(31 downto 0) -- output to the PC register
+			);
+	end component;
+	
+	component alucontrol is
+		port(	i_OP         		: in std_logic_vector (5 downto 0); --op code
+				i_FI          		: in std_logic_vector (5 downto 0); --instruction
+				o_F         	 	: out std_logic_vector (4 downto 0)); --output
 
+	end component;
+	
+	component nbit_Reg is
+		generic(N : integer := 32); 
+		port(
+			i_CLK       : in std_logic;
+			i_RST		: in std_logic;
+			i_WE		: in std_logic;
+			i_D        : in std_logic_vector(N-1 downto 0);
+			o_Q         : out std_logic_vector(N-1 downto 0));
+	end component;
+
+	component extender is
+		generic(Y : integer := 16);
+		port(
+			input : in std_logic_vector(Y-1 downto 0);
+			sign  : in std_logic;
+			output: out std_logic_vector(31 downto 0));
+	end component;
+	
+	component mux2t1_N is
+		generic(N : integer := 32); -- Generic of type integer for input/output data width. Default value is 32.
+		port(
+			i_S          : in std_logic;
+			i_D0         : in std_logic_vector(N-1 downto 0);
+			i_D1         : in std_logic_vector(N-1 downto 0);
+			o_O          : out std_logic_vector(N-1 downto 0));
+	end component;
+	
 begin
 
   -- TODO: This is required to be your final input to your instruction memory. This provides a feasible method to externally load the memory module which means that the synthesis tool must assume it knows nothing about the values stored in the instruction memory. If this is not included, much, if not all of the design is optimized out because the synthesis tool will believe the memory to be all zeros.
@@ -97,5 +147,7 @@ begin
   -- TODO: Ensure that s_Ovfl is connected to the overflow output of your ALU
 
   -- TODO: Implement the rest of your processor below this comment! 
+  
+  
 
 end structure;

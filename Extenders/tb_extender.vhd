@@ -1,14 +1,11 @@
-00library IEEE;
+library IEEE;
 use IEEE.std_logic_1164.all;
 
 
 entity tb_extender is
-  generic(gCLK_HPER   : time := 50 ns);
 end tb_extender;
 
 architecture behavior of tb_extender is
-
-  constant cCLK_PER  : time := gCLK_HPER * 2;
 
   component extender
     generic(Y: integer := 16);
@@ -17,7 +14,6 @@ architecture behavior of tb_extender is
          output: out std_logic_vector(31 downto 0));
   end component;
 
-  signal s_CLK : std_logic;
   signal s_in : std_logic_vector(16-1 downto 0);
   signal s_sign : std_logic;
   signal s_output : std_logic_vector(31 downto 0);
@@ -27,34 +23,23 @@ begin
   ext: extender
   port map(s_in, s_sign, s_output);
 
-
-  P_CLK: process
-  begin
-    s_CLK <= '0';
-    wait for gCLK_HPER;
-    s_CLK <= '1';
-    wait for gCLK_HPER;
-  end process;
-  
-
   P_TB: process
   begin
 
     s_in <= x"FFFF";
     s_sign <= '0';
-    wait for cCLK_PER;
+	wait for 100 ns;
 
     s_sign <= '1';
-    wait for cCLK_PER;
+	wait for 100 ns;
 
     s_in <= x"0FFF";
     s_sign <= '0';
-    wait for cCLK_PER;
+	wait for 100 ns;
 
     s_sign <= '1';
-    wait for cCLK_PER;
+	wait for 100 ns;
 
-    wait;
   end process;
   
 end behavior;

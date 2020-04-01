@@ -1,0 +1,88 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/School/CPRE381/381proj/Extenders
+Eextender
+Z1 w1584392625
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+R0
+Z4 8C:/School/CPRE381/381proj/Extenders/extender.vhd
+Z5 FC:/School/CPRE381/381proj/Extenders/extender.vhd
+l0
+L5
+VeeaPlXi;DP`dzjIKE0OIU1
+!s100 Zf_LJ^=Nkg:1N]Sj>b7[<0
+Z6 OP;C;10.4a;61
+32
+Z7 !s110 1585776061
+!i10b 1
+Z8 !s108 1585776061.000000
+Z9 !s90 -reportprogress|300|-work|work|C:/School/CPRE381/381proj/Extenders/extender.vhd|
+Z10 !s107 C:/School/CPRE381/381proj/Extenders/extender.vhd|
+!i113 1
+Z11 o-work work -O0
+Z12 tExplicit 1
+Adataflow
+R2
+R3
+DEx4 work 8 extender 0 22 eeaPlXi;DP`dzjIKE0OIU1
+l15
+L13
+V=FE=[zAn_DaBOQh=kd;[<1
+!s100 ZG]X^gl7F^GU0S2JlnKVa0
+R6
+32
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Etb_extender
+Z13 w1585776051
+R2
+R3
+R0
+Z14 8C:/School/CPRE381/381proj/Extenders/tb_extender.vhd
+Z15 FC:/School/CPRE381/381proj/Extenders/tb_extender.vhd
+l0
+L5
+V@DNofc3kk1Xa[[S9i=ihH3
+!s100 Wb]71VU]To^O6>>0fdWmR1
+R6
+32
+Z16 !s110 1585776062
+!i10b 1
+R8
+Z17 !s90 -reportprogress|300|-work|work|C:/School/CPRE381/381proj/Extenders/tb_extender.vhd|
+Z18 !s107 C:/School/CPRE381/381proj/Extenders/tb_extender.vhd|
+!i113 1
+R11
+R12
+Abehavior
+R2
+R3
+Z19 DEx4 work 11 tb_extender 0 22 @DNofc3kk1Xa[[S9i=ihH3
+l25
+L9
+V7@P[4Wgm0^3[PLLUB[Zf12
+!s100 @B97NICQS9RKP0[=Ia0b[0
+R6
+32
+R16
+!i10b 1
+R8
+R17
+R18
+!i113 1
+R11
+R12

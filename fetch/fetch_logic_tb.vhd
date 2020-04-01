@@ -40,7 +40,7 @@ begin
 	);
   process
     begin
-	-- test run command fo modelsim: vsim -voptargs="+acc" fetch_logic_tb
+	-- test run command for modelsim: vsim -voptargs="+acc" fetch_logic_tb
 	
 		-- TEST 1: INCREMENT THE PC
 	i_tBranch 	<= '0';			-- disable branch
