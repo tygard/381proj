@@ -15,7 +15,7 @@ use IEEE.std_logic_1164.all;
 entity barrelshift_32 is
   generic(N : integer := 32); -- Generic of type integer for input/output data width. Default value is 32.
   port(i_SHAMT      : in std_logic_vector(4 downto 0);		 -- Shift amount input
-       i_D	        : in std_logic;     					 -- Shift direction input (0: left, 1: right)
+       i_D	        : in std_logic;     					 -- Shift direction input (0: right, 1: left)
        i_T          : in std_logic;     					 -- Shift type input (0: logical, 1: arith.)
 	   i_X          : in std_logic_vector(31 downto 0);     -- Data value input
        o_Y          : out std_logic_vector(31 downto 0));   -- Data value output
@@ -55,7 +55,7 @@ architecture structural of barrelshift_32 is
 	end component;
 	
 	begin
-		-- TODO: add shift-right before the first MUX
+		
 	
 		---------------------------------------------------------------------------
 		-- Level 0: reverser used for logical shift functionality

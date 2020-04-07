@@ -25,7 +25,7 @@ architecture mixed of tb_barrelshift_32 is
 	component barrelshift_32 is
 		generic(N : integer := 32); -- Generic of type integer for input/output data width. Default value is 32.
 		port(i_SHAMT      : in std_logic_vector(4 downto 0);		 -- Shift amount input
-			 i_D	        : in std_logic;     					 -- Shift direction input (0: left, 1: right)
+			 i_D	        : in std_logic;     					 -- Shift direction input (0: right, 1: left)
 			 i_T          : in std_logic;     					 -- Shift type input (0: logical, 1: arith.)
 			 i_X          : in std_logic_vector(31 downto 0);     -- Data value input
 			 o_Y          : out std_logic_vector(31 downto 0));   -- Data value output
@@ -34,7 +34,7 @@ architecture mixed of tb_barrelshift_32 is
 	
 	-- Define test signals
 	signal s_iSHAMT			:  std_logic_vector(4 downto 0);	 -- Shift amount input
-	signal s_iD				:  std_logic;     					 -- Shift direction input (0: left, 1: right)
+	signal s_iD				:  std_logic;     					 -- Shift direction input (0: right, 1: left)
 	signal s_iT				:  std_logic;     					 -- Shift type input (0: logical, 1: arith.)
 	signal s_iX				:  std_logic_vector(31 downto 0);    -- Data value input
 	signal s_oY				:  std_logic_vector(31 downto 0);  -- Data value output
