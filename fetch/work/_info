@@ -18,6 +18,7 @@ o-quiet -auto_acc_if_foreign -work work +acc
 Z2 tCvgOpt 0
 n@_opt
 Z3 OL;O;2019.3;69
+R0
 T_opt1
 !s110 1583284538
 VGjk4HgWG2YHKT5?k:eHk@3
@@ -42,9 +43,9 @@ VmOgPZ5FZ:VQjeB=MlFZkh1
 !s100 BA]9I11l9iPPiAGm6VIO_3
 Z9 OL;C;2019.3;69
 32
-Z10 !s110 1583512768
+Z10 !s110 1585165437
 !i10b 1
-Z11 !s108 1583512768.000000
+Z11 !s108 1585165436.000000
 Z12 !s90 -reportprogress|300|-work|work|U:/ISU/2020 Spring/cpre381/381proj/fetch/adder_1_bit.vhd|
 Z13 !s107 U:/ISU/2020 Spring/cpre381/381proj/fetch/adder_1_bit.vhd|
 !i113 0
@@ -83,9 +84,9 @@ V3b850IP==^E`km@T^5bQm0
 !s100 SkFzhO0?eDWPLIW5:e4jV1
 R9
 32
-Z18 !s110 1583512769
+R10
 !i10b 1
-R11
+Z18 !s108 1585165437.000000
 Z19 !s90 -reportprogress|300|-work|work|U:/ISU/2020 Spring/cpre381/381proj/fetch/adder_N_bit.vhd|
 Z20 !s107 U:/ISU/2020 Spring/cpre381/381proj/fetch/adder_N_bit.vhd|
 !i113 0
@@ -102,9 +103,9 @@ V;F?=:A280ZA4J^IUD^o=30
 !s100 ao46hIzFW1JjP07=`dP=O2
 R9
 32
-R18
+R10
 !i10b 1
-R11
+R18
 R19
 R20
 !i113 0
@@ -124,9 +125,9 @@ VQ@<<<@nlJ=eiIl4BJDFzW2
 !s100 YT?bGzEmcFo:DlnoC^B4_0
 R9
 32
-R18
+Z23 !s110 1585165438
 !i10b 1
-Z23 !s108 1583512769.000000
+R18
 Z24 !s90 -reportprogress|300|-work|work|U:/ISU/2020 Spring/cpre381/381proj/fetch/andg2.vhd|
 Z25 !s107 U:/ISU/2020 Spring/cpre381/381proj/fetch/andg2.vhd|
 !i113 0
@@ -143,9 +144,9 @@ VJVOzCk?IH:iJ5bCRU`CK13
 !s100 I`@Z@UBObS]<7m8bPgKUS1
 R9
 32
-R18
-!i10b 1
 R23
+!i10b 1
+R18
 R24
 R25
 !i113 0
@@ -165,9 +166,9 @@ V6oNQdH3WI`fke2i3fGcDk3
 !s100 DTcBPcoRGKJ]HmNLBF;Wa0
 R9
 32
-Z29 !s110 1583512770
-!i10b 1
 R23
+!i10b 1
+Z29 !s108 1585165438.000000
 Z30 !s90 -reportprogress|300|-work|work|U:/ISU/2020 Spring/cpre381/381proj/fetch/dataflow21mux.vhd|
 Z31 !s107 U:/ISU/2020 Spring/cpre381/381proj/fetch/dataflow21mux.vhd|
 !i113 0
@@ -184,9 +185,9 @@ VgeKbT?<TI?FNf@_]?2XWE1
 !s100 2YSATbG7Hz9>cHQbmm;[f2
 R9
 32
-R29
-!i10b 1
 R23
+!i10b 1
+R29
 R30
 R31
 !i113 0
@@ -206,9 +207,9 @@ VR16WODR11b`<MjEIb=2?82
 !s100 Zf_LJ^=Nkg:1N]Sj>b7[<0
 R9
 32
-R29
+Z35 !s110 1585165439
 !i10b 1
-Z35 !s108 1583512770.000000
+R29
 Z36 !s90 -reportprogress|300|-work|work|U:/ISU/2020 Spring/cpre381/381proj/fetch/extender.vhd|
 Z37 !s107 U:/ISU/2020 Spring/cpre381/381proj/fetch/extender.vhd|
 !i113 0
@@ -225,16 +226,16 @@ V]`TUDG^Xc<BYSgFY2Zdz42
 !s100 ZG]X^gl7F^GU0S2JlnKVa0
 R9
 32
-R29
-!i10b 1
 R35
+!i10b 1
+R29
 R36
 R37
 !i113 0
 R14
 R15
 Efetch_logic
-Z38 w1583282502
+Z38 w1583515300
 R5
 R6
 !i122 -1
@@ -242,14 +243,14 @@ R0
 Z39 8U:/ISU/2020 Spring/cpre381/381proj/fetch/fetch_logic.vhd
 Z40 FU:/ISU/2020 Spring/cpre381/381proj/fetch/fetch_logic.vhd
 l0
-L11
-VBMND`AH>]2Blnjh8OWe4=2
-!s100 Wd^QzMX;8XFz6U<;EN_0L1
+L16
+VVj]FnW8McYXHScZRc4hfK0
+!s100 j;N3^J[TSUn<ziZAk6gQl1
 R9
 32
-Z41 !s110 1583512771
-!i10b 1
 R35
+!i10b 1
+Z41 !s108 1585165439.000000
 Z42 !s90 -reportprogress|300|-work|work|U:/ISU/2020 Spring/cpre381/381proj/fetch/fetch_logic.vhd|
 Z43 !s107 U:/ISU/2020 Spring/cpre381/381proj/fetch/fetch_logic.vhd|
 !i113 0
@@ -258,17 +259,17 @@ R15
 Astructure
 R5
 R6
-DEx4 work 11 fetch_logic 0 22 BMND`AH>]2Blnjh8OWe4=2
+DEx4 work 11 fetch_logic 0 22 Vj]FnW8McYXHScZRc4hfK0
 !i122 -1
-l62
-L23
-V`ViQ>cSF6m6bS^65`=Ab_2
-!s100 IJW<hN;>;120>5hLnKITz3
+l67
+L28
+VQ?Ggfg;]MGNc7_IH^A:_j1
+!s100 V@?]VE>?jga>k_VPgX7i=2
 R9
 32
-R41
-!i10b 1
 R35
+!i10b 1
+R41
 R42
 R43
 !i113 0
@@ -288,9 +289,9 @@ V9D0LSlXWYQc=3Za2>ni]M3
 !s100 Z=Bl0d6B83gn3mUjX=LQM0
 R9
 32
-Z47 !s110 1583515045
+Z47 !s110 1585165444
 !i10b 1
-Z48 !s108 1583515044.000000
+Z48 !s108 1585165443.000000
 Z49 !s90 -reportprogress|300|-work|work|U:/ISU/2020 Spring/cpre381/381proj/fetch/fetch_logic_tb.vhd|
 Z50 !s107 U:/ISU/2020 Spring/cpre381/381proj/fetch/fetch_logic_tb.vhd|
 !i113 0
@@ -329,9 +330,9 @@ VQ?6hb9ePk@>kZZ9k]hNSO3
 !s100 _XK?_^5z0Rm1<k12?;5R?2
 R9
 32
-R41
+R47
 !i10b 1
-Z53 !s108 1583512771.000000
+Z53 !s108 1585165444.000000
 Z54 !s90 -reportprogress|300|-work|work|U:/ISU/2020 Spring/cpre381/381proj/fetch/invg.vhd|
 Z55 !s107 U:/ISU/2020 Spring/cpre381/381proj/fetch/invg.vhd|
 !i113 0
@@ -348,7 +349,7 @@ Vch>li:oKYZkCO5]GamViK1
 !s100 bk7I76o8e1LURdoZEQb8H0
 R9
 32
-R41
+R47
 !i10b 1
 R53
 R54
@@ -370,11 +371,11 @@ V>:;HNgD7z7UbO2EagFn;L1
 !s100 K>6<OCe@ccUf48<SZSAId3
 R9
 32
-Z58 !s110 1583512772
+Z58 !s110 1585165445
 !i10b 1
-Z59 !s108 1583512772.000000
-Z60 !s90 -reportprogress|300|-work|work|U:/ISU/2020 Spring/cpre381/381proj/fetch/mux2t1.vhd|
-Z61 !s107 U:/ISU/2020 Spring/cpre381/381proj/fetch/mux2t1.vhd|
+R53
+Z59 !s90 -reportprogress|300|-work|work|U:/ISU/2020 Spring/cpre381/381proj/fetch/mux2t1.vhd|
+Z60 !s107 U:/ISU/2020 Spring/cpre381/381proj/fetch/mux2t1.vhd|
 !i113 0
 R14
 R15
@@ -391,9 +392,9 @@ R9
 32
 R58
 !i10b 1
+R53
 R59
 R60
-R61
 !i113 0
 R14
 R15
@@ -403,8 +404,8 @@ R5
 R6
 !i122 -1
 R0
-Z62 8U:/ISU/2020 Spring/cpre381/381proj/fetch/mux2t1_N.vhd
-Z63 FU:/ISU/2020 Spring/cpre381/381proj/fetch/mux2t1_N.vhd
+Z61 8U:/ISU/2020 Spring/cpre381/381proj/fetch/mux2t1_N.vhd
+Z62 FU:/ISU/2020 Spring/cpre381/381proj/fetch/mux2t1_N.vhd
 l0
 L21
 VFY=Tc@WO1TP4Z42>dBMei3
@@ -413,7 +414,7 @@ R9
 32
 R58
 !i10b 1
-R59
+Z63 !s108 1585165445.000000
 Z64 !s90 -reportprogress|300|-work|work|U:/ISU/2020 Spring/cpre381/381proj/fetch/mux2t1_N.vhd|
 Z65 !s107 U:/ISU/2020 Spring/cpre381/381proj/fetch/mux2t1_N.vhd|
 !i113 0
@@ -432,7 +433,7 @@ R9
 32
 R58
 !i10b 1
-R59
+R63
 R64
 R65
 !i113 0
@@ -452,9 +453,9 @@ V[C`FCj=kL0CTBYLlbjJzD3
 !s100 bGQ1F9eW^Q17OoL9h4g7z2
 R9
 32
-Z68 !s110 1583512773
+Z68 !s110 1585165446
 !i10b 1
-R59
+R63
 Z69 !s90 -reportprogress|300|-work|work|U:/ISU/2020 Spring/cpre381/381proj/fetch/org2.vhd|
 Z70 !s107 U:/ISU/2020 Spring/cpre381/381proj/fetch/org2.vhd|
 !i113 0
@@ -473,7 +474,7 @@ R9
 32
 R68
 !i10b 1
-R59
+R63
 R69
 R70
 !i113 0
@@ -495,7 +496,7 @@ R9
 32
 R68
 !i10b 1
-Z73 !s108 1583512773.000000
+Z73 !s108 1585165446.000000
 Z74 !s90 -reportprogress|300|-work|work|U:/ISU/2020 Spring/cpre381/381proj/fetch/xorg2.vhd|
 Z75 !s107 U:/ISU/2020 Spring/cpre381/381proj/fetch/xorg2.vhd|
 !i113 0
@@ -504,12 +505,12 @@ R15
 Adataflow
 R5
 R6
-DEx4 work 5 xorg2 0 22 ;hb`C0MKik;h36`3`SzM60
+Z76 DEx4 work 5 xorg2 0 22 ;hb`C0MKik;h36`3`SzM60
 !i122 -1
 l32
 L31
-VbmLohbkYjJQ`?EHUY>LoL1
-!s100 Z6[FAPS4fBLB`F?OO<AY72
+Z77 VbmLohbkYjJQ`?EHUY>LoL1
+Z78 !s100 Z6[FAPS4fBLB`F?OO<AY72
 R9
 32
 R68
