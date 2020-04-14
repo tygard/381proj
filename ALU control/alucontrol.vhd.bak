@@ -12,10 +12,6 @@ end alucontrol;
 architecture behavorial of alucontrol is
 begin
 
-
-process (i_OP, i_FI)
-begin
-
 if i_OP = "000000" then 
 
 	if i_FI = "000000" then
@@ -122,5 +118,4 @@ else
 	null;
 	
 end if;	
-end process;
 end behavorial;

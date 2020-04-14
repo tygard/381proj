@@ -9,23 +9,41 @@ z2
 cModel Technology
 Z0 dC:/Users/adnan/Documents/GitHub/381proj/ALU control
 Ealucontrol
-w1585166749
-DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
-DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z1 w1586891526
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
 R0
-8C:/Users/adnan/Documents/GitHub/381proj/ALU control/alucontrol.vhd
-FC:/Users/adnan/Documents/GitHub/381proj/ALU control/alucontrol.vhd
+Z4 8C:/Users/adnan/Documents/GitHub/381proj/ALU control/alucontrol.vhd
+Z5 FC:/Users/adnan/Documents/GitHub/381proj/ALU control/alucontrol.vhd
 l0
 L4
 Vgd7JUCa:5NWONbQoFano?3
 !s100 KeUZi>Y5>QnAlVkBaB<6X2
-OP;C;10.4a;61
+Z6 OP;C;10.4a;61
 33
-!s110 1585166753
+Z7 !s110 1586891594
 !i10b 1
-!s108 1585166753.000000
-!s90 -reportprogress|300|-work|work|C:/Users/adnan/Documents/GitHub/381proj/ALU control/alucontrol.vhd|
-!s107 C:/Users/adnan/Documents/GitHub/381proj/ALU control/alucontrol.vhd|
+Z8 !s108 1586891594.000000
+Z9 !s90 -reportprogress|300|-work|work|C:/Users/adnan/Documents/GitHub/381proj/ALU control/alucontrol.vhd|
+Z10 !s107 C:/Users/adnan/Documents/GitHub/381proj/ALU control/alucontrol.vhd|
 !i113 1
-o-work work -O0
-tExplicit 1 NoCoverage 1
+Z11 o-work work -O0
+Z12 tExplicit 1 NoCoverage 1
+Abehavorial
+R2
+R3
+Z13 DEx4 work 10 alucontrol 0 22 gd7JUCa:5NWONbQoFano?3
+l13
+L12
+V2BB;WR9^@fO];aMZ_]2NH3
+!s100 F[9FTahL4TS27X^E:Hi9z0
+R6
+33
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
