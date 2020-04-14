@@ -13,26 +13,65 @@ architecture behavorial of alucontrol is
 begin
 
 if i_OP = "000000" then 
-	with i_FI select
-		  o_F <= 	"00000" when "000000", --sll
-					"00001" when "000010", --srl
-					"00010" when "000011", --sra
-					"00011" when "000100", --sllv
-					"00100" when "000110", --srlv
-					"00101" when "000111", --srav
-					"00110" when "001000", --jr
-					"00111" when "011001", --multu
-					"01000" when "100000", --add
-					"01001" when "100001", --addu
-					"01010" when "100010", --sub
-					"01011" when "100011", --subu
-					"01100" when "100100", --and
-					"01101" when "100101", --or
-					"01110" when "100110", --xor
-					"01111" when "100111", --nor
-					"10000" when "101010", --slt
-					"10001" when "101011"; --sltu
-					
+
+	if i_FI = "000000" then
+		o_F <= "00000"; --sll
+		
+	elsif i_FI = "000010" then
+		o_F <= "00001"; --srl
+		
+	elsif i_FI = "000011" then
+		o_F <= "00010"; --sra
+		
+	elsif i_FI = "000100" then
+		o_F <= "00011"; --sllv
+		
+	elsif i_FI = "000110" then
+		o_F <= "00100"; --srlv 
+		
+	elsif i_FI = "000111" then
+		o_F <= "00101"; --srav
+		
+	elsif i_FI = "001000" then
+		o_F <= "00110"; --jr
+		
+	elsif i_FI = "011001" then
+		o_F <= "00111"; --multu
+		
+	elsif i_FI = "100000" then
+		o_F <= "01000"; --add
+		
+	elsif i_FI = "100001" then
+		o_F <= "01001"; --addu
+	
+	elsif i_FI = "100010" then
+		o_F <= "01010"; --sub
+	
+	elsif i_FI = "100011" then
+		o_F <= "01011"; --subu
+		
+	elsif i_FI = "100100" then
+		o_F <= "01100"; --and
+
+	elsif i_FI = "100101" then
+		o_F <= "01101"; --or
+
+	elsif i_FI = "100110" then
+		o_F <= "01110"; --xor	
+
+	elsif i_FI = "100111" then
+		o_F <= "01111"; --nor
+
+	elsif i_FI = "101010" then
+		o_F <= "10000"; --slt
+
+	elsif i_FI = "101011" then
+		o_F <= "10001"; --sltu
+
+	else
+		null;
+	end if
+	
 elsif i_OP = "000010" then 
 	o_F <= "10010"; --j
 	
@@ -73,7 +112,10 @@ elsif i_OP = "100011" then
 	o_F <= "11110"; --lw		
 	
 elsif i_OP = "101011" then 
-	o_F <= "11111"; --sw	
+	o_F <= "11111"; --sv
+	
+else
+	null;
 	
 end if;	
 end behavorial;
