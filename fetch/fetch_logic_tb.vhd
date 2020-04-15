@@ -80,9 +80,9 @@ BEGIN
 		WAIT FOR 100 ns;
 
 		-- TEST 5:	BRANCH AND JUMP
-		i_tBranch <= '1'; -- disable branch
-		i_tJump <= '1'; -- disable jump
-		-- when both jump and branch are enabled we just increment the PC by 4
+		i_tBranch <= '1'; -- enable branch
+		i_tJump <= '1'; -- enable jump
+		-- jump using the 26 bit immediate 
 
 		i_tPC <= x"E1111111"; -- PC = 0 for easy testing
 		i_tinstr <= x"11111111"; -- jump address is 26 bit imm, o_PC should be driven to i_instr(31-28) & 0x01111111 = 0xE4444444
