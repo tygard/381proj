@@ -71,7 +71,7 @@ R12
 Astructure
 R2
 R3
-Z20 DEx4 work 17 barrel_decoder_tb 0 22 @Qzi;2LJOPXaFK09^Yj`A1
+DEx4 work 17 barrel_decoder_tb 0 22 @Qzi;2LJOPXaFK09^Yj`A1
 l24
 L7
 Vm634[AoX60Y9eNRMJgTYB0
@@ -83,6 +83,84 @@ R16
 R17
 R18
 R19
+!i113 1
+R11
+R12
+Efetch_logic
+Z20 w1586909358
+R2
+R3
+R0
+Z21 8C:/School/CPRE381/381proj/fetch/fetch_logic.vhd
+Z22 FC:/School/CPRE381/381proj/fetch/fetch_logic.vhd
+l0
+L14
+VZ1aJXHh5>W?0DWBKTF4XK2
+!s100 <;2[kB`QD]2_E@J36KVj<1
+R6
+32
+Z23 !s110 1586912930
+!i10b 1
+Z24 !s108 1586912930.000000
+Z25 !s90 -reportprogress|300|-work|work|C:/School/CPRE381/381proj/fetch/fetch_logic.vhd|
+Z26 !s107 C:/School/CPRE381/381proj/fetch/fetch_logic.vhd|
+!i113 1
+R11
+R12
+Astructure
+R2
+R3
+DEx4 work 11 fetch_logic 0 22 Z1aJXHh5>W?0DWBKTF4XK2
+l64
+L25
+VGhU3Ah@oeHn>>k;oaeS>i1
+!s100 DL8?0nGem^kOh6]ml9DJl1
+R6
+32
+R23
+!i10b 1
+R24
+R25
+R26
+!i113 1
+R11
+R12
+Efetch_logic_tb
+Z27 w1586909279
+R2
+R3
+R0
+Z28 8C:/School/CPRE381/381proj/fetch/fetch_logic_tb.vhd
+Z29 FC:/School/CPRE381/381proj/fetch/fetch_logic_tb.vhd
+l0
+L4
+VHR7Ng9NHI_aacSEo:mzSC3
+!s100 0@B`imTV?4FmVLano_XM12
+R6
+32
+R23
+!i10b 1
+R24
+Z30 !s90 -reportprogress|300|-work|work|C:/School/CPRE381/381proj/fetch/fetch_logic_tb.vhd|
+Z31 !s107 C:/School/CPRE381/381proj/fetch/fetch_logic_tb.vhd|
+!i113 1
+R11
+R12
+Astructure
+R2
+R3
+DEx4 work 14 fetch_logic_tb 0 22 HR7Ng9NHI_aacSEo:mzSC3
+l28
+L11
+VY:BC6g?dAka8:i?il=Y;A3
+!s100 ><9?[SdO36z0`aBLj810X2
+R6
+32
+R23
+!i10b 1
+R24
+R30
+R31
 !i113 1
 R11
 R12

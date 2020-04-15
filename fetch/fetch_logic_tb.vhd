@@ -10,7 +10,6 @@ END fetch_logic_tb;
 
 ARCHITECTURE structure OF fetch_logic_tb IS
 	COMPONENT fetch_logic IS
-		--generic(S : integer := 32);
 		PORT (
 			i_Branch : IN std_logic;
 			i_Jump : IN std_logic;
@@ -48,7 +47,6 @@ BEGIN
 		i_tPC <= x"00000000"; -- PC = 0 for easy testing
 		i_tinstr <= x"33333333"; -- for this test inst doesnt matter, just PC+4
 		-- ^^^ instruction input (when branch the address is lower 16 bits, when jump is lower 26 bits)
-
 		WAIT FOR 100 ns;
 
 		-- TEST 2: BRANCH
@@ -57,9 +55,8 @@ BEGIN
 		-- branch using the 16 bit immediate 
 
 		i_tPC <= x"00000000"; -- PC = 0 for easy testing
-		i_tinstr <= x"00001111"; -- branch address is 16 bit imm, o_PC should be driven to i_PC+4 + 0x00004444 = 0x00004445 
+		i_tinstr <= x"00001111"; -- branch address is 16 bit imm, o_PC should be driven to i_PC+4 + 0x00004444 = 0x00004448 
 		-- ^^^ instruction input (when branch the address is lower 16 bits, when jump is lower 26 bits)
-
 		WAIT FOR 100 ns;
 
 		-- TEST 3: BRANCH
@@ -68,9 +65,8 @@ BEGIN
 		-- branch using the 16 bit immediate 
 
 		i_tPC <= x"00000000"; -- PC = 0 for easy testing
-		i_tinstr <= x"00001010"; -- branch address is 16 bit imm, o_PC should be driven to i_PC+4 + 0x00004040 = 0x00004041 
+		i_tinstr <= x"00001010"; -- branch address is 16 bit imm, o_PC should be driven to i_PC+4 + 0x00004040 = 0x00004044 
 		-- ^^^ instruction input (when branch the address is lower 16 bits, when jump is lower 26 bits)
-
 		WAIT FOR 100 ns;
 
 		-- TEST 4: JUMP
@@ -81,7 +77,6 @@ BEGIN
 		i_tPC <= x"F0000000"; -- top 4 bits are set to 1's to test concatenation
 		i_tinstr <= x"02222222"; -- jump address is 26 bit imm, o_PC should be driven to i_instr(31-28) & 0x08888888 = 0xF8888888
 		-- ^^^ instruction input (when jump the address is lower 26 bits, when jump is lower 26 bits)
-
 		WAIT FOR 100 ns;
 
 		-- TEST 5:	BRANCH AND JUMP
@@ -92,7 +87,6 @@ BEGIN
 		i_tPC <= x"E1111111"; -- PC = 0 for easy testing
 		i_tinstr <= x"11111111"; -- jump address is 26 bit imm, o_PC should be driven to i_instr(31-28) & 0x01111111 = 0xE4444444
 		-- ^^^ instruction input (when branch the address is lower 16 bits, when jump is lower 26 bits)
-
 		WAIT FOR 100 ns;
 
 	END PROCESS;

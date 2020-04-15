@@ -62,18 +62,6 @@ ARCHITECTURE structure OF fetch_logic IS
 	SIGNAL s_PC4 : std_logic_vector(31 DOWNTO 0);
 
 BEGIN
-	-- shift left SEBA, store in SEABSL2
-	s_SEBASL2(31 DOWNTO 2) <= s_SEBA(29 DOWNTO 0);
-	s_SEBASL2(1) <= '0';
-	s_SEBASL2(0) <= '0';
-
-	-- shift left inst[25:0] by 2 bits, store in JASL2
-	s_JASL2 <= i_instr(25 DOWNTO 0) & "00";
-	s_JASL2(27 DOWNTO 2) <= i_instr(25 DOWNTO 0);
-	s_JASL2(1) <= '0';
-	s_JASL2(0) <= '0';
-	-- concatenate PC+4 and JASL2
-	s_JA <= s_PC4(31 DOWNTO 28) & s_JASL2(27 DOWNTO 0);
 	extender0 : extender
 	PORT MAP(
 		input => i_instr(15 DOWNTO 0),
@@ -81,14 +69,24 @@ BEGIN
 		output => s_SEBA
 	);
 
+	-- shift left SEBA, store in SEABSL2
+	s_SEBASL2(31 DOWNTO 0) <= s_SEBA(29 DOWNTO 0) & "00";
+
 	adder0 : adder_N_bit
 	PORT MAP(
 		i_A => i_PC,
-		i_B => x"00000001", -- add 4 to the PC
+		i_B => x"00000004", -- add 4 to the PC
 		i_Cin => '0', -- no carry in
 		o_S => s_PC4,
 		o_Cout => OPEN -- we dont use the Cout because the PC will never have its MSB increased
 	);
+
+	-- shift left inst[25:0] by 2 bits, store in JASL2
+	s_JASL2 <= i_instr(25 DOWNTO 0) & "00";
+	s_JASL2(27 DOWNTO 0) <= i_instr(25 DOWNTO 0) & "00";
+
+	-- concatenate PC+4 and JASL2
+	s_JA <= s_PC4(31 DOWNTO 28) & s_JASL2(27 DOWNTO 0);
 
 	adder1 : adder_N_bit
 	PORT MAP(
