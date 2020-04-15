@@ -1,0 +1,88 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/School/CPRE381/381proj/barrel_decoder
+Ebarrel_decoder
+Z1 w1586903508
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+R0
+Z4 8C:/School/CPRE381/381proj/barrel_decoder/barrel_decoder.vhd
+Z5 FC:/School/CPRE381/381proj/barrel_decoder/barrel_decoder.vhd
+l0
+L12
+V=@_BhKG:0iWjf[SnLQ=:E2
+!s100 ^kaZD4RNK^5@Mih;9d@5X1
+Z6 OP;C;10.4a;61
+32
+Z7 !s110 1586910886
+!i10b 1
+Z8 !s108 1586910886.000000
+Z9 !s90 -reportprogress|300|-work|work|C:/School/CPRE381/381proj/barrel_decoder/barrel_decoder.vhd|
+Z10 !s107 C:/School/CPRE381/381proj/barrel_decoder/barrel_decoder.vhd|
+!i113 1
+Z11 o-work work -O0
+Z12 tExplicit 1
+Adataflow
+R2
+R3
+DEx4 work 14 barrel_decoder 0 22 =@_BhKG:0iWjf[SnLQ=:E2
+l24
+L22
+VoIkfAi=]L]PXd6HHEHRAQ1
+!s100 GheDTOQ`9g7>4l;_E_A6a3
+R6
+32
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Ebarrel_decoder_tb
+Z13 w1586910989
+R2
+R3
+R0
+Z14 8C:/School/CPRE381/381proj/barrel_decoder/barrel_decoder_tb.vhd
+Z15 FC:/School/CPRE381/381proj/barrel_decoder/barrel_decoder_tb.vhd
+l0
+L4
+V@Qzi;2LJOPXaFK09^Yj`A1
+!s100 cBQVz6oCU>Mi:1RIBP_L41
+R6
+32
+Z16 !s110 1586911061
+!i10b 1
+Z17 !s108 1586911061.000000
+Z18 !s90 -reportprogress|300|-work|work|C:/School/CPRE381/381proj/barrel_decoder/barrel_decoder_tb.vhd|
+Z19 !s107 C:/School/CPRE381/381proj/barrel_decoder/barrel_decoder_tb.vhd|
+!i113 1
+R11
+R12
+Astructure
+R2
+R3
+Z20 DEx4 work 17 barrel_decoder_tb 0 22 @Qzi;2LJOPXaFK09^Yj`A1
+l24
+L7
+Vm634[AoX60Y9eNRMJgTYB0
+!s100 2`>G4;RZZgmTakoGe:89Y3
+R6
+32
+R16
+!i10b 1
+R17
+R18
+R19
+!i113 1
+R11
+R12
