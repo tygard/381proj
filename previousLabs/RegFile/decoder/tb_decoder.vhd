@@ -1,0 +1,58 @@
+library IEEE;
+use IEEE.std_logic_1164.all;
+
+entity tb_decoder is
+  generic(gCLK_HPER   : time := 50 ns);
+end tb_decoder;
+
+architecture behavior of tb_decoder is
+  
+ constant cCLK_PER  : time := gCLK_HPER * 2;
+
+  component decoder5_32
+    port(i_A  : in std_logic_vector(4 downto 0);
+         o_D  : out std_logic_vector(31 downto 0));
+  end component;
+ 
+  signal s_CLK : std_logic;
+  signal s_In : std_logic_vector(4 downto 0);
+  signal s_Out : std_logic_vector(31 downto 0);
+
+begin
+
+  
+  dec: decoder5_32
+  port map(s_In,s_Out);
+
+ 
+  CLK: process
+  begin
+    s_CLK <= '0';
+    wait for gCLK_HPER;
+    s_CLK <= '1';
+    wait for gCLK_HPER;
+  end process;
+  
+  TB: process
+  begin
+
+    s_In <= "00000";
+    wait for cCLK_PER;
+
+    s_In <= "00001";
+    wait for cCLK_PER;  
+
+    s_In <= "00010";
+    wait for cCLK_PER;  
+
+    s_In <= "00011";
+    wait for cCLK_PER;  
+
+    s_In <= "11111";
+    wait for cCLK_PER;  
+
+    wait;
+  end process;
+  
+  
+  end behavior;

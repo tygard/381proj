@@ -1,0 +1,386 @@
+m255
+K4
+z2
+!s11e vcom 2019.3 2019.07, Jul 24 2019
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dU:/ISU/2020 Spring/cpre381/381repo/381/addersub
+T_opt
+!s110 1581096324
+V3DGdHOa4gPg;kfE2Fn4ja0
+04 25 9 work addersubtracter_testbench structure 1
+=1-509a4c4766fb-5e3d9d83-37a-26c4
+o-quiet -auto_acc_if_foreign -work work +acc
+tCvgOpt 0
+n@_opt
+OL;O;2019.3;69
+R0
+Eadder
+Z1 w1580774715
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 -1
+R0
+Z4 8U:/ISU/2020 Spring/cpre381/381repo/381/addersub/Adder.vhd
+Z5 FU:/ISU/2020 Spring/cpre381/381repo/381/addersub/Adder.vhd
+l0
+L26
+Vie]<j?[Y^l8Q3D=EIIC_:0
+!s100 ?M@C[n:@^fhmgGDG`5ibH3
+Z6 OL;C;2019.3;69
+32
+Z7 !s110 1581093903
+!i10b 1
+Z8 !s108 1581093903.000000
+Z9 !s90 -reportprogress|300|-work|work|U:/ISU/2020 Spring/cpre381/381repo/381/addersub/Adder.vhd|
+Z10 !s107 U:/ISU/2020 Spring/cpre381/381repo/381/addersub/Adder.vhd|
+!i113 0
+Z11 o-work work
+Z12 tExplicit 1 CvgOpt 0
+Abehavior
+R2
+R3
+DEx4 work 5 adder 0 22 ie]<j?[Y^l8Q3D=EIIC_:0
+!i122 -1
+l36
+L35
+V;1<0UOS7@[zPo1R`OK7WI2
+!s100 cB67aGlEFcN>h>lDnF1Sh3
+R6
+32
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 0
+R11
+R12
+Eaddersubtracter_testbench
+Z13 w1581455000
+R2
+Z14 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z15 dC:/School/CPRE381/lab/381/addersub
+Z16 8C:/School/CPRE381/lab/381/addersub/AdderSubtracter_Testbench.vhd
+Z17 FC:/School/CPRE381/lab/381/addersub/AdderSubtracter_Testbench.vhd
+l0
+L5
+VgV4JJ2B[?PUi`HFg:oa;M2
+!s100 <68@iSAk>R^Cb=l:NWT?@3
+Z18 OP;C;10.4a;61
+33
+Z19 !s110 1581455341
+!i10b 1
+Z20 !s108 1581455341.000000
+Z21 !s90 -reportprogress|300|-work|work|C:/School/CPRE381/lab/381/addersub/AdderSubtracter_Testbench.vhd|
+Z22 !s107 C:/School/CPRE381/lab/381/addersub/AdderSubtracter_Testbench.vhd|
+!i113 1
+Z23 o-work work -O0
+Z24 tExplicit 1 NoCoverage 1
+Astructure
+R2
+R14
+Z25 DEx4 work 25 addersubtracter_testbench 0 22 gV4JJ2B[?PUi`HFg:oa;M2
+l32
+L10
+Z26 VgfbbDIPKZ]d=Pm<gm^E@03
+Z27 !s100 Vl87c?gk?eRN`;gnTHBm;3
+R18
+33
+R19
+!i10b 1
+R20
+R21
+R22
+!i113 1
+R23
+R24
+Eandg2
+Z28 w1580774717
+R2
+R3
+!i122 -1
+R0
+Z29 8U:/ISU/2020 Spring/cpre381/381repo/381/addersub/andg2.vhd
+Z30 FU:/ISU/2020 Spring/cpre381/381repo/381/addersub/andg2.vhd
+l0
+L23
+VQ@<<<@nlJ=eiIl4BJDFzW2
+!s100 YT?bGzEmcFo:DlnoC^B4_0
+R6
+32
+Z31 !s110 1581093904
+!i10b 1
+R8
+Z32 !s90 -reportprogress|300|-work|work|U:/ISU/2020 Spring/cpre381/381repo/381/addersub/andg2.vhd|
+Z33 !s107 U:/ISU/2020 Spring/cpre381/381repo/381/addersub/andg2.vhd|
+!i113 0
+R11
+R12
+Adataflow
+R2
+R3
+DEx4 work 5 andg2 0 22 Q@<<<@nlJ=eiIl4BJDFzW2
+!i122 -1
+l32
+L31
+VJVOzCk?IH:iJ5bCRU`CK13
+!s100 I`@Z@UBObS]<7m8bPgKUS1
+R6
+32
+R31
+!i10b 1
+R8
+R32
+R33
+!i113 0
+R11
+R12
+Efulladder
+Z34 w1580775326
+R2
+R3
+!i122 -1
+R0
+Z35 8U:/ISU/2020 Spring/cpre381/381repo/381/addersub/fulladder.vhd
+Z36 FU:/ISU/2020 Spring/cpre381/381repo/381/addersub/fulladder.vhd
+l0
+L4
+VClV:>1<<iAabG>J1WBKc:1
+!s100 [EDAoIBgZY<Mh7eBUfOoT1
+R6
+32
+R31
+!i10b 1
+Z37 !s108 1581093904.000000
+Z38 !s90 -reportprogress|300|-work|work|U:/ISU/2020 Spring/cpre381/381repo/381/addersub/fulladder.vhd|
+Z39 !s107 U:/ISU/2020 Spring/cpre381/381repo/381/addersub/fulladder.vhd|
+!i113 0
+R11
+R12
+Astructure
+R2
+R3
+DEx4 work 9 fulladder 0 22 ClV:>1<<iAabG>J1WBKc:1
+!i122 -1
+l36
+L14
+V>b2H1>KSmaiHDRoD<YT:]2
+!s100 mGfdea:R39BDl`e8?PVLA3
+R6
+32
+R31
+!i10b 1
+R37
+R38
+R39
+!i113 0
+R11
+R12
+Einvg
+Z40 w1580782148
+R2
+R3
+!i122 -1
+R0
+Z41 8U:/ISU/2020 Spring/cpre381/381repo/381/addersub/invg.vhd
+Z42 FU:/ISU/2020 Spring/cpre381/381repo/381/addersub/invg.vhd
+l0
+L23
+VQ?6hb9ePk@>kZZ9k]hNSO3
+!s100 _XK?_^5z0Rm1<k12?;5R?2
+R6
+32
+R31
+!i10b 1
+R37
+Z43 !s90 -reportprogress|300|-work|work|U:/ISU/2020 Spring/cpre381/381repo/381/addersub/invg.vhd|
+Z44 !s107 U:/ISU/2020 Spring/cpre381/381repo/381/addersub/invg.vhd|
+!i113 0
+R11
+R12
+Adataflow
+R2
+R3
+DEx4 work 4 invg 0 22 Q?6hb9ePk@>kZZ9k]hNSO3
+!i122 -1
+l31
+L30
+Vch>li:oKYZkCO5]GamViK1
+!s100 bk7I76o8e1LURdoZEQb8H0
+R6
+32
+R31
+!i10b 1
+R37
+R43
+R44
+!i113 0
+R11
+R12
+Emux2t1
+R28
+R2
+R3
+!i122 -1
+R0
+Z45 8U:/ISU/2020 Spring/cpre381/381repo/381/addersub/mux2t1.vhd
+Z46 FU:/ISU/2020 Spring/cpre381/381repo/381/addersub/mux2t1.vhd
+l0
+L4
+VB=4znkF^eb=kN<MhRJ`Gb1
+!s100 ?A1Nfz8P9hmgG4`io:c640
+R6
+32
+Z47 !s110 1581093905
+!i10b 1
+R37
+Z48 !s90 -reportprogress|300|-work|work|U:/ISU/2020 Spring/cpre381/381repo/381/addersub/mux2t1.vhd|
+Z49 !s107 U:/ISU/2020 Spring/cpre381/381repo/381/addersub/mux2t1.vhd|
+!i113 0
+R11
+R12
+Astructure
+R2
+R3
+DEx4 work 6 mux2t1 0 22 B=4znkF^eb=kN<MhRJ`Gb1
+!i122 -1
+l37
+L13
+V5LX[OL@mRNODG8[oAzRI_2
+!s100 IfVN95:dWa2GPk:g8Rbjd0
+R6
+32
+R47
+!i10b 1
+R37
+R48
+R49
+!i113 0
+R11
+R12
+Enbit_adder_sub
+Z50 w1581454490
+R2
+R14
+R15
+Z51 8C:/School/CPRE381/lab/381/addersub/nbit_adder_sub.vhd
+Z52 FC:/School/CPRE381/lab/381/addersub/nbit_adder_sub.vhd
+l0
+L4
+VIm9Io5JmbVFQ3Dcd8HWbI3
+!s100 36lg]m>=Ha>d]eN5O5<KV3
+R18
+33
+Z53 !s110 1581455338
+!i10b 1
+Z54 !s108 1581455338.000000
+Z55 !s90 -reportprogress|300|-work|work|C:/School/CPRE381/lab/381/addersub/nbit_adder_sub.vhd|
+Z56 !s107 C:/School/CPRE381/lab/381/addersub/nbit_adder_sub.vhd|
+!i113 1
+R23
+R24
+Astructure
+R2
+R14
+DEx4 work 14 nbit_adder_sub 0 22 Im9Io5JmbVFQ3Dcd8HWbI3
+l55
+L16
+Vb4J3ozLK1z:5Un<^2TV2i0
+!s100 ;_9Q>lB5fbhmWmQd6zAoa3
+R18
+33
+R53
+!i10b 1
+R54
+R55
+R56
+!i113 1
+R23
+R24
+Eorg2
+R28
+R2
+R3
+!i122 -1
+R0
+Z57 8U:/ISU/2020 Spring/cpre381/381repo/381/addersub/org2.vhd
+Z58 FU:/ISU/2020 Spring/cpre381/381repo/381/addersub/org2.vhd
+l0
+L23
+V[C`FCj=kL0CTBYLlbjJzD3
+!s100 bGQ1F9eW^Q17OoL9h4g7z2
+R6
+32
+R47
+!i10b 1
+Z59 !s108 1581093905.000000
+Z60 !s90 -reportprogress|300|-work|work|U:/ISU/2020 Spring/cpre381/381repo/381/addersub/org2.vhd|
+Z61 !s107 U:/ISU/2020 Spring/cpre381/381repo/381/addersub/org2.vhd|
+!i113 0
+R11
+R12
+Adataflow
+R2
+R3
+DEx4 work 4 org2 0 22 [C`FCj=kL0CTBYLlbjJzD3
+!i122 -1
+l32
+L31
+VNHGn>Kh:]BEh4o]ImiG<d3
+!s100 h5_AzR3TdRA0a_K=dQ>mI2
+R6
+32
+R47
+!i10b 1
+R59
+R60
+R61
+!i113 0
+R11
+R12
+Exorg2
+R28
+R2
+R3
+!i122 -1
+R0
+Z62 8U:/ISU/2020 Spring/cpre381/381repo/381/addersub/xorg2.vhd
+Z63 FU:/ISU/2020 Spring/cpre381/381repo/381/addersub/xorg2.vhd
+l0
+L23
+V;hb`C0MKik;h36`3`SzM60
+!s100 [hI[mXFH4_j16U;>U1Lfn2
+R6
+32
+Z64 !s110 1581093906
+!i10b 1
+Z65 !s108 1581093906.000000
+Z66 !s90 -reportprogress|300|-work|work|U:/ISU/2020 Spring/cpre381/381repo/381/addersub/xorg2.vhd|
+Z67 !s107 U:/ISU/2020 Spring/cpre381/381repo/381/addersub/xorg2.vhd|
+!i113 0
+R11
+R12
+Adataflow
+R2
+R3
+DEx4 work 5 xorg2 0 22 ;hb`C0MKik;h36`3`SzM60
+!i122 -1
+l32
+L31
+VbmLohbkYjJQ`?EHUY>LoL1
+!s100 Z6[FAPS4fBLB`F?OO<AY72
+R6
+32
+R64
+!i10b 1
+R65
+R66
+R67
+!i113 0
+R11
+R12

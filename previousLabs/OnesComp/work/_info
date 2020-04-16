@@ -1,0 +1,184 @@
+m255
+K4
+z2
+!s11e vcom 2019.3 2019.07, Jul 24 2019
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dU:/381/Lab1/OnesComp
+T_opt
+!s110 1579883474
+Vb[<5oSZP<DM=eJ7UVfVM@0
+04 9 8 work testbench behavior 1
+=1-509a4c473734-5e2b1bd1-39a-28c4
+o-quiet -auto_acc_if_foreign -work work
+tCvgOpt 0
+n@_opt
+OL;O;2019.3;69
+Einvg
+Z1 w1575899277
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 -1
+R0
+Z4 8U:/381/Lab1/OnesComp/invg.vhd
+Z5 FU:/381/Lab1/OnesComp/invg.vhd
+l0
+L23
+VQ?6hb9ePk@>kZZ9k]hNSO3
+!s100 _XK?_^5z0Rm1<k12?;5R?2
+Z6 OL;C;2019.3;69
+32
+Z7 !s110 1579883454
+!i10b 1
+Z8 !s108 1579883454.000000
+Z9 !s90 -reportprogress|300|-work|work|U:/381/Lab1/OnesComp/invg.vhd|
+Z10 !s107 U:/381/Lab1/OnesComp/invg.vhd|
+!i113 0
+Z11 o-work work
+Z12 tExplicit 1 CvgOpt 0
+Adataflow
+R2
+R3
+DEx4 work 4 invg 0 22 Q?6hb9ePk@>kZZ9k]hNSO3
+!i122 -1
+l31
+L30
+Vch>li:oKYZkCO5]GamViK1
+!s100 bk7I76o8e1LURdoZEQb8H0
+R6
+32
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 0
+R11
+R12
+Eones_compliment
+Z13 w1567554414
+R2
+R3
+!i122 -1
+R0
+Z14 8U:/381/Lab1/OnesComp/Ones_Complementer_structural.vhd
+Z15 FU:/381/Lab1/OnesComp/Ones_Complementer_structural.vhd
+l0
+L4
+V>k<HO1dBXW^d;z`PG:i=n1
+!s100 RNma`C1DZ20[EB[J_IZNL0
+R6
+32
+Z16 !s110 1579883455
+!i10b 1
+Z17 !s108 1579883455.000000
+Z18 !s90 -reportprogress|300|-work|work|U:/381/Lab1/OnesComp/Ones_Complementer_structural.vhd|
+Z19 !s107 U:/381/Lab1/OnesComp/Ones_Complementer_structural.vhd|
+!i113 0
+R11
+R12
+Astructure
+R2
+R3
+DEx4 work 15 ones_compliment 0 22 >k<HO1dBXW^d;z`PG:i=n1
+!i122 -1
+l18
+L11
+VP3;U5YFTh<_7Q>Y=Wo6OT2
+!s100 7iol9YS3Dla1QV^`lM`cP3
+R6
+32
+R16
+!i10b 1
+R17
+R18
+R19
+!i113 0
+R11
+R12
+Eones_compliment_dataflow
+Z20 w1567554934
+R2
+R3
+!i122 -1
+R0
+Z21 8U:/381/Lab1/OnesComp/Ones_Complementer_dataflow.vhd
+Z22 FU:/381/Lab1/OnesComp/Ones_Complementer_dataflow.vhd
+l0
+L4
+V>FXFD`Zak2a>cCKRnG>Sn2
+!s100 f6H^NUecnanDl7PMiCNIC3
+R6
+32
+R16
+!i10b 1
+R17
+Z23 !s90 -reportprogress|300|-work|work|U:/381/Lab1/OnesComp/Ones_Complementer_dataflow.vhd|
+Z24 !s107 U:/381/Lab1/OnesComp/Ones_Complementer_dataflow.vhd|
+!i113 0
+R11
+R12
+Adataflow
+R2
+R3
+DEx4 work 24 ones_compliment_dataflow 0 22 >FXFD`Zak2a>cCKRnG>Sn2
+!i122 -1
+l13
+L12
+VcZV7XTojdF<7^XJi7Jc;?2
+!s100 NWPMA<Z0G37PkSX]ZA`6A1
+R6
+32
+R16
+!i10b 1
+R17
+R23
+R24
+!i113 0
+R11
+R12
+Etestbench
+Z25 w1567554587
+R2
+R3
+!i122 -1
+R0
+Z26 8U:/381/Lab1/OnesComp/testbench.vhd
+Z27 FU:/381/Lab1/OnesComp/testbench.vhd
+l0
+L6
+VCY>oRYQf<dgGP37fQb^XH2
+!s100 Sia`T9M0VEi3U>5;=Vj7d3
+R6
+32
+R16
+!i10b 1
+R17
+Z28 !s90 -reportprogress|300|-work|work|U:/381/Lab1/OnesComp/testbench.vhd|
+Z29 !s107 U:/381/Lab1/OnesComp/testbench.vhd|
+!i113 0
+R11
+R12
+Abehavior
+R2
+R3
+DEx4 work 9 testbench 0 22 CY>oRYQf<dgGP37fQb^XH2
+!i122 -1
+l29
+L10
+VM32Q=SF98BkddVKCF`YKN3
+!s100 9@j=AeM]JEIokM:mzbV=n1
+R6
+32
+R16
+!i10b 1
+R17
+R28
+R29
+!i113 0
+R11
+R12

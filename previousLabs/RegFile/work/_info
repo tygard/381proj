@@ -1,0 +1,143 @@
+m255
+K4
+z2
+!s11e vcom 2019.3 2019.07, Jul 24 2019
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dU:/381/Lab2/RegFile
+T_opt
+!s110 1580779237
+V@`m0OmfZP[j^B;<og?JOE2
+04 13 8 work n_register_tb behavior 1
+=3-509a4c473734-5e38c6e4-1ec-2b98
+o-quiet -auto_acc_if_foreign -work work
+tCvgOpt 0
+n@_opt
+OL;O;2019.3;69
+Edffg
+Z1 w1577987095
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 -1
+R0
+Z4 8U:/381/Lab2/RegFile/dffg.vhd
+Z5 FU:/381/Lab2/RegFile/dffg.vhd
+l0
+L23
+V<]b9Vm3e`GAN;Cnj:57L>2
+!s100 T4gcXQGMCgKJbn8XhBM;b0
+Z6 OL;C;2019.3;69
+32
+Z7 !s110 1580778189
+!i10b 1
+Z8 !s108 1580778188.000000
+Z9 !s90 -reportprogress|300|-work|work|U:/381/Lab2/RegFile/dffg.vhd|
+Z10 !s107 U:/381/Lab2/RegFile/dffg.vhd|
+!i113 0
+Z11 o-work work
+Z12 tExplicit 1 CvgOpt 0
+Amixed
+R2
+R3
+DEx4 work 4 dffg 0 22 <]b9Vm3e`GAN;Cnj:57L>2
+!i122 -1
+l37
+L33
+V`CHXPZKVEek`3gFWL_zFm2
+!s100 iOdlTUid@@]UimFK_53^C1
+R6
+32
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 0
+R11
+R12
+En_register
+Z13 w1580778180
+R2
+R3
+!i122 -1
+R0
+Z14 8U:/381/Lab2/RegFile/n_register.vhd
+Z15 FU:/381/Lab2/RegFile/n_register.vhd
+l0
+L5
+V??_ea5lQnY=Lzzl]D0cLF2
+!s100 WaN0aH@=QGVK^U]7zD;o[1
+R6
+32
+Z16 !s110 1580778859
+!i10b 1
+Z17 !s108 1580778858.000000
+Z18 !s90 -reportprogress|300|-work|work|U:/381/Lab2/RegFile/n_register.vhd|
+Z19 !s107 U:/381/Lab2/RegFile/n_register.vhd|
+!i113 0
+R11
+R12
+Astructure
+R2
+R3
+DEx4 work 10 n_register 0 22 ??_ea5lQnY=Lzzl]D0cLF2
+!i122 -1
+l27
+L15
+VYM_dfh@=fnoEE2QC>:5G`0
+!s100 6R^XS12;kIeg;Q:[Ac[;N1
+R6
+32
+R16
+!i10b 1
+R17
+R18
+R19
+!i113 0
+R11
+R12
+En_register_tb
+Z20 w1580779215
+R2
+R3
+!i122 -1
+R0
+Z21 8U:/381/Lab2/RegFile/n_register_tb.vhd
+Z22 FU:/381/Lab2/RegFile/n_register_tb.vhd
+l0
+L4
+Vi_DKXdcYkz`=V@@`imGdU0
+!s100 Rm:m0LR7hJPWjUYo=l63H1
+R6
+32
+Z23 !s110 1580779230
+!i10b 1
+Z24 !s108 1580779230.000000
+Z25 !s90 -reportprogress|300|-work|work|U:/381/Lab2/RegFile/n_register_tb.vhd|
+Z26 !s107 U:/381/Lab2/RegFile/n_register_tb.vhd|
+!i113 0
+R11
+R12
+Abehavior
+R2
+R3
+DEx4 work 13 n_register_tb 0 22 i_DKXdcYkz`=V@@`imGdU0
+!i122 -1
+l27
+L9
+VIFMiOb0KdMZVGlI<fWFzo0
+!s100 >5N3_;GnP2YX58N8`fQb]0
+R6
+32
+R23
+!i10b 1
+R24
+R25
+R26
+!i113 0
+R11
+R12
