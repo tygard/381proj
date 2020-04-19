@@ -35,6 +35,8 @@ BEGIN
 
 	s_OP  <= i_instruction(31 downto 26);
 	s_FN  <= i_instruction(5 downto 0);
+	process(s_OP, s_FN) is 
+	begin
 	
     if s_OP = "001000" then        --addi
 		o_immSign   	<= '1';
@@ -599,6 +601,6 @@ BEGIN
 			o_branch 		<= '0';
 		end if;
 	end if;
-	
+	end process;
 	
 END behavorial;
