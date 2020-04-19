@@ -1,89 +1,604 @@
--- barrelshift_32.vhd
+-- control.vhd
 -------------------------------------------------------------------------
--- DESCRIPTION: This file contains an implementation of a barrel shifter
--- for a 32-bit binary input with support for shifting in either
--- direction, both logically and arithmetically. The implementation
--- uses logarithmic shifting.
+-- DESCRIPTION: This file contains an implementation of a control unit.
 --
--- NOTES:
--- 2/21/2020 by zbesta::Design created.
 -------------------------------------------------------------------------
 
-library IEEE;
-use IEEE.std_logic_1164.all;
+LIBRARY IEEE;
+USE ieee.std_logic_1164.all;
 
-entity barrelshift_32 is
-  
-  port(i_SHAMT      : in std_logic_vector(4 downto 0);		 -- Shift amount input
-       i_D	        : in std_logic;     					 -- Shift direction input (0: left, 1: right)
-       i_T          : in std_logic;     					 -- Shift type input (0: logical, 1: arith.)
-	   i_X          : in std_logic_vector(31 downto 0);     -- Data value input
-       o_Y          : out std_logic_vector(31 downto 0));   -- Data value output
+ENTITY control IS
+  port(i_instruction       	 	: in std_logic_vector(31 downto 0);
+       o_immSign             	: out std_logic;
+	   o_MemToReg          		: out std_logic;
+	   o_sub             		: out std_logic;
+	   o_imm            		: out std_logic;
+	   o_lui           			: out std_logic;
+	   o_ALUOp         			: out std_logic_vector(5 downto 0);
+	   o_Shift		           	: out std_logic;
+	   o_leftShift           	: out std_logic;
+	   o_arithShift             : out std_logic;
+	   o_MemWrite           	: out std_logic;
+	   o_shiftReg           	: out std_logic;
+	   o_DestReg             	: out std_logic;
+	   o_jump           		: out std_logic;
+	   o_branch           		: out std_logic;);
+END control;
 
-end barrelshift_32;
+ARCHITECTURE behavorial OF control IS
 
-architecture structural of barrelshift_32 is
+	signal s_OP : std_logic_vector(5 downto 0);			-- OpCode Signal
+	signal s_FN : std_logic_vector(5 downto 0);			-- Function Signal
+	
 
-	-- Signals to handle connections between the MUX rows
-	signal s_iA : std_logic_vector(31 downto 0);		-- output of MUX A
-	signal s_iB : std_logic_vector(31 downto 0);		-- output of MUX B
-	signal s_iC : std_logic_vector(31 downto 0);		-- output of MUX C
-	signal s_iD : std_logic_vector(31 downto 0);		-- output of MUX D
+BEGIN
+
+	s_OP  <= i_instruction(31 downto 26);
+	s_FN  <= i_instruction(5 downto 0);
+	
+    if s_OP = "001000" then        --addi
+		o_immSign   	<= "1";
+		o_MemToReg  	<= "0";
+		o_sub           <= "0";
+		o_imm           <= "1";
+		o_lui           <= "0";
+		o_ALUOp         <= s_OP;
+		o_shift         <= "0";
+		o_leftShift     <= "0";
+		o_arithShift    <= "0";
+		o_MemWrite      <= "0";
+		o_shiftReg      <= "0";
+		o_DestReg       <= "1";
+		o_jump          <= "0";
+		o_branch 		<= "0";
+	end if;
+	
+	if s_OP = "000000" then        --add
+		if s_FN = "100000" then
+			o_immSign   	<= "0";
+			o_MemToReg  	<= "0";
+			o_sub           <= "0";
+			o_imm           <= "0";
+			o_lui           <= "0";
+			o_ALUOp         <= s_OP;
+			o_shift         <= "0";
+			o_leftShift     <= "0";
+			o_arithShift    <= "0";
+			o_MemWrite      <= "0";
+			o_shiftReg      <= "0";
+			o_DestReg       <= "0";
+			o_jump          <= "0";
+			o_branch 		<= "0";
+		end if;
+	end if;
+	
+	if s_OP = "001001" then        --addiu
+		o_immSign   	<= "0";
+		o_MemToReg  	<= "0";
+		o_sub           <= "0";
+		o_imm           <= "1";
+		o_lui           <= "0";
+		o_ALUOp         <= s_OP;
+		o_shift         <= "0";
+		o_leftShift     <= "0";
+		o_arithShift    <= "0";
+		o_MemWrite      <= "0";
+		o_shiftReg      <= "0";
+		o_DestReg       <= "1";
+		o_jump          <= "0";
+		o_branch 		<= "0";
+	end if;
+	
+	if s_OP = "000000" then        --addu
+		if s_FN = "100001" then
+			o_immSign   	<= "0";
+			o_MemToReg  	<= "0";
+			o_sub           <= "0";
+			o_imm           <= "0";
+			o_lui           <= "0";
+			o_ALUOp         <= s_OP;
+			o_shift         <= "0";	
+			o_leftShift     <= "0";
+			o_arithShift    <= "0";
+			o_MemWrite      <= "0";
+			o_shiftReg      <= "0";
+			o_DestReg       <= "0";
+			o_jump          <= "0";
+			o_branch 		<= "0";
+		end if;
+	end if;
+	
+	if s_OP = "000000" then        --and
+		if s_FN = "100100" then
+			o_immSign   	<= "0";
+			o_MemToReg  	<= "0";
+			o_sub           <= "0";
+			o_imm           <= "0";
+			o_lui           <= "0";
+			o_ALUOp         <= s_OP;
+			o_shift         <= "0";
+			o_leftShift     <= "0";
+			o_arithShift    <= "0";
+			o_MemWrite      <= "0";
+			o_shiftReg      <= "0";
+			o_DestReg       <= "0";
+			o_jump          <= "0";
+			o_branch 		<= "0";
+		end if;
+	end if;
+	
+	if s_OP = "001100" then        --andi
+		o_immSign   	<= "1";
+		o_MemToReg  	<= "0";
+		o_sub           <= "0";
+		o_imm           <= "1";
+		o_lui           <= "0";
+		o_ALUOp         <= s_OP;
+		o_shift         <= "0";
+		o_leftShift     <= "0";
+		o_arithShift    <= "0";
+		o_MemWrite      <= "0";
+		o_shiftReg      <= "0";
+		o_DestReg       <= "1";
+		o_jump          <= "0";
+		o_branch 		<= "0";
+	end if;
+	
+	if s_OP = "001111" then        --lui
+		o_immSign   	<= "0";
+		o_MemToReg  	<= "0";
+		o_sub           <= "0";
+		o_imm           <= "1";
+		o_lui           <= "1";
+		o_ALUOp         <= s_OP;
+		o_shift         <= "0";
+		o_leftShift     <= "0";
+		o_arithShift    <= "0";
+		o_MemWrite      <= "0";
+		o_shiftReg      <= "0";
+		o_DestReg       <= "1";
+		o_jump          <= "0";
+		o_branch 		<= "0";
+	end if;
+	
+	if s_OP = "100011" then        --lw
+		o_immSign   	<= "1";
+		o_MemToReg  	<= "1";
+		o_sub           <= "0";
+		o_imm           <= "1";
+		o_lui           <= "0";
+		o_ALUOp         <= s_OP;
+		o_shift         <= "0";
+		o_leftShift     <= "0";
+		o_arithShift    <= "0";
+		o_MemWrite      <= "0";
+		o_shiftReg      <= "0";
+		o_DestReg       <= "1";
+		o_jump          <= "0";
+		o_branch 		<= "0";
+	end if;
+              
+	if s_OP = "000000" then        --nor
+		if s_FN = "100111" then
+			o_immSign   	<= "0";
+			o_MemToReg  	<= "0";
+			o_sub           <= "0";
+			o_imm           <= "0";
+			o_lui           <= "0";
+			o_ALUOp         <= s_OP;
+			o_shift         <= "0";
+			o_leftShift     <= "0";
+			o_arithShift    <= "0";
+			o_MemWrite      <= "0";
+			o_shiftReg      <= "0";
+			o_DestReg       <= "0";
+			o_jump          <= "0";
+			o_branch 		<= "0";
+		end if;
+	end if;
+	
+	if s_OP = "000000" then        --xor
+		if s_FN = "100110" then
+			o_immSign   	<= "0";
+			o_MemToReg  	<= "0";
+			o_sub           <= "0";
+			o_imm           <= "0";
+			o_lui           <= "0";
+			o_ALUOp         <= s_OP;
+			o_shift         <= "0";
+			o_leftShift     <= "0";
+			o_arithShift    <= "0";
+			o_MemWrite      <= "0";
+			o_shiftReg      <= "0";
+			o_DestReg       <= "0";
+			o_jump          <= "0";
+			o_branch 		<= "0";
+		end if;
+	end if;
+	
+	if s_OP = "001110" then        --xori
+		o_immSign   	<= "1";
+		o_MemToReg  	<= "0";
+		o_sub           <= "0";
+		o_imm           <= "1";
+		o_lui           <= "0";
+		o_ALUOp         <= s_OP;
+		o_shift         <= "0";
+		o_leftShift     <= "0";
+		o_arithShift    <= "0";
+		o_MemWrite      <= "0";
+		o_shiftReg      <= "0";
+		o_DestReg       <= "1";
+		o_jump          <= "0";
+		o_branch 		<= "0";
+	end if;
+	
+	if s_OP = "000000" then        --or
+		if s_FN = "100101" then
+			o_immSign   	<= "0";
+			o_MemToReg  	<= "0";
+			o_sub           <= "0";
+			o_imm           <= "0";
+			o_lui           <= "0";
+			o_ALUOp         <= s_OP;
+			o_shift         <= "0";
+			o_leftShift     <= "0";
+			o_arithShift    <= "0";
+			o_MemWrite      <= "0";
+			o_shiftReg      <= "0";
+			o_DestReg       <= "0";
+			o_jump          <= "0";
+			o_branch 		<= "0";
+		end if;
+	end if;
+	
+	if s_OP = "001101" then        --ori
+		o_immSign   	<= "1";
+		o_MemToReg  	<= "0";
+		o_sub           <= "0";
+		o_imm           <= "1";
+		o_lui           <= "0";
+		o_ALUOp         <= s_OP;
+		o_shift         <= "0";
+		o_leftShift     <= "0";
+		o_arithShift    <= "0";
+		o_MemWrite      <= "0";
+		o_shiftReg      <= "0";
+		o_DestReg       <= "1";
+		o_jump          <= "0";
+		o_branch 		<= "0";
+	end if;
 	
 	
-	-- N-bit 2:1 MUX
-	component mux2t1_N
-		port(i_S          : in std_logic;
-			 i_D0         : in std_logic_vector(31 downto 0);
-			 i_D1         : in std_logic_vector(31 downto 0);
-			 o_O          : out std_logic_vector(31 downto 0));
-	end component;
+	if s_OP = "000000" then        --slt
+		if s_FN = "101010" then
+			o_immSign   	<= "0";
+			o_MemToReg  	<= "0";
+			o_sub           <= "0";
+			o_imm           <= "0";
+			o_lui           <= "0";
+			o_ALUOp         <= s_OP;
+			o_shift         <= "0";
+			o_leftShift     <= "0";
+			o_arithShift    <= "0";
+			o_MemWrite      <= "0";
+			o_shiftReg      <= "0";
+			o_DestReg       <= "0";
+			o_jump          <= "0";
+			o_branch 		<= "0";
+		end if;
+	end if;
 	
-	begin
-		-- TODO: add shift-right and arithmetic functionality before the first MUX
-		---------------------------------------------------------------------------
-		-- Level 0: leftmost MUX array (A) configured to shift 1 bit right
-		-- if the LSB of shift amount is 1
-		---------------------------------------------------------------------------
-		g_MUXA: mux2t1_N
-		port MAP(i_S               => i_SHAMT(0),
-				 i_D0			   => i_X,
-				 i_D1              => "0" & i_X(30 downto 0),	-- concatenate 
-				 o_O               => s_iA);
-				 
-		---------------------------------------------------------------------------
-		-- Level 1: MUX array B configured to shift 2 bits right
-		---------------------------------------------------------------------------
-		g_MUXB: mux2t1_N
-		port MAP(i_S               => i_SHAMT(1),
-				 i_D0			   => s_iA,
-				 i_D1              => "00" & s_iA(29 downto 0),
-				 o_O               => s_iB);
-				 
-		---------------------------------------------------------------------------
-		-- Level 2: MUX array C configured to shift 4 bits right
-		---------------------------------------------------------------------------
-		g_MUXC: mux2t1_N
-		port MAP(i_S               => i_SHAMT(2),
-				 i_D0			   => s_iB,
-				 i_D1              => "0000" & s_iB(27 downto 0),
-				 o_O               => s_iC);
-		
-		---------------------------------------------------------------------------
-		-- Level 3: MUX array D configured to shift 8 bits right
-		---------------------------------------------------------------------------
-		g_MUXD: mux2t1_N
-		port MAP(i_S               => i_SHAMT(3),
-				 i_D0			   => s_iC,
-				 i_D1              => "00000000" & s_iC(23 downto 0),
-				 o_O               => s_iD);
-  
-  		---------------------------------------------------------------------------
-		-- Level 4: MUX array E configured to shift 16 bits right
-		---------------------------------------------------------------------------
-		g_MUXE: mux2t1_N
-		port MAP(i_S               => i_SHAMT(4),
-				 i_D0			   => s_iD,
-				 i_D1              => "0000000000000000" & s_iD(15 downto 0),
-				 o_O               => o_Y);			-- final stage, so output to component output
-end structural;
+	if s_OP = "001010" then        --slti
+		o_immSign   	<= "1";
+		o_MemToReg  	<= "0";
+		o_sub           <= "0";
+		o_imm           <= "1";
+		o_lui           <= "0";
+		o_ALUOp         <= s_OP;
+		o_shift         <= "0";
+		o_leftShift     <= "0";
+		o_arithShift    <= "0";
+		o_MemWrite      <= "0";
+		o_shiftReg      <= "0";
+		o_DestReg       <= "1";
+		o_jump          <= "0";
+		o_branch 		<= "0";
+	end if;
+	
+	if s_OP = "001011" then        --sltiu
+		o_immSign   	<= "1";
+		o_MemToReg  	<= "0";
+		o_sub           <= "0";
+		o_imm           <= "1";
+		o_lui           <= "0";
+		o_ALUOp         <= s_OP;
+		o_shift         <= "0";
+		o_leftShift     <= "0";
+		o_arithShift    <= "0";
+		o_MemWrite      <= "0";
+		o_shiftReg      <= "0";
+		o_DestReg       <= "1";
+		o_jump          <= "0";
+		o_branch 		<= "0";
+	end if;
+	
+	if s_OP = "000000" then        --sltu
+		if s_FN = "101011" then
+			o_immSign   	<= "0";
+			o_MemToReg  	<= "0";
+			o_sub           <= "0";
+			o_imm           <= "0";
+			o_lui           <= "0";
+			o_ALUOp         <= s_OP;
+			o_shift         <= "0";
+			o_leftShift     <= "0";
+			o_arithShift    <= "0";
+			o_MemWrite      <= "0";
+			o_shiftReg      <= "0";
+			o_DestReg       <= "0";
+			o_jump          <= "0";
+			o_branch 		<= "0";
+		end if;
+	end if;
+	
+	if s_OP = "000000" then        --sll
+		if s_FN = "000000" then
+			o_immSign   	<= "0";
+			o_MemToReg  	<= "0";
+			o_sub           <= "0";
+			o_imm           <= "0";
+			o_lui           <= "0";
+			o_ALUOp         <= s_OP;
+			o_shift         <= "1";
+			o_leftShift     <= "1";
+			o_arithShift    <= "0";
+			o_MemWrite      <= "0";
+			o_shiftReg      <= "0";
+			o_DestReg       <= "0";
+			o_jump          <= "0";
+			o_branch 		<= "0";
+		end if;
+	end if;
+	
+	if s_OP = "000000" then        --srl
+		if s_FN = "000010" then
+			o_immSign   	<= "0";
+			o_MemToReg  	<= "0";
+			o_sub           <= "0";
+			o_imm           <= "0";
+			o_lui           <= "0";
+			o_ALUOp         <= s_OP;
+			o_shift         <= "1";
+			o_leftShift     <= "0";
+			o_arithShift    <= "0";
+			o_MemWrite      <= "0";
+			o_shiftReg      <= "0";
+			o_DestReg       <= "0";
+			o_jump          <= "0";
+			o_branch 		<= "0";
+		end if;
+	end if;
+	
+	if s_OP = "000000" then        --sra
+		if s_FN = "000011" then
+			o_immSign   	<= "0";
+			o_MemToReg  	<= "0";
+			o_sub           <= "0";
+			o_imm           <= "0";
+			o_lui           <= "0";
+			o_ALUOp         <= s_OP;
+			o_shift         <= "1";
+			o_leftShift     <= "0";
+			o_arithShift    <= "1";
+			o_MemWrite      <= "0";
+			o_shiftReg      <= "0";
+			o_DestReg       <= "0";
+			o_jump          <= "0";
+			o_branch 		<= "0";
+		end if;
+	end if;
+	
+	if s_OP = "000000" then        --sllv
+		if s_FN = "000100" then
+			o_immSign   	<= "0";
+			o_MemToReg  	<= "0";
+			o_sub           <= "0";
+			o_imm           <= "0";
+			o_lui           <= "0";
+			o_ALUOp         <= s_OP;
+			o_shift         <= "1";
+			o_leftShift     <= "1";
+			o_arithShift    <= "0";
+			o_MemWrite      <= "0";
+			o_shiftReg      <= "1";
+			o_DestReg       <= "0";
+			o_jump          <= "0";
+			o_branch 		<= "0";
+		end if;
+	end if;
+	
+	if s_OP = "000000" then        --srlv
+		if s_FN = "000110" then
+			o_immSign   	<= "0";
+			o_MemToReg  	<= "0";
+			o_sub           <= "0";
+			o_imm           <= "0";
+			o_lui           <= "0";
+			o_ALUOp         <= s_OP;
+			o_shift         <= "1";
+			o_leftShift     <= "0";
+			o_arithShift    <= "0";
+			o_MemWrite      <= "0";
+			o_shiftReg      <= "1";
+			o_DestReg       <= "0";
+			o_jump          <= "0";
+			o_branch 		<= "0";
+		end if;
+	end if;
+	
+	if s_OP = "000000" then        --srav
+		if s_FN = "000110" then
+			o_immSign   	<= "0";
+			o_MemToReg  	<= "0";
+			o_sub           <= "0";
+			o_imm           <= "0";
+			o_lui           <= "0";
+			o_ALUOp         <= s_OP;
+			o_shift         <= "1";
+			o_leftShift     <= "0";
+			o_arithShift    <= "1";
+			o_MemWrite      <= "0";
+			o_shiftReg      <= "1";
+			o_DestReg       <= "0";
+			o_jump          <= "0";
+			o_branch 		<= "0";
+		end if;
+	end if;
+	
+	if s_OP = "101011" then        --sw
+		o_immSign   	<= "1";
+		o_MemToReg  	<= "0";
+		o_sub           <= "0";
+		o_imm           <= "1";
+		o_lui           <= "0";
+		o_ALUOp         <= s_OP;
+		o_shift         <= "0";
+		o_leftShift     <= "0";
+		o_arithShift    <= "0";
+		o_MemWrite      <= "1";
+		o_shiftReg      <= "0";
+		o_DestReg       <= "1";
+		o_jump          <= "0";
+		o_branch 		<= "0";
+	end if;
+	
+	if s_OP = "000000" then        --sub
+		if s_FN = "100010" then
+			o_immSign   	<= "0";
+			o_MemToReg  	<= "0";
+			o_sub           <= "1";
+			o_imm           <= "0";
+			o_lui           <= "0";
+			o_ALUOp         <= s_OP;
+			o_shift         <= "0";
+			o_leftShift     <= "0";
+			o_arithShift    <= "0";
+			o_MemWrite      <= "0";
+			o_shiftReg      <= "0";
+			o_DestReg       <= "0";
+			o_jump          <= "0";
+			o_branch 		<= "0";
+		end if;
+	end if;
+	
+	if s_OP = "000000" then        --subu
+		if s_FN = "100011" then
+			o_immSign   	<= "0";
+			o_MemToReg  	<= "0";
+			o_sub           <= "1";
+			o_imm           <= "0";
+			o_lui           <= "0";
+			o_ALUOp         <= s_OP;
+			o_shift         <= "0";
+			o_leftShift     <= "0";
+			o_arithShift    <= "0";
+			o_MemWrite      <= "0";
+			o_shiftReg      <= "0";
+			o_DestReg       <= "0";
+			o_jump          <= "0";
+			o_branch 		<= "0";
+		end if;
+	end if;
+	
+	if s_OP = "000100" then        --beq
+		o_immSign   	<= "0";
+		o_MemToReg  	<= "0";
+		o_sub           <= "0";
+		o_imm           <= "0";
+		o_lui           <= "0";
+		o_ALUOp         <= s_OP;
+		o_shift         <= "0";
+		o_leftShift     <= "0";
+		o_arithShift    <= "0";
+		o_MemWrite      <= "0";
+		o_shiftReg      <= "0";
+		o_DestReg       <= "0";
+		o_jump          <= "0";
+		o_branch 		<= "1";
+	end if;
+	
+	if s_OP = "000101" then        --bne
+		o_immSign   	<= "0";
+		o_MemToReg  	<= "0";
+		o_sub           <= "0";
+		o_imm           <= "0";
+		o_lui           <= "0";
+		o_ALUOp         <= s_OP;
+		o_shift         <= "0";
+		o_leftShift     <= "0";
+		o_arithShift    <= "0";
+		o_MemWrite      <= "0";
+		o_shiftReg      <= "0";
+		o_DestReg       <= "0";
+		o_jump          <= "0";
+		o_branch 		<= "1";
+	end if;
+	
+	
+	if s_OP = "000101" then        --j
+		o_immSign   	<= "0";
+		o_MemToReg  	<= "0";
+		o_sub           <= "0";
+		o_imm           <= "0";
+		o_lui           <= "0";
+		o_ALUOp         <= s_OP;
+		o_shift         <= "0";
+		o_leftShift     <= "0";
+		o_arithShift    <= "0";
+		o_MemWrite      <= "0";
+		o_shiftReg      <= "0";
+		o_DestReg       <= "0";
+		o_jump          <= "1";
+		o_branch 		<= "0";
+	end if;
+	
+	if s_OP = "000011" then        --jal
+		o_immSign   	<= "0";
+		o_MemToReg  	<= "0";
+		o_sub           <= "0";
+		o_imm           <= "0";
+		o_lui           <= "0";
+		o_ALUOp         <= s_OP;
+		o_shift         <= "0";
+		o_leftShift     <= "0";
+		o_arithShift    <= "0";
+		o_MemWrite      <= "1";
+		o_shiftReg      <= "0";
+		o_DestReg       <= "0";
+		o_jump          <= "1";
+		o_branch 		<= "0";
+	end if;
+	
+	
+	if s_OP = "000000" then        --jr
+		if s_FN = "001000" then
+			o_immSign   	<= "0";
+			o_MemToReg  	<= "0";
+			o_sub           <= "0";
+			o_imm           <= "0";
+			o_lui           <= "0";
+			o_ALUOp         <= s_OP;
+			o_shift         <= "0";
+			o_leftShift     <= "0";
+			o_arithShift    <= "0";
+			o_MemWrite      <= "0";
+			o_shiftReg      <= "0";
+			o_DestReg       <= "0";
+			o_jump          <= "1";
+			o_branch 		<= "0";
+		end if;
+	end if;
+	
+	
+END behavorial;
