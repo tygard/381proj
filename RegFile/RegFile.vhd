@@ -16,467 +16,467 @@ ENTITY RegFile IS
 	);
 END RegFile;
 
-ARCHITECTURE structure OF RegFile IS
+ARCHITECTURE structural OF RegFile IS
 
-	COMPONENT n_register
+	COMPONENT nbit_Reg IS
 		GENERIC (N : INTEGER := 32);
 		PORT (
 			i_CLK : IN std_logic;
 			i_RST : IN std_logic;
 			i_WE : IN std_logic;
-			i_d : IN std_logic_vector(N - 1 DOWNTO 0);
-			o_q : OUT std_logic_vector(N - 1 DOWNTO 0)
+			i_D : IN std_logic_vector(N - 1 DOWNTO 0);
+			o_Q : OUT std_logic_vector(N - 1 DOWNTO 0)
 		);
 	END COMPONENT;
 
-	COMPONENT decoder5_32
+	COMPONENT Decoder IS
 		PORT (
-			i_A : IN std_logic_vector(4 DOWNTO 0);
-			o_D : OUT std_logic_vector(31 DOWNTO 0)
-		);
-	END COMPONENT;
-
-	COMPONENT mux32
-		PORT (
-			i_A0 : IN std_logic_vector(31 DOWNTO 0);
-			i_A1 : IN std_logic_vector(31 DOWNTO 0);
-			i_A2 : IN std_logic_vector(31 DOWNTO 0);
-			i_A3 : IN std_logic_vector(31 DOWNTO 0);
-			i_A4 : IN std_logic_vector(31 DOWNTO 0);
-			i_A5 : IN std_logic_vector(31 DOWNTO 0);
-			i_A6 : IN std_logic_vector(31 DOWNTO 0);
-			i_A7 : IN std_logic_vector(31 DOWNTO 0);
-			i_A8 : IN std_logic_vector(31 DOWNTO 0);
-			i_A9 : IN std_logic_vector(31 DOWNTO 0);
-			i_A10 : IN std_logic_vector(31 DOWNTO 0);
-			i_A11 : IN std_logic_vector(31 DOWNTO 0);
-			i_A12 : IN std_logic_vector(31 DOWNTO 0);
-			i_A13 : IN std_logic_vector(31 DOWNTO 0);
-			i_A14 : IN std_logic_vector(31 DOWNTO 0);
-			i_A15 : IN std_logic_vector(31 DOWNTO 0);
-			i_A16 : IN std_logic_vector(31 DOWNTO 0);
-			i_A17 : IN std_logic_vector(31 DOWNTO 0);
-			i_A18 : IN std_logic_vector(31 DOWNTO 0);
-			i_A19 : IN std_logic_vector(31 DOWNTO 0);
-			i_A20 : IN std_logic_vector(31 DOWNTO 0);
-			i_A21 : IN std_logic_vector(31 DOWNTO 0);
-			i_A22 : IN std_logic_vector(31 DOWNTO 0);
-			i_A23 : IN std_logic_vector(31 DOWNTO 0);
-			i_A24 : IN std_logic_vector(31 DOWNTO 0);
-			i_A25 : IN std_logic_vector(31 DOWNTO 0);
-			i_A26 : IN std_logic_vector(31 DOWNTO 0);
-			i_A27 : IN std_logic_vector(31 DOWNTO 0);
-			i_A28 : IN std_logic_vector(31 DOWNTO 0);
-			i_A29 : IN std_logic_vector(31 DOWNTO 0);
-			i_A30 : IN std_logic_vector(31 DOWNTO 0);
-			i_A31 : IN std_logic_vector(31 DOWNTO 0);
 			i_S : IN std_logic_vector(4 DOWNTO 0);
 			o_F : OUT std_logic_vector(31 DOWNTO 0)
 		);
 	END COMPONENT;
 
+	COMPONENT mux32t1 IS
+		PORT (
+			i_D0 : IN std_logic_vector(31 DOWNTO 0);
+			i_D1 : IN std_logic_vector(31 DOWNTO 0);
+			i_D2 : IN std_logic_vector(31 DOWNTO 0);
+			i_D3 : IN std_logic_vector(31 DOWNTO 0);
+			i_D4 : IN std_logic_vector(31 DOWNTO 0);
+			i_D5 : IN std_logic_vector(31 DOWNTO 0);
+			i_D6 : IN std_logic_vector(31 DOWNTO 0);
+			i_D7 : IN std_logic_vector(31 DOWNTO 0);
+			i_D8 : IN std_logic_vector(31 DOWNTO 0);
+			i_D9 : IN std_logic_vector(31 DOWNTO 0);
+			i_D10 : IN std_logic_vector(31 DOWNTO 0);
+			i_D11 : IN std_logic_vector(31 DOWNTO 0);
+			i_D12 : IN std_logic_vector(31 DOWNTO 0);
+			i_D13 : IN std_logic_vector(31 DOWNTO 0);
+			i_D14 : IN std_logic_vector(31 DOWNTO 0);
+			i_D15 : IN std_logic_vector(31 DOWNTO 0);
+			i_D16 : IN std_logic_vector(31 DOWNTO 0);
+			i_D17 : IN std_logic_vector(31 DOWNTO 0);
+			i_D18 : IN std_logic_vector(31 DOWNTO 0);
+			i_D19 : IN std_logic_vector(31 DOWNTO 0);
+			i_D20 : IN std_logic_vector(31 DOWNTO 0);
+			i_D21 : IN std_logic_vector(31 DOWNTO 0);
+			i_D22 : IN std_logic_vector(31 DOWNTO 0);
+			i_D23 : IN std_logic_vector(31 DOWNTO 0);
+			i_D24 : IN std_logic_vector(31 DOWNTO 0);
+			i_D25 : IN std_logic_vector(31 DOWNTO 0);
+			i_D26 : IN std_logic_vector(31 DOWNTO 0);
+			i_D27 : IN std_logic_vector(31 DOWNTO 0);
+			i_D28 : IN std_logic_vector(31 DOWNTO 0);
+			i_D29 : IN std_logic_vector(31 DOWNTO 0);
+			i_D30 : IN std_logic_vector(31 DOWNTO 0);
+			i_D31 : IN std_logic_vector(31 DOWNTO 0);
+			i_S : IN std_logic_vector(4 DOWNTO 0);
+			o_Q : OUT std_logic_vector(31 DOWNTO 0)
+		);
+	END COMPONENT;
+
 	SIGNAL s_WE : std_logic;
 	SIGNAL s_Data : std_logic_vector(31 DOWNTO 0);
-	SIGNAL s_A0 : std_logic_vector(31 DOWNTO 0);
-	SIGNAL s_A1 : std_logic_vector(31 DOWNTO 0);
-	SIGNAL s_A2 : std_logic_vector(31 DOWNTO 0);
-	SIGNAL s_A3 : std_logic_vector(31 DOWNTO 0);
-	SIGNAL s_A4 : std_logic_vector(31 DOWNTO 0);
-	SIGNAL s_A5 : std_logic_vector(31 DOWNTO 0);
-	SIGNAL s_A6 : std_logic_vector(31 DOWNTO 0);
-	SIGNAL s_A7 : std_logic_vector(31 DOWNTO 0);
-	SIGNAL s_A8 : std_logic_vector(31 DOWNTO 0);
-	SIGNAL s_A9 : std_logic_vector(31 DOWNTO 0);
-	SIGNAL s_A10 : std_logic_vector(31 DOWNTO 0);
-	SIGNAL s_A11 : std_logic_vector(31 DOWNTO 0);
-	SIGNAL s_A12 : std_logic_vector(31 DOWNTO 0);
-	SIGNAL s_A13 : std_logic_vector(31 DOWNTO 0);
-	SIGNAL s_A14 : std_logic_vector(31 DOWNTO 0);
-	SIGNAL s_A15 : std_logic_vector(31 DOWNTO 0);
-	SIGNAL s_A16 : std_logic_vector(31 DOWNTO 0);
-	SIGNAL s_A17 : std_logic_vector(31 DOWNTO 0);
-	SIGNAL s_A18 : std_logic_vector(31 DOWNTO 0);
-	SIGNAL s_A19 : std_logic_vector(31 DOWNTO 0);
-	SIGNAL s_A20 : std_logic_vector(31 DOWNTO 0);
-	SIGNAL s_A21 : std_logic_vector(31 DOWNTO 0);
-	SIGNAL s_A22 : std_logic_vector(31 DOWNTO 0);
-	SIGNAL s_A23 : std_logic_vector(31 DOWNTO 0);
-	SIGNAL s_A24 : std_logic_vector(31 DOWNTO 0);
-	SIGNAL s_A25 : std_logic_vector(31 DOWNTO 0);
-	SIGNAL s_A26 : std_logic_vector(31 DOWNTO 0);
-	SIGNAL s_A27 : std_logic_vector(31 DOWNTO 0);
-	SIGNAL s_A28 : std_logic_vector(31 DOWNTO 0);
-	SIGNAL s_A29 : std_logic_vector(31 DOWNTO 0);
-	SIGNAL s_A30 : std_logic_vector(31 DOWNTO 0);
-	SIGNAL s_A31 : std_logic_vector(31 DOWNTO 0);
+	SIGNAL s_D0 : std_logic_vector(31 DOWNTO 0);
+	SIGNAL s_D1 : std_logic_vector(31 DOWNTO 0);
+	SIGNAL s_D2 : std_logic_vector(31 DOWNTO 0);
+	SIGNAL s_D3 : std_logic_vector(31 DOWNTO 0);
+	SIGNAL s_D4 : std_logic_vector(31 DOWNTO 0);
+	SIGNAL s_D5 : std_logic_vector(31 DOWNTO 0);
+	SIGNAL s_D6 : std_logic_vector(31 DOWNTO 0);
+	SIGNAL s_D7 : std_logic_vector(31 DOWNTO 0);
+	SIGNAL s_D8 : std_logic_vector(31 DOWNTO 0);
+	SIGNAL s_D9 : std_logic_vector(31 DOWNTO 0);
+	SIGNAL s_D10 : std_logic_vector(31 DOWNTO 0);
+	SIGNAL s_D11 : std_logic_vector(31 DOWNTO 0);
+	SIGNAL s_D12 : std_logic_vector(31 DOWNTO 0);
+	SIGNAL s_D13 : std_logic_vector(31 DOWNTO 0);
+	SIGNAL s_D14 : std_logic_vector(31 DOWNTO 0);
+	SIGNAL s_D15 : std_logic_vector(31 DOWNTO 0);
+	SIGNAL s_D16 : std_logic_vector(31 DOWNTO 0);
+	SIGNAL s_D17 : std_logic_vector(31 DOWNTO 0);
+	SIGNAL s_D18 : std_logic_vector(31 DOWNTO 0);
+	SIGNAL s_D19 : std_logic_vector(31 DOWNTO 0);
+	SIGNAL s_D20 : std_logic_vector(31 DOWNTO 0);
+	SIGNAL s_D21 : std_logic_vector(31 DOWNTO 0);
+	SIGNAL s_D22 : std_logic_vector(31 DOWNTO 0);
+	SIGNAL s_D23 : std_logic_vector(31 DOWNTO 0);
+	SIGNAL s_D24 : std_logic_vector(31 DOWNTO 0);
+	SIGNAL s_D25 : std_logic_vector(31 DOWNTO 0);
+	SIGNAL s_D26 : std_logic_vector(31 DOWNTO 0);
+	SIGNAL s_D27 : std_logic_vector(31 DOWNTO 0);
+	SIGNAL s_D28 : std_logic_vector(31 DOWNTO 0);
+	SIGNAL s_D29 : std_logic_vector(31 DOWNTO 0);
+	SIGNAL s_D30 : std_logic_vector(31 DOWNTO 0);
+	SIGNAL s_D31 : std_logic_vector(31 DOWNTO 0);
 
 BEGIN
-	decoder : decoder5_32
+	decode : Decoder
 	PORT MAP(
-		i_A => i_WA,
-		o_D => s_Data
+		i_S => i_WA,
+		o_F => s_Data
 	);
-	reg0 : n_register
+	reg0 : nbit_Reg
 	GENERIC MAP(N => N)
 	PORT MAP(
 		i_CLK => i_CLK,
 		i_RST => i_RST,
 		i_WE => s_Data(0),
 		i_d => i_WD,
-		o_q => s_A0
+		o_q => s_D0
 	);
-	reg1 : n_register
+	reg1 : nbit_Reg
 	GENERIC MAP(N => N)
 	PORT MAP(
 		i_CLK => i_CLK,
 		i_RST => i_RST,
 		i_WE => s_Data(1),
 		i_d => i_WD,
-		o_q => s_A1
+		o_q => s_D1
 	);
-	reg2 : n_register
+	reg2 : nbit_Reg
 	GENERIC MAP(N => N)
 	PORT MAP(
 		i_CLK => i_CLK,
 		i_RST => i_RST,
 		i_WE => s_Data(2),
 		i_d => i_WD,
-		o_q => s_A2
+		o_q => s_D2
 	);
-	reg3 : n_register
+	reg3 : nbit_Reg
 	GENERIC MAP(N => N)
 	PORT MAP(
 		i_CLK => i_CLK,
 		i_RST => i_RST,
 		i_WE => s_Data(3),
 		i_d => i_WD,
-		o_q => s_A3
+		o_q => s_D3
 	);
-	reg4 : n_register
+	reg4 : nbit_Reg
 	GENERIC MAP(N => N)
 	PORT MAP(
 		i_CLK => i_CLK,
 		i_RST => i_RST,
 		i_WE => s_Data(4),
 		i_d => i_WD,
-		o_q => s_A4
+		o_q => s_D4
 	);
-	reg5 : n_register
+	reg5 : nbit_Reg
 	GENERIC MAP(N => N)
 	PORT MAP(
 		i_CLK => i_CLK,
 		i_RST => i_RST,
 		i_WE => s_Data(5),
 		i_d => i_WD,
-		o_q => s_A5
+		o_q => s_D5
 	);
-	reg6 : n_register
+	reg6 : nbit_Reg
 	GENERIC MAP(N => N)
 	PORT MAP(
 		i_CLK => i_CLK,
 		i_RST => i_RST,
 		i_WE => s_Data(6),
 		i_d => i_WD,
-		o_q => s_A6
+		o_q => s_D6
 	);
-	reg7 : n_register
+	reg7 : nbit_Reg
 	GENERIC MAP(N => N)
 	PORT MAP(
 		i_CLK => i_CLK,
 		i_RST => i_RST,
 		i_WE => s_Data(7),
 		i_d => i_WD,
-		o_q => s_A7
+		o_q => s_D7
 	);
-	reg8 : n_register
+	reg8 : nbit_Reg
 	GENERIC MAP(N => N)
 	PORT MAP(
 		i_CLK => i_CLK,
 		i_RST => i_RST,
 		i_WE => s_Data(8),
 		i_d => i_WD,
-		o_q => s_A8
+		o_q => s_D8
 	);
-	reg9 : n_register
+	reg9 : nbit_Reg
 	GENERIC MAP(N => N)
 	PORT MAP(
 		i_CLK => i_CLK,
 		i_RST => i_RST,
 		i_WE => s_Data(9),
 		i_d => i_WD,
-		o_q => s_A9
+		o_q => s_D9
 	);
-	reg10 : n_register
+	reg10 : nbit_Reg
 	GENERIC MAP(N => N)
 	PORT MAP(
 		i_CLK => i_CLK,
 		i_RST => i_RST,
 		i_WE => s_Data(10),
 		i_d => i_WD,
-		o_q => s_A10
+		o_q => s_D10
 	);
-	reg11 : n_register
+	reg11 : nbit_Reg
 	GENERIC MAP(N => N)
 	PORT MAP(
 		i_CLK => i_CLK,
 		i_RST => i_RST,
 		i_WE => s_Data(11),
 		i_d => i_WD,
-		o_q => s_A11
+		o_q => s_D11
 	);
-	reg12 : n_register
+	reg12 : nbit_Reg
 	GENERIC MAP(N => N)
 	PORT MAP(
 		i_CLK => i_CLK,
 		i_RST => i_RST,
 		i_WE => s_Data(12),
 		i_d => i_WD,
-		o_q => s_A12
+		o_q => s_D12
 	);
-	reg13 : n_register
+	reg13 : nbit_Reg
 	GENERIC MAP(N => N)
 	PORT MAP(
 		i_CLK => i_CLK,
 		i_RST => i_RST,
 		i_WE => s_Data(13),
 		i_d => i_WD,
-		o_q => s_A13
+		o_q => s_D13
 	);
-	reg14 : n_register
+	reg14 : nbit_Reg
 	GENERIC MAP(N => N)
 	PORT MAP(
 		i_CLK => i_CLK,
 		i_RST => i_RST,
 		i_WE => s_Data(14),
 		i_d => i_WD,
-		o_q => s_A14
+		o_q => s_D14
 	);
-	reg15 : n_register
+	reg15 : nbit_Reg
 	GENERIC MAP(N => N)
 	PORT MAP(
 		i_CLK => i_CLK,
 		i_RST => i_RST,
 		i_WE => s_Data(15),
 		i_d => i_WD,
-		o_q => s_A15
+		o_q => s_D15
 	);
-	reg16 : n_register
+	reg16 : nbit_Reg
 	GENERIC MAP(N => N)
 	PORT MAP(
 		i_CLK => i_CLK,
 		i_RST => i_RST,
 		i_WE => s_Data(16),
 		i_d => i_WD,
-		o_q => s_A16
+		o_q => s_D16
 	);
-	reg17 : n_register
+	reg17 : nbit_Reg
 	GENERIC MAP(N => N)
 	PORT MAP(
 		i_CLK => i_CLK,
 		i_RST => i_RST,
 		i_WE => s_Data(17),
 		i_d => i_WD,
-		o_q => s_A17
+		o_q => s_D17
 	);
-	reg18 : n_register
+	reg18 : nbit_Reg
 	GENERIC MAP(N => N)
 	PORT MAP(
 		i_CLK => i_CLK,
 		i_RST => i_RST,
 		i_WE => s_Data(18),
 		i_d => i_WD,
-		o_q => s_A18
+		o_q => s_D18
 	);
-	reg19 : n_register
+	reg19 : nbit_Reg
 	GENERIC MAP(N => N)
 	PORT MAP(
 		i_CLK => i_CLK,
 		i_RST => i_RST,
 		i_WE => s_Data(19),
 		i_d => i_WD,
-		o_q => s_A19
+		o_q => s_D19
 	);
-	reg20 : n_register
+	reg20 : nbit_Reg
 	GENERIC MAP(N => N)
 	PORT MAP(
 		i_CLK => i_CLK,
 		i_RST => i_RST,
 		i_WE => s_Data(20),
 		i_d => i_WD,
-		o_q => s_A20
+		o_q => s_D20
 	);
-	reg21 : n_register
+	reg21 : nbit_Reg
 	GENERIC MAP(N => N)
 	PORT MAP(
 		i_CLK => i_CLK,
 		i_RST => i_RST,
 		i_WE => s_Data(21),
 		i_d => i_WD,
-		o_q => s_A21
+		o_q => s_D21
 	);
-	reg22 : n_register
+	reg22 : nbit_Reg
 	GENERIC MAP(N => N)
 	PORT MAP(
 		i_CLK => i_CLK,
 		i_RST => i_RST,
 		i_WE => s_Data(22),
 		i_d => i_WD,
-		o_q => s_A22
+		o_q => s_D22
 	);
-	reg23 : n_register
+	reg23 : nbit_Reg
 	GENERIC MAP(N => N)
 	PORT MAP(
 		i_CLK => i_CLK,
 		i_RST => i_RST,
 		i_WE => s_Data(23),
 		i_d => i_WD,
-		o_q => s_A23
+		o_q => s_D23
 	);
-	reg24 : n_register
+	reg24 : nbit_Reg
 	GENERIC MAP(N => N)
 	PORT MAP(
 		i_CLK => i_CLK,
 		i_RST => i_RST,
 		i_WE => s_Data(24),
 		i_d => i_WD,
-		o_q => s_A24
+		o_q => s_D24
 	);
-	reg25 : n_register
+	reg25 : nbit_Reg
 	GENERIC MAP(N => N)
 	PORT MAP(
 		i_CLK => i_CLK,
 		i_RST => i_RST,
 		i_WE => s_Data(25),
 		i_d => i_WD,
-		o_q => s_A25
+		o_q => s_D25
 	);
-	reg26 : n_register
+	reg26 : nbit_Reg
 	GENERIC MAP(N => N)
 	PORT MAP(
 		i_CLK => i_CLK,
 		i_RST => i_RST,
 		i_WE => s_Data(26),
 		i_d => i_WD,
-		o_q => s_A26
+		o_q => s_D26
 	);
-	reg27 : n_register
+	reg27 : nbit_Reg
 	GENERIC MAP(N => N)
 	PORT MAP(
 		i_CLK => i_CLK,
 		i_RST => i_RST,
 		i_WE => s_Data(27),
 		i_d => i_WD,
-		o_q => s_A27
+		o_q => s_D27
 	);
-	reg28 : n_register
+	reg28 : nbit_Reg
 	GENERIC MAP(N => N)
 	PORT MAP(
 		i_CLK => i_CLK,
 		i_RST => i_RST,
 		i_WE => s_Data(28),
 		i_d => i_WD,
-		o_q => s_A28
+		o_q => s_D28
 	);
-	reg29 : n_register
+	reg29 : nbit_Reg
 	GENERIC MAP(N => N)
 	PORT MAP(
 		i_CLK => i_CLK,
 		i_RST => i_RST,
 		i_WE => s_Data(29),
 		i_d => i_WD,
-		o_q => s_A29
+		o_q => s_D29
 	);
-	reg30 : n_register
+	reg30 : nbit_Reg
 	GENERIC MAP(N => N)
 	PORT MAP(
 		i_CLK => i_CLK,
 		i_RST => i_RST,
 		i_WE => s_Data(30),
 		i_d => i_WD,
-		o_q => s_A30
+		o_q => s_D30
 	);
-	reg31 : n_register
+	reg31 : nbit_Reg
 	GENERIC MAP(N => N)
 	PORT MAP(
 		i_CLK => i_CLK,
 		i_RST => i_RST,
 		i_WE => s_Data(31),
 		i_d => i_WD,
-		o_q => s_A31
+		o_q => s_D31
 	);
-	mux0 : mux32
+	mux0 : mux32t1
 	PORT MAP(
-		i_A0 => s_A0,
-		i_A1 => s_A1,
-		i_A2 => s_A2,
-		i_A3 => s_A3,
-		i_A4 => s_A4,
-		i_A5 => s_A5,
-		i_A6 => s_A6,
-		i_A7 => s_A7,
-		i_A8 => s_A8,
-		i_A9 => s_A9,
-		i_A10 => s_A10,
-		i_A11 => s_A11,
-		i_A12 => s_A12,
-		i_A13 => s_A13,
-		i_A14 => s_A14,
-		i_A15 => s_A15,
-		i_A16 => s_A16,
-		i_A17 => s_A17,
-		i_A18 => s_A18,
-		i_A19 => s_A19,
-		i_A20 => s_A20,
-		i_A21 => s_A21,
-		i_A22 => s_A22,
-		i_A23 => s_A23,
-		i_A24 => s_A24,
-		i_A25 => s_A25,
-		i_A26 => s_A26,
-		i_A27 => s_A27,
-		i_A28 => s_A28,
-		i_A29 => s_A29,
-		i_A30 => s_A30,
-		i_A31 => s_A31,
+		i_D0 => s_D0,
+		i_D1 => s_D1,
+		i_D2 => s_D2,
+		i_D3 => s_D3,
+		i_D4 => s_D4,
+		i_D5 => s_D5,
+		i_D6 => s_D6,
+		i_D7 => s_D7,
+		i_D8 => s_D8,
+		i_D9 => s_D9,
+		i_D10 => s_D10,
+		i_D11 => s_D11,
+		i_D12 => s_D12,
+		i_D13 => s_D13,
+		i_D14 => s_D14,
+		i_D15 => s_D15,
+		i_D16 => s_D16,
+		i_D17 => s_D17,
+		i_D18 => s_D18,
+		i_D19 => s_D19,
+		i_D20 => s_D20,
+		i_D21 => s_D21,
+		i_D22 => s_D22,
+		i_D23 => s_D23,
+		i_D24 => s_D24,
+		i_D25 => s_D25,
+		i_D26 => s_D26,
+		i_D27 => s_D27,
+		i_D28 => s_D28,
+		i_D29 => s_D29,
+		i_D30 => s_D30,
+		i_D31 => s_D31,
 		i_S => i_RA0,
-		o_F => o_q0
+		o_Q => o_q0
 	);
-	mux1 : mux32
+	mux1 : mux32t1
 	PORT MAP(
-		i_A0 => s_A0,
-		i_A1 => s_A1,
-		i_A2 => s_A2,
-		i_A3 => s_A3,
-		i_A4 => s_A4,
-		i_A5 => s_A5,
-		i_A6 => s_A6,
-		i_A7 => s_A7,
-		i_A8 => s_A8,
-		i_A9 => s_A9,
-		i_A10 => s_A10,
-		i_A11 => s_A11,
-		i_A12 => s_A12,
-		i_A13 => s_A13,
-		i_A14 => s_A14,
-		i_A15 => s_A15,
-		i_A16 => s_A16,
-		i_A17 => s_A17,
-		i_A18 => s_A18,
-		i_A19 => s_A19,
-		i_A20 => s_A20,
-		i_A21 => s_A21,
-		i_A22 => s_A22,
-		i_A23 => s_A23,
-		i_A24 => s_A24,
-		i_A25 => s_A25,
-		i_A26 => s_A26,
-		i_A27 => s_A27,
-		i_A28 => s_A28,
-		i_A29 => s_A29,
-		i_A30 => s_A30,
-		i_A31 => s_A31,
+		i_D0 => s_D0,
+		i_D1 => s_D1,
+		i_D2 => s_D2,
+		i_D3 => s_D3,
+		i_D4 => s_D4,
+		i_D5 => s_D5,
+		i_D6 => s_D6,
+		i_D7 => s_D7,
+		i_D8 => s_D8,
+		i_D9 => s_D9,
+		i_D10 => s_D10,
+		i_D11 => s_D11,
+		i_D12 => s_D12,
+		i_D13 => s_D13,
+		i_D14 => s_D14,
+		i_D15 => s_D15,
+		i_D16 => s_D16,
+		i_D17 => s_D17,
+		i_D18 => s_D18,
+		i_D19 => s_D19,
+		i_D20 => s_D20,
+		i_D21 => s_D21,
+		i_D22 => s_D22,
+		i_D23 => s_D23,
+		i_D24 => s_D24,
+		i_D25 => s_D25,
+		i_D26 => s_D26,
+		i_D27 => s_D27,
+		i_D28 => s_D28,
+		i_D29 => s_D29,
+		i_D30 => s_D30,
+		i_D31 => s_D31,
 		i_S => i_RA1,
-		o_F => o_q1
+		o_Q => o_q1
 	);
 
-END structure;
+END structural;

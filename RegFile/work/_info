@@ -7,4 +7,381 @@ z2
 !i10e 25
 !i10f 100
 cModel Technology
-dC:/School/CPRE381/381proj/RegFile
+Z0 dC:/School/CPRE381/381proj/RegFile
+Edecoder
+Z1 w1585773688
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+R0
+Z4 8C:/School/CPRE381/381proj/RegFile/Decoder.vhd
+Z5 FC:/School/CPRE381/381proj/RegFile/Decoder.vhd
+l0
+L4
+VJhKeF9N@NNHJHjVd@0PXC3
+!s100 hhn]jdUXhjW:I3@_<=C0E1
+Z6 OP;C;10.4a;61
+33
+Z7 !s110 1587409485
+!i10b 1
+Z8 !s108 1587409485.000000
+Z9 !s90 -reportprogress|300|-work|work|C:/School/CPRE381/381proj/RegFile/Decoder.vhd|
+Z10 !s107 C:/School/CPRE381/381proj/RegFile/Decoder.vhd|
+!i113 1
+Z11 o-work work -O0
+Z12 tExplicit 1 NoCoverage 1
+Adataflow
+R2
+R3
+DEx4 work 7 decoder 0 22 JhKeF9N@NNHJHjVd@0PXC3
+l12
+L11
+VDD`A_hAmHj_MYEfb>:6`B1
+!s100 iG]EnlY1d?NScP@Y3Pjle3
+R6
+33
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Edffg
+R1
+R2
+R3
+R0
+Z13 8C:/School/CPRE381/381proj/RegFile/dffg.vhd
+Z14 FC:/School/CPRE381/381proj/RegFile/dffg.vhd
+l0
+L23
+V]Vh50IP377n7Y;=^ndT]a3
+!s100 T4gcXQGMCgKJbn8XhBM;b0
+R6
+33
+R7
+!i10b 1
+R8
+Z15 !s90 -reportprogress|300|-work|work|C:/School/CPRE381/381proj/RegFile/dffg.vhd|
+Z16 !s107 C:/School/CPRE381/381proj/RegFile/dffg.vhd|
+!i113 1
+R11
+R12
+Amixed
+R2
+R3
+DEx4 work 4 dffg 0 22 ]Vh50IP377n7Y;=^ndT]a3
+l37
+L33
+V`ECk5KO>gBeLzYQVA<k>c0
+!s100 iOdlTUid@@]UimFK_53^C1
+R6
+33
+R7
+!i10b 1
+R8
+R15
+R16
+!i113 1
+R11
+R12
+Emipsfinaldesign
+R1
+R2
+R3
+R0
+Z17 8C:/School/CPRE381/381proj/RegFile/mipsfinaldesign.vhd
+Z18 FC:/School/CPRE381/381proj/RegFile/mipsfinaldesign.vhd
+l0
+L23
+Vm;D]@jHXCEIn]^IDj]7i<0
+!s100 Oed9ZN8Ll_VeTdaRJIaVU3
+R6
+33
+R7
+!i10b 1
+R8
+Z19 !s90 -reportprogress|300|-work|work|C:/School/CPRE381/381proj/RegFile/mipsfinaldesign.vhd|
+Z20 !s107 C:/School/CPRE381/381proj/RegFile/mipsfinaldesign.vhd|
+!i113 1
+R11
+R12
+Astructure
+R2
+R3
+DEx4 work 15 mipsfinaldesign 0 22 m;D]@jHXCEIn]^IDj]7i<0
+l139
+L36
+V6l3VgT@mV@oz_UHdW2n6O0
+!s100 zODBmbUZI9mSOEK3hS>HK0
+R6
+33
+R7
+!i10b 1
+R8
+R19
+R20
+!i113 1
+R11
+R12
+Emux32t1
+R1
+R2
+R3
+R0
+Z21 8C:/School/CPRE381/381proj/RegFile/mux32t1.vhd
+Z22 FC:/School/CPRE381/381proj/RegFile/mux32t1.vhd
+l0
+L4
+VRiIUmTkkhB9d2RDgl2e0L1
+!s100 oiSPEanA@E_0_9li8AP^G2
+R6
+33
+Z23 !s110 1587409486
+!i10b 1
+Z24 !s108 1587409486.000000
+Z25 !s90 -reportprogress|30|-work|work|C:/School/CPRE381/381proj/RegFile/mux32t1.vhd|
+Z26 !s107 C:/School/CPRE381/381proj/RegFile/mux32t1.vhd|
+!i113 1
+R11
+R12
+Adataflow
+R2
+R3
+DEx4 work 7 mux32t1 0 22 RiIUmTkkhB9d2RDgl2e0L1
+l46
+L43
+V[ioOL:1JQ37f9ikkM^<`R3
+!s100 l63UKX2dm64JPmlfmN;F72
+R6
+33
+R23
+!i10b 1
+R24
+R25
+R26
+!i113 1
+R11
+R12
+Enbit_reg
+R1
+R2
+R3
+R0
+Z27 8C:/School/CPRE381/381proj/RegFile/nbit_Reg.vhd
+Z28 FC:/School/CPRE381/381proj/RegFile/nbit_Reg.vhd
+l0
+L20
+VTiAIL[4bKLS^K5_JoCWRg2
+!s100 Qh[2NR_[JlUa>ncb[A3F[1
+R6
+33
+R23
+!i10b 1
+R24
+Z29 !s90 -reportprogress|30|-work|work|C:/School/CPRE381/381proj/RegFile/nbit_Reg.vhd|
+Z30 !s107 C:/School/CPRE381/381proj/RegFile/nbit_Reg.vhd|
+!i113 1
+R11
+R12
+Astructural
+R2
+R3
+DEx4 work 8 nbit_reg 0 22 TiAIL[4bKLS^K5_JoCWRg2
+l43
+L31
+V0_T1Q`TflF8z<6f;WA:4N1
+!s100 aFJ`7D__o<<:G]LUnK=oN1
+R6
+33
+R23
+!i10b 1
+R24
+R29
+R30
+!i113 1
+R11
+R12
+Eregfile
+Z31 w1587409585
+Z32 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+R2
+R3
+R0
+Z33 8C:/School/CPRE381/381proj/RegFile/RegFile.vhd
+Z34 FC:/School/CPRE381/381proj/RegFile/RegFile.vhd
+l0
+L5
+VdIO3NmgfdU;1zK`CPTPIB3
+!s100 =N_zzM9[L`BKCG96k31=91
+R6
+33
+Z35 !s110 1587409620
+!i10b 1
+Z36 !s108 1587409620.000000
+Z37 !s90 -reportprogress|30|-work|work|C:/School/CPRE381/381proj/RegFile/RegFile.vhd|
+Z38 !s107 C:/School/CPRE381/381proj/RegFile/RegFile.vhd|
+!i113 1
+R11
+R12
+Astructural
+R32
+R2
+R3
+Z39 DEx4 work 7 regfile 0 22 dIO3NmgfdU;1zK`CPTPIB3
+l113
+L19
+VeaKz_Y412<LOXPn9k]oDk0
+!s100 NUVNX4>`<9:;m2Pfo30Y?0
+R6
+33
+R35
+!i10b 1
+R36
+R37
+R38
+!i113 1
+R11
+R12
+Astructure
+R32
+R2
+R3
+R39
+l113
+L19
+VG_e1jFWJnobn>FHjOC;H^3
+!s100 ElQ?DznA[_cDUL?XQNbPG3
+R6
+33
+!s110 1587408634
+!i10b 1
+!s108 1587408633.000000
+R37
+R38
+!i113 1
+R11
+R12
+w1587408595
+Eregfile_tb
+Z40 w1587408419
+R2
+R3
+R0
+Z41 8C:/School/CPRE381/381proj/RegFile/RegFile_tb.vhd
+Z42 FC:/School/CPRE381/381proj/RegFile/RegFile_tb.vhd
+l0
+L4
+VF5Fe]_f`Z7R[T6><7;QV53
+!s100 n5RXce:M4m8WfReNOC=<M2
+R6
+33
+Z43 !s110 1587409623
+!i10b 1
+Z44 !s108 1587409623.000000
+Z45 !s90 -reportprogress|30|-work|work|C:/School/CPRE381/381proj/RegFile/RegFile_tb.vhd|
+Z46 !s107 C:/School/CPRE381/381proj/RegFile/RegFile_tb.vhd|
+!i113 1
+R11
+R12
+Abehavior
+R2
+R3
+Z47 DEx4 work 10 regfile_tb 0 22 F5Fe]_f`Z7R[T6><7;QV53
+l31
+L7
+Z48 VAjioUIH9I1X_C^TKH^HF22
+Z49 !s100 Ke=1DSbHk_[KRRem9bXS30
+R6
+33
+R43
+!i10b 1
+R44
+R45
+R46
+!i113 1
+R11
+R12
+Etb_decoder
+R1
+Z50 DPx3 std 3 env 0 22 d?`1ck@NdeD@H3RZG7FgZ2
+Z51 DPx4 ieee 16 std_logic_textio 0 22 V5TSK`;aJKC<l]CEg1>mz1
+R2
+R3
+R0
+Z52 8C:/School/CPRE381/381proj/RegFile/tb_decoder.vhd
+Z53 FC:/School/CPRE381/381proj/RegFile/tb_decoder.vhd
+l0
+L22
+V15<0N8hKmJLQDf^9C`JSc0
+!s100 cnc@SPh`LMKFiS^f>EU2M3
+R6
+33
+Z54 !s110 1587409487
+!i10b 1
+Z55 !s108 1587409487.000000
+Z56 !s90 -reportprogress|30|-work|work|C:/School/CPRE381/381proj/RegFile/tb_decoder.vhd|
+Z57 !s107 C:/School/CPRE381/381proj/RegFile/tb_decoder.vhd|
+!i113 1
+R11
+R12
+Amixed
+R50
+R51
+R2
+R3
+DEx4 work 10 tb_decoder 0 22 15<0N8hKmJLQDf^9C`JSc0
+l42
+L25
+Vl3NfKI69XR]<1I6ZiiHTX1
+!s100 5W=E[V`=_8^Lhj2ILl7gG3
+R6
+33
+R54
+!i10b 1
+R55
+R56
+R57
+!i113 1
+R11
+R12
+Etb_nbit_reg
+R1
+R2
+R3
+R0
+Z58 8C:/School/CPRE381/381proj/RegFile/tb_nbit_Reg.vhd
+Z59 FC:/School/CPRE381/381proj/RegFile/tb_nbit_Reg.vhd
+l0
+L16
+VRNcRKz]k5aE^7YJGiko1O2
+!s100 f@Oa^4[7gbDB9c48d;l7R3
+R6
+33
+R54
+!i10b 1
+R55
+Z60 !s90 -reportprogress|30|-work|work|C:/School/CPRE381/381proj/RegFile/tb_nbit_Reg.vhd|
+Z61 !s107 C:/School/CPRE381/381proj/RegFile/tb_nbit_Reg.vhd|
+!i113 1
+R11
+R12
+Abehavior
+R2
+R3
+DEx4 work 11 tb_nbit_reg 0 22 RNcRKz]k5aE^7YJGiko1O2
+l40
+L22
+VzWfN9aDT[@YadYInzE3a[3
+!s100 d`WATeTBgceVnNLE4X9BR2
+R6
+33
+R54
+!i10b 1
+R55
+R60
+R61
+!i113 1
+R11
+R12

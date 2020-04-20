@@ -5,7 +5,7 @@ ENTITY RegFile_tb IS
 END RegFile_tb;
 
 ARCHITECTURE behavior OF RegFile_tb IS
-    COMPONENT RegFile IS
+    COMPONENT RegFile
         GENERIC (N : INTEGER := 32);
         PORT (
             i_WA : IN std_logic_vector(4 DOWNTO 0);
@@ -18,6 +18,7 @@ ARCHITECTURE behavior OF RegFile_tb IS
             o_q1 : OUT std_logic_vector(31 DOWNTO 0)
         );
     END COMPONENT;
+    
     SIGNAL s_WA : std_logic_vector(4 DOWNTO 0);
     SIGNAL s_WD : std_logic_vector(31 DOWNTO 0);
     SIGNAL s_RA0 : std_logic_vector(4 DOWNTO 0);
@@ -58,7 +59,6 @@ BEGIN
         s_RST <= '1';
         s_WA <= "00000";
         s_WD <= x"FFFFFFFF";
-        s_q0 <= x"00000000";
         WAIT FOR 100 ns;
 
         -- test writes
