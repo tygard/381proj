@@ -128,6 +128,20 @@ ARCHITECTURE structure OF MIPS_Processor IS
       o_Q : OUT std_logic_vector(N - 1 DOWNTO 0));
   END COMPONENT;
 
+  COMPONENT RegFile IS
+    GENERIC (N : INTEGER := 32);
+    PORT (
+      i_WA : IN std_logic_vector(4 DOWNTO 0);
+      i_WD : IN std_logic_vector(31 DOWNTO 0);
+      i_RA0 : IN std_logic_vector(4 DOWNTO 0);
+      i_RA1 : IN std_logic_vector(4 DOWNTO 0);
+      i_RST : IN std_logic;
+      i_CLK : IN std_logic;
+      o_q0 : OUT std_logic_vector(31 DOWNTO 0);
+      o_q1 : OUT std_logic_vector(31 DOWNTO 0)
+    );
+  END COMPONENT;
+
   COMPONENT extender IS
     GENERIC (Y : INTEGER := 16);
     PORT (
@@ -137,7 +151,7 @@ ARCHITECTURE structure OF MIPS_Processor IS
   END COMPONENT;
 
   COMPONENT mux2t1_N IS
-    GENERIC (N : INTEGER := 32); -- Generic of type integer for input/output data width. Default value is 32.
+    GENERIC (N : INTEGER := 32);
     PORT (
       i_S : IN std_logic;
       i_D0 : IN std_logic_vector(N - 1 DOWNTO 0);
@@ -150,6 +164,25 @@ ARCHITECTURE structure OF MIPS_Processor IS
       i_A : IN std_logic;
       i_B : IN std_logic;
       o_F : OUT std_logic);
+  END COMPONENT;
+
+  COMPONENT control IS
+    PORT (
+      i_instruction : IN std_logic_vector(31 DOWNTO 0);
+      o_immSign : OUT std_logic; -- not needed
+      o_MemToReg : OUT std_logic;
+      o_sub : OUT std_logic; -- not needed
+      o_imm : OUT std_logic;
+      o_lui : OUT std_logic; -- not needed
+      o_ALUOp : OUT std_logic_vector(5 DOWNTO 0);
+      o_Shift : OUT std_logic; -- not needed
+      o_leftShift : OUT std_logic; -- not needed
+      o_arithShift : OUT std_logic; -- not needed
+      o_MemWrite : OUT std_logic;
+      o_shiftReg : OUT std_logic; -- not needed
+      o_DestReg : OUT std_logic;
+      o_jump : OUT std_logic;
+      o_branch : OUT std_logic);
   END COMPONENT;
 BEGIN
 
@@ -206,6 +239,43 @@ BEGIN
     o_PC => s_nextPC
   );
 
-  registers : nbit_Reg
+  registers : RegFile
+  GENERIC MAP(N => 32);
+  PORT MAP(
+    i_WA => s_RegWrAddr,
+    i_WD => s_RegWrData,
+    i_RA0 => s_Inst(25 DOWNTO 21),
+    i_RA1 => s_Inst(20 DOWNTO 16),
+    i_RST => iRST,
+    i_CLK => iCLK,
+    o_q0 => s_Rs,
+    o_q1 => s_Rt
+  );
 
+  control : control
+  PORT MAP(
+    i_instruction => s_Inst,
+    o_immSign => open,
+    o_MemToReg => s_MemtoReg,
+    o_sub => open,
+    o_imm => s_ALUsrc,
+    o_lui => open,
+    o_ALUOp => s_ALUOp,
+    o_Shift => open,
+    o_leftShift => open,
+    o_arithShift => open,
+    o_MemWrite => s_MemWrite,
+    o_shiftReg => open,
+    o_DestReg => s_RegDest,
+    o_jump => s_Jump,
+    o_branch => s_Branch
+  );
+
+  -- mux0 : mux2t1_N
+  -- GENERIC (N => 5);
+  -- PORT (
+  --   i_S : IN std_logic;
+  --   i_D0 : IN std_logic_vector(N - 1 DOWNTO 0);
+  --   i_D1 : IN std_logic_vector(N - 1 DOWNTO 0);
+  --   o_O : OUT std_logic_vector(N - 1 DOWNTO 0));
 END structure;

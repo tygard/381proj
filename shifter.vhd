@@ -24,7 +24,7 @@ entity myFirstMIPSDataPath is
 
   port( i_A         : in std_logic_vector(31 downto 0);
 		i_l_or_r    : in std_logic;
-		o_F         : out std_logic_vector(31 downto 0)));
+		o_F         : out std_logic_vector(31 downto 0));
 
 end myFirstMIPSDataPath;
 

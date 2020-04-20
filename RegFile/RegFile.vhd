@@ -9,6 +9,7 @@ ENTITY RegFile IS
 		i_WD : IN std_logic_vector(31 DOWNTO 0);
 		i_RA0 : IN std_logic_vector(4 DOWNTO 0);
 		i_RA1 : IN std_logic_vector(4 DOWNTO 0);
+		i_WE : IN std_logic;
 		i_RST : IN std_logic;
 		i_CLK : IN std_logic;
 		o_q0 : OUT std_logic_vector(31 DOWNTO 0);
@@ -121,7 +122,7 @@ BEGIN
 	PORT MAP(
 		i_CLK => i_CLK,
 		i_RST => i_RST,
-		i_WE => s_Data(0),
+		i_WE => s_Data(0) & i_WE,
 		i_d => i_WD,
 		o_q => s_D0
 	);
@@ -130,7 +131,7 @@ BEGIN
 	PORT MAP(
 		i_CLK => i_CLK,
 		i_RST => i_RST,
-		i_WE => s_Data(1),
+		i_WE => s_Data(1) & i_WE,
 		i_d => i_WD,
 		o_q => s_D1
 	);
@@ -139,7 +140,7 @@ BEGIN
 	PORT MAP(
 		i_CLK => i_CLK,
 		i_RST => i_RST,
-		i_WE => s_Data(2),
+		i_WE => s_Data(2) & i_WE,
 		i_d => i_WD,
 		o_q => s_D2
 	);
@@ -148,7 +149,7 @@ BEGIN
 	PORT MAP(
 		i_CLK => i_CLK,
 		i_RST => i_RST,
-		i_WE => s_Data(3),
+		i_WE => s_Data(3) & i_WE,
 		i_d => i_WD,
 		o_q => s_D3
 	);
@@ -157,7 +158,7 @@ BEGIN
 	PORT MAP(
 		i_CLK => i_CLK,
 		i_RST => i_RST,
-		i_WE => s_Data(4),
+		i_WE => s_Data(4) & i_WE,
 		i_d => i_WD,
 		o_q => s_D4
 	);
@@ -166,7 +167,7 @@ BEGIN
 	PORT MAP(
 		i_CLK => i_CLK,
 		i_RST => i_RST,
-		i_WE => s_Data(5),
+		i_WE => s_Data(5) & i_WE,
 		i_d => i_WD,
 		o_q => s_D5
 	);
@@ -175,7 +176,7 @@ BEGIN
 	PORT MAP(
 		i_CLK => i_CLK,
 		i_RST => i_RST,
-		i_WE => s_Data(6),
+		i_WE => s_Data(6) & i_WE,
 		i_d => i_WD,
 		o_q => s_D6
 	);
@@ -184,7 +185,7 @@ BEGIN
 	PORT MAP(
 		i_CLK => i_CLK,
 		i_RST => i_RST,
-		i_WE => s_Data(7),
+		i_WE => s_Data(7) & i_WE,
 		i_d => i_WD,
 		o_q => s_D7
 	);
@@ -193,7 +194,7 @@ BEGIN
 	PORT MAP(
 		i_CLK => i_CLK,
 		i_RST => i_RST,
-		i_WE => s_Data(8),
+		i_WE => s_Data(8) & i_WE,
 		i_d => i_WD,
 		o_q => s_D8
 	);
@@ -202,7 +203,7 @@ BEGIN
 	PORT MAP(
 		i_CLK => i_CLK,
 		i_RST => i_RST,
-		i_WE => s_Data(9),
+		i_WE => s_Data(9) & i_WE,
 		i_d => i_WD,
 		o_q => s_D9
 	);
@@ -211,7 +212,7 @@ BEGIN
 	PORT MAP(
 		i_CLK => i_CLK,
 		i_RST => i_RST,
-		i_WE => s_Data(10),
+		i_WE => s_Data(10) & i_WE,
 		i_d => i_WD,
 		o_q => s_D10
 	);
@@ -220,7 +221,7 @@ BEGIN
 	PORT MAP(
 		i_CLK => i_CLK,
 		i_RST => i_RST,
-		i_WE => s_Data(11),
+		i_WE => s_Data(11) & i_WE,
 		i_d => i_WD,
 		o_q => s_D11
 	);
@@ -229,7 +230,7 @@ BEGIN
 	PORT MAP(
 		i_CLK => i_CLK,
 		i_RST => i_RST,
-		i_WE => s_Data(12),
+		i_WE => s_Data(12) & i_WE,
 		i_d => i_WD,
 		o_q => s_D12
 	);
@@ -238,7 +239,7 @@ BEGIN
 	PORT MAP(
 		i_CLK => i_CLK,
 		i_RST => i_RST,
-		i_WE => s_Data(13),
+		i_WE => s_Data(13) & i_WE,
 		i_d => i_WD,
 		o_q => s_D13
 	);
@@ -247,7 +248,7 @@ BEGIN
 	PORT MAP(
 		i_CLK => i_CLK,
 		i_RST => i_RST,
-		i_WE => s_Data(14),
+		i_WE => s_Data(14) & i_WE,
 		i_d => i_WD,
 		o_q => s_D14
 	);
@@ -256,7 +257,7 @@ BEGIN
 	PORT MAP(
 		i_CLK => i_CLK,
 		i_RST => i_RST,
-		i_WE => s_Data(15),
+		i_WE => s_Data(15) & i_WE,
 		i_d => i_WD,
 		o_q => s_D15
 	);
@@ -265,7 +266,7 @@ BEGIN
 	PORT MAP(
 		i_CLK => i_CLK,
 		i_RST => i_RST,
-		i_WE => s_Data(16),
+		i_WE => s_Data(16) & i_WE,
 		i_d => i_WD,
 		o_q => s_D16
 	);
@@ -274,7 +275,7 @@ BEGIN
 	PORT MAP(
 		i_CLK => i_CLK,
 		i_RST => i_RST,
-		i_WE => s_Data(17),
+		i_WE => s_Data(17) & i_WE,
 		i_d => i_WD,
 		o_q => s_D17
 	);
@@ -283,7 +284,7 @@ BEGIN
 	PORT MAP(
 		i_CLK => i_CLK,
 		i_RST => i_RST,
-		i_WE => s_Data(18),
+		i_WE => s_Data(18) & i_WE,
 		i_d => i_WD,
 		o_q => s_D18
 	);
@@ -292,7 +293,7 @@ BEGIN
 	PORT MAP(
 		i_CLK => i_CLK,
 		i_RST => i_RST,
-		i_WE => s_Data(19),
+		i_WE => s_Data(19) & i_WE,
 		i_d => i_WD,
 		o_q => s_D19
 	);
@@ -301,7 +302,7 @@ BEGIN
 	PORT MAP(
 		i_CLK => i_CLK,
 		i_RST => i_RST,
-		i_WE => s_Data(20),
+		i_WE => s_Data(20) & i_WE,
 		i_d => i_WD,
 		o_q => s_D20
 	);
@@ -310,7 +311,7 @@ BEGIN
 	PORT MAP(
 		i_CLK => i_CLK,
 		i_RST => i_RST,
-		i_WE => s_Data(21),
+		i_WE => s_Data(21) & i_WE,
 		i_d => i_WD,
 		o_q => s_D21
 	);
@@ -319,7 +320,7 @@ BEGIN
 	PORT MAP(
 		i_CLK => i_CLK,
 		i_RST => i_RST,
-		i_WE => s_Data(22),
+		i_WE => s_Data(22) & i_WE,
 		i_d => i_WD,
 		o_q => s_D22
 	);
@@ -328,7 +329,7 @@ BEGIN
 	PORT MAP(
 		i_CLK => i_CLK,
 		i_RST => i_RST,
-		i_WE => s_Data(23),
+		i_WE => s_Data(23) & i_WE,
 		i_d => i_WD,
 		o_q => s_D23
 	);
@@ -337,7 +338,7 @@ BEGIN
 	PORT MAP(
 		i_CLK => i_CLK,
 		i_RST => i_RST,
-		i_WE => s_Data(24),
+		i_WE => s_Data(24) & i_WE,
 		i_d => i_WD,
 		o_q => s_D24
 	);
@@ -346,7 +347,7 @@ BEGIN
 	PORT MAP(
 		i_CLK => i_CLK,
 		i_RST => i_RST,
-		i_WE => s_Data(25),
+		i_WE => s_Data(25) & i_WE,
 		i_d => i_WD,
 		o_q => s_D25
 	);
@@ -355,7 +356,7 @@ BEGIN
 	PORT MAP(
 		i_CLK => i_CLK,
 		i_RST => i_RST,
-		i_WE => s_Data(26),
+		i_WE => s_Data(26) & i_WE,
 		i_d => i_WD,
 		o_q => s_D26
 	);
@@ -364,7 +365,7 @@ BEGIN
 	PORT MAP(
 		i_CLK => i_CLK,
 		i_RST => i_RST,
-		i_WE => s_Data(27),
+		i_WE => s_Data(27) & i_WE,
 		i_d => i_WD,
 		o_q => s_D27
 	);
@@ -373,7 +374,7 @@ BEGIN
 	PORT MAP(
 		i_CLK => i_CLK,
 		i_RST => i_RST,
-		i_WE => s_Data(28),
+		i_WE => s_Data(28) & i_WE,
 		i_d => i_WD,
 		o_q => s_D28
 	);
@@ -382,7 +383,7 @@ BEGIN
 	PORT MAP(
 		i_CLK => i_CLK,
 		i_RST => i_RST,
-		i_WE => s_Data(29),
+		i_WE => s_Data(29) & i_WE,
 		i_d => i_WD,
 		o_q => s_D29
 	);
@@ -391,7 +392,7 @@ BEGIN
 	PORT MAP(
 		i_CLK => i_CLK,
 		i_RST => i_RST,
-		i_WE => s_Data(30),
+		i_WE => s_Data(30) & i_WE,
 		i_d => i_WD,
 		o_q => s_D30
 	);
@@ -400,7 +401,7 @@ BEGIN
 	PORT MAP(
 		i_CLK => i_CLK,
 		i_RST => i_RST,
-		i_WE => s_Data(31),
+		i_WE => s_Data(31) & i_WE,
 		i_d => i_WD,
 		o_q => s_D31
 	);
