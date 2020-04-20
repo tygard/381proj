@@ -87,7 +87,7 @@ ARCHITECTURE structure OF MIPS_Processor IS
   SIGNAL s_ShiftEn : std_logic;
   SIGNAL s_D : std_logic;
   SIGNAL s_T : std_logic;
-  signal s_BranchAndZero : std_logic;
+  SIGNAL s_BranchAndZero : std_logic;
   -- components -----------------------------------------------------------
 
   COMPONENT fetch_logic IS
@@ -151,17 +151,6 @@ ARCHITECTURE structure OF MIPS_Processor IS
       i_B : IN std_logic;
       o_F : OUT std_logic);
   END COMPONENT;
-
-  COMPONENT nbit_Reg IS
-    GENERIC (N : INTEGER := 32);
-    PORT (
-      i_CLK : IN std_logic;
-      i_RST : IN std_logic;
-      i_WE : IN std_logic;
-      i_D : IN std_logic_vector(N - 1 DOWNTO 0);
-      o_Q : OUT std_logic_vector(N - 1 DOWNTO 0));
-  END COMPONENT;
-
 BEGIN
 
   -- TODO: This is required to be your final input to your instruction memory. This provides a feasible method to externally load the memory module which means that the synthesis tool must assume it knows 
@@ -209,7 +198,7 @@ BEGIN
   );
 
   fetch : fetch_logic
-  port map(
+  PORT MAP(
     i_Branch => s_BranchAndZero,
     i_Jump => s_Jump,
     i_instr => s_Inst,
@@ -217,8 +206,6 @@ BEGIN
     o_PC => s_nextPC
   );
 
-
-
-
+  registers : nbit_Reg
 
 END structure;

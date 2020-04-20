@@ -1,54 +1,42 @@
 m255
 K4
 z2
-!s11e vcom 2019.3 2019.07, Jul 24 2019
 13
 !s112 1.1
 !i10d 8192
 !i10e 25
 !i10f 100
 cModel Technology
-Z0 dU:/381/Lab2/RegFile
-T_opt
-!s110 1580779237
-V@`m0OmfZP[j^B;<og?JOE2
-04 13 8 work n_register_tb behavior 1
-=3-509a4c473734-5e38c6e4-1ec-2b98
-o-quiet -auto_acc_if_foreign -work work
-tCvgOpt 0
-n@_opt
-OL;O;2019.3;69
-Edffg
-Z1 w1577987095
+Z0 dC:/School/CPRE381/381proj/previousLabs/RegFile
+Ebarrel_decoder_tb
+Z1 w1587357709
 Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
-Z3 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
-!i122 -1
+Z3 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
 R0
-Z4 8U:/381/Lab2/RegFile/dffg.vhd
-Z5 FU:/381/Lab2/RegFile/dffg.vhd
+Z4 8C:/School/CPRE381/381proj/previousLabs/RegFile/RegFile_tb.vhd
+Z5 FC:/School/CPRE381/381proj/previousLabs/RegFile/RegFile_tb.vhd
 l0
-L23
-V<]b9Vm3e`GAN;Cnj:57L>2
-!s100 T4gcXQGMCgKJbn8XhBM;b0
-Z6 OL;C;2019.3;69
+L4
+V@Qzi;2LJOPXaFK09^Yj`A1
+!s100 cBQVz6oCU>Mi:1RIBP_L41
+Z6 OP;C;10.4a;61
 32
-Z7 !s110 1580778189
+Z7 !s110 1587357843
 !i10b 1
-Z8 !s108 1580778188.000000
-Z9 !s90 -reportprogress|300|-work|work|U:/381/Lab2/RegFile/dffg.vhd|
-Z10 !s107 U:/381/Lab2/RegFile/dffg.vhd|
-!i113 0
-Z11 o-work work
-Z12 tExplicit 1 CvgOpt 0
-Amixed
+Z8 !s108 1587357843.000000
+Z9 !s90 -reportprogress|30|-work|work|C:/School/CPRE381/381proj/previousLabs/RegFile/RegFile_tb.vhd|
+Z10 !s107 C:/School/CPRE381/381proj/previousLabs/RegFile/RegFile_tb.vhd|
+!i113 1
+Z11 o-work work -O0
+Z12 tExplicit 1
+Astructure
 R2
 R3
-DEx4 work 4 dffg 0 22 <]b9Vm3e`GAN;Cnj:57L>2
-!i122 -1
-l37
-L33
-V`CHXPZKVEek`3gFWL_zFm2
-!s100 iOdlTUid@@]UimFK_53^C1
+DEx4 work 17 barrel_decoder_tb 0 22 @Qzi;2LJOPXaFK09^Yj`A1
+l22
+L7
+V>mHIU]U:5PEgHC]?>Ia1W3
+!s100 k[UaH@:hL`XJi128JTla31
 R6
 32
 R7
@@ -56,40 +44,38 @@ R7
 R8
 R9
 R10
-!i113 0
+!i113 1
 R11
 R12
-En_register
-Z13 w1580778180
+Edffg
+Z13 w1580924736
 R2
 R3
-!i122 -1
 R0
-Z14 8U:/381/Lab2/RegFile/n_register.vhd
-Z15 FU:/381/Lab2/RegFile/n_register.vhd
+Z14 8C:/School/CPRE381/381proj/previousLabs/RegFile/dffg.vhd
+Z15 FC:/School/CPRE381/381proj/previousLabs/RegFile/dffg.vhd
 l0
-L5
-V??_ea5lQnY=Lzzl]D0cLF2
-!s100 WaN0aH@=QGVK^U]7zD;o[1
+L23
+V`>eWfU0<Ciah0l5:Az0B21
+!s100 T4gcXQGMCgKJbn8XhBM;b0
 R6
 32
-Z16 !s110 1580778859
+Z16 !s110 1587407069
 !i10b 1
-Z17 !s108 1580778858.000000
-Z18 !s90 -reportprogress|300|-work|work|U:/381/Lab2/RegFile/n_register.vhd|
-Z19 !s107 U:/381/Lab2/RegFile/n_register.vhd|
-!i113 0
+Z17 !s108 1587407069.000000
+Z18 !s90 -reportprogress|300|-work|work|C:/School/CPRE381/381proj/previousLabs/RegFile/dffg.vhd|
+Z19 !s107 C:/School/CPRE381/381proj/previousLabs/RegFile/dffg.vhd|
+!i113 1
 R11
 R12
-Astructure
+Amixed
 R2
 R3
-DEx4 work 10 n_register 0 22 ??_ea5lQnY=Lzzl]D0cLF2
-!i122 -1
-l27
-L15
-VYM_dfh@=fnoEE2QC>:5G`0
-!s100 6R^XS12;kIeg;Q:[Ac[;N1
+DEx4 work 4 dffg 0 22 `>eWfU0<Ciah0l5:Az0B21
+l37
+L33
+VVdEUNjfgcG>KT`QEG70RO2
+!s100 iOdlTUid@@]UimFK_53^C1
 R6
 32
 R16
@@ -97,47 +83,183 @@ R16
 R17
 R18
 R19
-!i113 0
+!i113 1
+R11
+R12
+En_register
+Z20 w1587357279
+R2
+R3
+R0
+Z21 8C:/School/CPRE381/381proj/previousLabs/RegFile/n_register.vhd
+Z22 FC:/School/CPRE381/381proj/previousLabs/RegFile/n_register.vhd
+l0
+L3
+VCQJZj@a]ambD=IEWN`F3c1
+!s100 4E80mkNY]cChAQGB@RF@]3
+R6
+32
+R16
+!i10b 1
+R17
+Z23 !s90 -reportprogress|300|-work|work|C:/School/CPRE381/381proj/previousLabs/RegFile/n_register.vhd|
+Z24 !s107 C:/School/CPRE381/381proj/previousLabs/RegFile/n_register.vhd|
+!i113 1
+R11
+R12
+Astructure
+R2
+R3
+DEx4 work 10 n_register 0 22 CQJZj@a]ambD=IEWN`F3c1
+l23
+L12
+V_>SA3^BMe?7[ji3Hc>?Z_1
+!s100 GdT8^N=n_Q>9n^<6NEnEW0
+R6
+32
+R16
+!i10b 1
+R17
+R23
+R24
+!i113 1
 R11
 R12
 En_register_tb
-Z20 w1580779215
+R13
 R2
 R3
-!i122 -1
 R0
-Z21 8U:/381/Lab2/RegFile/n_register_tb.vhd
-Z22 FU:/381/Lab2/RegFile/n_register_tb.vhd
+Z25 8C:/School/CPRE381/381proj/previousLabs/RegFile/n_register_tb.vhd
+Z26 FC:/School/CPRE381/381proj/previousLabs/RegFile/n_register_tb.vhd
 l0
 L4
-Vi_DKXdcYkz`=V@@`imGdU0
+VnL45NbZ5?H[g?n`@@@KeP2
 !s100 Rm:m0LR7hJPWjUYo=l63H1
 R6
 32
-Z23 !s110 1580779230
+R16
 !i10b 1
-Z24 !s108 1580779230.000000
-Z25 !s90 -reportprogress|300|-work|work|U:/381/Lab2/RegFile/n_register_tb.vhd|
-Z26 !s107 U:/381/Lab2/RegFile/n_register_tb.vhd|
-!i113 0
+R17
+Z27 !s90 -reportprogress|300|-work|work|C:/School/CPRE381/381proj/previousLabs/RegFile/n_register_tb.vhd|
+Z28 !s107 C:/School/CPRE381/381proj/previousLabs/RegFile/n_register_tb.vhd|
+!i113 1
 R11
 R12
 Abehavior
 R2
 R3
-DEx4 work 13 n_register_tb 0 22 i_DKXdcYkz`=V@@`imGdU0
-!i122 -1
+DEx4 work 13 n_register_tb 0 22 nL45NbZ5?H[g?n`@@@KeP2
 l27
 L9
-VIFMiOb0KdMZVGlI<fWFzo0
-!s100 >5N3_;GnP2YX58N8`fQb]0
+VH]_2F@aaW7`dkXM37gY8n1
+!s100 M9lY[Z@XCNCTCYZ[e7mdC1
 R6
 32
-R23
+R16
 !i10b 1
-R24
-R25
-R26
-!i113 0
+R17
+R27
+R28
+!i113 1
 R11
 R12
+Eregfile
+Z29 w1587406220
+Z30 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+R2
+R3
+R0
+Z31 8C:/School/CPRE381/381proj/previousLabs/RegFile/RegFile.vhd
+Z32 FC:/School/CPRE381/381proj/previousLabs/RegFile/RegFile.vhd
+l0
+L5
+V`_H:PUL@`IRf29P=VMLiR1
+!s100 =N_zzM9[L`BKCG96k31=91
+R6
+32
+R16
+!i10b 1
+R17
+Z33 !s90 -reportprogress|300|-work|work|C:/School/CPRE381/381proj/previousLabs/RegFile/RegFile.vhd|
+Z34 !s107 C:/School/CPRE381/381proj/previousLabs/RegFile/RegFile.vhd|
+!i113 1
+R11
+R12
+Astructure
+R30
+R2
+R3
+DEx4 work 7 regfile 0 22 `_H:PUL@`IRf29P=VMLiR1
+l113
+L19
+V5Hfj0:Z8Ng_oIYM7zPgbP3
+!s100 D^VXmJN:b[5]Zaf2Mdaed3
+R6
+32
+R16
+!i10b 1
+R17
+R33
+R34
+!i113 1
+R11
+R12
+Eregfile_tb
+Z35 w1587406953
+R2
+R3
+R0
+R4
+R5
+l0
+L4
+VRfiYM4XgeB6V3;<=3>B9?2
+!s100 n5RXce:M4m8WfReNOC=<M2
+R6
+32
+Z36 !s110 1587407070
+!i10b 1
+Z37 !s108 1587407070.000000
+R9
+R10
+!i113 1
+R11
+R12
+Abehavior
+R2
+R3
+Z38 DEx4 work 10 regfile_tb 0 22 RfiYM4XgeB6V3;<=3>B9?2
+l30
+L7
+Vam2^Q[oZ`inmP0clT`@mo3
+!s100 LT_[RjE1K?FW:1a[cHc5A0
+R6
+32
+R36
+!i10b 1
+R37
+R9
+R10
+!i113 1
+R11
+R12
+Astructure
+R2
+R3
+R38
+l30
+L7
+Vg[kDWf6_QbH0dgWii]BjL2
+!s100 3:PllQRR:XnemPHNk5nXc3
+R6
+32
+!s110 1587405907
+!i10b 1
+!s108 1587405907.000000
+R9
+R10
+!i113 1
+R11
+R12
+w1587405899
