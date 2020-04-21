@@ -12,7 +12,7 @@ end f_alu;
 architecture structural of f_alu is
 --32t1mux
  component mux32t1 is
-  i_D0: in std_logic_vector(31 downto 0);
+  port (i_D0: in std_logic_vector(31 downto 0);
 		i_D1: in std_logic_vector(31 downto 0);
 		i_D2: in std_logic_vector(31 downto 0);
 		i_D3: in std_logic_vector(31 downto 0);
@@ -21,7 +21,7 @@ architecture structural of f_alu is
 		i_D6: in std_logic_vector(31 downto 0);
 		i_D7: in std_logic_vector(31 downto 0);
 		i_D8: in std_logic_vector(31 downto 0);
-		i_D9: in std_logic_vector(31 downto 0);
+		i_D9: in std_logic_vector(31 downto 0); 	
 		i_D10: in std_logic_vector(31 downto 0);
 		i_D11: in std_logic_vector(31 downto 0);
 		i_D12: in std_logic_vector(31 downto 0);
@@ -50,6 +50,7 @@ architecture structural of f_alu is
 --sll
 --srl
 component barrelshift_32 is
+	port (
   i_SHAMT           : in std_logic_vector(4 downto 0);		 -- Shift amount input
        i_D	        : in std_logic;     					 -- Shift direction input (0: right, 1: left)
        i_T          : in std_logic;     					 -- Shift type input (0: logical, 1: arith.)
@@ -68,6 +69,7 @@ component barrelshift_32 is
 
 --multu
  component m_N_bit is
+	port(
   	i_A         : in std_logic_vector(N-1 downto 0);
 	i_B         : in std_logic_vector(N-1 downto 0);
 	o_S         : out std_logic_vector(63 downto 0); --I BELIEVE THE OUTPUT WILL BE 64 BITS -ADNAN
