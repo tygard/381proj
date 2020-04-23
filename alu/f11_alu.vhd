@@ -14,8 +14,8 @@ entity f_alu is
   port(	i_A         : in std_logic_vector(N-1 downto 0);  --input 1
 		i_B         : in std_logic_vector(N-1 downto 0);  --input 2
 		i_C			: in std_logic_vector (4 downto 0);   --alu control
-		o_S         : out std_logic_vector(63 downto 0); --sum output
-		o_C         : out std_logic_vector(63 downto 0)); --carry output
+		o_S         : out std_logic_vector(32 downto 0); --sum output
+		o_C         : out std_logic_vector(32 downto 0)); --carry output
 end f_alu;
 
 architecture structural of f_alu is
