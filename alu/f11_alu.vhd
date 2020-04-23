@@ -10,7 +10,7 @@ entity f_alu is
   generic(N : integer := 32); 
   port(	i_A         : in std_logic_vector(N-1 downto 0);  --input 1
 		i_B         : in std_logic_vector(N-1 downto 0);  --input 2
-		i_C	    : in std_logic_vector (4 downto 0);   --alu control
+		i_C	        : in std_logic_vector (4 downto 0);   --alu control
 		o_S         : out std_logic_vector(32 downto 0); --sum output
 		o_C         : out std_logic_vector(32 downto 0); --carry output
 		o_Overflow  : out std_logic);
@@ -129,13 +129,17 @@ component add_sub_N_bit  is
             o_F          : out std_logic_vector(31 downto 0));
   end component;
 --------------------------------------------------------------------------------------------
-architecture structural of f_alu is
+--architecture structural of f_alu is
 
 --signals:
 	signal s_iS : std_logic;							
 		
-	signal s_multu : std_logic_vector(N-1 downto 0);
-	signal s_multu_carry : std_logic_vector(N-1 downto 0);
+	signal s_multu : std_logic_vector(63 downto 0);
+	signal s_multu_first : std_logic_vector(N-1 downto 0);
+	signal s_multu_last : std_logic_vector(N-1 downto 0);
+	
+	signal s_multu_carry : std_logic;
+	
 	signal s_add : std_logic_vector(N-1 downto 0);	
 	signal s_add_carry : std_logic_vector(N-1 downto 0);	
 	signal s_sub: std_logic_vector(N-1 downto 0);	
@@ -157,7 +161,7 @@ begin
 --32t1mux----------------------------------------
 g_32t1mux: mux32t1 --SUM OUTPUT MUX
 		port MAP(
-		i_D0   =>  s_multu,
+		i_D0   =>  s_multu_first,
 		i_D1   =>  s_add,
 		i_D2   =>  s_sub,
 		i_D3   =>  s_and,
@@ -171,39 +175,87 @@ g_32t1mux: mux32t1 --SUM OUTPUT MUX
 		i_D9   =>  s_bne,
 		
 		--NEED TO MAKE UNUSED OUTPUTS BELOW 0s
-		i_D10   => open,
-		i_D11   => open,
+		i_D10   => X"00000000",
+		i_D11   =>  X"00000000",
 		
-		i_D12   => open,
-		i_D13   => open,
-		i_D14   => open,
-		i_D15   => open,
+		i_D12   =>  X"00000000",
+		i_D13   =>  X"00000000",
+		i_D14   =>  X"00000000",
+		i_D15   =>  X"00000000",
 		
-		i_D16   => open,
-		i_D17   => open,
-		i_D18   => open,
-		i_D19   =>  open,
+		i_D16   =>  X"00000000",
+		i_D17   =>  X"00000000",
+		i_D18   =>  X"00000000",
+		i_D19   =>   X"00000000",
 		
-		i_D20   => open,
-		i_D21   => open,
-        i_D22   => open,
-		i_D23   => open,
+		i_D20   =>  X"00000000",
+		i_D21   =>  X"00000000",
+        i_D22   =>  X"00000000",
+		i_D23   =>  X"00000000",
 		
-		i_D24   => open,
-		i_D25   => open,
-		i_D26   => open,
-		i_D27   => open,
+		i_D24   =>  X"00000000",
+		i_D25   =>  X"00000000",
+		i_D26   =>  X"00000000",
+		i_D27   =>  X"00000000",
 		
-		i_D28   => open,
-		i_D29   => open,
-		i_D30   => open,
-		i_D31   => open,
+		i_D28   =>  X"00000000",
+		i_D29   =>  X"00000000",
+		i_D30   =>  X"00000000",
+		i_D31   =>  X"00000000",
 		
 		i_S     =>  i_C,
         o_Q     =>  o_S);
 		
+		
+		----------------------------------------------------
+--secong mux that selects corresponding mult
+	g_32t1mux_mult: mux32t1
+		port MAP(
+		i_D0   =>  s_multu_last,
+		i_D1   =>  X"00000000",
+		i_D2   =>  X"00000000",
+		i_D3   =>  X"00000000",
+		
+		i_D4   =>   X"00000000",
+		i_D5   =>   X"00000000",
+		i_D6   =>   X"00000000",
+		i_D7   =>   X"00000000",
+		
+		i_D8   =>   X"00000000",
+		i_D9   =>   X"00000000",
+		i_D10   =>  X"00000000",
+		i_D11   =>  X"00000000",
+		
+		i_D12   =>  X"00000000",
+		i_D13   =>  X"00000000",
+		i_D14   =>  X"00000000",
+		i_D15   =>  X"00000000",
+		
+		i_D16   =>  X"00000000",
+		i_D17   =>  X"00000000",
+		i_D18   =>  X"00000000",
+		i_D19   =>   X"00000000",
+		
+		i_D20   =>  X"00000000",
+		i_D21   =>  X"00000000",
+        i_D22   =>  X"00000000",
+		i_D23   =>  X"00000000",
+		
+		i_D24   =>  X"00000000",
+		i_D25   =>  X"00000000",
+		i_D26   =>  X"00000000",
+		i_D27   =>  X"00000000",
+		
+		i_D28   =>  X"00000000",
+		i_D29   =>  X"00000000",
+		i_D30   =>  X"00000000",
+		i_D31   =>  X"00000000",
+		
+		i_S     =>  i_C,
+        o_Q     =>  o_C);
+
 ----------------------------------------------------
---second mux that selects corresponding carry to out put
+--third mux that selects corresponding carry to out put
 	g_32t1mux_carry: mux32t1
 		port MAP(
 		i_D0   =>  s_multu_carry,
@@ -213,61 +265,61 @@ g_32t1mux: mux32t1 --SUM OUTPUT MUX
 		--NEED TO MAKE UNUSED OUTPUTS BELOW 0s
 		i_D3   =>  s_and,
 		
-		i_D4   =>  open,
-		i_D5   =>  open,
-		i_D6   =>  open,
-		i_D7   =>  open,
+		i_D4   =>   X"00000000",
+		i_D5   =>   X"00000000",
+		i_D6   =>   X"00000000",
+		i_D7   =>   X"00000000",
 		
-		i_D8   =>  open,
-		i_D9   =>  open,
-		i_D10   => open,
-		i_D11   => open,
+		i_D8   =>   X"00000000",
+		i_D9   =>   X"00000000",
+		i_D10   =>  X"00000000",
+		i_D11   =>  X"00000000",
 		
-		i_D12   => open,
-		i_D13   => open,
-		i_D14   => open,
-		i_D15   => open,
+		i_D12   =>  X"00000000",
+		i_D13   =>  X"00000000",
+		i_D14   =>  X"00000000",
+		i_D15   =>  X"00000000",
 		
-		i_D16   => open,
-		i_D17   => open,
-		i_D18   => open,
-		i_D19   =>  open,
+		i_D16   =>  X"00000000",
+		i_D17   =>  X"00000000",
+		i_D18   =>  X"00000000",
+		i_D19   =>   X"00000000",
 		
-		i_D20   => open,
-		i_D21   => open,
-        i_D22   => open,
-		i_D23   => open,
+		i_D20   =>  X"00000000",
+		i_D21   =>  X"00000000",
+        i_D22   =>  X"00000000",
+		i_D23   =>  X"00000000",
 		
-		i_D24   => open,
-		i_D25   => open,
-		i_D26   => open,
-		i_D27   => open,
+		i_D24   =>  X"00000000",
+		i_D25   =>  X"00000000",
+		i_D26   =>  X"00000000",
+		i_D27   =>  X"00000000",
 		
-		i_D28   => open,
-		i_D29   => open,
-		i_D30   => open,
-		i_D31   => open,
+		i_D28   =>  X"00000000",
+		i_D29   =>  X"00000000",
+		i_D30   =>  X"00000000",
+		i_D31   =>  X"00000000",
 		
 		i_S     =>  i_C,
-        o_Q     =>  o_C);
+        o_Q     =>  o_Overflow);
 
 --mult-------------------------------
 g_mult: m_N_bit
 		port MAP(i_A     =>  i_A,
 				i_B	     =>  i_B,
-				s_multu      =>  o_S,
-				s_multu_carry	 =>  o_Cout);
+				o_S      =>    s_multu,
+				o_Cout	 =>  s_multu_carry);--make 1 bit
 				
 -- de concatenate multiplier parts
 
-	i_S(63 downto 32) => s_multu_carry;
-	i_S(31 downto 0) => s_multu;
+	s_multu(63 downto 32) => s_multu_first;
+	s_multu(31 downto 0) => s_multu_last;
 
 --s_add,----------------------------				
 g_add: add_sub_N_bit
 		port MAP(i_A         => i_A,
 				 i_B         => i_B,
-				 '0'         => i_SELECT,
+				i_SELECT          => '0', -- '0'         => i_SELECT,
 				   s_add     => o_S,
 				s_add_carry	 => o_Cout);
 				
