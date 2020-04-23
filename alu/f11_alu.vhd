@@ -61,40 +61,40 @@ architecture structural of f_alu is
   
   component mux32t1 is
 	port(
-	i_D0: in std_logic);
-		i_D1: in std_logic);
-		i_D2: in std_logic);
-		i_D3: in std_logic);
-		i_D4: in std_logic);
-		i_D5: in std_logic);
-		i_D6: in std_logic);
-		i_D7: in std_logic);
-		i_D8: in std_logic);
-		i_D9: in std_logic);
-		i_D10: in std_logic);
-		i_D11: in std_logic);
-		i_D12: in std_logic);
-		i_D13: in std_logic);
-		i_D14: in std_logic);
-		i_D15: in std_logic);
-		i_D16: in std_logic);
-		i_D17: in std_logic);
-		i_D18: in std_logic);
-		i_D19: in std_logic);
-		i_D20: in std_logic);
-		i_D21: in std_logic);
-		i_D22: in std_logic);
-		i_D23: in std_logic);
-		i_D24: in std_logic);
-		i_D25: in std_logic);
-		i_D26: in std_logic);
-		i_D27: in std_logic);
-		i_D28: in std_logic);
-		i_D29: in std_logic);
-		i_D30: in std_logic);
+		i_D0: in std_logic;
+		i_D1: in std_logic;
+		i_D2: in std_logic;
+		i_D3: in std_logic;
+		i_D4: in std_logic;
+		i_D5: in std_logic;
+		i_D6: in std_logic;
+		i_D7: in std_logic;
+		i_D8: in std_logic;
+		i_D9: in std_logic;
+		i_D10: in std_logic;
+		i_D11: in std_logic;
+		i_D12: in std_logic;
+		i_D13: in std_logic;
+		i_D14: in std_logic;
+		i_D15: in std_logic;
+		i_D16: in std_logic;
+		i_D17: in std_logic;
+		i_D18: in std_logic;
+		i_D19: in std_logic;
+		i_D20: in std_logic;
+		i_D21: in std_logic
+		i_D22: in std_logic;
+		i_D23: in std_logic;
+		i_D24: in std_logic;
+		i_D25: in std_logic;
+		i_D26: in std_logic;
+		i_D27: in std_logic;
+		i_D28: in std_logic;
+		i_D29: in std_logic;
+		i_D30: in std_logic;
 		i_D31: in std_logic;
 		i_S: in std_logic_vector(4 downto 0);
-        o_Q  : out std_logic);
+        o_Q  : out std_logic
 	);
   end component;
   
