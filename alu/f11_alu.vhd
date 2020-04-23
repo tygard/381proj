@@ -277,22 +277,22 @@ g_add: add_sub_N_bit
 		port MAP(i_A         => i_A,
 				 i_B         => i_B,
 				i_SELECT          => '0', -- '0'         => i_SELECT,
-				   s_add     => o_S,
-				s_add_carry	 => o_Cout);
+				   o_S     =>  s_add,
+				o_Cout	 =>   s_add_carry);
 				
 --s_sub,----------------------------
 g_sub: add_sub_N_bit
 		port MAP(i_A         =>  i_A,
 				 i_B         =>  i_B,
-				 '0'         =>  i_SELECT,
-				   s_sub     =>  o_S,
-				s_sub_carry	 =>  o_Cout);
+				i_SELECT          =>  '0',
+				o_S        =>  s_sub,
+				 o_Cout 	 =>  s_sub_carry);
 
 --and-------------------------------- CHANGE TO 32
 g_and: andg32
 		port MAP(i_A   =>  i_A,
 				i_B	   =>  i_B,
-				s_and  =>  o_Cout);
+				o_Cout  =>    s_and);
 		
 --or--------------------------------- CHANGE TO 32
 g_or: org32
@@ -304,30 +304,30 @@ g_or: org32
 g_xor: xorg32
 		port MAP(i_A   =>  i_A,
 				i_B	   =>  i_B,
-				s_xor  =>  o_Cout);
+				o_Cout   => s_xor );
 	
 --s_nor,----------------------------- CHANGE TO 32
 g_nor: norg32
 		port MAP(i_A   =>  i_A,
 				i_B	   =>  i_B,
-				s_nor  =>  o_Cout);
+				o_Cout   => s_nor );
 
 --s_slt,---------------------------- 
 g_slt: slt
 		port MAP(i_A   =>  i_A,
 				i_B	   =>  i_B,
-				s_slt  =>  o_F);
+				o_F  =>    s_slt);
 
 --s_beq,------------------------- 
 g_beq: beq
 		port MAP(i_A   =>  i_A,
 				i_B	   =>  i_B,
-				s_beq  =>  o_F);
+				o_F  =>    s_beq);
 
 --s_bne,-------------------------
 g_invg: invg32
-		port MAP(s_beq   =>  i_A,
-				 s_bne   =>  o_F);
+		port MAP( i_A  =>    s_beq,
+				o_F    =>    s_bne);
 
 ----------------------------
 end structural;
