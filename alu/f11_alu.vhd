@@ -220,7 +220,7 @@ g_32t1mux: mux32t1 --SUM OUTPUT MUX
 		i_D2   =>  s_sub_carry,
 		
 		--NEED TO MAKE UNUSED OUTPUTS BELOW 0s
-		i_D3   =>  s_and,
+		i_D3   =>   X"00000000",
 		
 		i_D4   =>   X"00000000",
 		i_D5   =>   X"00000000",
