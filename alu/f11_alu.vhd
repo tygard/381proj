@@ -1,9 +1,6 @@
 -- TODO:
--- need to make 32 bit vhd files for and through beq
--- need to de concatenate multiplier parts
--- test slt and beq vhd files
--- need to add zeros to useless mux out puts
--- need to compile
+
+-- need to add zeros to useless mux out puts / need to compile
 -- need to make test benches
 
 library IEEE;
@@ -82,31 +79,31 @@ component add_sub_N_bit  is
   end component;
 
 --and
- component andg2 is
-    port(	i_A      : in std_logic;
-			i_B      : in std_logic; 
-			o_F      : out std_logic);
+ component andg32 is
+    port(	i_A      : in std_logic_vector(31 downto 0);
+			i_B      : in std_logic_vector(31 downto 0); 
+			o_F      : out std_logic_vector(31 downto 0));
   end component;
   
   --or
-  component org2 is
-    port(	i_A          : in std_logic;
-            i_B          : in std_logic;
-            o_F          : out std_logic);
+  component org32 is
+    port(	i_A          : in std_logic_vector(31 downto 0);
+            i_B          : in std_logic_vector(31 downto 0);
+            o_F          : out std_logic_vector(31 downto 0));
   end component;
   
   --xor
-   component xorg2 is
-    port(	i_A          : in std_logic;
-            i_B          : in std_logic;
-            o_F          : out std_logic);
+   component xorg32 is
+    port(	i_A          : in std_logic_vector(31 downto 0);
+            i_B          : in std_logic_vector(31 downto 0);
+            o_F          : out std_logic_vector(31 downto 0));
   end component;
   
   --nor
-   component norg2 is
-    port(	i_A          : in std_logic;
-            i_B          : in std_logic;
-            o_F          : out std_logic);
+   component norg32 is
+    port(	i_A          : in std_logic_vector(31 downto 0);
+            i_B          : in std_logic_vector(31 downto 0);
+            o_F          : out std_logic_vector(31 downto 0));
   end component;
   
   --slt
@@ -258,8 +255,13 @@ g_32t1mux: mux32t1 --SUM OUTPUT MUX
 g_mult: m_N_bit
 		port MAP(i_A     =>  i_A,
 				i_B	     =>  i_B,
-				'0'      =>  o_S,
-				s_multu	 =>  o_Cout);-- need to de concatenate multiplier parts
+				s_multu      =>  o_S,
+				s_multu_carry	 =>  o_Cout);
+				
+-- de concatenate multiplier parts
+
+	i_S(63 downto 32) => s_multu_carry;
+	i_S(31 downto 0) => s_multu;
 
 --s_add,----------------------------				
 g_add: add_sub_N_bit
@@ -278,25 +280,25 @@ g_sub: add_sub_N_bit
 				s_sub_carry	 =>  o_Cout);
 
 --and-------------------------------- CHANGE TO 32
-g_and: andg2
+g_and: andg32
 		port MAP(i_A   =>  i_A,
 				i_B	   =>  i_B,
 				s_and  =>  o_Cout);
 		
 --or--------------------------------- CHANGE TO 32
-g_or: org2
+g_or: org32
 		port MAP(i_A   =>  i_A,
 				i_B	   =>  i_B,
 				s_or   =>  o_Cout);	
 				
 --xor-------------------------------- CHANGE TO 32
-g_xor: xorg2
+g_xor: xorg32
 		port MAP(i_A   =>  i_A,
 				i_B	   =>  i_B,
 				s_xor  =>  o_Cout);
 	
 --s_nor,----------------------------- CHANGE TO 32
-g_nor: norg2
+g_nor: norg32
 		port MAP(i_A   =>  i_A,
 				i_B	   =>  i_B,
 				s_nor  =>  o_Cout);
