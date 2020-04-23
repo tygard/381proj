@@ -1,9 +1,6 @@
 -- TODO:
--- need to make 32 bit vhd files for and through beq
--- need to de concatenate multiplier parts
--- test slt and beq vhd files
--- need to add zeros to useless mux out puts
--- need to compile
+
+-- need to add zeros to useless mux out puts / need to compile
 -- need to make test benches
 
 library IEEE;
@@ -82,31 +79,31 @@ component add_sub_N_bit  is
   end component;
 
 --and
- component andg2 is
-    port(	i_A      : in std_logic;
-			i_B      : in std_logic; 
-			o_F      : out std_logic);
+ component andg32 is
+    port(	i_A      : in std_logic_vector(31 downto 0);
+			i_B      : in std_logic_vector(31 downto 0); 
+			o_F      : out std_logic_vector(31 downto 0));
   end component;
   
   --or
-  component org2 is
-    port(	i_A          : in std_logic;
-            i_B          : in std_logic;
-            o_F          : out std_logic);
+  component org32 is
+    port(	i_A          : in std_logic_vector(31 downto 0);
+            i_B          : in std_logic_vector(31 downto 0);
+            o_F          : out std_logic_vector(31 downto 0));
   end component;
   
   --xor
-   component xorg2 is
-    port(	i_A          : in std_logic;
-            i_B          : in std_logic;
-            o_F          : out std_logic);
+   component xorg32 is
+    port(	i_A          : in std_logic_vector(31 downto 0);
+            i_B          : in std_logic_vector(31 downto 0);
+            o_F          : out std_logic_vector(31 downto 0));
   end component;
   
   --nor
-   component norg2 is
-    port(	i_A          : in std_logic;
-            i_B          : in std_logic;
-            o_F          : out std_logic);
+   component norg32 is
+    port(	i_A          : in std_logic_vector(31 downto 0);
+            i_B          : in std_logic_vector(31 downto 0);
+            o_F          : out std_logic_vector(31 downto 0));
   end component;
   
   --slt
@@ -174,33 +171,33 @@ g_32t1mux: mux32t1 --SUM OUTPUT MUX
 		i_D9   =>  s_bne,
 		
 		--NEED TO MAKE UNUSED OUTPUTS BELOW 0s
-		--i_D10   => s_sub,
-		--i_D11   => s_subu,
+		i_D10   => open,
+		i_D11   => open,
 		
-		--i_D12   => s_and,
-		--i_D13   => s_or,
-		--i_D14   => s_xor,
-		--i_D15   => s_nor,
+		i_D12   => open,
+		i_D13   => open,
+		i_D14   => open,
+		i_D15   => open,
 		
-		--i_D16   => s_slt,
-		--i_D17   => s_sltu,
+		i_D16   => open,
+		i_D17   => open,
 		i_D18   => open,
 		i_D19   =>  open,
 		
-		--i_D20   => s_beq,
-		--i_D21   => s_bne,
-        --i_D22   => s_addi,
-		--i_D23   => s_addiu,
+		i_D20   => open,
+		i_D21   => open,
+        i_D22   => open,
+		i_D23   => open,
 		
-		--i_D24   => s_slti,
-		--i_D25   => s_sltiu,
-		--i_D26   => s_andi,
-		--i_D27   => s_ori,
+		i_D24   => open,
+		i_D25   => open,
+		i_D26   => open,
+		i_D27   => open,
 		
-		--i_D28   => s_xori,
-		--i_D29   => s_sub_carry,
-		--i_D30   => s_add_carry,
-		--i_D31   => s_multu_carry,
+		i_D28   => open,
+		i_D29   => open,
+		i_D30   => open,
+		i_D31   => open,
 		
 		i_S     =>  i_C,
         o_Q     =>  o_S);
@@ -214,42 +211,42 @@ g_32t1mux: mux32t1 --SUM OUTPUT MUX
 		i_D2   =>  s_sub_carry,
 		
 		--NEED TO MAKE UNUSED OUTPUTS BELOW 0s
-		--i_D3   =>  s_and,
+		i_D3   =>  s_and,
 		
-		--i_D4   =>  s_or,
-		--i_D5   =>  s_xor,
-		--i_D6   =>  s_nor,
-		--i_D7   =>  s_slt,
+		i_D4   =>  open,
+		i_D5   =>  open,
+		i_D6   =>  open,
+		i_D7   =>  open,
 		
-		--i_D8   =>  s_beq,
-		--i_D9   =>  s_bne,
-		--i_D10   => s_sub,
-		--i_D11   => s_subu,
+		i_D8   =>  open,
+		i_D9   =>  open,
+		i_D10   => open,
+		i_D11   => open,
 		
-		--i_D12   => s_and,
-		--i_D13   => s_or,
-		--i_D14   => s_xor,
-		--i_D15   => s_nor,
+		i_D12   => open,
+		i_D13   => open,
+		i_D14   => open,
+		i_D15   => open,
 		
-		--i_D16   => s_slt,
-		--i_D17   => s_sltu,
-		--i_D18   => s_j,
-		--i_D19   =>  s_jal,
+		i_D16   => open,
+		i_D17   => open,
+		i_D18   => open,
+		i_D19   =>  open,
 		
-		--i_D20   => s_beq,
-		--i_D21   => s_bne,
-        --i_D22   => s_addi,
-		--i_D23   => s_addiu,
+		i_D20   => open,
+		i_D21   => open,
+        i_D22   => open,
+		i_D23   => open,
 		
-		--i_D24   => s_slti,
-		--i_D25   => s_sltiu,
-		--i_D26   => s_andi,
-		--i_D27   => s_ori,
+		i_D24   => open,
+		i_D25   => open,
+		i_D26   => open,
+		i_D27   => open,
 		
-		--i_D28   => s_xori,
-		--i_D29   => s_sub_carry,
-		--i_D30   => s_add_carry,
-		--i_D31   => s_multu_carry,
+		i_D28   => open,
+		i_D29   => open,
+		i_D30   => open,
+		i_D31   => open,
 		
 		i_S     =>  i_C,
         o_Q     =>  o_C);
@@ -258,8 +255,13 @@ g_32t1mux: mux32t1 --SUM OUTPUT MUX
 g_mult: m_N_bit
 		port MAP(i_A     =>  i_A,
 				i_B	     =>  i_B,
-				'0'      =>  o_S,
-				s_multu	 =>  o_Cout);-- need to de concatenate multiplier parts
+				s_multu      =>  o_S,
+				s_multu_carry	 =>  o_Cout);
+				
+-- de concatenate multiplier parts
+
+	i_S(63 downto 32) => s_multu_carry;
+	i_S(31 downto 0) => s_multu;
 
 --s_add,----------------------------				
 g_add: add_sub_N_bit
@@ -278,25 +280,25 @@ g_sub: add_sub_N_bit
 				s_sub_carry	 =>  o_Cout);
 
 --and-------------------------------- CHANGE TO 32
-g_and: andg2
+g_and: andg32
 		port MAP(i_A   =>  i_A,
 				i_B	   =>  i_B,
 				s_and  =>  o_Cout);
 		
 --or--------------------------------- CHANGE TO 32
-g_or: org2
+g_or: org32
 		port MAP(i_A   =>  i_A,
 				i_B	   =>  i_B,
 				s_or   =>  o_Cout);	
 				
 --xor-------------------------------- CHANGE TO 32
-g_xor: xorg2
+g_xor: xorg32
 		port MAP(i_A   =>  i_A,
 				i_B	   =>  i_B,
 				s_xor  =>  o_Cout);
 	
 --s_nor,----------------------------- CHANGE TO 32
-g_nor: norg2
+g_nor: norg32
 		port MAP(i_A   =>  i_A,
 				i_B	   =>  i_B,
 				s_nor  =>  o_Cout);
