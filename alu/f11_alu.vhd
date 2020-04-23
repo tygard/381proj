@@ -59,7 +59,7 @@ architecture structural of f_alu is
         o_Q  : out std_logic_vector(31 downto 0));
   end component;
   
-  component mux32t1 is
+  component mux32t1bit1wide is
 	port(
 		i_D0: in std_logic;
 		i_D1: in std_logic;
@@ -97,10 +97,6 @@ architecture structural of f_alu is
         o_Q  : out std_logic
 	);
   end component;
-  
-  
-  
-  
 
 --multu
  component m_N_bit is
