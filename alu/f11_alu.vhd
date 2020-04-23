@@ -141,9 +141,9 @@ component add_sub_N_bit  is
 	signal s_multu_carry : std_logic;
 	
 	signal s_add : std_logic_vector(N-1 downto 0);	
-	signal s_add_carry : std_logic_vector(N-1 downto 0);	
+	signal s_add_carry : std_logic;	
 	signal s_sub: std_logic_vector(N-1 downto 0);	
-	signal s_sub_carry: std_logic_vector(N-1 downto 0);	
+	signal s_sub_carry: std_logic;	
 	signal s_and : std_logic_vector(N-1 downto 0);	
 	
 	signal s_or : std_logic_vector(N-1 downto 0);	
@@ -207,12 +207,12 @@ g_32t1mux: mux32t1 --SUM OUTPUT MUX
         o_Q     =>  o_S);
 		
 		
-	----------------------------------------------------
+----------------------------------------------------
 
-        o_C     =>  s_multu_last;
+      
 
 ----------------------------------------------------
---third mux that selects corresponding carry to out put
+--second mux that selects corresponding carry to out put
 	g_32t1mux_carry: mux32t1
 		port MAP(
 		i_D0   =>  s_multu_carry,
@@ -220,42 +220,42 @@ g_32t1mux: mux32t1 --SUM OUTPUT MUX
 		i_D2   =>  s_sub_carry,
 		
 		--NEED TO MAKE UNUSED OUTPUTS BELOW 0s
-		i_D3   =>   X"00000000",
+		i_D3   =>   '0',
 		
-		i_D4   =>   X"00000000",
-		i_D5   =>   X"00000000",
-		i_D6   =>   X"00000000",
-		i_D7   =>   X"00000000",
+		i_D4   =>   '0',
+		i_D5   =>  '0',
+		i_D6   => '0',
+		i_D7   =>  '0',
 		
-		i_D8   =>   X"00000000",
-		i_D9   =>   X"00000000",
-		i_D10   =>  X"00000000",
-		i_D11   =>  X"00000000",
+		i_D8   =>  '0',
+		i_D9   =>   '0',
+		i_D10   =>  '0',
+		i_D11   =>  '0',
 		
-		i_D12   =>  X"00000000",
-		i_D13   =>  X"00000000",
-		i_D14   =>  X"00000000",
-		i_D15   =>  X"00000000",
+		i_D12   =>  '0',
+		i_D13   => '0',
+		i_D14   =>  '0',
+		i_D15   => '0',
 		
-		i_D16   =>  X"00000000",
-		i_D17   =>  X"00000000",
-		i_D18   =>  X"00000000",
-		i_D19   =>   X"00000000",
+		i_D16   =>  '0',
+		i_D17   => '0',
+		i_D18   =>  '0',
+		i_D19   =>   '0',
 		
-		i_D20   =>  X"00000000",
-		i_D21   =>  X"00000000",
-        i_D22   =>  X"00000000",
-		i_D23   =>  X"00000000",
+		i_D20   =>  '0',
+		i_D21   => '0',
+        i_D22   => '0',
+		i_D23   =>  '0',
 		
-		i_D24   =>  X"00000000",
-		i_D25   =>  X"00000000",
-		i_D26   =>  X"00000000",
-		i_D27   =>  X"00000000",
+		i_D24   =>  '0',
+		i_D25   =>  '0',
+		i_D26   => '0',
+		i_D27   =>  '0',
 		
-		i_D28   =>  X"00000000",
-		i_D29   =>  X"00000000",
-		i_D30   =>  X"00000000",
-		i_D31   =>  X"00000000",
+		i_D28   =>  '0',
+		i_D29   =>  '0',
+		i_D30   =>  '0',
+		i_D31   =>  '0',
 		
 		i_S     =>  i_C,
         o_Q     =>  o_Overflow);
@@ -271,6 +271,9 @@ g_mult: m_N_bit
 
 	s_multu(63 downto 32) => s_multu_first;
 	s_multu(31 downto 0) => s_multu_last;
+	
+	
+	  o_C     =>  s_multu_last;
 
 --s_add,----------------------------				
 g_add: add_sub_N_bit
