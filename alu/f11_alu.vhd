@@ -184,8 +184,8 @@ g_32t1mux: mux32t1 --SUM OUTPUT MUX
 		
 		--i_D16   => s_slt,
 		--i_D17   => s_sltu,
-		--i_D18   => s_j,
-		--i_D19   =>  s_jal,
+		i_D18   => open,
+		i_D19   =>  open,
 		
 		--i_D20   => s_beq,
 		--i_D21   => s_bne,
