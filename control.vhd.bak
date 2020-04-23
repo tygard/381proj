@@ -268,8 +268,8 @@ BEGIN
 		o_branch 		<= '0';
 	
 	
-	elsif s_OP = "000000" then        
-		elsif s_FN = "100000" then		--add
+	elsif s_OP = "000000" then        --add
+		elsif s_FN = "100000" then
 			o_immSign   	<= '0';
 			o_MemToReg  	<= '0';
 			o_sub           <= '0';
