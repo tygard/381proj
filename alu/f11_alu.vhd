@@ -214,15 +214,15 @@ g_32t1mux: mux32t1 --SUM OUTPUT MUX
 		i_D2   =>  s_sub_carry,
 		
 		--NEED TO MAKE UNUSED OUTPUTS BELOW 0s
-		--i_D3   =>  s_and,
+		i_D3   =>  s_and,
 		
-		--i_D4   =>  open,
-		--i_D5   =>  open,
-		--i_D6   =>  open,
-		--i_D7   =>  open,
+		i_D4   =>  open,
+		i_D5   =>  open,
+		i_D6   =>  open,
+		i_D7   =>  open,
 		
-		--i_D8   =>  open,
-		--i_D9   =>  open,
+		i_D8   =>  open,
+		i_D9   =>  open,
 		i_D10   => open,
 		i_D11   => open,
 		
