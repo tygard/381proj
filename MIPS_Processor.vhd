@@ -135,6 +135,7 @@ ARCHITECTURE structure OF MIPS_Processor IS
       i_WD : IN std_logic_vector(31 DOWNTO 0);
       i_RA0 : IN std_logic_vector(4 DOWNTO 0);
       i_RA1 : IN std_logic_vector(4 DOWNTO 0);
+      i_WE : IN std_logic;
       i_RST : IN std_logic;
       i_CLK : IN std_logic;
       o_q0 : OUT std_logic_vector(31 DOWNTO 0);
@@ -218,6 +219,89 @@ BEGIN
 
   -- TODO: Implement the rest of your processor below this comment! 
 
+  --------------------------------------CHECKLIST--------------------------------------
+  -- PC
+  -- inputs:
+  -- i_WE needs to be tied to clock I think??
+
+  -- outputs:
+  -- I think done
+  -----------------------------------------------------------------
+  -- IMEM
+  -- inputs:
+
+  -- outputs:
+  -----------------------------------------------------------------
+  -- CONTROL
+  -- inputs:
+
+  -- outputs:
+  -----------------------------------------------------------------
+  -- MUX0
+  -- inputs:
+
+  -- outputs:
+  -----------------------------------------------------------------
+  -- REGFILE
+  -- inputs:
+
+  -- outputs:
+  -----------------------------------------------------------------
+  -- SIGN EXTENDER
+  -- inputs:
+
+  -- outputs:
+  -----------------------------------------------------------------
+  -- MUX1
+  -- inputs:
+
+  -- outputs:
+  -----------------------------------------------------------------
+  -- ALU CONTROL
+  -- inputs:
+
+  -- outputs:
+  -----------------------------------------------------------------
+  -- BARREL DECODER
+  -- inputs:
+
+  -- outputs:
+  -----------------------------------------------------------------
+  -- MUX 3
+  -- inputs:
+
+  -- outputs:
+  -----------------------------------------------------------------
+  --BARREL SHIFTER
+  -- inputs:
+
+  -- outputs:
+  -----------------------------------------------------------------
+  -- ALU
+  -- inputs:
+
+  -- outputs:
+  -----------------------------------------------------------------
+  -- MUX4
+  -- inputs:
+
+  -- outputs:
+  -----------------------------------------------------------------
+  -- BRANCH AND BEQ
+  -- inputs:
+
+  -- outputs:
+  -----------------------------------------------------------------
+  -- DMEM
+  -- inputs:
+
+  -- outputs:
+  -----------------------------------------------------------------
+  -- MUX2
+  -- inputs:
+
+  -- outputs:
+  -----------------------------------------------------------------
   PC : nbit_Reg
   GENERIC MAP(
     N => 32
@@ -246,6 +330,7 @@ BEGIN
     i_WD => s_RegWrData,
     i_RA0 => s_Inst(25 DOWNTO 21),
     i_RA1 => s_Inst(20 DOWNTO 16),
+    i_WE => s_RegWrite,
     i_RST => iRST,
     i_CLK => iCLK,
     o_q0 => s_Rs,
@@ -255,27 +340,28 @@ BEGIN
   control : control
   PORT MAP(
     i_instruction => s_Inst,
-    o_immSign => open,
+    o_immSign => OPEN,
     o_MemToReg => s_MemtoReg,
-    o_sub => open,
+    o_sub => OPEN,
     o_imm => s_ALUsrc,
-    o_lui => open,
+    o_lui => OPEN,
     o_ALUOp => s_ALUOp,
-    o_Shift => open,
-    o_leftShift => open,
-    o_arithShift => open,
+    o_Shift => OPEN,
+    o_leftShift => OPEN,
+    o_arithShift => OPEN,
     o_MemWrite => s_MemWrite,
-    o_shiftReg => open,
+    o_shiftReg => OPEN,
     o_DestReg => s_RegDest,
     o_jump => s_Jump,
     o_branch => s_Branch
   );
 
-  -- mux0 : mux2t1_N
-  -- GENERIC (N => 5);
-  -- PORT (
-  --   i_S : IN std_logic;
-  --   i_D0 : IN std_logic_vector(N - 1 DOWNTO 0);
-  --   i_D1 : IN std_logic_vector(N - 1 DOWNTO 0);
-  --   o_O : OUT std_logic_vector(N - 1 DOWNTO 0));
+  mux0 : mux2t1_N
+  GENERIC MAP(N => 5);
+  PORT MAP(
+    i_S => s_RegDest,
+    i_D0 => s_Inst(20 DOWNTO 16),
+    i_D1 => s_Inst(15 DOWNTO 11),
+    o_O => s_RegWrAddr
+  );
 END structure;
