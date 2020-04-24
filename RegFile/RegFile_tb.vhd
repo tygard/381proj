@@ -12,17 +12,19 @@ ARCHITECTURE behavior OF RegFile_tb IS
             i_WD : IN std_logic_vector(31 DOWNTO 0);
             i_RA0 : IN std_logic_vector(4 DOWNTO 0);
             i_RA1 : IN std_logic_vector(4 DOWNTO 0);
+            i_WE : IN std_logic;
             i_RST : IN std_logic;
             i_CLK : IN std_logic;
             o_q0 : OUT std_logic_vector(31 DOWNTO 0);
             o_q1 : OUT std_logic_vector(31 DOWNTO 0)
         );
     END COMPONENT;
-    
+
     SIGNAL s_WA : std_logic_vector(4 DOWNTO 0);
     SIGNAL s_WD : std_logic_vector(31 DOWNTO 0);
     SIGNAL s_RA0 : std_logic_vector(4 DOWNTO 0);
     SIGNAL s_RA1 : std_logic_vector(4 DOWNTO 0);
+    SIGNAL s_WE : std_logic;
     SIGNAL s_RST : std_logic;
     SIGNAL s_CLK : std_logic;
     SIGNAL s_q0 : std_logic_vector(31 DOWNTO 0);
@@ -37,6 +39,7 @@ BEGIN
         i_WD => s_WD,
         i_RA0 => s_RA0,
         i_RA1 => s_RA1,
+        i_WE => s_WE,
         i_RST => s_RST,
         i_CLK => s_CLK,
         o_q0 => s_q0,
@@ -56,14 +59,47 @@ BEGIN
         -- test run command for modelsim: vsim -voptargs="+acc" RegFile_tb
 
         -- reset flip flops
+        s_WE <= '1';
         s_RST <= '1';
         s_WA <= "00000";
         s_WD <= x"FFFFFFFF";
+        s_RA0 <= "00000";
+        s_RA1 <= "00000";
         WAIT FOR 100 ns;
+
+        -- test write enable
+
+        -- TEST 1: write to reg0 with WE
+        s_RST <= '0';
+        s_WE <= '1';
+        s_WA <= "00000";
+        s_WD <= x"11111111";
+        s_RA0 <= "00000";
+        s_RA1 <= "00000";
+        WAIT FOR 20 ns;
+
+        -- TEST 2: read from reg0
+        s_RA0 <= "00000";
+        s_RA1 <= "00000";
+        WAIT FOR 20 ns;
+
+        -- TEST 3: write to reg0 without WE
+        s_WE <= '0';
+        s_WA <= "00000";
+        s_WD <= x"22222222";
+        s_RA0 <= "00000";
+        s_RA1 <= "00000";
+        WAIT FOR 20 ns;
+
+        -- TEST 3: read from reg0
+        s_RA0 <= "00000";
+        s_RA1 <= "00000";
+        WAIT FOR 20 ns;
 
         -- test writes
 
         -- TEST 1: store values of each register in order
+        s_WE <= '1';
         s_RST <= '0';
         s_WA <= "00000";
         s_WD <= x"00000001";
@@ -71,6 +107,7 @@ BEGIN
         WAIT FOR 20 ns;
 
         -- TEST 2: store values of each register in order
+        s_WE <= '1';
         s_RST <= '0';
         s_WA <= "00001";
         s_WD <= x"00000002";
@@ -78,6 +115,7 @@ BEGIN
         WAIT FOR 20 ns;
 
         -- TEST 3: store values of each register in order
+        s_WE <= '1';
         s_RST <= '0';
         s_WA <= "00010";
         s_WD <= x"00000003";
@@ -85,6 +123,7 @@ BEGIN
         WAIT FOR 20 ns;
 
         -- TEST 4: store values of each register in order
+        s_WE <= '1';
         s_RST <= '0';
         s_WA <= "00011";
         s_WD <= x"00000004";
@@ -92,6 +131,7 @@ BEGIN
         WAIT FOR 20 ns;
 
         -- TEST 5: store values of each register in order
+        s_WE <= '1';
         s_RST <= '0';
         s_WA <= "00100";
         s_WD <= x"00000005";
@@ -99,6 +139,7 @@ BEGIN
         WAIT FOR 20 ns;
 
         -- TEST 6: store values of each register in order
+        s_WE <= '1';
         s_RST <= '0';
         s_WA <= "00101";
         s_WD <= x"00000006";

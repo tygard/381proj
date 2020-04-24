@@ -1,0 +1,148 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/School/CPRE381/381proj/alu
+Ebeq
+Z1 w1587608921
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+R0
+Z4 8C:/School/CPRE381/381proj/alu/beq.vhd
+Z5 FC:/School/CPRE381/381proj/alu/beq.vhd
+l0
+L6
+V_9E0NLHCX<Y]gCWi2]:nA1
+!s100 5TaVF4A8eD[VRD5^LDoCV2
+Z6 OP;C;10.4a;61
+32
+Z7 !s110 1587608926
+!i10b 1
+Z8 !s108 1587608926.000000
+Z9 !s90 -reportprogress|300|-work|work|C:/School/CPRE381/381proj/alu/beq.vhd|
+Z10 !s107 C:/School/CPRE381/381proj/alu/beq.vhd|
+!i113 1
+Z11 o-work work -O0
+Z12 tExplicit 1
+Adataflow
+R2
+R3
+DEx4 work 3 beq 0 22 _9E0NLHCX<Y]gCWi2]:nA1
+l15
+L14
+V6A@fJVSEWZH6GcPCebTRF2
+!s100 nMjiH;gbIz>T9^c:0FIN^3
+R6
+32
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Ef_alu
+w1587609072
+R2
+R3
+R0
+8C:/School/CPRE381/381proj/alu/f11_alu.vhd
+FC:/School/CPRE381/381proj/alu/f11_alu.vhd
+l0
+L12
+VG0FiZ:@F@50?4gdjRPSad3
+!s100 lA0:eSL9g<XVD5fe[ee513
+R6
+32
+!s110 1587609075
+!i10b 1
+!s108 1587609075.000000
+!s90 -reportprogress|300|-work|work|C:/School/CPRE381/381proj/alu/f11_alu.vhd|
+!s107 C:/School/CPRE381/381proj/alu/f11_alu.vhd|
+!i113 1
+R11
+R12
+Enorg2
+Z13 w1587608167
+R2
+R3
+R0
+Z14 8C:/School/CPRE381/381proj/alu/norg2.vhd
+Z15 FC:/School/CPRE381/381proj/alu/norg2.vhd
+l0
+L23
+VkW2aX[olL7NkggIWLIkl=3
+!s100 n]@EFF]IP5V]ibmNoZeC51
+R6
+32
+Z16 !s110 1587608640
+!i10b 1
+Z17 !s108 1587608640.000000
+Z18 !s90 -reportprogress|300|-work|work|C:/School/CPRE381/381proj/alu/norg2.vhd|
+Z19 !s107 C:/School/CPRE381/381proj/alu/norg2.vhd|
+!i113 1
+R11
+R12
+Adataflow
+R2
+R3
+DEx4 work 5 norg2 0 22 kW2aX[olL7NkggIWLIkl=3
+l32
+L31
+VhOKDnFz[T`J^S>7za@OVT3
+!s100 haZ6UXNa9mnZ03P;LLGHA2
+R6
+32
+R16
+!i10b 1
+R17
+R18
+R19
+!i113 1
+R11
+R12
+Eslt
+R13
+R2
+R3
+R0
+Z20 8C:/School/CPRE381/381proj/alu/slt.vhd
+Z21 FC:/School/CPRE381/381proj/alu/slt.vhd
+l0
+L6
+V]dSYLT`9m[M6m;P`<MjeL0
+!s100 G3k8NVAjdKmD1=Ymc>Ae70
+R6
+32
+R16
+!i10b 1
+R17
+Z22 !s90 -reportprogress|300|-work|work|C:/School/CPRE381/381proj/alu/slt.vhd|
+Z23 !s107 C:/School/CPRE381/381proj/alu/slt.vhd|
+!i113 1
+R11
+R12
+Adataflow
+R2
+R3
+DEx4 work 3 slt 0 22 ]dSYLT`9m[M6m;P`<MjeL0
+l15
+L14
+VV]On2LMZN]0T]LmQz5lbA0
+!s100 0[dHfRS:5J8Ic9YgbAaJ33
+R6
+32
+R16
+!i10b 1
+R17
+R22
+R23
+!i113 1
+R11
+R12
