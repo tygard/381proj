@@ -11,8 +11,8 @@ entity f_alu is
   port(	i_A         : in std_logic_vector(N-1 downto 0);  --input 1
 		i_B         : in std_logic_vector(N-1 downto 0);  --input 2
 		i_C	        : in std_logic_vector (4 downto 0);   --alu control
-		o_S         : out std_logic_vector(32 downto 0); --sum output
-		o_C         : out std_logic_vector(32 downto 0); --carry output
+		o_S         : out std_logic_vector(31 downto 0); --sum output
+		o_C         : out std_logic_vector(31 downto 0); --carry output
 		o_Overflow  : out std_logic);
 end f_alu;
 
@@ -82,7 +82,7 @@ architecture structural of f_alu is
 		i_D18: in std_logic;
 		i_D19: in std_logic;
 		i_D20: in std_logic;
-		i_D21: in std_logic
+		i_D21: in std_logic;
 		i_D22: in std_logic;
 		i_D23: in std_logic;
 		i_D24: in std_logic;
@@ -188,10 +188,13 @@ component add_sub_N_bit  is
 	signal s_or : std_logic_vector(N-1 downto 0);	
 	signal s_xor : std_logic_vector(N-1 downto 0);	
 	signal s_nor : std_logic_vector(N-1 downto 0);	
+	signal s_slt_bit : std_logic;	
 	signal s_slt : std_logic_vector(N-1 downto 0);	
-	
+
 	signal s_beq : std_logic_vector(N-1 downto 0);	
-	signal s_bne : std_logic_vector(N-1 downto 0);	
+	signal s_bne : std_logic_vector(N-1 downto 0);
+	signal s_beq_bit : std_logic;	
+	signal s_bne_bit : std_logic;	
   
 begin
 
@@ -200,47 +203,47 @@ begin
 --32t1mux----------------------------------------
 g_32t1mux: mux32t1 --SUM OUTPUT MUX
 		port MAP(
-		i_D0   =>  s_multu_first,
-		i_D1   =>  s_add,
-		i_D2   =>  s_sub,
-		i_D3   =>  s_and,
+		i_D0   => x"00000000",	-- sll
+		i_D1   => x"00000000",	-- srl
+		i_D2   => x"00000000",	-- sra
+		i_D3   => x"00000000",	-- sllv
 		
-		i_D4   =>  s_or,
-		i_D5   =>  s_xor,
-		i_D6   =>  s_nor,
-		i_D7   =>  s_slt,
+		i_D4   => x"00000000",	-- srlv
+		i_D5   => x"00000000",	-- srav
+		i_D6   => i_A,		-- jr
+		i_D7   => s_multu_last,	-- multu
 		
-		i_D8   =>  s_beq,
-		i_D9   =>  s_bne,
+		i_D8   => s_add,	-- add
+		i_D9   => s_add,	-- addu
 		
 		--NEED TO MAKE UNUSED OUTPUTS BELOW 0s
-		i_D10   => X"00000000",
-		i_D11   =>  X"00000000",
+		i_D10   => s_sub,	-- sub
+		i_D11   => s_sub,	-- subu
+
+		i_D12   => s_and,	-- and
+		i_D13   => s_or,	-- or
+		i_D14   => s_xor,	-- xor
+		i_D15   => s_nor,	-- nor
 		
-		i_D12   =>  X"00000000",
-		i_D13   =>  X"00000000",
-		i_D14   =>  X"00000000",
-		i_D15   =>  X"00000000",
+		i_D16   => s_slt,	-- slt
+		i_D17   => s_slt,	-- sltu
+		i_D18   => x"00000000",	-- j
+		i_D19   => x"00000000",	-- jal
 		
-		i_D16   =>  X"00000000",
-		i_D17   =>  X"00000000",
-		i_D18   =>  X"00000000",
-		i_D19   =>   X"00000000",
+		i_D20   => s_beq,	-- beq
+		i_D21   => s_bne,	-- bne
+        i_D22   => s_add,	-- addi
+		i_D23   => s_add,	-- addiu
 		
-		i_D20   =>  X"00000000",
-		i_D21   =>  X"00000000",
-        i_D22   =>  X"00000000",
-		i_D23   =>  X"00000000",
+		i_D24   => s_slt,	-- slti
+		i_D25   => s_slt,	-- sltiu
+		i_D26   => s_and,	-- andi
+		i_D27   => s_and,	-- ori
 		
-		i_D24   =>  X"00000000",
-		i_D25   =>  X"00000000",
-		i_D26   =>  X"00000000",
-		i_D27   =>  X"00000000",
-		
-		i_D28   =>  X"00000000",
-		i_D29   =>  X"00000000",
-		i_D30   =>  X"00000000",
-		i_D31   =>  X"00000000",
+		i_D28   => s_xor,	-- xori
+		i_D29   => x"00000000",	-- lui
+		i_D30   => x"00000000",	-- lw
+		i_D31   => x"00000000",	-- sw
 		
 		i_S     =>  i_C,
         o_Q     =>  o_S);
@@ -308,11 +311,11 @@ g_mult: m_N_bit
 				
 -- de concatenate multiplier parts
 
-	s_multu(63 downto 32) => s_multu_first;
-	s_multu(31 downto 0) => s_multu_last;
+	s_multu(63 downto 32) <= s_multu_first;
+	s_multu(31 downto 0) <= s_multu_last;
 	
 	
-	  o_C     =>  s_multu_last;
+	  o_C     <=  s_multu_first;
 
 --s_add,----------------------------				
 g_add: add_sub_N_bit
@@ -326,7 +329,7 @@ g_add: add_sub_N_bit
 g_sub: add_sub_N_bit
 		port MAP(i_A         =>  i_A,
 				 i_B         =>  i_B,
-				i_SELECT          =>  '0',
+				i_SELECT          =>  '1',
 				o_S        =>  s_sub,
 				 o_Cout 	 =>  s_sub_carry);
 
@@ -334,42 +337,46 @@ g_sub: add_sub_N_bit
 g_and: andg32
 		port MAP(i_A   =>  i_A,
 				i_B	   =>  i_B,
-				o_Cout  =>    s_and);
+				o_F  =>    s_and);
 		
 --or--------------------------------- CHANGE TO 32
 g_or: org32
 		port MAP(i_A   =>  i_A,
 				i_B	   =>  i_B,
-				s_or   =>  o_Cout);	
+				o_F   =>  s_or);	
 				
 --xor-------------------------------- CHANGE TO 32
 g_xor: xorg32
 		port MAP(i_A   =>  i_A,
 				i_B	   =>  i_B,
-				o_Cout   => s_xor );
+				o_F   => s_xor );
 	
 --s_nor,----------------------------- CHANGE TO 32
 g_nor: norg32
 		port MAP(i_A   =>  i_A,
 				i_B	   =>  i_B,
-				o_Cout   => s_nor );
+				o_F   => s_nor );
 
 --s_slt,---------------------------- 
 g_slt: slt
 		port MAP(i_A   =>  i_A,
 				i_B	   =>  i_B,
-				o_F  =>    s_slt);
+				o_F  =>    s_slt_bit);
+				s_slt <= x"0000000" & "000" & s_slt_bit;
 
 --s_beq,------------------------- 
 g_beq: beq
 		port MAP(i_A   =>  i_A,
 				i_B	   =>  i_B,
-				o_F  =>    s_beq);
+				o_F  =>    s_beq_bit);
+				s_beq <= x"0000000" & "000" & s_beq_bit;
 
 --s_bne,-------------------------
-g_invg: invg32
-		port MAP( i_A  =>    s_beq,
-				o_F    =>    s_bne);
+-- g_invg: invg32
+-- 		port MAP( i_A  =>    s_beq,
+-- 				o_F    =>    s_bne);
+s_bne_bit <= not s_beq_bit;
+	s_bne <= x"0000000" & "000" & s_bne_bit;
 
 ----------------------------
 end structural;

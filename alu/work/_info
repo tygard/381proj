@@ -8,27 +8,66 @@ z2
 !i10f 100
 cModel Technology
 Z0 dC:/School/CPRE381/381proj/alu
-Ebeq
-Z1 w1587608921
+Eandg32
+Z1 w1587669631
 Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
 Z3 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
 R0
-Z4 8C:/School/CPRE381/381proj/alu/beq.vhd
-Z5 FC:/School/CPRE381/381proj/alu/beq.vhd
+Z4 8C:/School/CPRE381/381proj/alu/and32.vhd
+Z5 FC:/School/CPRE381/381proj/alu/and32.vhd
+l0
+L4
+VK0[DRJC?@72c;7WhJP2@;2
+!s100 ?4iko^J8=z^^5zW6J11iS2
+Z6 OP;C;10.4a;61
+32
+Z7 !s110 1587854467
+!i10b 1
+Z8 !s108 1587854467.000000
+Z9 !s90 -reportprogress|300|-work|work|C:/School/CPRE381/381proj/alu/and32.vhd|
+Z10 !s107 C:/School/CPRE381/381proj/alu/and32.vhd|
+!i113 1
+Z11 o-work work -O0
+Z12 tExplicit 1
+Adataflow
+R2
+R3
+DEx4 work 6 andg32 0 22 K0[DRJC?@72c;7WhJP2@;2
+l13
+L12
+VQ<UIlNYNaHGz2]jO`KPBN2
+!s100 S8=z@2`4]4A`[zmb5@[Yd3
+R6
+32
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Ebeq
+Z13 w1587608921
+R2
+R3
+R0
+Z14 8C:/School/CPRE381/381proj/alu/beq.vhd
+Z15 FC:/School/CPRE381/381proj/alu/beq.vhd
 l0
 L6
 V_9E0NLHCX<Y]gCWi2]:nA1
 !s100 5TaVF4A8eD[VRD5^LDoCV2
-Z6 OP;C;10.4a;61
+R6
 32
-Z7 !s110 1587608926
+R7
 !i10b 1
-Z8 !s108 1587608926.000000
-Z9 !s90 -reportprogress|300|-work|work|C:/School/CPRE381/381proj/alu/beq.vhd|
-Z10 !s107 C:/School/CPRE381/381proj/alu/beq.vhd|
+R8
+Z16 !s90 -reportprogress|300|-work|work|C:/School/CPRE381/381proj/alu/beq.vhd|
+Z17 !s107 C:/School/CPRE381/381proj/alu/beq.vhd|
 !i113 1
-Z11 o-work work -O0
-Z12 tExplicit 1
+R11
+R12
 Adataflow
 R2
 R3
@@ -42,50 +81,185 @@ R6
 R7
 !i10b 1
 R8
-R9
-R10
+R16
+R17
 !i113 1
 R11
 R12
 Ef_alu
-w1587609072
+Z18 w1587856130
 R2
 R3
 R0
-8C:/School/CPRE381/381proj/alu/f11_alu.vhd
-FC:/School/CPRE381/381proj/alu/f11_alu.vhd
+Z19 8C:/School/CPRE381/381proj/alu/f11_alu.vhd
+Z20 FC:/School/CPRE381/381proj/alu/f11_alu.vhd
 l0
-L12
-VG0FiZ:@F@50?4gdjRPSad3
-!s100 lA0:eSL9g<XVD5fe[ee513
+L9
+V^ZaMJ6[oGSH^CeE_o[ag^1
+!s100 R?2F1@DZA_MiF?AfO>FU22
 R6
 32
-!s110 1587609075
+Z21 !s110 1587856132
 !i10b 1
-!s108 1587609075.000000
-!s90 -reportprogress|300|-work|work|C:/School/CPRE381/381proj/alu/f11_alu.vhd|
-!s107 C:/School/CPRE381/381proj/alu/f11_alu.vhd|
+Z22 !s108 1587856132.000000
+Z23 !s90 -reportprogress|300|-work|work|C:/School/CPRE381/381proj/alu/f11_alu.vhd|
+Z24 !s107 C:/School/CPRE381/381proj/alu/f11_alu.vhd|
+!i113 1
+R11
+R12
+Astructural
+R2
+R3
+DEx4 work 5 f_alu 0 22 ^ZaMJ6[oGSH^CeE_o[ag^1
+l199
+L19
+V[QfG5THI_3RlUGHFBdFcK2
+!s100 ?M76aXZ9fJ:IgT?ldcdLn0
+R6
+32
+R21
+!i10b 1
+R22
+R23
+R24
+!i113 1
+R11
+R12
+Einvg
+R1
+R2
+R3
+R0
+Z25 8C:/School/CPRE381/381proj/alu/invg32.vhd
+Z26 FC:/School/CPRE381/381proj/alu/invg32.vhd
+l0
+L4
+V5kW7K=L0Q@9QOf?G_B;kz0
+!s100 O>=2?6oUUGf;IHla>RA]i2
+R6
+32
+Z27 !s110 1587854665
+!i10b 1
+Z28 !s108 1587854665.000000
+Z29 !s90 -reportprogress|300|-work|work|C:/School/CPRE381/381proj/alu/invg32.vhd|
+Z30 !s107 C:/School/CPRE381/381proj/alu/invg32.vhd|
+!i113 1
+R11
+R12
+Adataflow
+R2
+R3
+DEx4 work 4 invg 0 22 5kW7K=L0Q@9QOf?G_B;kz0
+l12
+L11
+V[9028gWF^kZ>@?hAaDW>^0
+!s100 z>TRmS5Vb@I5me`cGFTM33
+R6
+32
+R27
+!i10b 1
+R28
+R29
+R30
+!i113 1
+R11
+R12
+Emux32t1
+Z31 w1587695290
+R2
+R3
+R0
+Z32 8C:/School/CPRE381/381proj/alu/32t1mux32bit.vhd
+Z33 FC:/School/CPRE381/381proj/alu/32t1mux32bit.vhd
+l0
+L4
+VS_m3oGHN3SQbhF3Z[d0Y92
+!s100 oiSPEanA@E_0_9li8AP^G2
+R6
+32
+Z34 !s110 1587854465
+!i10b 1
+Z35 !s108 1587854465.000000
+Z36 !s90 -reportprogress|300|-work|work|C:/School/CPRE381/381proj/alu/32t1mux32bit.vhd|
+Z37 !s107 C:/School/CPRE381/381proj/alu/32t1mux32bit.vhd|
+!i113 1
+R11
+R12
+Adataflow
+R2
+R3
+DEx4 work 7 mux32t1 0 22 S_m3oGHN3SQbhF3Z[d0Y92
+l46
+L43
+VOz_C2o5hfQcWa^bhNl4813
+!s100 l63UKX2dm64JPmlfmN;F72
+R6
+32
+R34
+!i10b 1
+R35
+R36
+R37
+!i113 1
+R11
+R12
+Emux32t1bit1wide
+Z38 w1587854644
+R2
+R3
+R0
+Z39 8C:/School/CPRE381/381proj/alu/mux32t1bit1wide.vhd
+Z40 FC:/School/CPRE381/381proj/alu/mux32t1bit1wide.vhd
+l0
+L4
+VF3_gXmMA<WNd0YbRSKV=J3
+!s100 Q^Sj2HO3Zf`n597:mEg^T0
+R6
+32
+Z41 !s110 1587854647
+!i10b 1
+Z42 !s108 1587854647.000000
+Z43 !s90 -reportprogress|300|-work|work|C:/School/CPRE381/381proj/alu/mux32t1bit1wide.vhd|
+Z44 !s107 C:/School/CPRE381/381proj/alu/mux32t1bit1wide.vhd|
+!i113 1
+R11
+R12
+Adataflow
+R2
+R3
+DEx4 work 15 mux32t1bit1wide 0 22 F3_gXmMA<WNd0YbRSKV=J3
+l46
+L43
+VU4A2BJ7T]ihR8[Id@KN==3
+!s100 Og<6NIJke3nAgB[hI3dJI0
+R6
+32
+R41
+!i10b 1
+R42
+R43
+R44
 !i113 1
 R11
 R12
 Enorg2
-Z13 w1587608167
+Z45 w1587608167
 R2
 R3
 R0
-Z14 8C:/School/CPRE381/381proj/alu/norg2.vhd
-Z15 FC:/School/CPRE381/381proj/alu/norg2.vhd
+Z46 8C:/School/CPRE381/381proj/alu/norg2.vhd
+Z47 FC:/School/CPRE381/381proj/alu/norg2.vhd
 l0
 L23
 VkW2aX[olL7NkggIWLIkl=3
 !s100 n]@EFF]IP5V]ibmNoZeC51
 R6
 32
-Z16 !s110 1587608640
+Z48 !s110 1587608640
 !i10b 1
-Z17 !s108 1587608640.000000
-Z18 !s90 -reportprogress|300|-work|work|C:/School/CPRE381/381proj/alu/norg2.vhd|
-Z19 !s107 C:/School/CPRE381/381proj/alu/norg2.vhd|
+Z49 !s108 1587608640.000000
+Z50 !s90 -reportprogress|300|-work|work|C:/School/CPRE381/381proj/alu/norg2.vhd|
+Z51 !s107 C:/School/CPRE381/381proj/alu/norg2.vhd|
 !i113 1
 R11
 R12
@@ -99,32 +273,110 @@ VhOKDnFz[T`J^S>7za@OVT3
 !s100 haZ6UXNa9mnZ03P;LLGHA2
 R6
 32
-R16
+R48
 !i10b 1
-R17
-R18
-R19
+R49
+R50
+R51
+!i113 1
+R11
+R12
+Enorg32
+R1
+R2
+R3
+R0
+R46
+R47
+l0
+L23
+VN1l0A0:0[lM]NjjS@b=HC2
+!s100 FFK;<X67U:f]Q6iCe25[N1
+R6
+32
+Z52 !s110 1587854657
+!i10b 1
+Z53 !s108 1587854657.000000
+R50
+R51
+!i113 1
+R11
+R12
+Adataflow
+R2
+R3
+DEx4 work 6 norg32 0 22 N1l0A0:0[lM]NjjS@b=HC2
+l32
+L31
+VG@o?C0HME1MnI<Z?m>elX2
+!s100 Q:GHoNEdQQ8O;Lamn7Pk23
+R6
+32
+R52
+!i10b 1
+R53
+R50
+R51
+!i113 1
+R11
+R12
+Eorg32
+R1
+R2
+R3
+R0
+Z54 8C:/School/CPRE381/381proj/alu/org32.vhd
+Z55 FC:/School/CPRE381/381proj/alu/org32.vhd
+l0
+L4
+Vb7[dS6ek56O@;B0j4CC8d3
+!s100 FIh;[:of[h0FXFSAf<D>e1
+R6
+32
+!s110 1587854659
+!i10b 1
+Z56 !s108 1587854659.000000
+Z57 !s90 -reportprogress|300|-work|work|C:/School/CPRE381/381proj/alu/org32.vhd|
+Z58 !s107 C:/School/CPRE381/381proj/alu/org32.vhd|
+!i113 1
+R11
+R12
+Adataflow
+R2
+R3
+DEx4 work 5 org32 0 22 b7[dS6ek56O@;B0j4CC8d3
+l13
+L12
+VQjcF9[gEUVzidcX;WSL;l0
+!s100 :[=:ckMWa^X;NVR<LO@OD1
+R6
+32
+!s110 1587854660
+!i10b 1
+R56
+R57
+R58
 !i113 1
 R11
 R12
 Eslt
-R13
+R45
 R2
 R3
 R0
-Z20 8C:/School/CPRE381/381proj/alu/slt.vhd
-Z21 FC:/School/CPRE381/381proj/alu/slt.vhd
+Z59 8C:/School/CPRE381/381proj/alu/slt.vhd
+Z60 FC:/School/CPRE381/381proj/alu/slt.vhd
 l0
 L6
 V]dSYLT`9m[M6m;P`<MjeL0
 !s100 G3k8NVAjdKmD1=Ymc>Ae70
 R6
 32
-R16
+Z61 !s110 1587854650
 !i10b 1
-R17
-Z22 !s90 -reportprogress|300|-work|work|C:/School/CPRE381/381proj/alu/slt.vhd|
-Z23 !s107 C:/School/CPRE381/381proj/alu/slt.vhd|
+Z62 !s108 1587854650.000000
+Z63 !s90 -reportprogress|300|-work|work|C:/School/CPRE381/381proj/alu/slt.vhd|
+Z64 !s107 C:/School/CPRE381/381proj/alu/slt.vhd|
 !i113 1
 R11
 R12
@@ -138,11 +390,11 @@ VV]On2LMZN]0T]LmQz5lbA0
 !s100 0[dHfRS:5J8Ic9YgbAaJ33
 R6
 32
-R16
+R61
 !i10b 1
-R17
-R22
-R23
+R62
+R63
+R64
 !i113 1
 R11
 R12
