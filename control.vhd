@@ -543,8 +543,6 @@ BEGIN
 			o_branch 		<= '0';
 		
 		end if;
-		
-	end if;	
 	end process;
 	
 END behavorial;

@@ -388,7 +388,7 @@ BEGIN
     o_PC => s_nextPC
   );
 
-  control : control
+  controlUnit : control
   PORT MAP(
     i_instruction => s_Inst,
     o_immSign => OPEN,
@@ -402,7 +402,7 @@ BEGIN
     o_arithShift => OPEN,
     o_MemWrite => s_MemWrite,
     o_shiftReg => OPEN,
-    o_DestReg => s_RegDest,
+    o_DestReg => s_RegDst,
     o_jump => s_Jump,
     o_branch => s_Branch
   );
