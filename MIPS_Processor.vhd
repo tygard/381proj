@@ -73,6 +73,7 @@ ARCHITECTURE structure OF MIPS_Processor IS
   SIGNAL s_Data0 : std_logic_vector(32 DOWNTO 0);
   SIGNAL s_Data1 : std_logic_vector(32 DOWNTO 0);
   SIGNAL s_nextPC : std_logic_vector(32 DOWNTO 0);
+  SIGNAL s_Mux4 : std_logic_vector(32 DOWNTO 0);
 
   SIGNAL s_Imm : std_logic_vector(15 DOWNTO 0);
   SIGNAL s_ALUOp : std_logic_vector(5 DOWNTO 0);
@@ -92,6 +93,7 @@ ARCHITECTURE structure OF MIPS_Processor IS
   SIGNAL s_VarEn : std_logic;
   SIGNAL s_D : std_logic;
   SIGNAL s_T : std_logic;
+  signal s_Zero : std_logic;
   SIGNAL s_BranchAndZero : std_logic;
 
   SIGNAL s_Y : std_logic_vector(31 DOWNTO 0);
@@ -344,13 +346,16 @@ BEGIN
   -----------------------------------------------------------------
   -- MUX4
   -- inputs:
-
+  -- select line s_ShiftEn from barrel decoder
+  -- output from barrel shifter = s_Y
+  -- bottom 32 bits from ALU
   -- outputs:
   -----------------------------------------------------------------
-  -- BRANCH AND BEQ
+  -- BRANCH AND ZERO
   -- inputs:
-
+-- just a logic and between the brnach control signal and the 0th bit from the ALU
   -- outputs:
+  -- branch input to the fetch = s_BranchAndZero
   -----------------------------------------------------------------
   -- DMEM (duwe also did this for us)
   -- inputs:
@@ -488,8 +493,29 @@ BEGIN
     o_Overflow => s_Ovfl
   );
 
-  oALUout => s_wholeALUout(31 downto 0);  -- dictated by outline
-  s_DMEmAddr => s_wholeALUout(31 downto 0); -- dictated by outline
+s_Zero => s_wholeALUout(0);
 
+  oALUout => s_wholeALUout(31 DOWNTO 0); -- dictated by outline
+  s_DMEmAddr => s_wholeALUout(31 DOWNTO 0); -- dictated by outline
+
+  mux4 : mux2t1_N
+  GENERIC MAP(N => 32);
+  PORT MAP(
+    i_S => s_ShiftEn,
+    i_D0 => s_wholeALUout(31 DOWNTO 0),
+    i_D1 => s_Y(4 DOWNTO 0),
+    o_O => s_Mux4
+  );
+
+  s_BranchAndZero => s_Branch and s_Zero;
+
+  mux2 : mux2t1_N
+  GENERIC MAP(N => 32);
+  PORT MAP(
+    i_S => s_MemtoReg,
+    i_D0 => s_DMemOut,
+    i_D1 => s_Mux4,
+    o_O => s_RegWrData
+  );
 
 END structure;
