@@ -71,7 +71,6 @@ ARCHITECTURE structure OF MIPS_Processor IS
   SIGNAL s_Rs : std_logic_vector(31 DOWNTO 0);
   SIGNAL s_Rt : std_logic_vector(31 DOWNTO 0);
   SIGNAL s_Data0 : std_logic_vector(31 DOWNTO 0);
-  SIGNAL s_Data1 : std_logic_vector(31 DOWNTO 0);
   SIGNAL s_nextPC : std_logic_vector(31 DOWNTO 0);
   SIGNAL s_Mux4 : std_logic_vector(31 DOWNTO 0);
   SIGNAL s_Mux1 : std_logic_vector(31 DOWNTO 0);
@@ -303,7 +302,7 @@ BEGIN
   -- the sign extended immediate 
   -- the Rt
   -- outputs:
-  -- signal s_Data1
+  -- signal s_mux1
   -- second input to ALU
   -- done
   -----------------------------------------------------------------
@@ -445,7 +444,7 @@ BEGIN
     i_S => s_ALUsrc,
     i_D0 => s_Rt,
     i_D1 => s_Imm,
-    o_O => s_Data1
+    o_O => s_Mux1
   );
 
   ALU_control : alucontrol
