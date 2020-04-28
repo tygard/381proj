@@ -1,1345 +1,533 @@
 m255
 K4
 z2
+!s11e vcom 2019.3 2019.07, Jul 24 2019
 13
 !s112 1.1
 !i10d 8192
 !i10e 25
 !i10f 100
 cModel Technology
-Z0 dC:/School/CPRE381/381proj
-<<<<<<< HEAD
-Z1 !s110 1587412815
+Z0 dU:/ISU/2020 Spring/cpre381/381proj
+Eandg2
+Z1 w1583513543
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 -1
+R0
+Z4 8U:/ISU/2020 Spring/cpre381/381proj/andg2.vhd
+Z5 FU:/ISU/2020 Spring/cpre381/381proj/andg2.vhd
+l0
+L23
+VzJ2OoPJ=<ja2?Y;OcjQk;3
+!s100 YT?bGzEmcFo:DlnoC^B4_0
+Z6 OL;C;2019.3;69
+33
+Z7 !s110 1588107976
 !i10b 1
-Z2 !s108 1587412815.000000
-Z3 !s90 -reportprogress|30|-work|work|C:/School/CPRE381/381proj/tb_reverser_32.vhd|
-Z4 !s107 C:/School/CPRE381/381proj/tb_reverser_32.vhd|
-Z5 =======
-R4
-!i10b 1
+Z8 !s108 1588107976.000000
+Z9 !s90 -reportprogress|300|-work|work|U:/ISU/2020 Spring/cpre381/381proj/andg2.vhd|
+Z10 !s107 U:/ISU/2020 Spring/cpre381/381proj/andg2.vhd|
+!i113 0
+Z11 o-work work
+Z12 tExplicit 1 NoCoverage 1 CvgOpt 0
+Adataflow
 R2
 R3
-R4
-R0
-<<<<<<< HEAD
-Z6 DPx3 std 3 env 0 22 d?`1ck@NdeD@H3RZG7FgZ2
-Z7 DPx4 ieee 16 std_logic_textio 0 22 V5TSK`;aJKC<l]CEg1>mz1
-R5
-Z8 FC:/School/CPRE381/381proj/tb_barrelshift_32.vhd
-R1
-R0
-<<<<<<< HEAD
-R1
-!i10b 1
-R2
-R3
-R4
-R5
-R4
-!i10b 1
-R2
-R3
-R4
-R0
-<<<<<<< HEAD
+DEx4 work 5 andg2 0 22 zJ2OoPJ=<ja2?Y;OcjQk;3
+!i122 -1
+l32
+L31
+V3oa1[>iDZj;2zVo:oz1>e2
+!s100 I`@Z@UBObS]<7m8bPgKUS1
 R6
+33
 R7
-Z9 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
-Z10 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
-R0
-Z11 8C:/School/CPRE381/381proj/tb_reverser_32.vhd
-Z12 FC:/School/CPRE381/381proj/tb_reverser_32.vhd
-R5
+!i10b 1
 R8
-R1
 R9
 R10
-R0
+!i113 0
 R11
 R12
-<<<<<<< HEAD
-R1
-!i10b 1
-R2
-Z13 !s90 -reportprogress|30|-work|work|C:/School/CPRE381/381proj/tb_barrelshift_32.vhd|
-Z14 !s107 C:/School/CPRE381/381proj/tb_barrelshift_32.vhd|
-R5
-R1
-!i10b 1
-R2
-R13
-R14
-R0
-<<<<<<< HEAD
-R6
-R7
-R5
-R8
-R1
-R0
-<<<<<<< HEAD
-R1
-!i10b 1
-R2
-R13
-R14
-R5
-R1
-!i10b 1
-R2
-R13
-R14
-R0
-<<<<<<< HEAD
-R6
-R7
-R9
-R10
-R0
-Z15 8C:/School/CPRE381/381proj/tb_barrelshift_32.vhd
-R8
-R5
-R8
-R7
-R9
-R10
-R0
-R15
-R8
-<<<<<<< HEAD
-Z16 !s110 1587412814
-!i10b 1
-Z17 !s108 1587412814.000000
-Z18 !s90 -reportprogress|30|-work|work|C:/School/CPRE381/381proj/tb.vhd|
-Z19 !s107 C:/School/CPRE381/381proj/tb.vhd|
-R5
-Z20 !s107 C:/School/CPRE381/381proj/org2.vhd|
-!i10b 1
-Z21 8C:/School/CPRE381/381proj/reverser_32.vhd
-R18
-R19
-R0
-<<<<<<< HEAD
-R6
-R7
-R5
-R6
-R7
-R0
-<<<<<<< HEAD
-R16
-!i10b 1
-R17
-R18
-R19
-R5
-R20
-!i10b 1
-R21
-R18
-R19
-R0
-<<<<<<< HEAD
-Z22 w1582491760
-R6
-R7
-R9
-R10
-R0
-Z23 8C:/School/CPRE381/381proj/tb.vhd
-Z24 FC:/School/CPRE381/381proj/tb.vhd
-R5
-Z25 8C:/School/CPRE381/381proj/MIPS_Processor.vhd
-R6
-R7
-R9
-R10
-R0
-R23
-R24
-<<<<<<< HEAD
-R16
-!i10b 1
-R17
-Z26 !s90 -reportprogress|30|-work|work|C:/School/CPRE381/381proj/reverser_32.vhd|
-Z27 !s107 C:/School/CPRE381/381proj/reverser_32.vhd|
-R5
-R20
-!i10b 1
-R21
-R26
-R27
-R0
-<<<<<<< HEAD
-R16
-!i10b 1
-R17
-R26
-R27
-R5
-R20
-!i10b 1
-R21
-R26
-R27
-R0
-<<<<<<< HEAD
-R21
-Z28 FC:/School/CPRE381/381proj/reverser_32.vhd
-R5
-R21
-R28
-R0
-<<<<<<< HEAD
-R16
-!i10b 1
-R17
-Z29 !s90 -reportprogress|30|-work|work|C:/School/CPRE381/381proj/org2.vhd|
-R20
-R5
-R20
-!i10b 1
-R17
-R29
-R20
-R0
-<<<<<<< HEAD
-R16
-!i10b 1
-R17
-R29
-R20
-R5
-R20
-!i10b 1
-R17
-R29
-R20
-R0
-<<<<<<< HEAD
-Z30 8C:/School/CPRE381/381proj/org2.vhd
-Z31 FC:/School/CPRE381/381proj/org2.vhd
-R5
-R30
-R31
-R0
-<<<<<<< HEAD
-R16
-!i10b 1
-R17
-Z32 !s90 -reportprogress|30|-work|work|C:/School/CPRE381/381proj/mux2t1_N.vhd|
-Z33 !s107 C:/School/CPRE381/381proj/mux2t1_N.vhd|
-R5
-R16
-!i10b 1
-R17
-R32
-R33
-R0
-<<<<<<< HEAD
-R16
-!i10b 1
-R17
-R32
-R33
-R5
-R16
-!i10b 1
-R17
-R32
-R33
-R0
-<<<<<<< HEAD
-Z34 w1583036888
-R9
-R10
-R0
-Z35 8C:/School/CPRE381/381proj/mux2t1_N.vhd
-Z36 FC:/School/CPRE381/381proj/mux2t1_N.vhd
-R5
-R34
-R9
-R10
-R0
-R35
-R36
-<<<<<<< HEAD
-Z37 !s110 1587412813
-!i10b 1
-Z38 !s108 1587412813.000000
-Z39 !s90 -reportprogress|30|-work|work|C:/School/CPRE381/381proj/mux2t1.vhd|
-Z40 !s107 C:/School/CPRE381/381proj/mux2t1.vhd|
-R5
-Z41 FC:/School/CPRE381/381proj/mem.vhd
-!i10b 1
-Z42 !s90 -reportprogress|30|-work|work|C:/School/CPRE381/381proj/mem.vhd|
-R39
-R40
-R0
-<<<<<<< HEAD
-R37
-!i10b 1
-R38
-R39
-R40
-R5
-R41
-!i10b 1
-R42
-R39
-R40
-R0
-<<<<<<< HEAD
-Z43 8C:/School/CPRE381/381proj/mux2t1.vhd
-Z44 FC:/School/CPRE381/381proj/mux2t1.vhd
-R5
-R43
-R44
-R0
-<<<<<<< HEAD
-Z45 !s107 C:/School/CPRE381/381proj/MIPS_Processor.vhd|
-R5
-R45
-R0
-<<<<<<< HEAD
-R37
-!i10b 1
-R38
-Z46 !s90 -reportprogress|30|-work|work|C:/School/CPRE381/381proj/MIPS_Processor.vhd|
-R45
-R5
-R41
-!i10b 1
-R42
-R46
-R45
-R0
-<<<<<<< HEAD
-Z47 w1587412650
-R9
-R10
-R0
-R25
-Z48 FC:/School/CPRE381/381proj/MIPS_Processor.vhd
-R5
-R47
-R9
-R10
-R0
-R25
-R48
-<<<<<<< HEAD
-R37
-!i10b 1
-R38
-R42
-Z49 !s107 C:/School/CPRE381/381proj/mem.vhd|
-R5
-R41
-!i10b 1
-R42
-R42
-R49
-R0
-<<<<<<< HEAD
-Z50 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
-R5
-R50
-R0
-<<<<<<< HEAD
-R37
-!i10b 1
-R38
-R42
-R49
-R5
-R41
-!i10b 1
-R42
-R42
-R49
-R0
-<<<<<<< HEAD
-R22
-R50
-R9
-R10
-R0
-Z51 8C:/School/CPRE381/381proj/mem.vhd
-R41
-R5
-R22
-R50
-R9
-R10
-R0
-R51
-R41
-<<<<<<< HEAD
-R37
-!i10b 1
-R38
-Z52 !s90 -reportprogress|30|-work|work|C:/School/CPRE381/381proj/invg.vhd|
-Z53 !s107 C:/School/CPRE381/381proj/invg.vhd|
-R5
-R37
-!i10b 1
-R38
-R52
-R53
-R0
-<<<<<<< HEAD
-R37
-!i10b 1
-R38
-R52
-R53
-R5
-R37
-!i10b 1
-R38
-R52
-R53
-R0
-<<<<<<< HEAD
-Z54 8C:/School/CPRE381/381proj/invg.vhd
-Z55 FC:/School/CPRE381/381proj/invg.vhd
-R5
-R54
-R55
-R0
-<<<<<<< HEAD
-!s110 1587412812
-!i10b 1
-!s108 1587412812.000000
-Z56 !s90 -reportprogress|300|-work|work|C:/School/CPRE381/381proj/control.vhd|
-Z57 !s107 C:/School/CPRE381/381proj/control.vhd|
-R5
-Z58 !s110 1587497379
-!i10b 1
-Z59 !s108 1587497379.000000
-R56
-R57
-!i113 1
-Z60 o-work work -O0
-Z61 tExplicit 1 NoCoverage 1
-R0
-<<<<<<< HEAD
-OL;C;2019.3;69
-32
-!s110 1587500230
-!i10b 1
-!s108 1587500229.000000
-!s90 -reportprogress|300|-work|work|U:/Documents/School/CPRE381/Singlecycle/381proj/control.vhd|
-!s107 U:/Documents/School/CPRE381/Singlecycle/381proj/control.vhd|
-!i113 0
-o-work work
-tExplicit 1 CvgOpt 0
-R5
-Z62 OP;C;10.4a;61
-33
-R58
-!i10b 1
-R59
-R56
-R57
-!i113 1
-R60
-R61
-R0
->>>>>>> 19da0b3d2fda01387ac4deb19bd9753381044d41
-!i113 1
-R60
-R61
-R0
->>>>>>> 19da0b3d2fda01387ac4deb19bd9753381044d41
-R9
-R10
-Z63 DEx4 work 14 tb_reverser_32 0 22 2<:3jE:NQPGNAg`:0>n^Q1
-l36
-L21
-Z64 VdCN`0W2EodI>DT@m5A<nK3
-Z65 !s100 oSX88f>DPW[l7m2Km5zUV3
-R62
-33
-R0
->>>>>>> 19da0b3d2fda01387ac4deb19bd9753381044d41
-!i113 1
-R60
-R61
-R0
-Amixed
->>>>>>> 19da0b3d2fda01387ac4deb19bd9753381044d41
-l0
-L17
-Z66 V2<:3jE:NQPGNAg`:0>n^Q1
-Z67 !s100 9I8jk78=2L279Vo<doc>F0
-R62
-33
-R0
->>>>>>> 19da0b3d2fda01387ac4deb19bd9753381044d41
-!i113 1
-R60
-R61
-R0
->>>>>>> 19da0b3d2fda01387ac4deb19bd9753381044d41
-R9
-R10
-Z68 DEx4 work 17 tb_barrelshift_32 0 22 FoQi?OW:7[<J6b>6e=ElT3
-l42
-L21
-Z69 V_=JOfz?f7;]m5UeWf?B9G2
-Z70 !s100 VHZb4cK_HcdDc56_@>Qel1
-R62
-33
-R0
->>>>>>> 19da0b3d2fda01387ac4deb19bd9753381044d41
-!i113 1
-R60
-R61
-R0
-Amixed
->>>>>>> 19da0b3d2fda01387ac4deb19bd9753381044d41
-l0
-L17
-Z71 VFoQi?OW:7[<J6b>6e=ElT3
-Z72 !s100 lNFOZ4_mE6JP:;>CA6GCm0
-R62
-33
-R0
->>>>>>> 19da0b3d2fda01387ac4deb19bd9753381044d41
-!i113 1
-R60
-R61
-R0
->>>>>>> 19da0b3d2fda01387ac4deb19bd9753381044d41
-R9
-R10
-Z73 DEx4 work 2 tb 0 22 kYSb_X>_i6@EkX8`DzNFV2
-l53
-L30
-Z74 V4ECdbzPO8z;l:T8H63@W`0
-Z75 !s100 bhlL<1i1S>WaO^AP7]GbX1
-R62
-33
-R0
->>>>>>> 19da0b3d2fda01387ac4deb19bd9753381044d41
-!i113 1
-R60
-R61
-R0
-Amixed
->>>>>>> 19da0b3d2fda01387ac4deb19bd9753381044d41
-l0
-L24
-Z76 VkYSb_X>_i6@EkX8`DzNFV2
-Z77 !s100 8WNCIFkeoFYOWSA_DLTi52
-R62
-33
-R0
->>>>>>> 19da0b3d2fda01387ac4deb19bd9753381044d41
-!i113 1
-R60
-R61
-R0
->>>>>>> 19da0b3d2fda01387ac4deb19bd9753381044d41
-!i113 1
-R60
-R61
-R0
-Adataflow
-R9
-R10
-Z78 DEx4 work 11 reverser_32 0 22 7W99QN3g;iY>:49F3RlUm2
-l22
-L20
-Z79 V93gLN]`L[E=Gl;FWYVHHQ1
-Z80 !s100 LUT2Sz[T5MDMV?ETB0_n[0
-R62
-33
->>>>>>> 19da0b3d2fda01387ac4deb19bd9753381044d41
-l0
-L14
-Z81 V7W99QN3g;iY>:49F3RlUm2
-Z82 !s100 W2W[`?gIMUN@ZR3mKOm7e1
-R62
-33
-R0
->>>>>>> 19da0b3d2fda01387ac4deb19bd9753381044d41
-!i113 1
-R60
-R61
-R0
->>>>>>> 19da0b3d2fda01387ac4deb19bd9753381044d41
-!i113 1
-R60
-R61
-R0
-Adataflow
-R9
-R10
-Z83 DEx4 work 4 org2 0 22 z[OIH?6YQS8mRoX`jDjnj2
-l32
-L31
-Z84 Vm]Dg=>FB0kjI``A0[0Nl:0
-Z85 !s100 h5_AzR3TdRA0a_K=dQ>mI2
-R62
-33
->>>>>>> 19da0b3d2fda01387ac4deb19bd9753381044d41
-l0
-L23
-Z86 Vz[OIH?6YQS8mRoX`jDjnj2
-Z87 !s100 bGQ1F9eW^Q17OoL9h4g7z2
-R62
-33
-R0
->>>>>>> 19da0b3d2fda01387ac4deb19bd9753381044d41
-!i113 1
-R60
-R61
-R0
->>>>>>> 19da0b3d2fda01387ac4deb19bd9753381044d41
-!i113 1
-R60
-R61
-R0
-Astructural
-R9
-R10
-Z88 DEx4 work 8 mux2t1_n 0 22 UNLEhM<8D3KJ]?CoEH2Nm3
-l39
-L30
-Z89 VcecPjkSR52eTEZOmF8AFZ1
-Z90 !s100 W>5MMWO2LBg`K8[P>h>Ye1
-R62
-33
->>>>>>> 19da0b3d2fda01387ac4deb19bd9753381044d41
-l0
-L21
-Z91 VUNLEhM<8D3KJ]?CoEH2Nm3
-Z92 !s100 BKZeKCAB2i6lge3>7TA3d3
-R62
-33
-R0
->>>>>>> 19da0b3d2fda01387ac4deb19bd9753381044d41
-!i113 1
-R60
-R61
-R0
->>>>>>> 19da0b3d2fda01387ac4deb19bd9753381044d41
-!i113 1
-R60
-R61
-R0
-Astructure
-R9
-R10
-Z93 DEx4 work 6 mux2t1 0 22 aQWIlNHUNk^e5k]7<h9j?2
-l40
-L15
-Z94 V5G8O<dBimVg^Tf6DhL@@o3
-Z95 !s100 a6eQ?JINGEnghNS>QhKCd1
-R62
-33
->>>>>>> 19da0b3d2fda01387ac4deb19bd9753381044d41
-l0
-L6
-Z96 VaQWIlNHUNk^e5k]7<h9j?2
-Z97 !s100 K>6<OCe@ccUf48<SZSAId3
-R62
-33
-R0
->>>>>>> 19da0b3d2fda01387ac4deb19bd9753381044d41
-!i113 1
-R60
-Z98 tExplicit 1
-R0
->>>>>>> 19da0b3d2fda01387ac4deb19bd9753381044d41
-!i113 1
-R60
-R61
-R0
-Astructure
-R9
-R10
-DEx4 work 14 mips_processor 0 22 GXRR^@jCBnXbZRlM0PW:c1
-l152
-L27
-V8R0RYijDY^em[16KDF7MA3
-!s100 hW:MZ`Vk2ilXk8WlN:QF23
-R62
-32
-!s110 1587070058
-!i10b 1
-!s108 1587070058.000000
-Z99 !s90 -reportprogress|300|-work|work|C:/School/CPRE381/381proj/MIPS_Processor.vhd|
->>>>>>> 19da0b3d2fda01387ac4deb19bd9753381044d41
-l0
-L16
-Z100 VOGN^ddeLBaeK1o:I?BY^30
-Z101 !s100 57zKY28KRjL_GcGjlaRiY0
-R62
-33
-R0
->>>>>>> 19da0b3d2fda01387ac4deb19bd9753381044d41
-!i113 1
-R60
-R61
-R0
->>>>>>> 19da0b3d2fda01387ac4deb19bd9753381044d41
-R9
-R10
-Z102 DEx4 work 3 mem 0 22 3U<eXk^P<<cJDhJJEG@TQ0
-l37
-L27
-Z103 VU3i4_j<mEB[0b3=JHS1=S3
-Z104 !s100 OI8_3><BhDkT3l3n8`OXd3
-R62
-33
-R0
->>>>>>> 19da0b3d2fda01387ac4deb19bd9753381044d41
-!i113 1
-R60
-R61
-R0
-Artl
->>>>>>> 19da0b3d2fda01387ac4deb19bd9753381044d41
-l0
-L8
-Z105 V3U<eXk^P<<cJDhJJEG@TQ0
-Z106 !s100 fRlcaiTJZJ1H;nZh;8=LI3
-R62
-33
-R0
->>>>>>> 19da0b3d2fda01387ac4deb19bd9753381044d41
-!i113 1
-R60
-R61
-R0
->>>>>>> 19da0b3d2fda01387ac4deb19bd9753381044d41
-!i113 1
-R60
-R61
-R0
-Adataflow
-R9
-R10
-Z107 DEx4 work 4 invg 0 22 WZ[Qn6Kne3hC>F]U><dbL1
-l31
-L30
-Z108 VLMc_0NKW6cKCF[BQ[<N=z3
-Z109 !s100 bk7I76o8e1LURdoZEQb8H0
-R62
-33
->>>>>>> 19da0b3d2fda01387ac4deb19bd9753381044d41
-l0
-L23
-Z110 VWZ[Qn6Kne3hC>F]U><dbL1
-Z111 !s100 _XK?_^5z0Rm1<k12?;5R?2
-R62
-33
-R0
->>>>>>> 19da0b3d2fda01387ac4deb19bd9753381044d41
-!i113 1
-R60
-R61
-R0
-Z112 FC:/School/CPRE381/381proj/control.vhd
-w1587318984
-Z113 8C:/School/CPRE381/381proj/control.vhd
->>>>>>> 19da0b3d2fda01387ac4deb19bd9753381044d41
-R0
-Abehavorial
-R9
-R10
-Z114 DEx4 work 7 control 0 22 Z9JBDJFDZiFl>>M3k=z0c2
-l34
-L28
-VU`?0PKTXaFQMMd^LQXQ7g1
-!s100 :5J7_PMWfTWPaZ=CQ=;KQ0
-R62
-33
-Eandg2
-Z115 w1584392626
-R9
-R10
-R0
-Z116 8C:/School/CPRE381/381proj/andg2.vhd
-Z117 FC:/School/CPRE381/381proj/andg2.vhd
-l0
-L23
-VkENG^`gSRYSE_]a5lVP[<3
-!s100 YT?bGzEmcFo:DlnoC^B4_0
-R62
-32
-Z118 !s110 1588100232
-!i10b 1
-Z119 !s108 1588100232.000000
-Z120 !s90 -reportprogress|300|-work|work|C:/School/CPRE381/381proj/andg2.vhd|
-Z121 !s107 C:/School/CPRE381/381proj/andg2.vhd|
-!i113 1
-R60
-R98
-Adataflow
-R9
-R10
-DEx4 work 5 andg2 0 22 kENG^`gSRYSE_]a5lVP[<3
-l32
-L31
-VeESY::K5feQNg=:fY:4?62
-!s100 I`@Z@UBObS]<7m8bPgKUS1
-R62
-32
-R118
-!i10b 1
-R119
-R120
-R121
-!i113 1
-R60
-R98
 Ebarrelshift_32
-Z122 w1586454963
-R9
-R10
+Z13 w1586891481
+R2
+R3
+!i122 -1
 R0
-Z123 8C:/School/CPRE381/381proj/barrelshift_32.vhd
-Z124 FC:/School/CPRE381/381proj/barrelshift_32.vhd
+Z14 8U:/ISU/2020 Spring/cpre381/381proj/barrelshift_32.vhd
+Z15 FU:/ISU/2020 Spring/cpre381/381proj/barrelshift_32.vhd
 l0
 L15
-Vk>471TI;`_FAi8^LO`clG1
+VzN<PKU6gJGPSkYAGQUAo:3
 !s100 4VB_;UiK[QB_MnHm5nO1n0
-R62
+R6
 33
-Z125 !s110 1588100330
+Z16 !s110 1588107977
 !i10b 1
-Z126 !s108 1588100330.000000
-Z127 !s90 -reportprogress|300|-work|work|C:/School/CPRE381/381proj/barrelshift_32.vhd|
-Z128 !s107 C:/School/CPRE381/381proj/barrelshift_32.vhd|
-!i113 1
-R60
-R61
+Z17 !s108 1588107977.000000
+Z18 !s90 -reportprogress|300|-work|work|U:/ISU/2020 Spring/cpre381/381proj/barrelshift_32.vhd|
+Z19 !s107 U:/ISU/2020 Spring/cpre381/381proj/barrelshift_32.vhd|
+!i113 0
+R11
+R12
 Astructural
-R9
-R10
-DEx4 work 14 barrelshift_32 0 22 k>471TI;`_FAi8^LO`clG1
+R2
+R3
+DEx4 work 14 barrelshift_32 0 22 zN<PKU6gJGPSkYAGQUAo:3
+!i122 -1
 l57
 L25
-VoTi:@Xj0?mA;=?2Ph1i`Y1
+ViSH8IK<oIn@Y00G71>[5Q3
 !s100 7h9XHCFB^M<J=1_Ym0moL0
-R62
-33
-R125
-!i10b 1
-R126
-R127
-R128
-!i113 1
-R60
-R61
-Econtrol
-Z129 w1588100371
-R9
-R10
-R0
-R113
-R112
-l0
-L10
-VZ9JBDJFDZiFl>>M3k=z0c2
-!s100 ?LLPTim0GSmXVD3^h:aj<0
-R62
-33
-Z130 !s110 1588100374
-!i10b 1
-Z131 !s108 1588100374.000000
-R56
-R57
-!i113 1
-R60
-R61
-Abehavorial
-R9
-R10
-R114
-l34
-L28
-Vf:F>VUX<l=2<9=UBoXa1b1
-!s100 oI?YmnR>8NQzg]FCWI;i^2
-R62
-33
-R130
-!i10b 1
-R131
-R56
-R57
-!i113 1
-R60
-R61
-Ef_alu
-w1587500120
-R9
-R10
-R0
-8C:/School/CPRE381/381proj/fi_alu.vhd
-FC:/School/CPRE381/381proj/fi_alu.vhd
-l0
-L4
-VEWNYJzG8=Ric=dIhHIWGM1
-!s100 hmoCG=jcLI6cDTPkgJeWh3
-R62
-32
-!s110 1588100102
-!i10b 1
-!s108 1588100101.000000
-!s90 -reportprogress|30|-work|work|C:/School/CPRE381/381proj/fi_alu.vhd|
-!s107 C:/School/CPRE381/381proj/fi_alu.vhd|
-!i113 1
-R60
-R98
-Einvg
-R115
-R9
-R10
-R0
-R54
-R55
-l0
-L23
-R110
-R111
-R62
-33
-Z132 !s110 1588100378
-!i10b 1
-Z133 !s108 1588100378.000000
-Z134 !s90 -reportprogress|300|-work|work|C:/School/CPRE381/381proj/invg.vhd|
-R53
-!i113 1
-R60
-R61
-Adataflow
-R9
-R10
-R107
-l31
-L30
-R108
-R109
-R62
-33
-R132
-!i10b 1
-R133
-R134
-R53
-!i113 1
-R60
-R61
-Emem
-R22
-R50
-R9
-R10
-R0
-R51
-R41
-l0
-L8
-R105
-R106
-R62
-33
-Z135 !s110 1588100380
-!i10b 1
-Z136 !s108 1588100380.000000
-Z137 !s90 -reportprogress|300|-work|work|C:/School/CPRE381/381proj/mem.vhd|
-R49
-!i113 1
-R60
-R61
-Artl
-R50
-R9
-R10
-R102
-l37
-L27
-R103
-R104
-R62
-33
-R135
-!i10b 1
-R136
-R137
-R49
-!i113 1
-R60
-R61
-Emips_processor
-Z138 w1588101704
-R9
-R10
-R0
-R25
-R48
-l0
-L16
-R100
-R101
-R62
-33
-!s110 1588101706
-!i10b 1
-Z139 !s108 1588101706.000000
-R99
-R45
-!i113 1
-R60
-R61
-Astructure
-R9
-R10
-DEx4 work 14 mips_processor 0 22 OGN^ddeLBaeK1o:I?BY^30
-l219
-L27
-VT1i0Co`c7bTl6jZd6ah1B0
-!s100 mnQGHYECGTmNJ9GQhFU^:1
-R62
-33
-!s110 1588101707
-!i10b 1
-R139
-R99
-R45
-!i113 1
-R60
-R61
-Emux2t1
-R115
-R9
-R10
-R0
-R43
-R44
-l0
-L6
-R96
-R97
-R62
-33
-Z140 !s110 1588100385
-!i10b 1
-Z141 !s108 1588100385.000000
-Z142 !s90 -reportprogress|300|-work|work|C:/School/CPRE381/381proj/mux2t1.vhd|
-R40
-!i113 1
-R60
-R61
-Astructure
-R9
-R10
-R93
-l40
-L15
-R94
-R95
-R62
-33
-R140
-!i10b 1
-R141
-R142
-R40
-!i113 1
-R60
-R61
-Emux2t1_n
-R34
-R9
-R10
-R0
-R35
-R36
-l0
-L21
-R91
-R92
-R62
-33
-Z143 !s110 1588100387
-!i10b 1
-Z144 !s108 1588100387.000000
-Z145 !s90 -reportprogress|300|-work|work|C:/School/CPRE381/381proj/mux2t1_N.vhd|
-R33
-!i113 1
-R60
-R61
-Astructural
-R9
-R10
-R88
-l39
-L30
-R89
-R90
-R62
-33
-R143
-!i10b 1
-R144
-R145
-R33
-!i113 1
-R60
-R61
-Emyfirstmipsdatapath
-w1587412860
-R9
-R10
-R0
-8C:/School/CPRE381/381proj/shifter.vhd
-FC:/School/CPRE381/381proj/shifter.vhd
-l0
-L23
-VEFcCQVN75dbiHnNRSn5[`3
-!s100 @MU[km7_ZD6BIF]=5Pi7;3
-R62
-33
-!s110 1588100392
-!i10b 1
-!s108 1588100392.000000
-!s90 -reportprogress|300|-work|work|C:/School/CPRE381/381proj/shifter.vhd|
-!s107 C:/School/CPRE381/381proj/shifter.vhd|
-!i113 1
-R60
-R61
-Eorg2
-R115
-R9
-R10
-R0
-R30
-R31
-l0
-L23
-R86
-R87
-R62
-33
-Z146 !s110 1588100389
-!i10b 1
-Z147 !s108 1588100389.000000
-Z148 !s90 -reportprogress|300|-work|work|C:/School/CPRE381/381proj/org2.vhd|
-R20
-!i113 1
-R60
-R61
-Adataflow
-R9
-R10
-R83
-l32
-L31
-R84
-R85
-R62
-33
-R146
-!i10b 1
-R147
-R148
-R20
-!i113 1
-R60
-R61
-Ereverser_32
-R115
-R9
-R10
-R0
-R21
-R28
-l0
-L14
-R81
-R82
-R62
-33
-Z149 !s110 1588100391
-!i10b 1
-Z150 !s108 1588100391.000000
-Z151 !s90 -reportprogress|300|-work|work|C:/School/CPRE381/381proj/reverser_32.vhd|
-R27
-!i113 1
-R60
-R61
-Adataflow
-R9
-R10
-R78
-l22
-L20
-R79
-R80
-R62
-33
-R149
-!i10b 1
-R150
-R151
-R27
-!i113 1
-R60
-R61
-Etb
-R22
 R6
-R7
-R9
-R10
-R0
-R23
-R24
-l0
-L24
-R76
-R77
-R62
 33
-Z152 !s110 1588100394
+R16
 !i10b 1
-Z153 !s108 1588100394.000000
-Z154 !s90 -reportprogress|300|-work|work|C:/School/CPRE381/381proj/tb.vhd|
+R17
+R18
 R19
-!i113 1
-R60
-R61
-Amixed
-R6
-R7
-R9
-R10
-R73
-l53
-L30
-R74
-R75
-R62
-33
-R152
-!i10b 1
-R153
-R154
-R19
-!i113 1
-R60
-R61
-Etb_barrelshift_32
-R122
-R6
-R7
-R9
-R10
-R0
-R15
-R8
-l0
-L17
-R71
-R72
-R62
-33
-Z155 !s110 1588100396
-!i10b 1
-Z156 !s108 1588100396.000000
-Z157 !s90 -reportprogress|300|-work|work|C:/School/CPRE381/381proj/tb_barrelshift_32.vhd|
-R14
-!i113 1
-R60
-R61
-Amixed
-R6
-R7
-R9
-R10
-R68
-l42
-L21
-R69
-R70
-R62
-33
-R155
-!i10b 1
-R156
-R157
-R14
-!i113 1
-R60
-R61
-Etb_reverser_32
-R115
-R6
-R7
-R9
-R10
-R0
+!i113 0
 R11
 R12
-l0
-L17
-R66
-R67
-R62
-33
-Z158 !s110 1588100397
-!i10b 1
-Z159 !s108 1588100397.000000
-Z160 !s90 -reportprogress|300|-work|work|C:/School/CPRE381/381proj/tb_reverser_32.vhd|
-R4
-!i113 1
-R60
-R61
-Amixed
-R6
-R7
-R9
-R10
-R63
-l36
-L21
-R64
-R65
-R62
-33
-R158
-!i10b 1
-R159
-R160
-R4
-!i113 1
-R60
-R61
-Exorg32
-w1588106807
-R9
-R10
+Econtrol
+Z20 w1588104476
+R2
+R3
+!i122 -1
 R0
-8C:/School/CPRE381/381proj/xorg32.vhd
-FC:/School/CPRE381/381proj/xorg32.vhd
+Z21 8U:/ISU/2020 Spring/cpre381/381proj/control.vhd
+Z22 FU:/ISU/2020 Spring/cpre381/381proj/control.vhd
+l0
+L10
+V6Dh<>U;A>`a3;G95zzE1T2
+!s100 ?LLPTim0GSmXVD3^h:aj<0
+R6
+33
+Z23 !s110 1588107978
+!i10b 1
+R17
+Z24 !s90 -reportprogress|300|-work|work|U:/ISU/2020 Spring/cpre381/381proj/control.vhd|
+Z25 !s107 U:/ISU/2020 Spring/cpre381/381proj/control.vhd|
+!i113 0
+R11
+R12
+Abehavorial
+R2
+R3
+DEx4 work 7 control 0 22 6Dh<>U;A>`a3;G95zzE1T2
+!i122 -1
+l34
+L28
+VcFWIBle_P:1dP2ib;X:XD1
+!s100 oI?YmnR>8NQzg]FCWI;i^2
+R6
+33
+R23
+!i10b 1
+R17
+R24
+R25
+!i113 0
+R11
+R12
+Einvg
+R1
+R2
+R3
+!i122 -1
+R0
+Z26 8U:/ISU/2020 Spring/cpre381/381proj/invg.vhd
+Z27 FU:/ISU/2020 Spring/cpre381/381proj/invg.vhd
 l0
 L23
-VTmz^nV0e9`64Sn5>KiFT]0
-!s100 9d>nSjY10c18ohB;gR8YS3
-R62
+VzJhOLc0g_4RfSF]IXa;:73
+!s100 _XK?_^5z0Rm1<k12?;5R?2
+R6
 33
-!s110 1588107039
+R23
 !i10b 1
-!s108 1588107039.000000
-!s90 -reportprogress|300|-work|work|C:/School/CPRE381/381proj/xorg32.vhd|
-!s107 C:/School/CPRE381/381proj/xorg32.vhd|
-!i113 1
+Z28 !s108 1588107978.000000
+Z29 !s90 -reportprogress|30|-work|work|U:/ISU/2020 Spring/cpre381/381proj/invg.vhd|
+Z30 !s107 U:/ISU/2020 Spring/cpre381/381proj/invg.vhd|
+!i113 0
+R11
+R12
+Adataflow
+R2
+R3
+DEx4 work 4 invg 0 22 zJhOLc0g_4RfSF]IXa;:73
+!i122 -1
+l31
+L30
+VT@AA60h>IXVJ?D^`RRiZk1
+!s100 bk7I76o8e1LURdoZEQb8H0
+R6
+33
+R23
+!i10b 1
+R28
+R29
+R30
+!i113 0
+R11
+R12
+Emips_processor
+R20
+R2
+R3
+!i122 -1
+R0
+Z31 8U:/ISU/2020 Spring/cpre381/381proj/MIPS_Processor.vhd
+Z32 FU:/ISU/2020 Spring/cpre381/381proj/MIPS_Processor.vhd
+l0
+L16
+VXifkoUF^l0E@Q;XUD^:g00
+!s100 57zKY28KRjL_GcGjlaRiY0
+R6
+33
+Z33 !s110 1588107979
+!i10b 1
+R28
+Z34 !s90 -reportprogress|30|-work|work|U:/ISU/2020 Spring/cpre381/381proj/MIPS_Processor.vhd|
+Z35 !s107 U:/ISU/2020 Spring/cpre381/381proj/MIPS_Processor.vhd|
+!i113 0
+R11
+R12
+Astructure
+R2
+R3
+DEx4 work 14 mips_processor 0 22 XifkoUF^l0E@Q;XUD^:g00
+!i122 -1
+l219
+L27
+Vk_8@@^9m5nSJK=3RzdeSE3
+!s100 mnQGHYECGTmNJ9GQhFU^:1
+R6
+33
+R33
+!i10b 1
+R28
+R34
+R35
+!i113 0
+R11
+R12
+Emux2t1
+R1
+R2
+R3
+!i122 -1
+R0
+Z36 8U:/ISU/2020 Spring/cpre381/381proj/mux2t1.vhd
+Z37 FU:/ISU/2020 Spring/cpre381/381proj/mux2t1.vhd
+l0
+L6
+VPk>h1l=lOGN3U=c@M>:l22
+!s100 K>6<OCe@ccUf48<SZSAId3
+R6
+33
+R33
+!i10b 1
+Z38 !s108 1588107979.000000
+Z39 !s90 -reportprogress|30|-work|work|U:/ISU/2020 Spring/cpre381/381proj/mux2t1.vhd|
+Z40 !s107 U:/ISU/2020 Spring/cpre381/381proj/mux2t1.vhd|
+!i113 0
+R11
+R12
+Astructure
+R2
+R3
+DEx4 work 6 mux2t1 0 22 Pk>h1l=lOGN3U=c@M>:l22
+!i122 -1
+l40
+L15
+VWJM`S@DoG641=3=Ko4>f?2
+!s100 a6eQ?JINGEnghNS>QhKCd1
+R6
+33
+Z41 !s110 1588107980
+!i10b 1
+R38
+R39
+R40
+!i113 0
+R11
+R12
+Emux2t1_n
+Z42 w1582307034
+R2
+R3
+!i122 -1
+R0
+Z43 8U:/ISU/2020 Spring/cpre381/381proj/mux2t1_N.vhd
+Z44 FU:/ISU/2020 Spring/cpre381/381proj/mux2t1_N.vhd
+l0
+L21
+VDk6W_YlM7aaW[_dI]K4K>1
+!s100 BKZeKCAB2i6lge3>7TA3d3
+R6
+33
+R41
+!i10b 1
+Z45 !s108 1588107980.000000
+Z46 !s90 -reportprogress|30|-work|work|U:/ISU/2020 Spring/cpre381/381proj/mux2t1_N.vhd|
+Z47 !s107 U:/ISU/2020 Spring/cpre381/381proj/mux2t1_N.vhd|
+!i113 0
+R11
+R12
+Astructural
+R2
+R3
+DEx4 work 8 mux2t1_n 0 22 Dk6W_YlM7aaW[_dI]K4K>1
+!i122 -1
+l39
+L30
+VS;7^3=hDiT7zH78Vm1Xhk1
+!s100 W>5MMWO2LBg`K8[P>h>Ye1
+R6
+33
+R41
+!i10b 1
+R45
+R46
+R47
+!i113 0
+R11
+R12
+Emyfirstmipsdatapath
+w1588104478
+R2
+R3
+!i122 -1
+R0
+8U:/ISU/2020 Spring/cpre381/381proj/shifter.vhd
+FU:/ISU/2020 Spring/cpre381/381proj/shifter.vhd
+l0
+L23
+VjNLc:f0RTK:U_bO7@5>W@1
+!s100 @MU[km7_ZD6BIF]=5Pi7;3
+R6
+33
+Z48 !s110 1588107982
+!i10b 1
+Z49 !s108 1588107981.000000
+!s90 -reportprogress|30|-work|work|U:/ISU/2020 Spring/cpre381/381proj/shifter.vhd|
+!s107 U:/ISU/2020 Spring/cpre381/381proj/shifter.vhd|
+!i113 0
+R11
+R12
+Eorg2
+R1
+R2
+R3
+!i122 -1
+R0
+Z50 8U:/ISU/2020 Spring/cpre381/381proj/org2.vhd
+Z51 FU:/ISU/2020 Spring/cpre381/381proj/org2.vhd
+l0
+L23
+V0FzB9ATDX9TV=M:n@=VB83
+!s100 bGQ1F9eW^Q17OoL9h4g7z2
+R6
+33
+Z52 !s110 1588107981
+!i10b 1
+R45
+Z53 !s90 -reportprogress|30|-work|work|U:/ISU/2020 Spring/cpre381/381proj/org2.vhd|
+Z54 !s107 U:/ISU/2020 Spring/cpre381/381proj/org2.vhd|
+!i113 0
+R11
+R12
+Adataflow
+R2
+R3
+DEx4 work 4 org2 0 22 0FzB9ATDX9TV=M:n@=VB83
+!i122 -1
+l32
+L31
+V0JC>N7cRXc=9bni@>dg7o3
+!s100 h5_AzR3TdRA0a_K=dQ>mI2
+R6
+33
+R52
+!i10b 1
+R45
+R53
+R54
+!i113 0
+R11
+R12
+Ereverser_32
+Z55 w1585164631
+R2
+R3
+!i122 -1
+R0
+Z56 8U:/ISU/2020 Spring/cpre381/381proj/reverser_32.vhd
+Z57 FU:/ISU/2020 Spring/cpre381/381proj/reverser_32.vhd
+l0
+L14
+Vo>9mV:SPBGX1f05m[MT6I0
+!s100 W2W[`?gIMUN@ZR3mKOm7e1
+R6
+33
+R52
+!i10b 1
+R49
+Z58 !s90 -reportprogress|30|-work|work|U:/ISU/2020 Spring/cpre381/381proj/reverser_32.vhd|
+Z59 !s107 U:/ISU/2020 Spring/cpre381/381proj/reverser_32.vhd|
+!i113 0
+R11
+R12
+Adataflow
+R2
+R3
+DEx4 work 11 reverser_32 0 22 o>9mV:SPBGX1f05m[MT6I0
+!i122 -1
+l22
+L20
+V?0JBXo0COlN@BI1Z`Ejm52
+!s100 LUT2Sz[T5MDMV?ETB0_n[0
+R6
+33
+R52
+!i10b 1
+R49
+R58
+R59
+!i113 0
+R11
+R12
+Etb_barrelshift_32
+R13
+Z60 DPx3 std 3 env 0 22 d?`1ck@NdeD@H3RZG7FgZ2
+Z61 DPx4 ieee 16 std_logic_textio 0 22 V5TSK`;aJKC<l]CEg1>mz1
+R2
+R3
+!i122 -1
+R0
+Z62 8U:/ISU/2020 Spring/cpre381/381proj/tb_barrelshift_32.vhd
+Z63 FU:/ISU/2020 Spring/cpre381/381proj/tb_barrelshift_32.vhd
+l0
+L17
+VL`m6mC<VCz;T3SVOVGK1Q1
+!s100 lNFOZ4_mE6JP:;>CA6GCm0
+R6
+33
+R48
+!i10b 1
+Z64 !s108 1588107982.000000
+Z65 !s90 -reportprogress|30|-work|work|U:/ISU/2020 Spring/cpre381/381proj/tb_barrelshift_32.vhd|
+Z66 !s107 U:/ISU/2020 Spring/cpre381/381proj/tb_barrelshift_32.vhd|
+!i113 0
+R11
+R12
+Amixed
 R60
 R61
+R2
+R3
+DEx4 work 17 tb_barrelshift_32 0 22 L`m6mC<VCz;T3SVOVGK1Q1
+!i122 -1
+l42
+L21
+VkKlfE3KOe:4NPZDV1;BRX1
+!s100 VHZb4cK_HcdDc56_@>Qel1
+R6
+33
+Z67 !s110 1588107983
+!i10b 1
+R64
+R65
+R66
+!i113 0
+R11
+R12
+Etb_reverser_32
+R55
+R60
+R61
+R2
+R3
+!i122 -1
+R0
+Z68 8U:/ISU/2020 Spring/cpre381/381proj/tb_reverser_32.vhd
+Z69 FU:/ISU/2020 Spring/cpre381/381proj/tb_reverser_32.vhd
+l0
+L17
+V5X210nHBWzNA8S5DZmWOR3
+!s100 9I8jk78=2L279Vo<doc>F0
+R6
+33
+R67
+!i10b 1
+Z70 !s108 1588107983.000000
+Z71 !s90 -reportprogress|30|-work|work|U:/ISU/2020 Spring/cpre381/381proj/tb_reverser_32.vhd|
+Z72 !s107 U:/ISU/2020 Spring/cpre381/381proj/tb_reverser_32.vhd|
+!i113 0
+R11
+R12
+Amixed
+R60
+R61
+R2
+R3
+DEx4 work 14 tb_reverser_32 0 22 5X210nHBWzNA8S5DZmWOR3
+!i122 -1
+l36
+L21
+V;=8iCe@nCmA1W0LIH2M6R0
+!s100 oSX88f>DPW[l7m2Km5zUV3
+R6
+33
+R67
+!i10b 1
+R70
+R71
+R72
+!i113 0
+R11
+R12
+Exorg32
+Z73 w1588107122
+R2
+R3
+!i122 -1
+R0
+Z74 8U:/ISU/2020 Spring/cpre381/381proj/xorg32.vhd
+Z75 FU:/ISU/2020 Spring/cpre381/381proj/xorg32.vhd
+l0
+L23
+VCac:G?]oDM[UVJ`]zLSzL0
+!s100 9d>nSjY10c18ohB;gR8YS3
+R6
+33
+Z76 !s110 1588107984
+!i10b 1
+R70
+Z77 !s90 -reportprogress|30|-work|work|U:/ISU/2020 Spring/cpre381/381proj/xorg32.vhd|
+Z78 !s107 U:/ISU/2020 Spring/cpre381/381proj/xorg32.vhd|
+!i113 0
+R11
+R12
+Adataflow
+R2
+R3
+DEx4 work 6 xorg32 0 22 Cac:G?]oDM[UVJ`]zLSzL0
+!i122 -1
+l32
+L31
+V74mo7nXEY=d1z?C3RMM_L1
+Z79 !s100 B4JHjNf;AHHTA?zjW0Jdg2
+R6
+33
+R76
+!i10b 1
+R70
+R77
+R78
+!i113 0
+R11
+R12

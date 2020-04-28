@@ -504,7 +504,7 @@ BEGIN
   PORT MAP(
     i_S => s_ShiftEn,
     i_D0 => s_wholeALUout(31 DOWNTO 0),
-    i_D1 => s_Y(4 DOWNTO 0),
+    i_D1 => s_Y,
     o_O => s_Mux4
   );
 
