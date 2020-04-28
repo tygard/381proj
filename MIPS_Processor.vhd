@@ -68,14 +68,15 @@ ARCHITECTURE structure OF MIPS_Processor IS
 
   SIGNAL s_wholeALUout : std_logic_vector(63 DOWNTO 0);
 
-  SIGNAL s_Rs : std_logic_vector(32 DOWNTO 0);
-  SIGNAL s_Rt : std_logic_vector(32 DOWNTO 0);
-  SIGNAL s_Data0 : std_logic_vector(32 DOWNTO 0);
-  SIGNAL s_Data1 : std_logic_vector(32 DOWNTO 0);
-  SIGNAL s_nextPC : std_logic_vector(32 DOWNTO 0);
-  SIGNAL s_Mux4 : std_logic_vector(32 DOWNTO 0);
+  SIGNAL s_Rs : std_logic_vector(31 DOWNTO 0);
+  SIGNAL s_Rt : std_logic_vector(31 DOWNTO 0);
+  SIGNAL s_Data0 : std_logic_vector(31 DOWNTO 0);
+  SIGNAL s_Data1 : std_logic_vector(31 DOWNTO 0);
+  SIGNAL s_nextPC : std_logic_vector(31 DOWNTO 0);
+  SIGNAL s_Mux4 : std_logic_vector(31 DOWNTO 0);
+  SIGNAL s_Mux1 : std_logic_vector(31 DOWNTO 0);
 
-  SIGNAL s_Imm : std_logic_vector(15 DOWNTO 0);
+  SIGNAL s_Imm : std_logic_vector(31 DOWNTO 0);
   SIGNAL s_ALUOp : std_logic_vector(5 DOWNTO 0);
   SIGNAL s_ALUctrl : std_logic_vector(4 DOWNTO 0);
 
@@ -93,7 +94,7 @@ ARCHITECTURE structure OF MIPS_Processor IS
   SIGNAL s_VarEn : std_logic;
   SIGNAL s_D : std_logic;
   SIGNAL s_T : std_logic;
-  signal s_Zero : std_logic;
+  SIGNAL s_Zero : std_logic;
   SIGNAL s_BranchAndZero : std_logic;
 
   SIGNAL s_Y : std_logic_vector(31 DOWNTO 0);
@@ -353,7 +354,7 @@ BEGIN
   -----------------------------------------------------------------
   -- BRANCH AND ZERO
   -- inputs:
--- just a logic and between the brnach control signal and the 0th bit from the ALU
+  -- just a logic and between the brnach control signal and the 0th bit from the ALU
   -- outputs:
   -- branch input to the fetch = s_BranchAndZero
   -----------------------------------------------------------------
@@ -408,16 +409,16 @@ BEGIN
   );
 
   mux0 : mux2t1_N
-  GENERIC MAP(N => 5);
+  GENERIC MAP(N => 5)
   PORT MAP(
-    i_S => s_RegDest,
+    i_S => s_RegDst,
     i_D0 => s_Inst(20 DOWNTO 16),
     i_D1 => s_Inst(15 DOWNTO 11),
     o_O => s_RegWrAddr
   );
 
   registers : RegFile
-  GENERIC MAP(N => 32);
+  GENERIC MAP(N => 32)
   PORT MAP(
     i_WA => s_RegWrAddr,
     i_WD => s_RegWrData,
@@ -431,7 +432,7 @@ BEGIN
   );
 
   SignExtender : extender
-  GENERIC MAP(Y => 16);
+  GENERIC MAP(Y => 16)
   PORT MAP(
     input => s_Inst(15 DOWNTO 0),
     sign => s_Inst(15),
@@ -439,7 +440,7 @@ BEGIN
   );
 
   mux1 : mux2t1_N
-  GENERIC MAP(N => 32);
+  GENERIC MAP(N => 32)
   PORT MAP(
     i_S => s_ALUsrc,
     i_D0 => s_Rt,
@@ -447,14 +448,14 @@ BEGIN
     o_O => s_Data1
   );
 
-  ALUcontrol : alucontrol
+  ALU_control : alucontrol
   PORT MAP(
     i_OP => s_ALUOp,
     i_FI => s_Inst(5 DOWNTO 0),
     o_F => s_ALUctrl
   );
 
-  barrel_decoder : barrel_decoder
+  b_decoder : barrel_decoder
   PORT MAP(
     i_ALUctrl => s_ALUctrl,
     o_D => s_D,
@@ -464,7 +465,7 @@ BEGIN
   );
 
   mux3 : mux2t1_N
-  GENERIC MAP(N => 5);
+  GENERIC MAP(N => 5)
   PORT MAP(
     i_S => s_VarEn,
     i_D0 => s_Inst(10 DOWNTO 6),
@@ -473,7 +474,7 @@ BEGIN
   );
 
   barrel_shifter : barrelshift_32
-  GENERIC MAP(N => 32); -- Generic of type integer for input/output data width. Default value is 32.
+  GENERIC MAP(N => 32) -- Generic of type integer for input/output data width. Default value is 32.
   PORT MAP(
     i_SHAMT => s_SHAMT,
     i_D => s_D,
@@ -483,7 +484,7 @@ BEGIN
   );
 
   ALU : f_alu
-  GENERIC MAP(N => 32);
+  GENERIC MAP(N => 32)
   PORT MAP(
     i_A => s_Rs,
     i_B => s_Mux1,
@@ -493,13 +494,13 @@ BEGIN
     o_Overflow => s_Ovfl
   );
 
-s_Zero => s_wholeALUout(0);
+  s_Zero <= s_wholeALUout(0);
 
-  oALUout => s_wholeALUout(31 DOWNTO 0); -- dictated by outline
-  s_DMEmAddr => s_wholeALUout(31 DOWNTO 0); -- dictated by outline
+  oALUout <= s_wholeALUout(31 DOWNTO 0); -- dictated by outline
+  s_DMEmAddr <= s_wholeALUout(31 DOWNTO 0); -- dictated by outline
 
   mux4 : mux2t1_N
-  GENERIC MAP(N => 32);
+  GENERIC MAP(N => 32)
   PORT MAP(
     i_S => s_ShiftEn,
     i_D0 => s_wholeALUout(31 DOWNTO 0),
@@ -507,10 +508,10 @@ s_Zero => s_wholeALUout(0);
     o_O => s_Mux4
   );
 
-  s_BranchAndZero => s_Branch and s_Zero;
+  s_BranchAndZero <= s_Branch AND s_Zero;
 
   mux2 : mux2t1_N
-  GENERIC MAP(N => 32);
+  GENERIC MAP(N => 32)
   PORT MAP(
     i_S => s_MemtoReg,
     i_D0 => s_DMemOut,

@@ -1,0 +1,7 @@
+
+Version sp2020.4
+
+Release Notes:
+
+* Ensured that hardware-created NOP are ignored by dump_compare.py
+
