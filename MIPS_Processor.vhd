@@ -66,15 +66,17 @@ ARCHITECTURE structure OF MIPS_Processor IS
   -- signals -----------------------------------------------------------
   -- this list is not complete, these are just the big ones that I thought needed to be written down
 
+  SIGNAL s_wholeALUout : std_logic_vector(63 DOWNTO 0);
+
   SIGNAL s_Rs : std_logic_vector(32 DOWNTO 0);
   SIGNAL s_Rt : std_logic_vector(32 DOWNTO 0);
   SIGNAL s_Data0 : std_logic_vector(32 DOWNTO 0);
   SIGNAL s_Data1 : std_logic_vector(32 DOWNTO 0);
-  SIGNAL s_ALUctrl : std_logic_vector(32 DOWNTO 0);
   SIGNAL s_nextPC : std_logic_vector(32 DOWNTO 0);
 
   SIGNAL s_Imm : std_logic_vector(15 DOWNTO 0);
   SIGNAL s_ALUOp : std_logic_vector(5 DOWNTO 0);
+  SIGNAL s_ALUctrl : std_logic_vector(4 DOWNTO 0);
 
   SIGNAL s_RegDst : std_logic;
   SIGNAL s_Jump : std_logic;
@@ -84,10 +86,15 @@ ARCHITECTURE structure OF MIPS_Processor IS
   SIGNAL s_MemWrite : std_logic;
   SIGNAL s_ALUsrc : std_logic;
   SIGNAL s_RegWrite : std_logic;
+
+  SIGNAL s_SHAMT : std_logic_vector(4 DOWNTO 0);
   SIGNAL s_ShiftEn : std_logic;
+  SIGNAL s_VarEn : std_logic;
   SIGNAL s_D : std_logic;
   SIGNAL s_T : std_logic;
   SIGNAL s_BranchAndZero : std_logic;
+
+  SIGNAL s_Y : std_logic_vector(31 DOWNTO 0);
   -- components -----------------------------------------------------------
 
   COMPONENT fetch_logic IS
@@ -167,6 +174,16 @@ ARCHITECTURE structure OF MIPS_Processor IS
       o_F : OUT std_logic);
   END COMPONENT;
 
+  COMPONENT barrelshift_32 IS
+    GENERIC (N : INTEGER := 32); -- Generic of type integer for input/output data width. Default value is 32.
+    PORT (
+      i_SHAMT : IN std_logic_vector(4 DOWNTO 0); -- Shift amount input
+      i_D : IN std_logic; -- Shift direction input (0: right, 1: left)
+      i_T : IN std_logic; -- Shift type input (0: logical, 1: arith.)
+      i_X : IN std_logic_vector(31 DOWNTO 0); -- Data value input
+      o_Y : OUT std_logic_vector(31 DOWNTO 0)); -- Data value output
+  END COMPONENT;
+
   COMPONENT control IS
     PORT (
       i_instruction : IN std_logic_vector(31 DOWNTO 0);
@@ -184,6 +201,17 @@ ARCHITECTURE structure OF MIPS_Processor IS
       o_DestReg : OUT std_logic;
       o_jump : OUT std_logic;
       o_branch : OUT std_logic);
+  END COMPONENT;
+
+  COMPONENT f_alu IS
+    GENERIC (N : INTEGER := 32);
+    PORT (
+      i_A : IN std_logic_vector(N - 1 DOWNTO 0); --input 1
+      i_B : IN std_logic_vector(N - 1 DOWNTO 0); --input 2
+      i_C : IN std_logic_vector (4 DOWNTO 0); --alu control
+      o_S : OUT std_logic_vector(31 DOWNTO 0); --sum output
+      o_C : OUT std_logic_vector(31 DOWNTO 0); --carry output
+      o_Overflow : OUT std_logic);
   END COMPONENT;
 BEGIN
 
@@ -227,60 +255,92 @@ BEGIN
   -- outputs:
   -- I think done
   -----------------------------------------------------------------
-  -- IMEM
+  -- IMEM (duwe was nice and did this for us, idk whats really going on with this)
   -- inputs:
-
+  -- inputs are unclear, needs to take in the loaded instructions outside of our design
+  -- clk and enable signals are also unclear, 
   -- outputs:
+  -- just outputs the instruction
   -----------------------------------------------------------------
   -- CONTROL
   -- inputs:
+  -- the instruction, 
 
   -- outputs:
+  -- all the control signals
+  -- done
   -----------------------------------------------------------------
   -- MUX0
   -- inputs:
+  -- reg WA bits depending on the instruction type
 
   -- outputs:
+  -- the correct WA
+  -- done
   -----------------------------------------------------------------
   -- REGFILE
   -- inputs:
+  -- all following diagram, iRST and iCLK
 
   -- outputs:
+  -- s_Rs
+  -- s_Rt
+  -- i think done
   -----------------------------------------------------------------
   -- SIGN EXTENDER
   -- inputs:
-
+  -- instruction
   -- outputs:
+  -- signed immediate
+  -- done
   -----------------------------------------------------------------
   -- MUX1
   -- inputs:
-
+  -- ALUsrc select line
+  -- the sign extended immediate 
+  -- the Rt
   -- outputs:
+  -- signal s_Data1
+  -- second input to ALU
+  -- done
   -----------------------------------------------------------------
   -- ALU CONTROL
   -- inputs:
-
+  -- ALUopcode
+  -- s_Inst(5-0)
   -- outputs:
+  -- s_ALUctrl
   -----------------------------------------------------------------
   -- BARREL DECODER
   -- inputs:
-
+  -- ALUctrl
   -- outputs:
+  --D
+  --T
+  -- shiftEn
   -----------------------------------------------------------------
   -- MUX 3
   -- inputs:
-
+  -- shamt from instruction
+  -- shamt from reg value
   -- outputs:
+  -- final shamt
   -----------------------------------------------------------------
   --BARREL SHIFTER
   -- inputs:
-
+  -- shamt
+  -- direction
+  -- type
   -- outputs:
+  -- shifted result: s_Y
   -----------------------------------------------------------------
   -- ALU
   -- inputs:
-
+  -- data 0 = Rs
+  -- data 1 = mux1
+  -- ALUctrl
   -- outputs:
+  -- s_wholeALUout(64 bits)
   -----------------------------------------------------------------
   -- MUX4
   -- inputs:
@@ -292,7 +352,7 @@ BEGIN
 
   -- outputs:
   -----------------------------------------------------------------
-  -- DMEM
+  -- DMEM (duwe also did this for us)
   -- inputs:
 
   -- outputs:
@@ -309,7 +369,7 @@ BEGIN
   PORT MAP(
     i_CLK => iCLK,
     i_RST => iRST,
-    i_WE => -- TODO: this needs some control signal to allow the PC register to change its value
+    i_WE => '1', -- TODO: this might need some control signal to allow the PC register to change its value
     i_D => s_nextPC,
     o_Q => s_NextInstAddr
   );
@@ -321,20 +381,6 @@ BEGIN
     i_instr => s_Inst,
     i_PC => s_NextInstAddr,
     o_PC => s_nextPC
-  );
-
-  registers : RegFile
-  GENERIC MAP(N => 32);
-  PORT MAP(
-    i_WA => s_RegWrAddr,
-    i_WD => s_RegWrData,
-    i_RA0 => s_Inst(25 DOWNTO 21),
-    i_RA1 => s_Inst(20 DOWNTO 16),
-    i_WE => s_RegWrite,
-    i_RST => iRST,
-    i_CLK => iCLK,
-    o_q0 => s_Rs,
-    o_q1 => s_Rt
   );
 
   control : control
@@ -364,4 +410,86 @@ BEGIN
     i_D1 => s_Inst(15 DOWNTO 11),
     o_O => s_RegWrAddr
   );
+
+  registers : RegFile
+  GENERIC MAP(N => 32);
+  PORT MAP(
+    i_WA => s_RegWrAddr,
+    i_WD => s_RegWrData,
+    i_RA0 => s_Inst(25 DOWNTO 21),
+    i_RA1 => s_Inst(20 DOWNTO 16),
+    i_WE => s_RegWrite,
+    i_RST => iRST,
+    i_CLK => iCLK,
+    o_q0 => s_Rs,
+    o_q1 => s_Rt
+  );
+
+  SignExtender : extender
+  GENERIC MAP(Y => 16);
+  PORT MAP(
+    input => s_Inst(15 DOWNTO 0),
+    sign => s_Inst(15),
+    output => s_Imm
+  );
+
+  mux1 : mux2t1_N
+  GENERIC MAP(N => 32);
+  PORT MAP(
+    i_S => s_ALUsrc,
+    i_D0 => s_Rt,
+    i_D1 => s_Imm,
+    o_O => s_Data1
+  );
+
+  ALUcontrol : alucontrol
+  PORT MAP(
+    i_OP => s_ALUOp,
+    i_FI => s_Inst(5 DOWNTO 0),
+    o_F => s_ALUctrl
+  );
+
+  barrel_decoder : barrel_decoder
+  PORT MAP(
+    i_ALUctrl => s_ALUctrl,
+    o_D => s_D,
+    o_T => s_T,
+    o_VarEn => s_VArEn,
+    o_ShiftEn => s_ShiftEn
+  );
+
+  mux3 : mux2t1_N
+  GENERIC MAP(N => 5);
+  PORT MAP(
+    i_S => s_VarEn,
+    i_D0 => s_Inst(10 DOWNTO 6),
+    i_D1 => s_Rs(4 DOWNTO 0),
+    o_O => s_SHAMT
+  );
+
+  barrel_shifter : barrelshift_32
+  GENERIC MAP(N => 32); -- Generic of type integer for input/output data width. Default value is 32.
+  PORT MAP(
+    i_SHAMT => s_SHAMT,
+    i_D => s_D,
+    i_T => s_T,
+    i_X => s_Rt,
+    o_Y => s_Y
+  );
+
+  ALU : f_alu
+  GENERIC MAP(N => 32);
+  PORT MAP(
+    i_A => s_Rs,
+    i_B => s_Mux1,
+    i_C => s_ALUctrl,
+    o_S => s_wholeALUout(31 DOWNTO 0),
+    o_C => s_wholeALUout(63 DOWNTO 32),
+    o_Overflow => s_Ovfl
+  );
+
+  oALUout => s_wholeALUout(31 downto 0);  -- dictated by outline
+  s_DMEmAddr => s_wholeALUout(31 downto 0); -- dictated by outline
+
+
 END structure;
