@@ -70,7 +70,6 @@ ARCHITECTURE structure OF MIPS_Processor IS
 
   SIGNAL s_Rs : std_logic_vector(31 DOWNTO 0);
   SIGNAL s_Rt : std_logic_vector(31 DOWNTO 0);
-  SIGNAL s_Data0 : std_logic_vector(31 DOWNTO 0);
   SIGNAL s_nextPC : std_logic_vector(31 DOWNTO 0);
   SIGNAL s_Mux4 : std_logic_vector(31 DOWNTO 0);
   SIGNAL s_Mux1 : std_logic_vector(31 DOWNTO 0);
@@ -513,8 +512,8 @@ BEGIN
   GENERIC MAP(N => 32)
   PORT MAP(
     i_S => s_MemtoReg,
-    i_D0 => s_DMemOut,
-    i_D1 => s_Mux4,
+    i_D0 => s_Mux4,
+    i_D1 => s_DMemOut,
     o_O => s_RegWrData
   );
 
