@@ -28,7 +28,7 @@ entity xorg32 is
 
 end xorg32;
 
-architecture dataflow of xorg2 is
+architecture dataflow of xorg32 is
 begin
 
   o_F <= i_A xor i_B;
