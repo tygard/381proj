@@ -199,7 +199,8 @@ ARCHITECTURE structure OF MIPS_Processor IS
       o_shiftReg : OUT std_logic; -- not needed
       o_DestReg : OUT std_logic;
       o_jump : OUT std_logic;
-      o_branch : OUT std_logic);
+      o_branch : OUT std_logic;
+      o_RegWrite : out std_logic);
   END COMPONENT;
 
   COMPONENT f_alu IS
@@ -401,7 +402,8 @@ BEGIN
     o_shiftReg => OPEN,
     o_DestReg => s_RegDst,
     o_jump => s_Jump,
-    o_branch => s_Branch
+    o_branch => s_Branch,
+    o_RegWrite => s_RegWr
   );
 
   mux0 : mux2t1_N
