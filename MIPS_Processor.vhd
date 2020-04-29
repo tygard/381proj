@@ -92,6 +92,7 @@ ARCHITECTURE structure OF MIPS_Processor IS
   SIGNAL s_T : std_logic;
   SIGNAL s_Zero : std_logic;
   SIGNAL s_BranchAndZero : std_logic;
+  signal s_Signed : std_logic;
 
   SIGNAL s_Y : std_logic_vector(31 DOWNTO 0);
   -- components -----------------------------------------------------------
@@ -394,7 +395,7 @@ BEGIN
   controlUnit : control
   PORT MAP(
     i_instruction => s_Inst,
-    o_immSign => OPEN,
+    o_immSign => s_Signed,
     o_MemToReg => s_MemtoReg,
     o_sub => OPEN,
     o_imm => s_ALUsrc,
@@ -440,7 +441,7 @@ BEGIN
   GENERIC MAP(Y => 16)
   PORT MAP(
     input => s_Inst(15 DOWNTO 0),
-    sign => s_Inst(15),
+    sign => s_Inst(15) and s_Signed,
     output => s_Imm
   );
 
