@@ -190,6 +190,7 @@ component add_sub_N_bit  is
 	signal s_nor : std_logic_vector(N-1 downto 0);	
 	signal s_slt_bit : std_logic;	
 	signal s_slt : std_logic_vector(N-1 downto 0);	
+	signal s_sltu : std_logic_vector(N-1 downto 0);	
 
 	signal s_beq : std_logic_vector(N-1 downto 0);	
 	signal s_bne : std_logic_vector(N-1 downto 0);
@@ -226,7 +227,7 @@ g_32t1mux: mux32t1 --SUM OUTPUT MUX
 		i_D15   => s_nor,	-- nor
 		
 		i_D16   => s_slt,	-- slt
-		i_D17   => s_slt,	-- sltu
+		i_D17   => s_sltu,	-- sltu
 		i_D18   => x"00000000",	-- j
 		i_D19   => x"00000000",	-- jal
 		
@@ -236,7 +237,7 @@ g_32t1mux: mux32t1 --SUM OUTPUT MUX
 		i_D23   => s_add,	-- addiu
 		
 		i_D24   => s_slt,	-- slti
-		i_D25   => s_slt,	-- sltiu
+		i_D25   => s_sltu,	-- sltiu
 		i_D26   => s_and,	-- andi
 		i_D27   => s_or,	-- ori
 		
@@ -358,11 +359,13 @@ g_nor: norg32
 				o_F   => s_nor );
 
 --s_slt,---------------------------- 
-g_slt: slt
-		port MAP(i_A   =>  i_A,
-				i_B	   =>  i_B,
-				o_F  =>    s_slt_bit);
-				s_slt <= x"0000000" & "000" & s_slt_bit;
+-- g_slt: slt
+-- 		port MAP(i_A   =>  i_A,
+-- 				i_B	   =>  i_B,
+-- 				o_F  =>    s_slt_bit);
+-- 				s_slt <= x"0000000" & "000" & s_slt_bit;
+s_slt <= x"0000000" & "000" & s_sub(31);
+s_sltu <= x"0000000" & "000" & not s_sub_carry;
 
 --s_beq,------------------------- 
 g_beq: beq
