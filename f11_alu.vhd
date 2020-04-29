@@ -238,12 +238,12 @@ g_32t1mux: mux32t1 --SUM OUTPUT MUX
 		i_D24   => s_slt,	-- slti
 		i_D25   => s_slt,	-- sltiu
 		i_D26   => s_and,	-- andi
-		i_D27   => s_and,	-- ori
+		i_D27   => s_or,	-- ori
 		
 		i_D28   => s_xor,	-- xori
 		i_D29   => s_add(15 downto 0) & x"0000",	-- lui
 		i_D30   => s_add,	-- lw
-		i_D31   => x"00000000",	-- sw
+		i_D31   => s_add,	-- sw
 		
 		i_S     =>  i_C,
         o_Q     =>  o_S);
