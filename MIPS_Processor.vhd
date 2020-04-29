@@ -434,6 +434,8 @@ BEGIN
     o_q1 => s_Rt
   );
 
+  s_DMemData <= s_Rt;
+
   SignExtender : extender
   GENERIC MAP(Y => 16)
   PORT MAP(
