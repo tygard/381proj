@@ -65,7 +65,7 @@ BEGIN
 	extender0 : extender
 	PORT MAP(
 		input => i_instr(15 DOWNTO 0),
-		sign => i_instr(15),
+		sign => '0',
 		output => s_SEBA
 	);
 
