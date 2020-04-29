@@ -242,7 +242,7 @@ BEGIN
 			o_branch <= '1';
 			o_RegWrite <= '0';
 
-		ELSIF s_OP = "000101" THEN --j
+		ELSIF s_OP = "000010" THEN --j
 			o_immSign <= '0';
 			o_MemToReg <= '0';
 			o_sub <= '0';
