@@ -22,7 +22,8 @@ ENTITY control IS
 	   o_shiftReg           	: out std_logic;
 	   o_DestReg             	: out std_logic;
 	   o_jump           		: out std_logic;
-	   o_branch           		: out std_logic);
+	   o_branch           		: out std_logic;
+	   o_RegWrite           	: out std_logic);
 END control;
 
 ARCHITECTURE behavorial OF control IS
@@ -53,8 +54,7 @@ BEGIN
 		o_DestReg       <= '1';
 		o_jump          <= '0';
 		o_branch 		<= '0';
-	
-	
+		o_RegWrite      <= '1';
 	
 	elsif s_OP = "001001" then        --addiu
 		o_immSign   	<= '0';
@@ -71,6 +71,7 @@ BEGIN
 		o_DestReg       <= '1';
 		o_jump          <= '0';
 		o_branch 		<= '0';
+		o_RegWrite      <= '1';
 	
 	elsif s_OP = "001100" then        --andi
 		o_immSign   	<= '1';
@@ -87,6 +88,7 @@ BEGIN
 		o_DestReg       <= '1';
 		o_jump          <= '0';
 		o_branch 		<= '0';
+		o_RegWrite      <= '1';
 	
 	elsif s_OP = "001111" then        --lui
 		o_immSign   	<= '0';
@@ -103,6 +105,7 @@ BEGIN
 		o_DestReg       <= '1';
 		o_jump          <= '0';
 		o_branch 		<= '0';
+		o_RegWrite      <= '1';
 	
 	elsif s_OP = "100011" then        --lw
 		o_immSign   	<= '1';
@@ -119,6 +122,7 @@ BEGIN
 		o_DestReg       <= '1';
 		o_jump          <= '0';
 		o_branch 		<= '0';
+		o_RegWrite      <= '1';
 	
 	elsif s_OP = "001110" then        --xori
 		o_immSign   	<= '1';
@@ -135,7 +139,7 @@ BEGIN
 		o_DestReg       <= '1';
 		o_jump          <= '0';
 		o_branch 		<= '0';
-		
+		o_RegWrite      <= '1';
 	
 	elsif s_OP = "001101" then        --ori
 		o_immSign   	<= '1';
@@ -152,6 +156,7 @@ BEGIN
 		o_DestReg       <= '1';
 		o_jump          <= '0';
 		o_branch 		<= '0';
+		o_RegWrite      <= '1';
 		
 	elsif s_OP = "001010" then        --slti
 		o_immSign   	<= '1';
@@ -168,6 +173,7 @@ BEGIN
 		o_DestReg       <= '1';
 		o_jump          <= '0';
 		o_branch 		<= '0';
+		o_RegWrite      <= '1';
 	
 	elsif s_OP = "001011" then        --sltiu
 		o_immSign   	<= '1';
@@ -184,7 +190,7 @@ BEGIN
 		o_DestReg       <= '1';
 		o_jump          <= '0';
 		o_branch 		<= '0';
-		
+		o_RegWrite      <= '1';
 	
 	elsif s_OP = "101011" then        --sw
 		o_immSign   	<= '1';
@@ -201,6 +207,7 @@ BEGIN
 		o_DestReg       <= '1';
 		o_jump          <= '0';
 		o_branch 		<= '0';
+		o_RegWrite      <= '0';
 	
 	elsif s_OP = "000100" then        --beq
 		o_immSign   	<= '0';
@@ -217,6 +224,7 @@ BEGIN
 		o_DestReg       <= '0';
 		o_jump          <= '0';
 		o_branch 		<= '1';
+		o_RegWrite      <= '0';
 	
 	elsif s_OP = "000101" then        --bne
 		o_immSign   	<= '0';
@@ -233,7 +241,7 @@ BEGIN
 		o_DestReg       <= '0';
 		o_jump          <= '0';
 		o_branch 		<= '1';
-	
+		o_RegWrite      <= '0';
 	
 	elsif s_OP = "000101" then        --j
 		o_immSign   	<= '0';
@@ -250,6 +258,7 @@ BEGIN
 		o_DestReg       <= '0';
 		o_jump          <= '1';
 		o_branch 		<= '0';
+		o_RegWrite      <= '0';
 	
 	elsif s_OP = "000011" then        --jal
 		o_immSign   	<= '0';
@@ -266,7 +275,7 @@ BEGIN
 		o_DestReg       <= '0';
 		o_jump          <= '1';
 		o_branch 		<= '0';
-	
+		o_RegWrite      <= '1';	
 	
 	elsif s_OP = "000000" then        
 		elsif s_FN = "100000" then		--add
@@ -284,6 +293,7 @@ BEGIN
 			o_DestReg       <= '0';
 			o_jump          <= '0';
 			o_branch 		<= '0';
+			o_RegWrite      <= '1';
 		
 		elsif s_FN = "100001" then        --addu
 			o_immSign   	<= '0';
@@ -300,6 +310,7 @@ BEGIN
 			o_DestReg       <= '0';
 			o_jump          <= '0';
 			o_branch 		<= '0';
+			o_RegWrite      <= '1';
 		
 		elsif s_FN = "100100" then        --and
 			o_immSign   	<= '0';
@@ -316,7 +327,7 @@ BEGIN
 			o_DestReg       <= '0';
 			o_jump          <= '0';
 			o_branch 		<= '0';
-		
+			o_RegWrite      <= '1';		
 		
 		elsif s_FN = "100111" then        --nor
 			o_immSign   	<= '0';
@@ -333,6 +344,7 @@ BEGIN
 			o_DestReg       <= '0';
 			o_jump          <= '0';
 			o_branch 		<= '0';
+			o_RegWrite      <= '1';
 		
 		elsif s_FN = "100110" then        --xor
 			o_immSign   	<= '0';
@@ -349,6 +361,7 @@ BEGIN
 			o_DestReg       <= '0';
 			o_jump          <= '0';
 			o_branch 		<= '0';
+			o_RegWrite      <= '1';
 		
 		elsif s_FN = "100101" then        --or
 			o_immSign   	<= '0';
@@ -365,6 +378,7 @@ BEGIN
 			o_DestReg       <= '0';
 			o_jump          <= '0';
 			o_branch 		<= '0';
+			o_RegWrite      <= '1';
 		
 		elsif s_FN = "101010" then        --slt
 			o_immSign   	<= '0';
@@ -381,6 +395,7 @@ BEGIN
 			o_DestReg       <= '0';
 			o_jump          <= '0';
 			o_branch 		<= '0';
+			o_RegWrite      <= '1';
 	
 		elsif s_FN = "101011" then        --sltu
 			o_immSign   	<= '0';
@@ -397,6 +412,7 @@ BEGIN
 			o_DestReg       <= '0';
 			o_jump          <= '0';
 			o_branch 		<= '0';
+			o_RegWrite      <= '1';
 		
 		elsif s_FN = "000000" then        --sll
 			o_immSign   	<= '0';
@@ -413,6 +429,7 @@ BEGIN
 			o_DestReg       <= '0';
 			o_jump          <= '0';
 			o_branch 		<= '0';
+			o_RegWrite      <= '1';
 		
 		elsif s_FN = "000010" then        --srl
 			o_immSign   	<= '0';
@@ -429,6 +446,7 @@ BEGIN
 			o_DestReg       <= '0';
 			o_jump          <= '0';
 			o_branch 		<= '0';
+			o_RegWrite      <= '1';
 		
 		elsif s_FN = "000011" then        --sra
 			o_immSign   	<= '0';
@@ -445,6 +463,7 @@ BEGIN
 			o_DestReg       <= '0';
 			o_jump          <= '0';
 			o_branch 		<= '0';
+			o_RegWrite      <= '1';
 		
 		elsif s_FN = "000100" then        --sllv
 			o_immSign   	<= '0';
@@ -461,6 +480,7 @@ BEGIN
 			o_DestReg       <= '0';
 			o_jump          <= '0';
 			o_branch 		<= '0';
+			o_RegWrite      <= '1';
 		
 		elsif s_FN = "000110" then        --srlv
 			o_immSign   	<= '0';
@@ -477,6 +497,7 @@ BEGIN
 			o_DestReg       <= '0';
 			o_jump          <= '0';
 			o_branch 		<= '0';
+			o_RegWrite      <= '1';
 		
 		elsif s_FN = "000110" then        --srav
 			o_immSign   	<= '0';
@@ -493,6 +514,7 @@ BEGIN
 			o_DestReg       <= '0';
 			o_jump          <= '0';
 			o_branch 		<= '0';
+			o_RegWrite      <= '1';
 		
 		elsif s_FN = "100010" then        --sub
 			o_immSign   	<= '0';
@@ -509,6 +531,7 @@ BEGIN
 			o_DestReg       <= '0';
 			o_jump          <= '0';
 			o_branch 		<= '0';
+			o_RegWrite      <= '1';
 		
 		elsif s_FN = "100011" then        --subu
 			o_immSign   	<= '0';
@@ -525,6 +548,7 @@ BEGIN
 			o_DestReg       <= '0';
 			o_jump          <= '0';
 			o_branch 		<= '0';
+			o_RegWrite      <= '1';
 		
 		elsif s_FN = "001000" then        --jr
 			o_immSign   	<= '0';
@@ -541,6 +565,7 @@ BEGIN
 			o_DestReg       <= '0';
 			o_jump          <= '1';
 			o_branch 		<= '0';
+			o_RegWrite      <= '0';
 		
 		end if;
 	end process;

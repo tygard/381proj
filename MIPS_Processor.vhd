@@ -83,7 +83,6 @@ ARCHITECTURE structure OF MIPS_Processor IS
   SIGNAL s_Branch : std_logic;
   SIGNAL s_MemRead : std_logic;
   SIGNAL s_MemtoReg : std_logic;
-  SIGNAL s_MemWrite : std_logic;
   SIGNAL s_ALUsrc : std_logic;
 
   SIGNAL s_SHAMT : std_logic_vector(4 DOWNTO 0);
@@ -398,7 +397,7 @@ BEGIN
     o_Shift => OPEN,
     o_leftShift => OPEN,
     o_arithShift => OPEN,
-    o_MemWrite => s_MemWrite,
+    o_MemWrite => s_DMemWr,
     o_shiftReg => OPEN,
     o_DestReg => s_RegDst,
     o_jump => s_Jump,
