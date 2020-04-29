@@ -56,7 +56,7 @@ BEGIN
 			o_RegWrite <= '1';
 
 		ELSIF s_OP = "001001" THEN --addiu
-			o_immSign <= '0';
+			o_immSign <= '1';
 			o_MemToReg <= '0';
 			o_sub <= '0';
 			o_imm <= '1';
@@ -73,7 +73,7 @@ BEGIN
 			o_RegWrite <= '1';
 
 		ELSIF s_OP = "001100" THEN --andi
-			o_immSign <= '1';
+			o_immSign <= '0';
 			o_MemToReg <= '0';
 			o_sub <= '0';
 			o_imm <= '1';
@@ -90,7 +90,7 @@ BEGIN
 			o_RegWrite <= '1';
 
 		ELSIF s_OP = "001111" THEN --lui
-			o_immSign <= '1';
+			o_immSign <= '0';
 			o_MemToReg <= '0';
 			o_sub <= '0';
 			o_imm <= '1';
