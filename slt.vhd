@@ -16,7 +16,7 @@ begin
 -- might need to subtract then compare to zero w signal
  process(i_A, i_B)
 	begin
-	if(i_A > i_B) then
+	if(i_A < i_B) then
 		
 			o_F <= '0';
 		
