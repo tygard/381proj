@@ -200,7 +200,7 @@ ARCHITECTURE structure OF MIPS_Processor IS
       o_DestReg : OUT std_logic;
       o_jump : OUT std_logic;
       o_branch : OUT std_logic;
-      o_RegWrite : out std_logic);
+      o_RegWrite : OUT std_logic);
   END COMPONENT;
 
   COMPONENT f_alu IS
@@ -365,6 +365,11 @@ BEGIN
 
   -- outputs:
   -----------------------------------------------------------------
+  WITH s_Inst(31 DOWNTO 26) SELECT
+  s_Halt <=
+    '1' WHEN "010100",
+    '0' WHEN OTHERS;
+
   PC : nbit_Reg
   GENERIC MAP(
     N => 32

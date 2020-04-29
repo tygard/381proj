@@ -69,7 +69,7 @@ BEGIN
 		'1' WHEN "00101", -- srav
 		'0' WHEN OTHERS;
 
-		WITH i_ALUctrl SELECT
+	WITH i_ALUctrl SELECT
 		o_VarEn <=
 		'0' WHEN "00000", -- sll
 		'0' WHEN "00001", -- srl
@@ -79,7 +79,7 @@ BEGIN
 		'1' WHEN "00101", -- srav
 		'0' WHEN OTHERS;
 
-		WITH i_ALUctrl SELECT
+	WITH i_ALUctrl SELECT
 		o_ShiftEn <=
 		'1' WHEN "00000", -- sll
 		'1' WHEN "00001", -- srl
