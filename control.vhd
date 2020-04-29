@@ -90,7 +90,7 @@ BEGIN
 			o_RegWrite <= '1';
 
 		ELSIF s_OP = "001111" THEN --lui
-			o_immSign <= '0';
+			o_immSign <= '1';
 			o_MemToReg <= '0';
 			o_sub <= '0';
 			o_imm <= '1';
@@ -124,7 +124,7 @@ BEGIN
 			o_RegWrite <= '1';
 
 		ELSIF s_OP = "001110" THEN --xori
-			o_immSign <= '1';
+			o_immSign <= '0';
 			o_MemToReg <= '0';
 			o_sub <= '0';
 			o_imm <= '1';
@@ -141,7 +141,7 @@ BEGIN
 			o_RegWrite <= '1';
 
 		ELSIF s_OP = "001101" THEN --ori
-			o_immSign <= '1';
+			o_immSign <= '0';
 			o_MemToReg <= '0';
 			o_sub <= '0';
 			o_imm <= '1';
@@ -175,7 +175,7 @@ BEGIN
 			o_RegWrite <= '1';
 
 		ELSIF s_OP = "001011" THEN --sltiu
-			o_immSign <= '1';
+			o_immSign <= '0';
 			o_MemToReg <= '0';
 			o_sub <= '0';
 			o_imm <= '1';
@@ -260,6 +260,7 @@ BEGIN
 			o_RegWrite <= '0';
 
 		ELSIF s_OP = "000011" THEN --jal
+		-- maybe add a specific jal output
 			o_immSign <= '0';
 			o_MemToReg <= '0';
 			o_sub <= '0';
