@@ -51,7 +51,7 @@ BEGIN
 		o_arithShift    <= '0';
 		o_MemWrite      <= '0';
 		o_shiftReg      <= '0';
-		o_DestReg       <= '1';
+		o_DestReg       <= '0'; -- i or j type set to 0, r-type set to 1
 		o_jump          <= '0';
 		o_branch 		<= '0';
 		o_RegWrite      <= '1';
@@ -68,7 +68,7 @@ BEGIN
 		o_arithShift    <= '0';
 		o_MemWrite      <= '0';
 		o_shiftReg      <= '0';
-		o_DestReg       <= '1';
+		o_DestReg       <= '0';
 		o_jump          <= '0';
 		o_branch 		<= '0';
 		o_RegWrite      <= '1';
@@ -85,7 +85,7 @@ BEGIN
 		o_arithShift    <= '0';
 		o_MemWrite      <= '0';
 		o_shiftReg      <= '0';
-		o_DestReg       <= '1';
+		o_DestReg       <= '0';
 		o_jump          <= '0';
 		o_branch 		<= '0';
 		o_RegWrite      <= '1';
@@ -102,7 +102,7 @@ BEGIN
 		o_arithShift    <= '0';
 		o_MemWrite      <= '0';
 		o_shiftReg      <= '0';
-		o_DestReg       <= '1';
+		o_DestReg       <= '0';
 		o_jump          <= '0';
 		o_branch 		<= '0';
 		o_RegWrite      <= '1';
@@ -119,7 +119,7 @@ BEGIN
 		o_arithShift    <= '0';
 		o_MemWrite      <= '0';
 		o_shiftReg      <= '0';
-		o_DestReg       <= '1';
+		o_DestReg       <= '0';
 		o_jump          <= '0';
 		o_branch 		<= '0';
 		o_RegWrite      <= '1';
@@ -136,7 +136,7 @@ BEGIN
 		o_arithShift    <= '0';
 		o_MemWrite      <= '0';
 		o_shiftReg      <= '0';
-		o_DestReg       <= '1';
+		o_DestReg       <= '0';
 		o_jump          <= '0';
 		o_branch 		<= '0';
 		o_RegWrite      <= '1';
@@ -153,7 +153,7 @@ BEGIN
 		o_arithShift    <= '0';
 		o_MemWrite      <= '0';
 		o_shiftReg      <= '0';
-		o_DestReg       <= '1';
+		o_DestReg       <= '0';
 		o_jump          <= '0';
 		o_branch 		<= '0';
 		o_RegWrite      <= '1';
@@ -170,7 +170,7 @@ BEGIN
 		o_arithShift    <= '0';
 		o_MemWrite      <= '0';
 		o_shiftReg      <= '0';
-		o_DestReg       <= '1';
+		o_DestReg       <= '0';
 		o_jump          <= '0';
 		o_branch 		<= '0';
 		o_RegWrite      <= '1';
@@ -187,7 +187,7 @@ BEGIN
 		o_arithShift    <= '0';
 		o_MemWrite      <= '0';
 		o_shiftReg      <= '0';
-		o_DestReg       <= '1';
+		o_DestReg       <= '0';
 		o_jump          <= '0';
 		o_branch 		<= '0';
 		o_RegWrite      <= '1';
@@ -204,7 +204,7 @@ BEGIN
 		o_arithShift    <= '0';
 		o_MemWrite      <= '1';
 		o_shiftReg      <= '0';
-		o_DestReg       <= '1';
+		o_DestReg       <= '0';
 		o_jump          <= '0';
 		o_branch 		<= '0';
 		o_RegWrite      <= '0';
@@ -290,7 +290,7 @@ BEGIN
 			o_arithShift    <= '0';
 			o_MemWrite      <= '0';
 			o_shiftReg      <= '0';
-			o_DestReg       <= '0';
+			o_DestReg       <= '1';
 			o_jump          <= '0';
 			o_branch 		<= '0';
 			o_RegWrite      <= '1';
@@ -307,7 +307,7 @@ BEGIN
 			o_arithShift    <= '0';
 			o_MemWrite      <= '0';
 			o_shiftReg      <= '0';
-			o_DestReg       <= '0';
+			o_DestReg       <= '1';
 			o_jump          <= '0';
 			o_branch 		<= '0';
 			o_RegWrite      <= '1';
@@ -324,7 +324,7 @@ BEGIN
 			o_arithShift    <= '0';
 			o_MemWrite      <= '0';
 			o_shiftReg      <= '0';
-			o_DestReg       <= '0';
+			o_DestReg       <= '1';
 			o_jump          <= '0';
 			o_branch 		<= '0';
 			o_RegWrite      <= '1';		
@@ -341,7 +341,7 @@ BEGIN
 			o_arithShift    <= '0';
 			o_MemWrite      <= '0';
 			o_shiftReg      <= '0';
-			o_DestReg       <= '0';
+			o_DestReg       <= '1';
 			o_jump          <= '0';
 			o_branch 		<= '0';
 			o_RegWrite      <= '1';
@@ -358,7 +358,7 @@ BEGIN
 			o_arithShift    <= '0';
 			o_MemWrite      <= '0';
 			o_shiftReg      <= '0';
-			o_DestReg       <= '0';
+			o_DestReg       <= '1';
 			o_jump          <= '0';
 			o_branch 		<= '0';
 			o_RegWrite      <= '1';
@@ -375,7 +375,7 @@ BEGIN
 			o_arithShift    <= '0';
 			o_MemWrite      <= '0';
 			o_shiftReg      <= '0';
-			o_DestReg       <= '0';
+			o_DestReg       <= '1';
 			o_jump          <= '0';
 			o_branch 		<= '0';
 			o_RegWrite      <= '1';
@@ -392,7 +392,7 @@ BEGIN
 			o_arithShift    <= '0';
 			o_MemWrite      <= '0';
 			o_shiftReg      <= '0';
-			o_DestReg       <= '0';
+			o_DestReg       <= '1';
 			o_jump          <= '0';
 			o_branch 		<= '0';
 			o_RegWrite      <= '1';
@@ -409,7 +409,7 @@ BEGIN
 			o_arithShift    <= '0';
 			o_MemWrite      <= '0';
 			o_shiftReg      <= '0';
-			o_DestReg       <= '0';
+			o_DestReg       <= '1';
 			o_jump          <= '0';
 			o_branch 		<= '0';
 			o_RegWrite      <= '1';
@@ -426,7 +426,7 @@ BEGIN
 			o_arithShift    <= '0';
 			o_MemWrite      <= '0';
 			o_shiftReg      <= '0';
-			o_DestReg       <= '0';
+			o_DestReg       <= '1';
 			o_jump          <= '0';
 			o_branch 		<= '0';
 			o_RegWrite      <= '1';
@@ -443,7 +443,7 @@ BEGIN
 			o_arithShift    <= '0';
 			o_MemWrite      <= '0';
 			o_shiftReg      <= '0';
-			o_DestReg       <= '0';
+			o_DestReg       <= '1';
 			o_jump          <= '0';
 			o_branch 		<= '0';
 			o_RegWrite      <= '1';
@@ -460,7 +460,7 @@ BEGIN
 			o_arithShift    <= '1';
 			o_MemWrite      <= '0';
 			o_shiftReg      <= '0';
-			o_DestReg       <= '0';
+			o_DestReg       <= '1';
 			o_jump          <= '0';
 			o_branch 		<= '0';
 			o_RegWrite      <= '1';
@@ -477,7 +477,7 @@ BEGIN
 			o_arithShift    <= '0';
 			o_MemWrite      <= '0';
 			o_shiftReg      <= '1';
-			o_DestReg       <= '0';
+			o_DestReg       <= '1';
 			o_jump          <= '0';
 			o_branch 		<= '0';
 			o_RegWrite      <= '1';
@@ -494,7 +494,7 @@ BEGIN
 			o_arithShift    <= '0';
 			o_MemWrite      <= '0';
 			o_shiftReg      <= '1';
-			o_DestReg       <= '0';
+			o_DestReg       <= '1';
 			o_jump          <= '0';
 			o_branch 		<= '0';
 			o_RegWrite      <= '1';
@@ -511,7 +511,7 @@ BEGIN
 			o_arithShift    <= '1';
 			o_MemWrite      <= '0';
 			o_shiftReg      <= '1';
-			o_DestReg       <= '0';
+			o_DestReg       <= '1';
 			o_jump          <= '0';
 			o_branch 		<= '0';
 			o_RegWrite      <= '1';
@@ -528,7 +528,7 @@ BEGIN
 			o_arithShift    <= '0';
 			o_MemWrite      <= '0';
 			o_shiftReg      <= '0';
-			o_DestReg       <= '0';
+			o_DestReg       <= '1';
 			o_jump          <= '0';
 			o_branch 		<= '0';
 			o_RegWrite      <= '1';
@@ -545,7 +545,7 @@ BEGIN
 			o_arithShift    <= '0';
 			o_MemWrite      <= '0';
 			o_shiftReg      <= '0';
-			o_DestReg       <= '0';
+			o_DestReg       <= '1';
 			o_jump          <= '0';
 			o_branch 		<= '0';
 			o_RegWrite      <= '1';
