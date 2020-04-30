@@ -258,21 +258,19 @@ g_32t1mux: mux32t1 --SUM OUTPUT MUX
 --second mux that selects corresponding carry to out put
 	g_32t1mux_carry: mux32t1bit1wide
 		port MAP(
-		i_D0   =>  s_multu_carry,
-		i_D1   =>  s_add_carry,
-		i_D2   =>  s_sub_carry,
-		
-		--NEED TO MAKE UNUSED OUTPUTS BELOW 0s
+		i_D0   =>  '0',
+		i_D1   =>  '0',
+		i_D2   =>  '0',
 		i_D3   =>   '0',
 		
 		i_D4   =>   '0',
 		i_D5   =>  '0',
 		i_D6   => '0',
-		i_D7   =>  '0',
+		i_D7   =>  s_multu_carry,
 		
-		i_D8   =>  '0',
+		i_D8   =>  s_add_carry,
 		i_D9   =>   '0',
-		i_D10   =>  '0',
+		i_D10   =>  s_sub_carry,
 		i_D11   =>  '0',
 		
 		i_D12   =>  '0',
@@ -287,7 +285,7 @@ g_32t1mux: mux32t1 --SUM OUTPUT MUX
 		
 		i_D20   =>  '0',
 		i_D21   => '0',
-        i_D22   => '0',
+        i_D22   => s_add_carry,
 		i_D23   =>  '0',
 		
 		i_D24   =>  '0',
