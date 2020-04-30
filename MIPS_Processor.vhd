@@ -71,6 +71,7 @@ ARCHITECTURE structure OF MIPS_Processor IS
   SIGNAL s_Rs : std_logic_vector(31 DOWNTO 0);
   SIGNAL s_Rt : std_logic_vector(31 DOWNTO 0);
   SIGNAL s_nextPC : std_logic_vector(31 DOWNTO 0);
+  SIGNAL s_oPC : std_logic_vector(31 DOWNTO 0);
   SIGNAL s_Mux4 : std_logic_vector(31 DOWNTO 0);
   SIGNAL s_Mux1 : std_logic_vector(31 DOWNTO 0);
 
@@ -93,6 +94,7 @@ ARCHITECTURE structure OF MIPS_Processor IS
   SIGNAL s_Zero : std_logic;
   SIGNAL s_BranchAndZero : std_logic;
   SIGNAL s_Signed : std_logic;
+  SIGNAL s_JR : std_logic;
 
   SIGNAL s_Y : std_logic_vector(31 DOWNTO 0);
   -- components -----------------------------------------------------------
