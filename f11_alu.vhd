@@ -270,7 +270,7 @@ g_32t1mux: mux32t1 --SUM OUTPUT MUX
 		
 		i_D8   =>  s_add_carry,
 		i_D9   =>   '0',
-		i_D10   =>  not s_sub_carry,
+		i_D10   =>  s_sub_carry,
 		i_D11   =>  '0',
 		
 		i_D12   =>  '0',
@@ -285,7 +285,7 @@ g_32t1mux: mux32t1 --SUM OUTPUT MUX
 		
 		i_D20   =>  '0',
 		i_D21   => '0',
-        i_D22   => s_add_carry,	-- mars does not detect overflow
+        i_D22   => not s_add_carry,	-- mars does not detect overflow
 		i_D23   =>  '0',
 		
 		i_D24   =>  '0',
