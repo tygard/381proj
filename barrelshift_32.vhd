@@ -85,7 +85,7 @@ architecture structural of barrelshift_32 is
 		g_MUXA: mux2t1_N
 		port MAP(i_S               => i_SHAMT(0),
 				 i_D0			   => s_iM,
-				 i_D1              => s_iS & i_X(31 downto 1),	-- concatenate 
+				 i_D1              => s_iS & s_iM(31 downto 1),	-- concatenate 
 				 o_O               => s_iA);
 				 
 		---------------------------------------------------------------------------
