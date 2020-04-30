@@ -396,7 +396,7 @@ BEGIN
   );
 
   mux5 : mux2t1_N
-  GENERIC MAP(N => 31)
+  GENERIC MAP(N => 32)
   PORT MAP(
     i_S => s_JR,
     i_D0 => s_oPC,
