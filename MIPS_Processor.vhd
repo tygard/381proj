@@ -92,7 +92,7 @@ ARCHITECTURE structure OF MIPS_Processor IS
   SIGNAL s_T : std_logic;
   SIGNAL s_Zero : std_logic;
   SIGNAL s_BranchAndZero : std_logic;
-  signal s_Signed : std_logic;
+  SIGNAL s_Signed : std_logic;
 
   SIGNAL s_Y : std_logic_vector(31 DOWNTO 0);
   -- components -----------------------------------------------------------
@@ -201,7 +201,8 @@ ARCHITECTURE structure OF MIPS_Processor IS
       o_DestReg : OUT std_logic;
       o_jump : OUT std_logic;
       o_branch : OUT std_logic;
-      o_RegWrite : OUT std_logic);
+      o_RegWrite : OUT std_logic;
+      o_JR : OUT std_logic);
   END COMPONENT;
 
   COMPONENT f_alu IS
@@ -389,7 +390,16 @@ BEGIN
     i_Jump => s_Jump,
     i_instr => s_Inst,
     i_PC => s_NextInstAddr,
-    o_PC => s_nextPC
+    o_PC => s_oPC
+  );
+
+  mux5 : mux2t1_N
+  GENERIC MAP(N => 31)
+  PORT MAP(
+    i_S => s_JR,
+    i_D0 => s_oPC,
+    i_D1 => s_Rs,
+    o_O => s_nextPC
   );
 
   controlUnit : control
@@ -409,7 +419,8 @@ BEGIN
     o_DestReg => s_RegDst,
     o_jump => s_Jump,
     o_branch => s_Branch,
-    o_RegWrite => s_RegWr
+    o_RegWrite => s_RegWr,
+    o_JR => s_JR
   );
 
   mux0 : mux2t1_N
@@ -441,7 +452,7 @@ BEGIN
   GENERIC MAP(Y => 16)
   PORT MAP(
     input => s_Inst(15 DOWNTO 0),
-    sign => s_Inst(15) and s_Signed,
+    sign => s_Inst(15) AND s_Signed,
     output => s_Imm
   );
 
