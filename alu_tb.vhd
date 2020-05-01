@@ -47,7 +47,7 @@ begin
     wait for 100 ns ; -- for waveform clarity, I prefer not to change inputs on clk edges100
 
   
-s_i_A  <=
+s_i_A  <='0X00000000';
 s_i_B  <=
 s_i_C  <=
  
