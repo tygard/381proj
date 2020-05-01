@@ -628,7 +628,7 @@ BEGIN
 				o_jump <= '0';
 				o_branch <= '0';
 				o_RegWrite <= '0';
-				o_JR <= '0';
+				o_JR <= '1';
 				o_JAL <= '0';
 
 			END IF;
