@@ -25,7 +25,7 @@ ENTITY PC_reg IS
 
 END PC_reg;
 --
-ARCHITECTURE structural OF nbit_Reg IS
+ARCHITECTURE structural OF PC_reg IS
 
     COMPONENT dffg IS
         PORT (
