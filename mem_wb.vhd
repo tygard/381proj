@@ -8,21 +8,21 @@ entity mem_wb is
 		i_WE		: in std_logic;
 		
 		
-		i_branch     : in std_logic; 
+		i_branch     : in std_logic_vector(N-1 downto 0); 
 		i_memtoreg      : in std_logic_vector(N-1 downto 0); 
 		i_memWrite    : in std_logic_vector(N-1 downto 0);
-		i_ALU_overflow    : in std_logic;
+		i_ALU_overflow    : in std_logic_vector(N-1 downto 0); 
 		i_ALU_result    : in std_logic_vector(N-1 downto 0);
 		i_data_1   : in std_logic_vector(N-1 downto 0);
 		i_mux4  : in std_logic_vector(N-1 downto 0);
 		
-		o_branch     : in std_logic_vector(N-1 downto 0); 
-		o_memtoreg      : in std_logic_vector(N-1 downto 0); 
-		o_memWrite    : in std_logic_vector(N-1 downto 0);
-		o_ALU_overflow    : in std_logic;
-		o_ALU_result    : in std_logic_vector(N-1 downto 0);
-		o_data_1   : in std_logic_vector(N-1 downto 0);
-		o_mux4  : in std_logic_vector(N-1 downto 0));
+		o_branch     : out std_logic_vector(N-1 downto 0); 
+		o_memtoreg      : out std_logic_vector(N-1 downto 0); 
+		o_memWrite    : out std_logic_vector(N-1 downto 0);
+		o_ALU_overflow    : out std_logic_vector(N-1 downto 0); 
+		o_ALU_result    : out std_logic_vector(N-1 downto 0);
+		o_data_1   : out std_logic_vector(N-1 downto 0);
+		o_mux4  : out std_logic_vector(N-1 downto 0));
 	
 end mem_wb;
 
@@ -42,8 +42,8 @@ component nbit_Reg  is
 begin
 
 --reg-------------------------------
-g_nbitReg1: nbit_Reg
-GENERIC (N => 1)
+g_nbitReg1 : nbit_Reg
+GENERIC MAP(N => 1)
 		port MAP(i_CLK  =>  i_CLK,
 				i_RST	=>  i_RST,
 				i_WE    =>    i_WE,
@@ -51,7 +51,7 @@ GENERIC (N => 1)
 				o_Q	    =>  o_branch);
 				
 --reg-------------------------------
-g_nbitReg2: nbit_Reg
+g_nbitReg2 : nbit_Reg
 		port MAP(i_CLK  =>  i_CLK,
 				i_RST	=>  i_RST,
 				i_WE    =>    i_WE,
