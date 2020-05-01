@@ -16,8 +16,6 @@ end if_id;
 architecture structural of if_id is
 
 --components:
-  
---nbit_Reg
 component nbit_Reg  is
 	port(
 		i_CLK       : in std_logic;
@@ -26,37 +24,23 @@ component nbit_Reg  is
 		i_D        : in std_logic_vector(N-1 downto 0);
 		o_Q         : out std_logic_vector(N-1 downto 0));
   end component;
-
 --------------------------------------------------------------------------------------------
 --architecture structural of f_alu is
-
---signals:							
-		
-	signal s_multu : std_logic_vector(63 downto 0);
-	signal s_multu_carry : std_logic;
-  
 begin
 
---arch:
-
---mult-------------------------------
-g_mult: m_N_bit
-		port MAP(i_A     =>  i_A,
-				i_B	     =>  i_B,
-				o_S      =>    s_multu,
-				o_Cout	 =>  s_multu_carry);--make 1 bit
+--reg-------------------------------
+g_nbitReg1: nbit_Reg
+		port MAP(i_CLK  =>  i_CLK,
+				i_RST	=>  i_RST,
+				i_WE    =>    i_WE,
+				i_D     => i_mem
+				o_Q	    =>  o_mem);
 				
---or--------------------------------- CHANGE TO 32
-g_or: org32
-		port MAP(i_A   =>  i_A,
-				i_B	   =>  i_B,
-				o_F   =>  s_or);	
-				
---xor-------------------------------- CHANGE TO 32
-g_xor: xorg32
-		port MAP(i_A   =>  i_A,
-				i_B	   =>  i_B,
-				o_F   => s_xor );
-	
-----------------------------
+--reg-------------------------------
+g_nbitReg2: nbit_Reg
+		port MAP(i_CLK  =>  i_CLK,
+				i_RST	=>  i_RST,
+				i_WE    =>    i_WE,
+				i_D     => i_mux1
+				o_Q	    =>  o_mux1);
 end structural;
