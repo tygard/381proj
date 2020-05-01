@@ -8,7 +8,7 @@ entity invg32 is
 
 end invg32;
 
-architecture dataflow of invg is
+architecture dataflow of invg32 is
 begin
 
   o_F <= not i_A;
