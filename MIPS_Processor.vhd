@@ -146,8 +146,7 @@ ARCHITECTURE structure OF MIPS_Processor IS
     );
   END COMPONENT;
 
-  COMPONENT nbit_Reg IS
-    GENERIC (N : INTEGER := 32);
+  COMPONENT PC_reg IS
     PORT (
       i_CLK : IN std_logic;
       i_RST : IN std_logic;
@@ -275,10 +274,7 @@ BEGIN
   '1' WHEN "010100",
   '0' WHEN OTHERS;
 
-  PC : nbit_Reg
-  GENERIC MAP(
-    N => 32
-  )
+  PC : PC_reg
   PORT MAP(
     i_CLK => iCLK,
     i_RST => iRST,
