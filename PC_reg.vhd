@@ -80,7 +80,7 @@ BEGIN
         o_Q => o_Q(28)
     );
     -----------------------
-    RegBit27 : dffg
+    RegBit31 : dffg
     PORT MAP(
         i_CLK => i_CLK,
         i_RST => i_RST,
@@ -88,8 +88,7 @@ BEGIN
         i_D => i_D(27),
         o_Q => o_Q(27)
     );
-
-    RegBit26 : dffgReset1
+    RegBit30 : dffg
     PORT MAP(
         i_CLK => i_CLK,
         i_RST => i_RST,
@@ -97,8 +96,42 @@ BEGIN
         i_D => i_D(26),
         o_Q => o_Q(26)
     );
+    RegBit29 : dffg
+    PORT MAP(
+        i_CLK => i_CLK,
+        i_RST => i_RST,
+        i_WE => i_WE,
+        i_D => i_D(25),
+        o_Q => o_Q(25)
+    );
+    RegBit28 : dffg
+    PORT MAP(
+        i_CLK => i_CLK,
+        i_RST => i_RST,
+        i_WE => i_WE,
+        i_D => i_D(24),
+        o_Q => o_Q(24)
+    );
+    -----------------------
+    RegBit27 : dffg
+    PORT MAP(
+        i_CLK => i_CLK,
+        i_RST => i_RST,
+        i_WE => i_WE,
+        i_D => i_D(23),
+        o_Q => o_Q(23)
+    );
 
-    G_nbit_Reg : FOR i IN 0 TO 25 GENERATE
+    RegBit26 : dffgReset1
+    PORT MAP(
+        i_CLK => i_CLK,
+        i_RST => i_RST,
+        i_WE => i_WE,
+        i_D => i_D(22),
+        o_Q => o_Q(22)
+    );
+
+    G_nbit_Reg : FOR i IN 0 TO 21 GENERATE
         RegI : dffg
         PORT MAP(
 
