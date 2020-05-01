@@ -8,7 +8,7 @@ entity mem_wb is
 		i_WE		: in std_logic;
 		
 		
-		i_branch     : in std_logic_vector(N-1 downto 0); 
+		i_branch     : in std_logic; 
 		i_memtoreg      : in std_logic_vector(N-1 downto 0); 
 		i_memWrite    : in std_logic_vector(N-1 downto 0);
 		i_ALU_overflow    : in std_logic;
@@ -22,7 +22,7 @@ entity mem_wb is
 		o_ALU_overflow    : in std_logic;
 		o_ALU_result    : in std_logic_vector(N-1 downto 0);
 		o_data_1   : in std_logic_vector(N-1 downto 0);
-		o_mux4  : in std_logic_vector(N-1 downto 0);
+		o_mux4  : in std_logic_vector(N-1 downto 0));
 	
 end mem_wb;
 
@@ -43,10 +43,11 @@ begin
 
 --reg-------------------------------
 g_nbitReg1: nbit_Reg
+GENERIC (N => 1)
 		port MAP(i_CLK  =>  i_CLK,
 				i_RST	=>  i_RST,
 				i_WE    =>    i_WE,
-				i_D     => i_branch
+				i_D     => i_branch,
 				o_Q	    =>  o_branch);
 				
 --reg-------------------------------
@@ -54,7 +55,7 @@ g_nbitReg2: nbit_Reg
 		port MAP(i_CLK  =>  i_CLK,
 				i_RST	=>  i_RST,
 				i_WE    =>    i_WE,
-				i_D     => i_memtoreg
+				i_D     => i_memtoreg,
 				o_Q	    =>  o_memtoreg);
 				
 --reg-------------------------------
@@ -62,15 +63,16 @@ g_nbitReg3: nbit_Reg
 		port MAP(i_CLK  =>  i_CLK,
 				i_RST	=>  i_RST,
 				i_WE    =>    i_WE,
-				i_D     => i_memWrite
+				i_D     => i_memWrite,
 				o_Q	    =>  o_memWrite);
 				
 --reg-------------------------------
 g_nbitReg4: nbit_Reg
+GENERIC MAP(N=>1)
 		port MAP(i_CLK  =>  i_CLK,
 				i_RST	=>  i_RST,
 				i_WE    =>    i_WE,
-				i_D     => i_ALU_overflow
+				i_D     => i_ALU_overflow,
 				o_Q	    =>  o_ALU_overflow);
 				
 --reg-------------------------------
@@ -78,7 +80,7 @@ g_nbitReg5: nbit_Reg
 		port MAP(i_CLK  =>  i_CLK,
 				i_RST	=>  i_RST,
 				i_WE    =>    i_WE,
-				i_D     => i_ALU_result
+				i_D     => i_ALU_result,
 				o_Q	    =>  o_ALU_result);
 				
 --reg-------------------------------
@@ -86,7 +88,7 @@ g_nbitReg6: nbit_Reg
 		port MAP(i_CLK  =>  i_CLK,
 				i_RST	=>  i_RST,
 				i_WE    =>    i_WE,
-				i_D     => i_data_1
+				i_D     => i_data_1,
 				o_Q	    =>  o_data_1);
 				
 --reg-------------------------------
@@ -94,7 +96,7 @@ g_nbitReg7: nbit_Reg
 		port MAP(i_CLK  =>  i_CLK,
 				i_RST	=>  i_RST,
 				i_WE    =>    i_WE,
-				i_D     => i_mux4
+				i_D     => i_mux4,
 				o_Q	    =>  o_mux4);
 
 end structural;
