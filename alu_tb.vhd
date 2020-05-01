@@ -47,17 +47,17 @@ begin
     wait for 100 ns ; -- for waveform clarity, I prefer not to change inputs on clk edges100
 
   
-s_i_A  <='0X00000000';
-s_i_B  <=
-s_i_C  <=
- 
+s_i_A  <= X"00000004";
+s_i_B  <= X"00000000";
+s_i_C  <= "01001" --add
+ --4+0 should be 4
 
 wait for 100 ns;
   
-s_i_A  <=
-s_i_B  <=
-s_i_C  <=v
-
+s_i_A  <=  X"00000008";
+s_i_B  <=  X"00000000";
+s_i_C  <= "01010" --sub
+--8-0 should be 8
    
    end process;
 
