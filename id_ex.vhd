@@ -58,63 +58,70 @@ g_nbitReg1: nbit_Reg
 		port MAP(i_CLK     =>  i_CLK,
 				i_RST	     =>  i_RST,
 				i_WE      =>    i_WE,
-				i_D     => i_DestReg
+				i_D     => i_DestReg,
 				o_Q	 =>  o_DestReg);
 
 --reg-------------------------------
 g_nbitReg2: nbit_Reg
+GENERIC (N=>1)
 		port MAP(i_CLK     =>  i_CLK,
 				i_RST	     =>  i_RST,
 				i_WE      =>    i_WE,
-				i_D     => i_jump
+				i_D     => i_jump,
 				o_Q	 =>  o_jump);	
 				
 --reg-------------------------------
 g_nbitReg3: nbit_Reg
+GENERIC (N=>1)
 		port MAP(i_CLK     =>  i_CLK,
 				i_RST	     =>  i_RST,
 				i_WE      =>    i_WE,
-				i_D     => i_branch
+				i_D     => i_branch,
 				o_Q	 =>  o_branch);
 --reg-------------------------------
 g_nbitReg4: nbit_Reg
+GENERIC (N=>1)
 		port MAP(i_CLK     =>  i_CLK,
 				i_RST	     =>  i_RST,
 				i_WE      =>    i_WE,
-				i_D     => i_memread
+				i_D     => i_memread,
 				o_Q	 =>  o_memread);
 				
 
 --reg-------------------------------
 g_nbitReg5: nbit_Reg
+GENERIC (N=>5)
 		port MAP(i_CLK     =>  i_CLK,
 				i_RST	     =>  i_RST,
 				i_WE      =>    i_WE,
-				i_D     => i_ALUop
+				i_D     => i_ALUop,
 				o_Q	 =>  o_ALUop);	
 				
 --reg-------------------------------
 g_nbitReg6: nbit_Reg
+GENERIC (N=>1)
 		port MAP(i_CLK     =>  i_CLK,
 				i_RST	     =>  i_RST,
 				i_WE      =>    i_WE,
-				i_D     => i_memwrite
+				i_D     => i_memwrite,
 				o_Q	 =>  o_memwrite);
 --reg-------------------------------
 g_nbitReg7: nbit_Reg
+GENERIC (N=>1)
 		port MAP(i_CLK     =>  i_CLK,
 				i_RST	     =>  i_RST,
 				i_WE      =>    i_WE,
-				i_D     => i_imm
+				i_D     => i_imm,
 				o_Q	 =>  o_imm);
 				
 
 --reg-------------------------------
 g_nbitReg8: nbit_Reg
+GENERIC (N=>1)
 		port MAP(i_CLK     =>  i_CLK,
 				i_RST	     =>  i_RST,
 				i_WE      =>    i_WE,
-				i_D     => i_regwrite
+				i_D     => i_regwrite,
 				o_Q	 =>  o_regwrite);	
 				
 --reg-------------------------------
@@ -122,14 +129,14 @@ g_nbitReg9: nbit_Reg
 		port MAP(i_CLK     =>  i_CLK,
 				i_RST	     =>  i_RST,
 				i_WE      =>    i_WE,
-				i_D     => i_o_data0
+				i_D     => i_o_data0,
 				o_Q	 =>  o_o_data0);
 --reg-------------------------------
 g_nbitReg10: nbit_Reg
 		port MAP(i_CLK     =>  i_CLK,
 				i_RST	     =>  i_RST,
 				i_WE      =>    i_WE,
-				i_D     => i_o_data1
+				i_D     => i_o_data1,
 				o_Q	 =>  o_o_data1);
 				
 
@@ -138,22 +145,24 @@ g_nbitReg11: nbit_Reg
 		port MAP(i_CLK     =>  i_CLK,
 				i_RST	     =>  i_RST,
 				i_WE      =>    i_WE,
-				i_D     => i_siExtend_output
+				i_D     => i_siExtend_output,
 				o_Q	 =>  o_siExtend_output);	
 				
 --reg-------------------------------
 g_nbitReg12: nbit_Reg
+GENERIC (N=>5)
 		port MAP(i_CLK     =>  i_CLK,
 				i_RST	     =>  i_RST,
 				i_WE      =>    i_WE,
-				i_D     => i_f1_alu_con
+				i_D     => i_f1_alu_con,
 				o_Q	 =>  o_f1_alu_con);
 --reg-------------------------------
 g_nbitReg13: nbit_Reg
+GENERIC (N=>5)
 		port MAP(i_CLK     =>  i_CLK,
 				i_RST	     =>  i_RST,
 				i_WE      =>    i_WE,
-				i_D     => i_s_inst
+				i_D     => i_s_inst,
 				o_Q	 =>  o_s_inst);
 	
 end structural;
