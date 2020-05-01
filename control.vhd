@@ -298,10 +298,10 @@ BEGIN
 			o_shift <= '0';
 			o_leftShift <= '0';
 			o_arithShift <= '0';
-			o_MemWrite <= '1';
+			o_MemWrite <= '0';
 			o_shiftReg <= '0';
 			o_DestReg <= '0';
-			o_jump <= '1';
+			o_jump <= '0';
 			o_branch <= '0';
 			o_RegWrite <= '1';
 			o_JR <= '0';
