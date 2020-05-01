@@ -8,32 +8,32 @@ entity id_ex is
 		i_WE		: in std_logic;
 		
 		i_DestReg        : in std_logic_vector(N-1 downto 0); 
-		i_jump       : in std_logic;  
-		i_branch            : in std_logic;  
-		i_memread          : in std_logic;  
-		i_ALUop       : in std_logic_vector(5 downto 0); 
-		i_memwrite         : in std_logic;  
-		i_imm         : in std_logic;  
-		i_regwrite         : in std_logic;  
+		i_jump       : in std_logic_vector(N-1 downto 0); 
+		i_branch            : in std_logic_vector(N-1 downto 0); 
+		i_memread          : in std_logic_vector(N-1 downto 0);  
+		i_ALUop       : in std_logic_vector(N-1 downto 0); 
+		i_memwrite         : in std_logic_vector(N-1 downto 0); 
+		i_imm         : in std_logic_vector(N-1 downto 0);   
+		i_regwrite         : in std_logic_vector(N-1 downto 0);  
 		i_o_data0  : in std_logic_vector(N-1 downto 0);
 		i_o_data1  : in std_logic_vector(N-1 downto 0);
 		i_siExtend_output  : in std_logic_vector(N-1 downto 0);
-		i_f1_alu_con    : in std_logic_vector(4 downto 0); 
-		i_s_inst : in std_logic_vector(4 downto 0); 
+		i_f1_alu_con    : in std_logic_vector(N-1 downto 0); 
+		i_s_inst : in std_logic_vector(N-1 downto 0); 
 	
-		o_DestReg        : in std_logic_vector(N-1 downto 0); 
-		o_jump       : in std_logic;  
-		o_branch            : in std_logic;  
-		o_memread          : in std_logic;  
-		o_ALUop       : in std_logic_vector(5 downto 0); 
-		o_memwrite         : in std_logic;  
-		o_imm         : in std_logic;  
-		o_regwrite         : in std_logic;  
-		o_o_data0  : in std_logic_vector(N-1 downto 0);
-		o_o_data1  : in std_logic_vector(N-1 downto 0);
-		o_siExtend_output  : in std_logic_vector(N-1 downto 0);
-		o_f1_alu_con    : in std_logic_vector(4 downto 0); 
-		o_s_inst : in std_logic_vector(4 downto 0)); 
+		o_DestReg        : out std_logic_vector(N-1 downto 0); 
+		o_jump       : out std_logic_vector(N-1 downto 0);   
+		o_branch            : out std_logic_vector(N-1 downto 0); 
+		o_memread          : out std_logic_vector(N-1 downto 0); 
+		o_ALUop       : out std_logic_vector(N-1 downto 0); 
+		o_memwrite         : out std_logic_vector(N-1 downto 0);  
+		o_imm         : out std_logic_vector(N-1 downto 0); 
+		o_regwrite         : out std_logic_vector(N-1 downto 0);  
+		o_o_data0  : out std_logic_vector(N-1 downto 0);
+		o_o_data1  : out std_logic_vector(N-1 downto 0);
+		o_siExtend_output  : out std_logic_vector(N-1 downto 0);
+		o_f1_alu_con    : out std_logic_vector(N-1 downto 0); 
+		o_s_inst : out std_logic_vector(N-1 downto 0)); 
 	
 end id_ex;
 
@@ -63,7 +63,7 @@ g_nbitReg1: nbit_Reg
 
 --reg-------------------------------
 g_nbitReg2: nbit_Reg
-GENERIC (N=>1)
+GENERIC MAP(N=>1)
 		port MAP(i_CLK     =>  i_CLK,
 				i_RST	     =>  i_RST,
 				i_WE      =>    i_WE,
@@ -72,7 +72,7 @@ GENERIC (N=>1)
 				
 --reg-------------------------------
 g_nbitReg3: nbit_Reg
-GENERIC (N=>1)
+GENERIC MAP(N=>1)
 		port MAP(i_CLK     =>  i_CLK,
 				i_RST	     =>  i_RST,
 				i_WE      =>    i_WE,
@@ -80,7 +80,7 @@ GENERIC (N=>1)
 				o_Q	 =>  o_branch);
 --reg-------------------------------
 g_nbitReg4: nbit_Reg
-GENERIC (N=>1)
+GENERIC MAP(N=>1)
 		port MAP(i_CLK     =>  i_CLK,
 				i_RST	     =>  i_RST,
 				i_WE      =>    i_WE,
@@ -90,7 +90,7 @@ GENERIC (N=>1)
 
 --reg-------------------------------
 g_nbitReg5: nbit_Reg
-GENERIC (N=>5)
+GENERIC MAP(N=>5)
 		port MAP(i_CLK     =>  i_CLK,
 				i_RST	     =>  i_RST,
 				i_WE      =>    i_WE,
@@ -99,7 +99,7 @@ GENERIC (N=>5)
 				
 --reg-------------------------------
 g_nbitReg6: nbit_Reg
-GENERIC (N=>1)
+GENERIC MAP(N=>1)
 		port MAP(i_CLK     =>  i_CLK,
 				i_RST	     =>  i_RST,
 				i_WE      =>    i_WE,
@@ -107,7 +107,7 @@ GENERIC (N=>1)
 				o_Q	 =>  o_memwrite);
 --reg-------------------------------
 g_nbitReg7: nbit_Reg
-GENERIC (N=>1)
+GENERIC MAP(N=>1)
 		port MAP(i_CLK     =>  i_CLK,
 				i_RST	     =>  i_RST,
 				i_WE      =>    i_WE,
@@ -117,7 +117,7 @@ GENERIC (N=>1)
 
 --reg-------------------------------
 g_nbitReg8: nbit_Reg
-GENERIC (N=>1)
+GENERIC MAP(N=>1)
 		port MAP(i_CLK     =>  i_CLK,
 				i_RST	     =>  i_RST,
 				i_WE      =>    i_WE,
@@ -150,7 +150,7 @@ g_nbitReg11: nbit_Reg
 				
 --reg-------------------------------
 g_nbitReg12: nbit_Reg
-GENERIC (N=>5)
+GENERIC MAP(N=>5)
 		port MAP(i_CLK     =>  i_CLK,
 				i_RST	     =>  i_RST,
 				i_WE      =>    i_WE,
@@ -158,7 +158,7 @@ GENERIC (N=>5)
 				o_Q	 =>  o_f1_alu_con);
 --reg-------------------------------
 g_nbitReg13: nbit_Reg
-GENERIC (N=>5)
+GENERIC MAP(N=>5)
 		port MAP(i_CLK     =>  i_CLK,
 				i_RST	     =>  i_RST,
 				i_WE      =>    i_WE,
