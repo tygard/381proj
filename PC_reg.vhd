@@ -122,7 +122,8 @@ BEGIN
         o_Q => o_Q(23)
     );
 
-    RegBit22 : dffgReset1
+    RegBit22 : dffg 
+    -- changed this back to a reg dffg because it caused errors in some tests with the fetch
     PORT MAP(
         i_CLK => i_CLK,
         i_RST => i_RST,
