@@ -146,17 +146,17 @@ ARCHITECTURE structure OF MIPS_Processor IS
     );
   END COMPONENT;
 
-  COMPONENT nbit_Reg IS
-    GENERIC (N : INTEGER := 32);
+  COMPONENT PC_reg IS
     PORT (
       i_CLK : IN std_logic;
       i_RST : IN std_logic;
       i_WE : IN std_logic;
-      i_D : IN std_logic_vector(N - 1 DOWNTO 0);
-      o_Q : OUT std_logic_vector(N - 1 DOWNTO 0));
+      i_D : IN std_logic_vector(31 DOWNTO 0);
+      o_Q : OUT std_logic_vector(31 DOWNTO 0));
   END COMPONENT;
 
-  COMPONENT PC_reg IS
+  COMPONENT RegFile IS
+    GENERIC (N : INTEGER := 32);
     PORT (
       i_WA : IN std_logic_vector(4 DOWNTO 0);
       i_WD : IN std_logic_vector(31 DOWNTO 0);
