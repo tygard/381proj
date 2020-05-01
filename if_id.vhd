@@ -3,11 +3,11 @@ use IEEE.std_logic_1164.all;
 
 entity if_id is
   generic(N : integer := 32); 
-  port(	i_mem       : in std_logic_vector(N-1 downto 0); 
-		i_mux1      : in std_logic_vector(N-1 downto 0); 
-		i_CLK       : in std_logic;
+  port(i_CLK       : in std_logic;
 		i_RST		: in std_logic;
 		i_WE		: in std_logic;
+		i_mem       : in std_logic_vector(N-1 downto 0); 
+		i_mux1      : in std_logic_vector(N-1 downto 0); 
 		o_mem	    : out std_logic_vector (N-1 downto 0); 
 		o_mux1      : out std_logic_vector(N-1 downto 0)); 
 	
