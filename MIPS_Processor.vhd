@@ -240,30 +240,28 @@ BEGIN
 
   -- TODO: This is required to be your final input to your instruction memory. This provides a feasible method to externally load the memory module which means that the synthesis tool must assume it knows 
   --        nothing about the values stored in the instruction memory. If this is not included, much, if not all of the design is optimized out because the synthesis tool will believe the memory to be all zeros.
-  WITH iInstLd SELECT
-  s_IMemAddr <= s_NextInstAddr WHEN '0',
-  iInstAddr WHEN OTHERS;
-  IMem : mem
-  GENERIC MAP(
-    ADDR_WIDTH => 10,
-    DATA_WIDTH => N)
-  PORT MAP(
-    clk => iCLK,
-    addr => s_IMemAddr(11 DOWNTO 2),
-    data => iInstExt,
-    we => iInstLd,
-    q => s_Inst);
+  with iInstLd select
+    s_IMemAddr <= s_NextInstAddr when '0',
+      iInstAddr when others;
 
-  DMem : mem
-  GENERIC MAP(
-    ADDR_WIDTH => 10,
-    DATA_WIDTH => N)
-  PORT MAP(
-    clk => iCLK,
-    addr => s_DMemAddr(11 DOWNTO 2),
-    data => s_DMemData,
-    we => s_DMemWr,
-    q => s_DMemOut);
+
+  IMem: mem
+    generic map(ADDR_WIDTH => 10,
+                DATA_WIDTH => N)
+    port map(clk  => iCLK,
+             addr => s_IMemAddr(11 downto 2),
+             data => iInstExt,
+             we   => iInstLd,
+             q    => s_Inst);
+  
+  DMem: mem
+    generic map(ADDR_WIDTH => 10,
+                DATA_WIDTH => N)
+    port map(clk  => iCLK,
+             addr => s_DMemAddr(11 downto 2),
+             data => s_DMemData,
+             we   => s_DMemWr,
+             q    => s_DMemOut);
 
   -- TODO: Ensure that s_Halt is connected to an output control signal produced from decoding the Halt instruction (Opcode: 01 0100)
   -- TODO: Ensure that s_Ovfl is connected to the overflow output of your ALU
