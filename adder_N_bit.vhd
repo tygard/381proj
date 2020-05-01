@@ -35,10 +35,12 @@ architecture structural of adder_N_bit is
 			i_B      : in std_logic;
 			i_Cin    : in std_logic;
 			o_S      : out std_logic;
-			o_Cout   : out std_logic);
+			o_Cout   : out std_logic;
+			o_Ovfl   : out std_logic);
   end component;
 			
 signal CI2  :std_logic_vector(N-1 downto 0);
+
 
 begin
 
@@ -61,5 +63,7 @@ G_NBit_ADDER: for i in 1 to N-1 generate
 			  o_Cout    => CI2(i));--31+1
 
 end generate G_NBit_ADDER;
+
+o_Ovfl <= CI2(N-1) xor CI2(N-2);
 
 end structural;

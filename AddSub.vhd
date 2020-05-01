@@ -7,7 +7,8 @@ entity add_sub_N_bit is
 		i_B         : in std_logic_vector(N-1 downto 0);
 		i_SELECT    : in std_logic;
 		o_S         : out std_logic_vector(N-1 downto 0);
-		o_Cout      : out std_logic);
+    o_Cout      : out std_logic
+    o_Overflow  : out std_logic);
 
 end add_sub_N_bit;
 --
@@ -21,7 +22,8 @@ architecture structural of add_sub_N_bit is
 			i_B      : in std_logic_vector(N-1 downto 0);
 			i_Cin    : in std_logic;
 			o_S      : out std_logic_vector(N-1 downto 0);
-			o_Cout   : out std_logic);
+      o_Cout   : out std_logic
+      o_Ovfl   : out std_logic);
   end component;
   
   -------------------------------------------------------
@@ -78,7 +80,8 @@ g_adder_n_bit: adder_N_bit
 			 i_B      =>  MUX_R,
 			 i_Cin    =>  i_SELECT,
 			 o_S      =>  o_S,
-			 o_Cout   =>  o_Cout);
+       o_Cout   =>  o_Cout
+       o_Ovfl   =>  o_Overflow);
 
 end structural;
 
