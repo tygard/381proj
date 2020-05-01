@@ -80,39 +80,7 @@ g_adder_n_bit: adder_N_bit
 			 i_B      =>  MUX_R,
 			 i_Cin    =>  i_SELECT,
 			 o_S      =>  o_S,
-       o_Cout   =>  o_Cout
+       o_Cout   =>  o_Cout,
        o_Ovfl   =>  o_Overflow);
 
 end structural;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
