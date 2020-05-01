@@ -11,9 +11,9 @@ entity ex_mem is
 		i_q       : in std_logic_vector(N-1 downto 0); 
 		i_mux4      : in std_logic_vector(N-1 downto 0); 
 		
-		o_memtoreg :  in std_logic_vector (N-1 downto 0); 
-		o_q       : in std_logic_vector(N-1 downto 0); 
-		o_mux4      : in std_logic_vector(N-1 downto 0)); 
+		o_memtoreg :  out std_logic_vector (N-1 downto 0); 
+		o_q       : out std_logic_vector(N-1 downto 0); 
+		o_mux4      : out std_logic_vector(N-1 downto 0)); 
 	
 end ex_mem;
 
@@ -37,7 +37,7 @@ g_nbitReg1: nbit_Reg
 		port MAP(i_CLK  =>  i_CLK,
 				i_RST	=>  i_RST,
 				i_WE    =>    i_WE,
-				i_D     => i_memtoreg
+				i_D     => i_memtoreg,
 				o_Q	    =>  o_memtoreg);
 				
 --reg-------------------------------
@@ -45,7 +45,7 @@ g_nbitReg2: nbit_Reg
 		port MAP(i_CLK  =>  i_CLK,
 				i_RST	=>  i_RST,
 				i_WE    =>    i_WE,
-				i_D     => i_q
+				i_D     => i_q,
 				o_Q	    =>  o_q);
 				
 --reg-------------------------------
@@ -53,6 +53,6 @@ g_nbitReg3: nbit_Reg
 		port MAP(i_CLK  =>  i_CLK,
 				i_RST	=>  i_RST,
 				i_WE    =>    i_WE,
-				i_D     => i_mux4
+				i_D     => i_mux4,
 				o_Q	    =>  o_mux4);
 end structural;
