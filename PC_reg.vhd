@@ -80,7 +80,7 @@ BEGIN
         o_Q => o_Q(28)
     );
     -----------------------
-    RegBit31 : dffg
+    RegBit27 : dffg
     PORT MAP(
         i_CLK => i_CLK,
         i_RST => i_RST,
@@ -88,7 +88,7 @@ BEGIN
         i_D => i_D(27),
         o_Q => o_Q(27)
     );
-    RegBit30 : dffg
+    RegBit26 : dffg
     PORT MAP(
         i_CLK => i_CLK,
         i_RST => i_RST,
@@ -96,7 +96,7 @@ BEGIN
         i_D => i_D(26),
         o_Q => o_Q(26)
     );
-    RegBit29 : dffg
+    RegBit25 : dffg
     PORT MAP(
         i_CLK => i_CLK,
         i_RST => i_RST,
@@ -104,7 +104,7 @@ BEGIN
         i_D => i_D(25),
         o_Q => o_Q(25)
     );
-    RegBit28 : dffg
+    RegBit24 : dffg
     PORT MAP(
         i_CLK => i_CLK,
         i_RST => i_RST,
@@ -113,7 +113,7 @@ BEGIN
         o_Q => o_Q(24)
     );
     -----------------------
-    RegBit27 : dffg
+    RegBit23 : dffg
     PORT MAP(
         i_CLK => i_CLK,
         i_RST => i_RST,
@@ -122,7 +122,7 @@ BEGIN
         o_Q => o_Q(23)
     );
 
-    RegBit26 : dffgReset1
+    RegBit22 : dffgReset1
     PORT MAP(
         i_CLK => i_CLK,
         i_RST => i_RST,
