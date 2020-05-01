@@ -33,7 +33,7 @@ g_nbitReg1: nbit_Reg
 		port MAP(i_CLK  =>  i_CLK,
 				i_RST	=>  i_RST,
 				i_WE    =>    i_WE,
-				i_D     => i_mem
+				i_D     => i_mem,
 				o_Q	    =>  o_mem);
 				
 --reg-------------------------------
@@ -41,6 +41,6 @@ g_nbitReg2: nbit_Reg
 		port MAP(i_CLK  =>  i_CLK,
 				i_RST	=>  i_RST,
 				i_WE    =>    i_WE,
-				i_D     => i_mux1
+				i_D     => i_mux1,
 				o_Q	    =>  o_mux1);
 end structural;
