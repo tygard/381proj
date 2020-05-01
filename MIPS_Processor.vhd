@@ -78,6 +78,7 @@ ARCHITECTURE structure OF MIPS_Processor IS
   SIGNAL s_Mux1 : std_logic_vector(31 DOWNTO 0);
   SIGNAL s_Imm : std_logic_vector(31 DOWNTO 0);
   SIGNAL s_Adder0 : std_logic_vector(31 DOWNTO 0);
+  SIGNAL s_nQ : std_logic_vector(31 DOWNTO 0);
 
   SIGNAL s_JAL_address : std_logic_vector(27 DOWNTO 0);
 
@@ -280,7 +281,7 @@ BEGIN
     i_RST => iRST,
     i_WE => '1', -- TODO: this might need some control signal to allow the PC register to change its value
     i_D => s_nextPC,
-    o_Q => s_NextInstAddr
+    o_Q => s_nQ
   );
 
   fetch : fetch_logic
@@ -439,7 +440,7 @@ BEGIN
   Adder0 : adder_N_bit
   GENERIC MAP(N => 32)
   PORT MAP(
-    i_A => s_NextInstAddr,
+    i_A => s_nextPC,
     i_B => x"00000004",
     i_Cin => '0',
     o_S => s_Adder0,
@@ -471,8 +472,8 @@ BEGIN
   GENERIC MAP(N => 32)
   PORT MAP(
     i_S => s_JAL,
-    i_D0 => s_Mux5,
+    i_D0 => s_nQ,
     i_D1 => s_Inst(31 downto 28) & s_JAL_address,
-    o_O => s_nextPC
+    o_O => s_NextInstAddr
   );
 END structure;
