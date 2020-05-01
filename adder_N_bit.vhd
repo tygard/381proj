@@ -64,6 +64,6 @@ G_NBit_ADDER: for i in 1 to N-1 generate
 
 end generate G_NBit_ADDER;
 
-o_Ovfl <= CI2(N-1) xor CI2(N-2);
+o_Ovfl => CI2(N-1) xor CI2(N-2);
 
 end structural;
