@@ -122,8 +122,8 @@ BEGIN
 	PORT MAP(
 		i_CLK => i_CLK,
 		i_RST => i_RST,
-		i_WE => s_Data(0) and i_WE,
-		i_d => i_WD,
+		i_WE => '0',
+		i_d => x"00000000",
 		o_q => s_D0
 	);
 	reg1 : nbit_Reg
