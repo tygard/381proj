@@ -45,7 +45,7 @@ begin
   begin
   wait for 100 ns ;
   
-    s_i_instruction <= X"40000000";--assuming hex? for 001100 andi
+    s_i_instruction <= X"30000000";--assuming hex? for 001100 andi
 	
 	--expected:
 			-- o_immSign <= '0';
