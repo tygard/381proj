@@ -7,7 +7,7 @@ entity add_sub_N_bit is
 		i_B         : in std_logic_vector(N-1 downto 0);
 		i_SELECT    : in std_logic;
 		o_S         : out std_logic_vector(N-1 downto 0);
-    o_Cout      : out std_logic
+    o_Cout      : out std_logic;
     o_Overflow  : out std_logic);
 
 end add_sub_N_bit;
