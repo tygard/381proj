@@ -59,7 +59,7 @@ g_nbitReg1: nbit_Reg
 				i_RST	     =>  i_RST,
 				i_WE      =>    i_WE,
 				i_D     => i_DestReg
-				o_Q	 =>  o_DestReg);--make 1 bit
+				o_Q	 =>  o_DestReg);
 
 --reg-------------------------------
 g_nbitReg2: nbit_Reg
@@ -67,7 +67,7 @@ g_nbitReg2: nbit_Reg
 				i_RST	     =>  i_RST,
 				i_WE      =>    i_WE,
 				i_D     => i_jump
-				o_Q	 =>  o_jump);--make 1 bit	
+				o_Q	 =>  o_jump);	
 				
 --reg-------------------------------
 g_nbitReg3: nbit_Reg
@@ -75,14 +75,14 @@ g_nbitReg3: nbit_Reg
 				i_RST	     =>  i_RST,
 				i_WE      =>    i_WE,
 				i_D     => i_branch
-				o_Q	 =>  o_branch);--make 1 bit
+				o_Q	 =>  o_branch);
 --reg-------------------------------
 g_nbitReg4: nbit_Reg
 		port MAP(i_CLK     =>  i_CLK,
 				i_RST	     =>  i_RST,
 				i_WE      =>    i_WE,
 				i_D     => i_memread
-				o_Q	 =>  o_memread);--make 1 bit
+				o_Q	 =>  o_memread);
 				
 
 --reg-------------------------------
@@ -91,7 +91,7 @@ g_nbitReg5: nbit_Reg
 				i_RST	     =>  i_RST,
 				i_WE      =>    i_WE,
 				i_D     => i_ALUop
-				o_Q	 =>  o_ALUop);--make 1 bit	
+				o_Q	 =>  o_ALUop);	
 				
 --reg-------------------------------
 g_nbitReg6: nbit_Reg
@@ -99,14 +99,14 @@ g_nbitReg6: nbit_Reg
 				i_RST	     =>  i_RST,
 				i_WE      =>    i_WE,
 				i_D     => i_memwrite
-				o_Q	 =>  o_memwrite);--make 1 bit
+				o_Q	 =>  o_memwrite);
 --reg-------------------------------
 g_nbitReg7: nbit_Reg
 		port MAP(i_CLK     =>  i_CLK,
 				i_RST	     =>  i_RST,
 				i_WE      =>    i_WE,
 				i_D     => i_imm
-				o_Q	 =>  o_imm);--make 1 bit
+				o_Q	 =>  o_imm);
 				
 
 --reg-------------------------------
@@ -115,7 +115,7 @@ g_nbitReg8: nbit_Reg
 				i_RST	     =>  i_RST,
 				i_WE      =>    i_WE,
 				i_D     => i_regwrite
-				o_Q	 =>  o_regwrite);--make 1 bit	
+				o_Q	 =>  o_regwrite);	
 				
 --reg-------------------------------
 g_nbitReg9: nbit_Reg
@@ -123,14 +123,14 @@ g_nbitReg9: nbit_Reg
 				i_RST	     =>  i_RST,
 				i_WE      =>    i_WE,
 				i_D     => i_o_data0
-				o_Q	 =>  o_o_data0);--make 1 bit
+				o_Q	 =>  o_o_data0);
 --reg-------------------------------
 g_nbitReg10: nbit_Reg
 		port MAP(i_CLK     =>  i_CLK,
 				i_RST	     =>  i_RST,
 				i_WE      =>    i_WE,
 				i_D     => i_o_data1
-				o_Q	 =>  o_o_data1);--make 1 bit
+				o_Q	 =>  o_o_data1);
 				
 
 --reg-------------------------------
@@ -139,7 +139,7 @@ g_nbitReg11: nbit_Reg
 				i_RST	     =>  i_RST,
 				i_WE      =>    i_WE,
 				i_D     => i_siExtend_output
-				o_Q	 =>  o_siExtend_output);--make 1 bit	
+				o_Q	 =>  o_siExtend_output);	
 				
 --reg-------------------------------
 g_nbitReg12: nbit_Reg
@@ -147,13 +147,13 @@ g_nbitReg12: nbit_Reg
 				i_RST	     =>  i_RST,
 				i_WE      =>    i_WE,
 				i_D     => i_f1_alu_con
-				o_Q	 =>  o_f1_alu_con);--make 1 bit
+				o_Q	 =>  o_f1_alu_con);
 --reg-------------------------------
 g_nbitReg13: nbit_Reg
 		port MAP(i_CLK     =>  i_CLK,
 				i_RST	     =>  i_RST,
 				i_WE      =>    i_WE,
 				i_D     => i_s_inst
-				o_Q	 =>  o_s_inst);--make 1 bit
+				o_Q	 =>  o_s_inst);
 	
 end structural;
