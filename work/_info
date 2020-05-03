@@ -360,7 +360,7 @@ R53
 R11
 R12
 Econtrol
-Z54 w1588296103
+Z54 w1588300765
 R2
 R3
 R0
@@ -372,11 +372,11 @@ V7^:h?[Xdc`h9Y8V<e1@<T2
 !s100 I6XDnlSgT3U7zUn^T^fQS0
 R6
 33
-R50
+Z57 !s110 1588337103
 !i10b 1
-R51
-Z57 !s90 -reportprogress|300|-work|work|C:/School/CPRE381/381proj/control.vhd|
-Z58 !s107 C:/School/CPRE381/381proj/control.vhd|
+Z58 !s108 1588337103.000000
+Z59 !s90 -reportprogress|300|-work|work|C:/School/CPRE381/381proj/control.vhd|
+Z60 !s107 C:/School/CPRE381/381proj/control.vhd|
 !i113 1
 R11
 R12
@@ -386,15 +386,15 @@ R3
 DEx4 work 7 control 0 22 7^:h?[Xdc`h9Y8V<e1@<T2
 l36
 L32
-V=BDVEHd?RQB@;nX]W7=521
-!s100 9B:lIdNZ>]onXzi6VUVe21
+V>QT1O3@9WcA7ERZ:lK08[3
+!s100 G`lUU6=D;S6cO0iGDO^f52
 R6
 33
-R50
-!i10b 1
-R51
 R57
+!i10b 1
 R58
+R59
+R60
 !i113 1
 R11
 R12
@@ -403,8 +403,8 @@ R13
 R2
 R3
 R0
-Z59 8C:/School/CPRE381/381proj/dataflow21mux.vhd
-Z60 FC:/School/CPRE381/381proj/dataflow21mux.vhd
+Z61 8C:/School/CPRE381/381proj/dataflow21mux.vhd
+Z62 FC:/School/CPRE381/381proj/dataflow21mux.vhd
 l0
 L4
 V4GQ00V?V7D2ijIGPPlGf@3
@@ -414,8 +414,8 @@ R6
 R50
 !i10b 1
 R51
-Z61 !s90 -reportprogress|30|-work|work|C:/School/CPRE381/381proj/dataflow21mux.vhd|
-Z62 !s107 C:/School/CPRE381/381proj/dataflow21mux.vhd|
+Z63 !s90 -reportprogress|30|-work|work|C:/School/CPRE381/381proj/dataflow21mux.vhd|
+Z64 !s107 C:/School/CPRE381/381proj/dataflow21mux.vhd|
 !i113 1
 R11
 R12
@@ -432,8 +432,8 @@ R6
 R50
 !i10b 1
 R51
-R61
-R62
+R63
+R64
 !i113 1
 R11
 R12
@@ -442,8 +442,8 @@ R13
 R2
 R3
 R0
-Z63 8C:/School/CPRE381/381proj/Decoder.vhd
-Z64 FC:/School/CPRE381/381proj/Decoder.vhd
+Z65 8C:/School/CPRE381/381proj/Decoder.vhd
+Z66 FC:/School/CPRE381/381proj/Decoder.vhd
 l0
 L4
 VJhKeF9N@NNHJHjVd@0PXC3
@@ -453,8 +453,8 @@ R6
 R50
 !i10b 1
 R51
-Z65 !s90 -reportprogress|30|-work|work|C:/School/CPRE381/381proj/Decoder.vhd|
-Z66 !s107 C:/School/CPRE381/381proj/Decoder.vhd|
+Z67 !s90 -reportprogress|30|-work|work|C:/School/CPRE381/381proj/Decoder.vhd|
+Z68 !s107 C:/School/CPRE381/381proj/Decoder.vhd|
 !i113 1
 R11
 R12
@@ -471,8 +471,8 @@ R6
 R50
 !i10b 1
 R51
-R65
-R66
+R67
+R68
 !i113 1
 R11
 R12
@@ -481,19 +481,19 @@ R13
 R2
 R3
 R0
-Z67 8C:/School/CPRE381/381proj/dffg.vhd
-Z68 FC:/School/CPRE381/381proj/dffg.vhd
+Z69 8C:/School/CPRE381/381proj/dffg.vhd
+Z70 FC:/School/CPRE381/381proj/dffg.vhd
 l0
 L23
 V]Vh50IP377n7Y;=^ndT]a3
 !s100 T4gcXQGMCgKJbn8XhBM;b0
 R6
 33
-Z69 !s110 1588298981
+Z71 !s110 1588298981
 !i10b 1
-Z70 !s108 1588298981.000000
-Z71 !s90 -reportprogress|30|-work|work|C:/School/CPRE381/381proj/dffg.vhd|
-Z72 !s107 C:/School/CPRE381/381proj/dffg.vhd|
+Z72 !s108 1588298981.000000
+Z73 !s90 -reportprogress|30|-work|work|C:/School/CPRE381/381proj/dffg.vhd|
+Z74 !s107 C:/School/CPRE381/381proj/dffg.vhd|
 !i113 1
 R11
 R12
@@ -507,11 +507,11 @@ V`ECk5KO>gBeLzYQVA<k>c0
 !s100 iOdlTUid@@]UimFK_53^C1
 R6
 33
-R69
-!i10b 1
-R70
 R71
+!i10b 1
 R72
+R73
+R74
 !i113 1
 R11
 R12
@@ -520,19 +520,19 @@ R13
 R2
 R3
 R0
-Z73 8C:/School/CPRE381/381proj/extender.vhd
-Z74 FC:/School/CPRE381/381proj/extender.vhd
+Z75 8C:/School/CPRE381/381proj/extender.vhd
+Z76 FC:/School/CPRE381/381proj/extender.vhd
 l0
 L5
 V?nHdN4e_aIJzPQE@JP6Mm3
 !s100 Zf_LJ^=Nkg:1N]Sj>b7[<0
 R6
 33
-R69
+R71
 !i10b 1
-R70
-Z75 !s90 -reportprogress|30|-work|work|C:/School/CPRE381/381proj/extender.vhd|
-Z76 !s107 C:/School/CPRE381/381proj/extender.vhd|
+R72
+Z77 !s90 -reportprogress|30|-work|work|C:/School/CPRE381/381proj/extender.vhd|
+Z78 !s107 C:/School/CPRE381/381proj/extender.vhd|
 !i113 1
 R11
 R12
@@ -546,32 +546,32 @@ Va3ADoLaeD=^Jb_c1o14mm2
 !s100 ZG]X^gl7F^GU0S2JlnKVa0
 R6
 33
-R69
+R71
 !i10b 1
-R70
-R75
-R76
+R72
+R77
+R78
 !i113 1
 R11
 R12
 Ef_alu
-Z77 w1588294035
+Z79 w1588294035
 R2
 R3
 R0
-Z78 8C:/School/CPRE381/381proj/f11_alu.vhd
-Z79 FC:/School/CPRE381/381proj/f11_alu.vhd
+Z80 8C:/School/CPRE381/381proj/f11_alu.vhd
+Z81 FC:/School/CPRE381/381proj/f11_alu.vhd
 l0
 L9
 VB_a8o74zn?EX4V9>[:k]D3
 !s100 R?2F1@DZA_MiF?AfO>FU22
 R6
 33
-R69
+R71
 !i10b 1
-R70
-Z80 !s90 -reportprogress|30|-work|work|C:/School/CPRE381/381proj/f11_alu.vhd|
-Z81 !s107 C:/School/CPRE381/381proj/f11_alu.vhd|
+R72
+Z82 !s90 -reportprogress|30|-work|work|C:/School/CPRE381/381proj/f11_alu.vhd|
+Z83 !s107 C:/School/CPRE381/381proj/f11_alu.vhd|
 !i113 1
 R11
 R12
@@ -585,32 +585,32 @@ Vk8e_e15O`];;i6JQQIXII2
 !s100 IaUkEQhmHeRFX2K;UjXlK3
 R6
 33
-R69
+R71
 !i10b 1
-R70
-R80
-R81
+R72
+R82
+R83
 !i113 1
 R11
 R12
 Efetch_logic
-Z82 w1588145204
+Z84 w1588145204
 R2
 R3
 R0
-Z83 8C:/School/CPRE381/381proj/fetch_logic.vhd
-Z84 FC:/School/CPRE381/381proj/fetch_logic.vhd
+Z85 8C:/School/CPRE381/381proj/fetch_logic.vhd
+Z86 FC:/School/CPRE381/381proj/fetch_logic.vhd
 l0
 L14
 Vf2CA6@zDn?>TMh?e90]M[3
 !s100 <;2[kB`QD]2_E@J36KVj<1
 R6
 33
-R69
+R71
 !i10b 1
-R70
-Z85 !s90 -reportprogress|30|-work|work|C:/School/CPRE381/381proj/fetch_logic.vhd|
-Z86 !s107 C:/School/CPRE381/381proj/fetch_logic.vhd|
+R72
+Z87 !s90 -reportprogress|30|-work|work|C:/School/CPRE381/381proj/fetch_logic.vhd|
+Z88 !s107 C:/School/CPRE381/381proj/fetch_logic.vhd|
 !i113 1
 R11
 R12
@@ -624,11 +624,11 @@ V^S8BHfe`mUaQ?Mm3jj`RT3
 !s100 _R=54W<OjcM^j6H@ldFo41
 R6
 33
-R69
+R71
 !i10b 1
-R70
-R85
-R86
+R72
+R87
+R88
 !i113 1
 R11
 R12
@@ -637,19 +637,19 @@ R13
 R2
 R3
 R0
-Z87 8C:/School/CPRE381/381proj/invg32.vhd
-Z88 FC:/School/CPRE381/381proj/invg32.vhd
+Z89 8C:/School/CPRE381/381proj/invg32.vhd
+Z90 FC:/School/CPRE381/381proj/invg32.vhd
 l0
 L4
 VmIAhkUE6W`G@CIB?mGiL51
 !s100 O>=2?6oUUGf;IHla>RA]i2
 R6
 33
-Z89 !s110 1588298982
+Z91 !s110 1588298982
 !i10b 1
-Z90 !s108 1588298982.000000
-Z91 !s90 -reportprogress|30|-work|work|C:/School/CPRE381/381proj/invg32.vhd|
-Z92 !s107 C:/School/CPRE381/381proj/invg32.vhd|
+Z92 !s108 1588298982.000000
+Z93 !s90 -reportprogress|30|-work|work|C:/School/CPRE381/381proj/invg32.vhd|
+Z94 !s107 C:/School/CPRE381/381proj/invg32.vhd|
 !i113 1
 R11
 R12
@@ -663,11 +663,11 @@ VSP3UK@b;L5i;@oWR9I;@?0
 !s100 z>TRmS5Vb@I5me`cGFTM33
 R6
 33
-R89
-!i10b 1
-R90
 R91
+!i10b 1
 R92
+R93
+R94
 !i113 1
 R11
 R12
@@ -676,19 +676,19 @@ R13
 R2
 R3
 R0
-Z93 8C:/School/CPRE381/381proj/final_mult.vhd
-Z94 FC:/School/CPRE381/381proj/final_mult.vhd
+Z95 8C:/School/CPRE381/381proj/final_mult.vhd
+Z96 FC:/School/CPRE381/381proj/final_mult.vhd
 l0
 L4
 Vh8?:mKiW`MEoI9ndoQbjk3
 !s100 EmhTPVfgI0FN0Y4e6i=5`3
 R6
 33
-R69
+R71
 !i10b 1
-R70
-Z95 !s90 -reportprogress|30|-work|work|C:/School/CPRE381/381proj/final_mult.vhd|
-Z96 !s107 C:/School/CPRE381/381proj/final_mult.vhd|
+R72
+Z97 !s90 -reportprogress|30|-work|work|C:/School/CPRE381/381proj/final_mult.vhd|
+Z98 !s107 C:/School/CPRE381/381proj/final_mult.vhd|
 !i113 1
 R11
 R12
@@ -702,38 +702,38 @@ V_kzBhO9RT5kj3:KKQgRKS2
 !s100 4IEfTe<^M=gkf0^IXCk092
 R6
 33
-R69
+R71
 !i10b 1
-R70
-R95
-R96
+R72
+R97
+R98
 !i113 1
 R11
 R12
 Emem
 R13
-Z97 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+Z99 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
 R2
 R3
 R0
-Z98 8C:/School/CPRE381/381proj/mem.vhd
-Z99 FC:/School/CPRE381/381proj/mem.vhd
+Z100 8C:/School/CPRE381/381proj/mem.vhd
+Z101 FC:/School/CPRE381/381proj/mem.vhd
 l0
 L8
 V3U<eXk^P<<cJDhJJEG@TQ0
 !s100 fRlcaiTJZJ1H;nZh;8=LI3
 R6
 33
-R89
+R91
 !i10b 1
-R90
-Z100 !s90 -reportprogress|30|-work|work|C:/School/CPRE381/381proj/mem.vhd|
-Z101 !s107 C:/School/CPRE381/381proj/mem.vhd|
+R92
+Z102 !s90 -reportprogress|30|-work|work|C:/School/CPRE381/381proj/mem.vhd|
+Z103 !s107 C:/School/CPRE381/381proj/mem.vhd|
 !i113 1
 R11
 R12
 Artl
-R97
+R99
 R2
 R3
 DEx4 work 3 mem 0 22 3U<eXk^P<<cJDhJJEG@TQ0
@@ -743,32 +743,32 @@ VU3i4_j<mEB[0b3=JHS1=S3
 !s100 OI8_3><BhDkT3l3n8`OXd3
 R6
 33
-R89
+R91
 !i10b 1
-R90
-R100
-R101
+R92
+R102
+R103
 !i113 1
 R11
 R12
 Emips_processor
-Z102 w1588299103
+Z104 w1588299103
 R2
 R3
 R0
-Z103 8C:/School/CPRE381/381proj/MIPS_Processor.vhd
-Z104 FC:/School/CPRE381/381proj/MIPS_Processor.vhd
+Z105 8C:/School/CPRE381/381proj/MIPS_Processor.vhd
+Z106 FC:/School/CPRE381/381proj/MIPS_Processor.vhd
 l0
 L16
 VOGN^ddeLBaeK1o:I?BY^30
 !s100 57zKY28KRjL_GcGjlaRiY0
 R6
 33
-Z105 !s110 1588299113
+Z107 !s110 1588299113
 !i10b 1
-Z106 !s108 1588299113.000000
-Z107 !s90 -reportprogress|30|-work|work|C:/School/CPRE381/381proj/MIPS_Processor.vhd|
-Z108 !s107 C:/School/CPRE381/381proj/MIPS_Processor.vhd|
+Z108 !s108 1588299113.000000
+Z109 !s90 -reportprogress|30|-work|work|C:/School/CPRE381/381proj/MIPS_Processor.vhd|
+Z110 !s107 C:/School/CPRE381/381proj/MIPS_Processor.vhd|
 !i113 1
 R11
 R12
@@ -782,11 +782,11 @@ VDhA_G3;OcR^kEnb?J`CBE0
 !s100 RIm46?Yj?zn16iGFC8:9E1
 R6
 33
-R105
-!i10b 1
-R106
 R107
+!i10b 1
 R108
+R109
+R110
 !i113 1
 R11
 R12
@@ -795,19 +795,19 @@ R13
 R2
 R3
 R0
-Z109 8C:/School/CPRE381/381proj/mipsfinaldesign.vhd
-Z110 FC:/School/CPRE381/381proj/mipsfinaldesign.vhd
+Z111 8C:/School/CPRE381/381proj/mipsfinaldesign.vhd
+Z112 FC:/School/CPRE381/381proj/mipsfinaldesign.vhd
 l0
 L23
 Vm;D]@jHXCEIn]^IDj]7i<0
 !s100 Oed9ZN8Ll_VeTdaRJIaVU3
 R6
 33
-R89
+R91
 !i10b 1
-R90
-Z111 !s90 -reportprogress|30|-work|work|C:/School/CPRE381/381proj/mipsfinaldesign.vhd|
-Z112 !s107 C:/School/CPRE381/381proj/mipsfinaldesign.vhd|
+R92
+Z113 !s90 -reportprogress|30|-work|work|C:/School/CPRE381/381proj/mipsfinaldesign.vhd|
+Z114 !s107 C:/School/CPRE381/381proj/mipsfinaldesign.vhd|
 !i113 1
 R11
 R12
@@ -821,11 +821,11 @@ V6l3VgT@mV@oz_UHdW2n6O0
 !s100 zODBmbUZI9mSOEK3hS>HK0
 R6
 33
-Z113 !s110 1588298983
+Z115 !s110 1588298983
 !i10b 1
-R90
-R111
-R112
+R92
+R113
+R114
 !i113 1
 R11
 R12
@@ -834,19 +834,19 @@ R13
 R2
 R3
 R0
-Z114 8C:/School/CPRE381/381proj/Mult32t1.vhd
-Z115 FC:/School/CPRE381/381proj/Mult32t1.vhd
+Z116 8C:/School/CPRE381/381proj/Mult32t1.vhd
+Z117 FC:/School/CPRE381/381proj/Mult32t1.vhd
 l0
 L23
 VA0knUP738PVmQUMeKHGZK2
 !s100 5ND[W4]OlEDYU<S^Y5<Ne0
 R6
 33
-R113
+R115
 !i10b 1
-Z116 !s108 1588298983.000000
-Z117 !s90 -reportprogress|30|-work|work|C:/School/CPRE381/381proj/Mult32t1.vhd|
-Z118 !s107 C:/School/CPRE381/381proj/Mult32t1.vhd|
+Z118 !s108 1588298983.000000
+Z119 !s90 -reportprogress|30|-work|work|C:/School/CPRE381/381proj/Mult32t1.vhd|
+Z120 !s107 C:/School/CPRE381/381proj/Mult32t1.vhd|
 !i113 1
 R11
 R12
@@ -860,11 +860,11 @@ V0J9D[hzdIHmJjccdhHM`J3
 !s100 0LT?ASU[43ZViQzcNQFE`1
 R6
 33
-R113
+R115
 !i10b 1
-R116
-R117
 R118
+R119
+R120
 !i113 1
 R11
 R12
@@ -873,19 +873,19 @@ R13
 R2
 R3
 R0
-Z119 8C:/School/CPRE381/381proj/mux2t1.vhd
-Z120 FC:/School/CPRE381/381proj/mux2t1.vhd
+Z121 8C:/School/CPRE381/381proj/mux2t1.vhd
+Z122 FC:/School/CPRE381/381proj/mux2t1.vhd
 l0
 L6
 VaQWIlNHUNk^e5k]7<h9j?2
 !s100 K>6<OCe@ccUf48<SZSAId3
 R6
 33
-R113
+R115
 !i10b 1
-R116
-Z121 !s90 -reportprogress|30|-work|work|C:/School/CPRE381/381proj/mux2t1.vhd|
-Z122 !s107 C:/School/CPRE381/381proj/mux2t1.vhd|
+R118
+Z123 !s90 -reportprogress|30|-work|work|C:/School/CPRE381/381proj/mux2t1.vhd|
+Z124 !s107 C:/School/CPRE381/381proj/mux2t1.vhd|
 !i113 1
 R11
 R12
@@ -899,32 +899,32 @@ V8:aE^67Kb=1V_P=4W2ZJY0
 !s100 O9AjXiPBa[[LI`ClJQ8`@1
 R6
 33
-R113
+R115
 !i10b 1
-R116
-R121
-R122
+R118
+R123
+R124
 !i113 1
 R11
 R12
 Emux2t1_n
-Z123 w1583036888
+Z125 w1583036888
 R2
 R3
 R0
-Z124 8C:/School/CPRE381/381proj/mux2t1_N.vhd
-Z125 FC:/School/CPRE381/381proj/mux2t1_N.vhd
+Z126 8C:/School/CPRE381/381proj/mux2t1_N.vhd
+Z127 FC:/School/CPRE381/381proj/mux2t1_N.vhd
 l0
 L21
 VUNLEhM<8D3KJ]?CoEH2Nm3
 !s100 BKZeKCAB2i6lge3>7TA3d3
 R6
 33
-R113
+R115
 !i10b 1
-R116
-Z126 !s90 -reportprogress|30|-work|work|C:/School/CPRE381/381proj/mux2t1_N.vhd|
-Z127 !s107 C:/School/CPRE381/381proj/mux2t1_N.vhd|
+R118
+Z128 !s90 -reportprogress|30|-work|work|C:/School/CPRE381/381proj/mux2t1_N.vhd|
+Z129 !s107 C:/School/CPRE381/381proj/mux2t1_N.vhd|
 !i113 1
 R11
 R12
@@ -938,11 +938,11 @@ VcecPjkSR52eTEZOmF8AFZ1
 !s100 W>5MMWO2LBg`K8[P>h>Ye1
 R6
 33
-R113
+R115
 !i10b 1
-R116
-R126
-R127
+R118
+R128
+R129
 !i113 1
 R11
 R12
@@ -951,19 +951,19 @@ R13
 R2
 R3
 R0
-Z128 8C:/School/CPRE381/381proj/mux32t1.vhd
-Z129 FC:/School/CPRE381/381proj/mux32t1.vhd
+Z130 8C:/School/CPRE381/381proj/mux32t1.vhd
+Z131 FC:/School/CPRE381/381proj/mux32t1.vhd
 l0
 L4
 VRiIUmTkkhB9d2RDgl2e0L1
 !s100 oiSPEanA@E_0_9li8AP^G2
 R6
 33
-R113
+R115
 !i10b 1
-R116
-Z130 !s90 -reportprogress|30|-work|work|C:/School/CPRE381/381proj/mux32t1.vhd|
-Z131 !s107 C:/School/CPRE381/381proj/mux32t1.vhd|
+R118
+Z132 !s90 -reportprogress|30|-work|work|C:/School/CPRE381/381proj/mux32t1.vhd|
+Z133 !s107 C:/School/CPRE381/381proj/mux32t1.vhd|
 !i113 1
 R11
 R12
@@ -977,11 +977,11 @@ V[ioOL:1JQ37f9ikkM^<`R3
 !s100 l63UKX2dm64JPmlfmN;F72
 R6
 33
-R113
+R115
 !i10b 1
-R116
-R130
-R131
+R118
+R132
+R133
 !i113 1
 R11
 R12
@@ -990,19 +990,19 @@ R13
 R2
 R3
 R0
-Z132 8C:/School/CPRE381/381proj/mux32t1bit1wide.vhd
-Z133 FC:/School/CPRE381/381proj/mux32t1bit1wide.vhd
+Z134 8C:/School/CPRE381/381proj/mux32t1bit1wide.vhd
+Z135 FC:/School/CPRE381/381proj/mux32t1bit1wide.vhd
 l0
 L4
 V09SH4QH@OnDE]1b0:zUeR0
 !s100 Q^Sj2HO3Zf`n597:mEg^T0
 R6
 33
-Z134 !s110 1588298984
+Z136 !s110 1588298984
 !i10b 1
-Z135 !s108 1588298984.000000
-Z136 !s90 -reportprogress|30|-work|work|C:/School/CPRE381/381proj/mux32t1bit1wide.vhd|
-Z137 !s107 C:/School/CPRE381/381proj/mux32t1bit1wide.vhd|
+Z137 !s108 1588298984.000000
+Z138 !s90 -reportprogress|30|-work|work|C:/School/CPRE381/381proj/mux32t1bit1wide.vhd|
+Z139 !s107 C:/School/CPRE381/381proj/mux32t1bit1wide.vhd|
 !i113 1
 R11
 R12
@@ -1016,11 +1016,11 @@ VNig>iJ6TDVY1H:bRA=]gH1
 !s100 Og<6NIJke3nAgB[hI3dJI0
 R6
 33
-R134
-!i10b 1
-R135
 R136
+!i10b 1
 R137
+R138
+R139
 !i113 1
 R11
 R12
@@ -1029,19 +1029,19 @@ R13
 R2
 R3
 R0
-Z138 8C:/School/CPRE381/381proj/nbit_Reg.vhd
-Z139 FC:/School/CPRE381/381proj/nbit_Reg.vhd
+Z140 8C:/School/CPRE381/381proj/nbit_Reg.vhd
+Z141 FC:/School/CPRE381/381proj/nbit_Reg.vhd
 l0
 L20
 VTiAIL[4bKLS^K5_JoCWRg2
 !s100 Qh[2NR_[JlUa>ncb[A3F[1
 R6
 33
-R134
+R136
 !i10b 1
-R135
-Z140 !s90 -reportprogress|30|-work|work|C:/School/CPRE381/381proj/nbit_Reg.vhd|
-Z141 !s107 C:/School/CPRE381/381proj/nbit_Reg.vhd|
+R137
+Z142 !s90 -reportprogress|30|-work|work|C:/School/CPRE381/381proj/nbit_Reg.vhd|
+Z143 !s107 C:/School/CPRE381/381proj/nbit_Reg.vhd|
 !i113 1
 R11
 R12
@@ -1055,11 +1055,11 @@ V0_T1Q`TflF8z<6f;WA:4N1
 !s100 aFJ`7D__o<<:G]LUnK=oN1
 R6
 33
-R134
+R136
 !i10b 1
-R135
-R140
-R141
+R137
+R142
+R143
 !i113 1
 R11
 R12
@@ -1068,19 +1068,19 @@ R13
 R2
 R3
 R0
-Z142 8C:/School/CPRE381/381proj/norg2.vhd
-Z143 FC:/School/CPRE381/381proj/norg2.vhd
+Z144 8C:/School/CPRE381/381proj/norg2.vhd
+Z145 FC:/School/CPRE381/381proj/norg2.vhd
 l0
 L23
 VAXkkH_X3[@?hjDDWc4FK43
 !s100 FFK;<X67U:f]Q6iCe25[N1
 R6
 33
-R134
+R136
 !i10b 1
-R135
-Z144 !s90 -reportprogress|30|-work|work|C:/School/CPRE381/381proj/norg2.vhd|
-Z145 !s107 C:/School/CPRE381/381proj/norg2.vhd|
+R137
+Z146 !s90 -reportprogress|30|-work|work|C:/School/CPRE381/381proj/norg2.vhd|
+Z147 !s107 C:/School/CPRE381/381proj/norg2.vhd|
 !i113 1
 R11
 R12
@@ -1094,11 +1094,11 @@ VMnigJZGL]mG_E49Vn^h0_1
 !s100 Q:GHoNEdQQ8O;Lamn7Pk23
 R6
 33
-R134
+R136
 !i10b 1
-R135
-R144
-R145
+R137
+R146
+R147
 !i113 1
 R11
 R12
@@ -1107,19 +1107,19 @@ R13
 R2
 R3
 R0
-Z146 8C:/School/CPRE381/381proj/oc_p2.vhd
-Z147 FC:/School/CPRE381/381proj/oc_p2.vhd
+Z148 8C:/School/CPRE381/381proj/oc_p2.vhd
+Z149 FC:/School/CPRE381/381proj/oc_p2.vhd
 l0
 L21
 V:Ye^?[5@5Y1nfGVGh2aTW3
 !s100 z;O;KfOM1=Q3cCDO?3aM90
 R6
 33
-R134
+R136
 !i10b 1
-R135
-Z148 !s90 -reportprogress|30|-work|work|C:/School/CPRE381/381proj/oc_p2.vhd|
-Z149 !s107 C:/School/CPRE381/381proj/oc_p2.vhd|
+R137
+Z150 !s90 -reportprogress|30|-work|work|C:/School/CPRE381/381proj/oc_p2.vhd|
+Z151 !s107 C:/School/CPRE381/381proj/oc_p2.vhd|
 !i113 1
 R11
 R12
@@ -1133,11 +1133,11 @@ VBlYLBOFR@eV_[^AW=G2e72
 !s100 _2NYU9NJROode3RdAHJi32
 R6
 33
-R134
+R136
 !i10b 1
-R135
-R148
-R149
+R137
+R150
+R151
 !i113 1
 R11
 R12
@@ -1146,19 +1146,19 @@ R29
 R2
 R3
 R0
-Z150 8C:/School/CPRE381/381proj/org2.vhd
-Z151 FC:/School/CPRE381/381proj/org2.vhd
+Z152 8C:/School/CPRE381/381proj/org2.vhd
+Z153 FC:/School/CPRE381/381proj/org2.vhd
 l0
 L23
 Vz[OIH?6YQS8mRoX`jDjnj2
 !s100 bGQ1F9eW^Q17OoL9h4g7z2
 R6
 33
-R134
+R136
 !i10b 1
-R135
-Z152 !s90 -reportprogress|30|-work|work|C:/School/CPRE381/381proj/org2.vhd|
-Z153 !s107 C:/School/CPRE381/381proj/org2.vhd|
+R137
+Z154 !s90 -reportprogress|30|-work|work|C:/School/CPRE381/381proj/org2.vhd|
+Z155 !s107 C:/School/CPRE381/381proj/org2.vhd|
 !i113 1
 R11
 R12
@@ -1172,11 +1172,11 @@ Vm]Dg=>FB0kjI``A0[0Nl:0
 !s100 h5_AzR3TdRA0a_K=dQ>mI2
 R6
 33
-R134
+R136
 !i10b 1
-R135
-R152
-R153
+R137
+R154
+R155
 !i113 1
 R11
 R12
@@ -1185,19 +1185,19 @@ R13
 R2
 R3
 R0
-Z154 8C:/School/CPRE381/381proj/org32.vhd
-Z155 FC:/School/CPRE381/381proj/org32.vhd
+Z156 8C:/School/CPRE381/381proj/org32.vhd
+Z157 FC:/School/CPRE381/381proj/org32.vhd
 l0
 L4
 Vb9aWE7Y32KA2MP_7D;XUN0
 !s100 FIh;[:of[h0FXFSAf<D>e1
 R6
 33
-Z156 !s110 1588298985
+Z158 !s110 1588298985
 !i10b 1
-Z157 !s108 1588298985.000000
-Z158 !s90 -reportprogress|30|-work|work|C:/School/CPRE381/381proj/org32.vhd|
-Z159 !s107 C:/School/CPRE381/381proj/org32.vhd|
+Z159 !s108 1588298985.000000
+Z160 !s90 -reportprogress|30|-work|work|C:/School/CPRE381/381proj/org32.vhd|
+Z161 !s107 C:/School/CPRE381/381proj/org32.vhd|
 !i113 1
 R11
 R12
@@ -1211,38 +1211,38 @@ Vmco0E@FgZ1@_D^kfEHkk_2
 !s100 :[=:ckMWa^X;NVR<LO@OD1
 R6
 33
-R156
-!i10b 1
-R157
 R158
+!i10b 1
 R159
+R160
+R161
 !i113 1
 R11
 R12
 Eregfile
 R13
-R97
+R99
 R2
 R3
 R0
-Z160 8C:/School/CPRE381/381proj/RegFile.vhd
-Z161 FC:/School/CPRE381/381proj/RegFile.vhd
+Z162 8C:/School/CPRE381/381proj/RegFile.vhd
+Z163 FC:/School/CPRE381/381proj/RegFile.vhd
 l0
 L5
 VDmf3]7mClGCi2:eQdRLEX1
 !s100 =Ok?9B?nNLV0:g6T0R7Nl2
 R6
 33
-R156
+R158
 !i10b 1
-R157
-Z162 !s90 -reportprogress|30|-work|work|C:/School/CPRE381/381proj/RegFile.vhd|
-Z163 !s107 C:/School/CPRE381/381proj/RegFile.vhd|
+R159
+Z164 !s90 -reportprogress|30|-work|work|C:/School/CPRE381/381proj/RegFile.vhd|
+Z165 !s107 C:/School/CPRE381/381proj/RegFile.vhd|
 !i113 1
 R11
 R12
 Astructural
-R97
+R99
 R2
 R3
 DEx4 work 7 regfile 0 22 Dmf3]7mClGCi2:eQdRLEX1
@@ -1252,11 +1252,11 @@ V1OL;?Zb0UCde>jS=8`_dn0
 !s100 JYIjj]XVQdP>FUV:oJK1g1
 R6
 33
-R156
+R158
 !i10b 1
-R157
-R162
-R163
+R159
+R164
+R165
 !i113 1
 R11
 R12
@@ -1265,19 +1265,19 @@ R29
 R2
 R3
 R0
-Z164 8C:/School/CPRE381/381proj/reverser_32.vhd
-Z165 FC:/School/CPRE381/381proj/reverser_32.vhd
+Z166 8C:/School/CPRE381/381proj/reverser_32.vhd
+Z167 FC:/School/CPRE381/381proj/reverser_32.vhd
 l0
 L14
 V7W99QN3g;iY>:49F3RlUm2
 !s100 W2W[`?gIMUN@ZR3mKOm7e1
 R6
 33
-R156
+R158
 !i10b 1
-R157
-Z166 !s90 -reportprogress|30|-work|work|C:/School/CPRE381/381proj/reverser_32.vhd|
-Z167 !s107 C:/School/CPRE381/381proj/reverser_32.vhd|
+R159
+Z168 !s90 -reportprogress|30|-work|work|C:/School/CPRE381/381proj/reverser_32.vhd|
+Z169 !s107 C:/School/CPRE381/381proj/reverser_32.vhd|
 !i113 1
 R11
 R12
@@ -1291,32 +1291,32 @@ V93gLN]`L[E=Gl;FWYVHHQ1
 !s100 LUT2Sz[T5MDMV?ETB0_n[0
 R6
 33
-R156
+R158
 !i10b 1
-R157
-R166
-R167
+R159
+R168
+R169
 !i113 1
 R11
 R12
 Eslt
-Z168 w1588148075
+Z170 w1588148075
 R2
 R3
 R0
-Z169 8C:/School/CPRE381/381proj/slt.vhd
-Z170 FC:/School/CPRE381/381proj/slt.vhd
+Z171 8C:/School/CPRE381/381proj/slt.vhd
+Z172 FC:/School/CPRE381/381proj/slt.vhd
 l0
 L6
 VT6dlY=dP1PMmIh;:M]Mi^2
 !s100 G3k8NVAjdKmD1=Ymc>Ae70
 R6
 33
-R156
+R158
 !i10b 1
-R157
-Z171 !s90 -reportprogress|30|-work|work|C:/School/CPRE381/381proj/slt.vhd|
-Z172 !s107 C:/School/CPRE381/381proj/slt.vhd|
+R159
+Z173 !s90 -reportprogress|30|-work|work|C:/School/CPRE381/381proj/slt.vhd|
+Z174 !s107 C:/School/CPRE381/381proj/slt.vhd|
 !i113 1
 R11
 R12
@@ -1330,40 +1330,40 @@ V<@zQ[V8hGN9e0RfzJHEID1
 !s100 SPVI?dIU<a`Q[2=;^`3H]1
 R6
 33
-R156
+R158
 !i10b 1
-R157
-R171
-R172
+R159
+R173
+R174
 !i113 1
 R11
 R12
 Etb
 R13
-Z173 DPx3 std 3 env 0 22 d?`1ck@NdeD@H3RZG7FgZ2
-Z174 DPx4 ieee 16 std_logic_textio 0 22 V5TSK`;aJKC<l]CEg1>mz1
+Z175 DPx3 std 3 env 0 22 d?`1ck@NdeD@H3RZG7FgZ2
+Z176 DPx4 ieee 16 std_logic_textio 0 22 V5TSK`;aJKC<l]CEg1>mz1
 R2
 R3
 R0
-Z175 8C:/School/CPRE381/381proj/tb.vhd
-Z176 FC:/School/CPRE381/381proj/tb.vhd
+Z177 8C:/School/CPRE381/381proj/tb.vhd
+Z178 FC:/School/CPRE381/381proj/tb.vhd
 l0
 L24
 VkYSb_X>_i6@EkX8`DzNFV2
 !s100 8WNCIFkeoFYOWSA_DLTi52
 R6
 33
-Z177 !s110 1588298986
+Z179 !s110 1588298986
 !i10b 1
-R157
-Z178 !s90 -reportprogress|30|-work|work|C:/School/CPRE381/381proj/tb.vhd|
-Z179 !s107 C:/School/CPRE381/381proj/tb.vhd|
+R159
+Z180 !s90 -reportprogress|30|-work|work|C:/School/CPRE381/381proj/tb.vhd|
+Z181 !s107 C:/School/CPRE381/381proj/tb.vhd|
 !i113 1
 R11
 R12
 Amixed
-R173
-R174
+R175
+R176
 R2
 R3
 DEx4 work 2 tb 0 22 kYSb_X>_i6@EkX8`DzNFV2
@@ -1373,40 +1373,40 @@ VM7IA^J4Zn87eKI<84dnPm3
 !s100 Ui0]ViMQF5nOHRo<GJmQP0
 R6
 33
-R177
-!i10b 1
-R157
-R178
 R179
+!i10b 1
+R159
+R180
+R181
 !i113 1
 R11
 R12
 Etb_barrelshift_32
-Z180 w1588276147
-R173
-R174
+Z182 w1588276147
+R175
+R176
 R2
 R3
 R0
-Z181 8C:/School/CPRE381/381proj/tb_barrelshift_32.vhd
-Z182 FC:/School/CPRE381/381proj/tb_barrelshift_32.vhd
+Z183 8C:/School/CPRE381/381proj/tb_barrelshift_32.vhd
+Z184 FC:/School/CPRE381/381proj/tb_barrelshift_32.vhd
 l0
 L17
 VFoQi?OW:7[<J6b>6e=ElT3
 !s100 lNFOZ4_mE6JP:;>CA6GCm0
 R6
 33
-R177
+R179
 !i10b 1
-Z183 !s108 1588298986.000000
-Z184 !s90 -reportprogress|30|-work|work|C:/School/CPRE381/381proj/tb_barrelshift_32.vhd|
-Z185 !s107 C:/School/CPRE381/381proj/tb_barrelshift_32.vhd|
+Z185 !s108 1588298986.000000
+Z186 !s90 -reportprogress|30|-work|work|C:/School/CPRE381/381proj/tb_barrelshift_32.vhd|
+Z187 !s107 C:/School/CPRE381/381proj/tb_barrelshift_32.vhd|
 !i113 1
 R11
 R12
 Amixed
-R173
-R174
+R175
+R176
 R2
 R3
 DEx4 work 17 tb_barrelshift_32 0 22 FoQi?OW:7[<J6b>6e=ElT3
@@ -1416,40 +1416,83 @@ VH<CInY7DMH2Hc:D0YNi2O3
 !s100 >6QZY0WO4ekM4UFWGH`g]3
 R6
 33
-R177
+R179
 !i10b 1
-R183
-R184
 R185
+R186
+R187
+!i113 1
+R11
+R12
+Etb_control
+Z188 w1588336920
+R175
+R176
+R2
+R3
+R0
+Z189 8C:/School/CPRE381/381proj/control_tb.vhd
+Z190 FC:/School/CPRE381/381proj/control_tb.vhd
+l0
+L8
+VPhY<40?iokR9gnO]@Zd2S0
+!s100 dPcUSm3F<UkFZc=cH0KlF2
+R6
+33
+Z191 !s110 1588337104
+!i10b 1
+Z192 !s108 1588337104.000000
+Z193 !s90 -reportprogress|30|-work|work|C:/School/CPRE381/381proj/control_tb.vhd|
+Z194 !s107 C:/School/CPRE381/381proj/control_tb.vhd|
+!i113 1
+R11
+R12
+Amixed
+R175
+R176
+R2
+R3
+DEx4 work 10 tb_control 0 22 PhY<40?iokR9gnO]@Zd2S0
+l38
+L12
+VBU[R:ajmg4i3BZT]9NKK@3
+!s100 i;AcN@98BaKkjoH;jBbM10
+R6
+33
+R191
+!i10b 1
+R192
+R193
+R194
 !i113 1
 R11
 R12
 Etb_reverser_32
 R29
-R173
-R174
+R175
+R176
 R2
 R3
 R0
-Z186 8C:/School/CPRE381/381proj/tb_reverser_32.vhd
-Z187 FC:/School/CPRE381/381proj/tb_reverser_32.vhd
+Z195 8C:/School/CPRE381/381proj/tb_reverser_32.vhd
+Z196 FC:/School/CPRE381/381proj/tb_reverser_32.vhd
 l0
 L17
 V2<:3jE:NQPGNAg`:0>n^Q1
 !s100 9I8jk78=2L279Vo<doc>F0
 R6
 33
-R177
+R179
 !i10b 1
-R183
-Z188 !s90 -reportprogress|30|-work|work|C:/School/CPRE381/381proj/tb_reverser_32.vhd|
-Z189 !s107 C:/School/CPRE381/381proj/tb_reverser_32.vhd|
+R185
+Z197 !s90 -reportprogress|30|-work|work|C:/School/CPRE381/381proj/tb_reverser_32.vhd|
+Z198 !s107 C:/School/CPRE381/381proj/tb_reverser_32.vhd|
 !i113 1
 R11
 R12
 Amixed
-R173
-R174
+R175
+R176
 R2
 R3
 DEx4 work 14 tb_reverser_32 0 22 2<:3jE:NQPGNAg`:0>n^Q1
@@ -1459,11 +1502,11 @@ VdCN`0W2EodI>DT@m5A<nK3
 !s100 oSX88f>DPW[l7m2Km5zUV3
 R6
 33
-R177
+R179
 !i10b 1
-R183
-R188
-R189
+R185
+R197
+R198
 !i113 1
 R11
 R12
@@ -1472,19 +1515,19 @@ R13
 R2
 R3
 R0
-Z190 8C:/School/CPRE381/381proj/xorg2.vhd
-Z191 FC:/School/CPRE381/381proj/xorg2.vhd
+Z199 8C:/School/CPRE381/381proj/xorg2.vhd
+Z200 FC:/School/CPRE381/381proj/xorg2.vhd
 l0
 L23
 VbLXOSFI@nM5fMM=i1AClD3
 !s100 [hI[mXFH4_j16U;>U1Lfn2
 R6
 33
-R177
+R179
 !i10b 1
-R183
-Z192 !s90 -reportprogress|30|-work|work|C:/School/CPRE381/381proj/xorg2.vhd|
-Z193 !s107 C:/School/CPRE381/381proj/xorg2.vhd|
+R185
+Z201 !s90 -reportprogress|30|-work|work|C:/School/CPRE381/381proj/xorg2.vhd|
+Z202 !s107 C:/School/CPRE381/381proj/xorg2.vhd|
 !i113 1
 R11
 R12
@@ -1498,32 +1541,32 @@ VE8KU]O>V@_d_H0CWPVYBL0
 !s100 Z6[FAPS4fBLB`F?OO<AY72
 R6
 33
-R177
+R179
 !i10b 1
-R183
-R192
-R193
+R185
+R201
+R202
 !i113 1
 R11
 R12
 Exorg32
-Z194 w1588107076
+Z203 w1588107076
 R2
 R3
 R0
-Z195 8C:/School/CPRE381/381proj/xorg32.vhd
-Z196 FC:/School/CPRE381/381proj/xorg32.vhd
+Z204 8C:/School/CPRE381/381proj/xorg32.vhd
+Z205 FC:/School/CPRE381/381proj/xorg32.vhd
 l0
 L23
 VTmz^nV0e9`64Sn5>KiFT]0
 !s100 9d>nSjY10c18ohB;gR8YS3
 R6
 33
-R177
+R179
 !i10b 1
-R183
-Z197 !s90 -reportprogress|30|-work|work|C:/School/CPRE381/381proj/xorg32.vhd|
-Z198 !s107 C:/School/CPRE381/381proj/xorg32.vhd|
+R185
+Z206 !s90 -reportprogress|30|-work|work|C:/School/CPRE381/381proj/xorg32.vhd|
+Z207 !s107 C:/School/CPRE381/381proj/xorg32.vhd|
 !i113 1
 R11
 R12
@@ -1537,11 +1580,11 @@ VY8J^2A@:_RAk^U5b^JL9e0
 !s100 B4JHjNf;AHHTA?zjW0Jdg2
 R6
 33
-R177
+R179
 !i10b 1
-R183
-R197
-R198
+R185
+R206
+R207
 !i113 1
 R11
 R12
