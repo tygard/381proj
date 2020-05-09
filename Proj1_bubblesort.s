@@ -38,7 +38,7 @@ beq $t1,$zero,in
 
 la $a0,Array
 addi $a1,$s0,1 
-jal bubble_sort #call bubble_sort
+jal bubble_sort      #call bubble_sort
 
 li $v0,4
 la $a0,msg3
@@ -65,24 +65,24 @@ li $v0,10
 syscall
 
 bubble_sort:
-add $t0,$zero,$zero #counter1( i )=0
+add $t0,$zero,$zero  #counter1( i )=0
 
-loop1:
+loop1: #outer loop
 addi $t0,$t0,1 #i++
-bgt $t0,$a1,endloop1 #if t0 < a1 break;
-add $t1,$a1,$zero #counter2=size=6
+bgt $t0,$a1,endloop1 
+add $t1,$a1,$zero    #counter2=size=6
 
-loop2:
-bge $t0,$t1,loop1 #j < = i
-addi $t1,$t1,-1 #j--
-mul $t4,$t1,4 #t4+a0=table[j]
-addi $t3,$t4,-4 #t3+a0=table[j-1]
-add $t7,$t4,$a0 #t7=table[j]
-add $t8,$t3,$a0 #t8=table[j-1]
+loop2: #inner loop
+bge $t0,$t1,loop1    #j < = i
+addi $t1,$t1,-1      #j--
+mul $t4,$t1,4        #t4+a0=table[j]
+addi $t3,$t4,-4      #t3+a0=table[j-1]
+add $t7,$t4,$a0      #t7=table[j]
+add $t8,$t3,$a0      #t8=table[j-1]
 lw $t5,0($t7)
 lw $t6,0($t8)
 bgt $t5,$t6,loop2
-sw $t5,0($t8) #switch t5,t6
+sw $t5,0($t8)        #swap
 sw $t6,0($t7)
 j loop2
 
