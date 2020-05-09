@@ -28,6 +28,7 @@ R1
 R2
 n@_opt1
 R3
+R0
 T_opt2
 !s110 1583515489
 VRk[[`n5JKzl6HSOeXF>cG0
@@ -39,201 +40,232 @@ n@_opt2
 R3
 R0
 Eadder_1_bit
-Z4 w1580355440
+Z4 w1585064693
 Z5 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
-Z6 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
-!i122 -1
-R0
-Z7 8U:/CPRE 381/381proj/MultiplierParts/adder_1_bit.vhd
-Z8 FU:/CPRE 381/381proj/MultiplierParts/adder_1_bit.vhd
+Z6 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z7 dC:/Users/adnan/Documents/GitHub/381proj/MultiplierParts
+Z8 8C:/Users/adnan/Documents/GitHub/381proj/MultiplierParts/adder_1_bit.vhd
+Z9 FC:/Users/adnan/Documents/GitHub/381proj/MultiplierParts/adder_1_bit.vhd
 l0
 L6
-VDABhbYJSZflClX5:;d5HO0
+VbNbeb`[_G^P1bPX:anF9=1
 !s100 BA]9I11l9iPPiAGm6VIO_3
-Z9 OL;C;2019.3;69
-33
-Z10 !s110 1583507690
+Z10 OP;C;10.4a;61
+32
+Z11 !s110 1589057488
 !i10b 1
-Z11 !s108 1583507689.000000
-Z12 !s90 -reportprogress|300|-work|work|U:/CPRE 381/381proj/MultiplierParts/adder_1_bit.vhd|
-Z13 !s107 U:/CPRE 381/381proj/MultiplierParts/adder_1_bit.vhd|
-!i113 0
-Z14 o-work work
-Z15 tExplicit 1 NoCoverage 1 CvgOpt 0
+Z12 !s108 1589057488.000000
+Z13 !s90 -reportprogress|300|-work|work|C:/Users/adnan/Documents/GitHub/381proj/MultiplierParts/adder_1_bit.vhd|
+Z14 !s107 C:/Users/adnan/Documents/GitHub/381proj/MultiplierParts/adder_1_bit.vhd|
+!i113 1
+Z15 o-work work -O0
+Z16 tExplicit 1
 Astructure
 R5
 R6
-DEx4 work 11 adder_1_bit 0 22 DABhbYJSZflClX5:;d5HO0
-!i122 -1
+DEx4 work 11 adder_1_bit 0 22 bNbeb`[_G^P1bPX:anF9=1
 l44
 L16
-VXzaL1_EUZa97nnBQ8OfdB3
+VFWczL_m[Fm?G_^hO7Md6a3
 !s100 7^<2f`1O04lUb2kzEnK2V0
-R9
-33
 R10
-!i10b 1
+32
 R11
+!i10b 1
 R12
 R13
-!i113 0
 R14
+!i113 1
 R15
+R16
 Eandg2
-Z16 w1575899278
+R4
 R5
 R6
-!i122 -1
-R0
-Z17 8U:/CPRE 381/381proj/MultiplierParts/andg2.vhd
-Z18 FU:/CPRE 381/381proj/MultiplierParts/andg2.vhd
+R7
+Z17 8C:/Users/adnan/Documents/GitHub/381proj/MultiplierParts/andg2.vhd
+Z18 FC:/Users/adnan/Documents/GitHub/381proj/MultiplierParts/andg2.vhd
 l0
 L23
-VzJ2OoPJ=<ja2?Y;OcjQk;3
+VkENG^`gSRYSE_]a5lVP[<3
 !s100 YT?bGzEmcFo:DlnoC^B4_0
-R9
-33
 R10
+32
+R11
 !i10b 1
-Z19 !s108 1583507690.000000
-Z20 !s90 -reportprogress|300|-work|work|U:/CPRE 381/381proj/MultiplierParts/andg2.vhd|
-Z21 !s107 U:/CPRE 381/381proj/MultiplierParts/andg2.vhd|
-!i113 0
-R14
+R12
+Z19 !s90 -reportprogress|300|-work|work|C:/Users/adnan/Documents/GitHub/381proj/MultiplierParts/andg2.vhd|
+Z20 !s107 C:/Users/adnan/Documents/GitHub/381proj/MultiplierParts/andg2.vhd|
+!i113 1
 R15
+R16
 Adataflow
 R5
 R6
-DEx4 work 5 andg2 0 22 zJ2OoPJ=<ja2?Y;OcjQk;3
-!i122 -1
+DEx4 work 5 andg2 0 22 kENG^`gSRYSE_]a5lVP[<3
 l32
 L31
-V3oa1[>iDZj;2zVo:oz1>e2
+VeESY::K5feQNg=:fY:4?62
 !s100 I`@Z@UBObS]<7m8bPgKUS1
-R9
-33
 R10
+32
+R11
 !i10b 1
+R12
 R19
 R20
-R21
-!i113 0
-R14
+!i113 1
 R15
+R16
 Efinaltest
-Z22 w1583515473
+R4
 R5
 R6
-!i122 -1
-R0
-Z23 8U:/CPRE 381/381proj/MultiplierParts/final_test.vhd
-Z24 FU:/CPRE 381/381proj/MultiplierParts/final_test.vhd
+R7
+Z21 8C:/Users/adnan/Documents/GitHub/381proj/MultiplierParts/final_test.vhd
+Z22 FC:/Users/adnan/Documents/GitHub/381proj/MultiplierParts/final_test.vhd
 l0
 L4
-VmBe^8iOKom59K2]M09L:O2
+VUJ[6HfA[iXW4eboH`SL_]1
 !s100 A9M<@lg2@8eWLE9[[=_7D2
-R9
-33
-Z25 !s110 1583515482
+R10
+32
+R11
 !i10b 1
-Z26 !s108 1583515482.000000
-Z27 !s90 -reportprogress|300|-work|work|U:/CPRE 381/381proj/MultiplierParts/final_test.vhd|
-Z28 !s107 U:/CPRE 381/381proj/MultiplierParts/final_test.vhd|
-!i113 0
-R14
+R12
+Z23 !s90 -reportprogress|300|-work|work|C:/Users/adnan/Documents/GitHub/381proj/MultiplierParts/final_test.vhd|
+Z24 !s107 C:/Users/adnan/Documents/GitHub/381proj/MultiplierParts/final_test.vhd|
+!i113 1
 R15
+R16
 Astructural
 R5
 R6
-DEx4 work 9 finaltest 0 22 mBe^8iOKom59K2]M09L:O2
-!i122 -1
+DEx4 work 9 finaltest 0 22 UJ[6HfA[iXW4eboH`SL_]1
 l41
 L13
-VDS_8c1;[m2g1PJj@ZRbT30
+VXce^;iokofon_O6LTTflD0
 !s100 CV@h>[cHC7S3K5hzB>_6E2
-R9
-33
-R25
+R10
+32
+R11
 !i10b 1
-R26
+R12
+R23
+R24
+!i113 1
+R15
+R16
+Em_n_bit
+R4
+R5
+R6
+R7
+Z25 8C:/Users/adnan/Documents/GitHub/381proj/MultiplierParts/final_mult.vhd
+Z26 FC:/Users/adnan/Documents/GitHub/381proj/MultiplierParts/final_mult.vhd
+l0
+L4
+VOJW<W?kJJVGfEV_=J?SnI2
+!s100 EmhTPVfgI0FN0Y4e6i=5`3
+R10
+32
+R11
+!i10b 1
+R12
+Z27 !s90 -reportprogress|300|-work|work|C:/Users/adnan/Documents/GitHub/381proj/MultiplierParts/final_mult.vhd|
+Z28 !s107 C:/Users/adnan/Documents/GitHub/381proj/MultiplierParts/final_mult.vhd|
+!i113 1
+R15
+R16
+Astructural
+R5
+R6
+DEx4 work 7 m_n_bit 0 22 OJW<W?kJJVGfEV_=J?SnI2
+l41
+L13
+VkjS<[Gbhgg3I;2Sfe]S`S0
+!s100 4IEfTe<^M=gkf0^IXCk092
+R10
+32
+R11
+!i10b 1
+R12
 R27
 R28
-!i113 0
-R14
+!i113 1
 R15
-Em_n_bit
-Z29 w1583515624
-R5
-R6
-!i122 -1
-R0
-Z30 8U:/CPRE 381/381proj/MultiplierParts/final_mult.vhd
-Z31 FU:/CPRE 381/381proj/MultiplierParts/final_mult.vhd
-l0
-L4
-Vga;P5CbCFenNn04UB=eUi0
-!s100 EmhTPVfgI0FN0Y4e6i=5`3
-R9
-33
-Z32 !s110 1583515635
-!i10b 1
-Z33 !s108 1583515634.000000
-Z34 !s90 -reportprogress|300|-work|work|U:/CPRE 381/381proj/MultiplierParts/final_mult.vhd|
-Z35 !s107 U:/CPRE 381/381proj/MultiplierParts/final_mult.vhd|
-!i113 0
-R14
-R15
-Astructural
-R5
-R6
-DEx4 work 7 m_n_bit 0 22 ga;P5CbCFenNn04UB=eUi0
-!i122 -1
-l41
-L13
-VAmd>FOY6@UJKHN=b5j;E<0
-!s100 4IEfTe<^M=gkf0^IXCk092
-R9
-33
-R32
-!i10b 1
-R33
-R34
-R35
-!i113 0
-R14
-R15
+R16
 Emult32t1
-Z36 w1583507379
+R4
 R5
 R6
-!i122 -1
-R0
-Z37 8U:/CPRE 381/381proj/MultiplierParts/Mult32t1.vhd
-Z38 FU:/CPRE 381/381proj/MultiplierParts/Mult32t1.vhd
+R7
+Z29 8C:/Users/adnan/Documents/GitHub/381proj/MultiplierParts/Mult32t1.vhd
+Z30 FC:/Users/adnan/Documents/GitHub/381proj/MultiplierParts/Mult32t1.vhd
 l0
 L23
-VPc1JF3;g8`f<]9zcL`=7g2
+V=X3EKYRDEESSJZfNjB_>F2
 !s100 5ND[W4]OlEDYU<S^Y5<Ne0
-R9
-33
-Z39 !s110 1583507691
+R10
+32
+R11
 !i10b 1
-Z40 !s108 1583507691.000000
-Z41 !s90 -reportprogress|300|-work|work|U:/CPRE 381/381proj/MultiplierParts/Mult32t1.vhd|
-Z42 !s107 U:/CPRE 381/381proj/MultiplierParts/Mult32t1.vhd|
-!i113 0
-R14
+R12
+Z31 !s90 -reportprogress|300|-work|work|C:/Users/adnan/Documents/GitHub/381proj/MultiplierParts/Mult32t1.vhd|
+Z32 !s107 C:/Users/adnan/Documents/GitHub/381proj/MultiplierParts/Mult32t1.vhd|
+!i113 1
 R15
+R16
 Astructure
 R5
 R6
-DEx4 work 8 mult32t1 0 22 Pc1JF3;g8`f<]9zcL`=7g2
-!i122 -1
+DEx4 work 8 mult32t1 0 22 =X3EKYRDEESSJZfNjB_>F2
 l62
 L34
-VPk]41AWC_<<?MWJ0ej5k33
+V2>bO5haa1obZb?GdJa:4i1
 !s100 0LT?ASU[43ZViQzcNQFE`1
-R9
+R10
+32
+R11
+!i10b 1
+R12
+R31
+R32
+!i113 1
+R15
+R16
+Eonescomplemntor
+Z33 w1580182314
+R5
+Z34 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 -1
+Z35 dU:/Desktop/c3812020/proj1/381proj/MultiplierParts
+Z36 8U:/Desktop/c3812020/proj1/381proj/firsttwoWeeks/Lab1/AddSub/onesComplementopr.vhd
+Z37 FU:/Desktop/c3812020/proj1/381proj/firsttwoWeeks/Lab1/AddSub/onesComplementopr.vhd
+l0
+L6
+VHL`QNCBW4NX_k2mZhFm<l1
+!s100 Fc[Wd4RABnl;bFEzEP=oo0
+Z38 OL;C;2019.3;69
+33
+Z39 !s110 1582909634
+!i10b 1
+Z40 !s108 1582909634.000000
+Z41 !s90 -reportprogress|300|-work|work|U:/Desktop/c3812020/proj1/381proj/firsttwoWeeks/Lab1/AddSub/onesComplementopr.vhd|
+Z42 !s107 U:/Desktop/c3812020/proj1/381proj/firsttwoWeeks/Lab1/AddSub/onesComplementopr.vhd|
+!i113 0
+Z43 o-work work
+Z44 tExplicit 1 NoCoverage 1 CvgOpt 0
+Astructure
+R5
+R34
+DEx4 work 15 onescomplemntor 0 22 HL`QNCBW4NX_k2mZhFm<l1
+!i122 -1
+l22
+L13
+VX1KQE0DeJTH>ZSZXlMfk93
+!s100 m<R7i1;8l3@FA@A`;hjZn1
+R38
 33
 R39
 !i10b 1
@@ -241,128 +273,83 @@ R40
 R41
 R42
 !i113 0
-R14
-R15
-Eonescomplemntor
-Z43 w1580182314
+R43
+R44
+Eorg2
+Z45 w1585064694
 R5
 R6
-!i122 -1
-Z44 dU:/Desktop/c3812020/proj1/381proj/MultiplierParts
-Z45 8U:/Desktop/c3812020/proj1/381proj/firsttwoWeeks/Lab1/AddSub/onesComplementopr.vhd
-Z46 FU:/Desktop/c3812020/proj1/381proj/firsttwoWeeks/Lab1/AddSub/onesComplementopr.vhd
+R7
+Z46 8C:/Users/adnan/Documents/GitHub/381proj/MultiplierParts/org2.vhd
+Z47 FC:/Users/adnan/Documents/GitHub/381proj/MultiplierParts/org2.vhd
 l0
-L6
-VHL`QNCBW4NX_k2mZhFm<l1
-!s100 Fc[Wd4RABnl;bFEzEP=oo0
-R9
-33
-Z47 !s110 1582909634
+L23
+VJRk_J;=P2[3FhjKXmTI_61
+!s100 bGQ1F9eW^Q17OoL9h4g7z2
+R10
+32
+R11
 !i10b 1
-Z48 !s108 1582909634.000000
-Z49 !s90 -reportprogress|300|-work|work|U:/Desktop/c3812020/proj1/381proj/firsttwoWeeks/Lab1/AddSub/onesComplementopr.vhd|
-Z50 !s107 U:/Desktop/c3812020/proj1/381proj/firsttwoWeeks/Lab1/AddSub/onesComplementopr.vhd|
-!i113 0
-R14
+R12
+Z48 !s90 -reportprogress|300|-work|work|C:/Users/adnan/Documents/GitHub/381proj/MultiplierParts/org2.vhd|
+Z49 !s107 C:/Users/adnan/Documents/GitHub/381proj/MultiplierParts/org2.vhd|
+!i113 1
 R15
-Astructure
+R16
+Adataflow
 R5
 R6
-DEx4 work 15 onescomplemntor 0 22 HL`QNCBW4NX_k2mZhFm<l1
-!i122 -1
-l22
-L13
-VX1KQE0DeJTH>ZSZXlMfk93
-!s100 m<R7i1;8l3@FA@A`;hjZn1
-R9
-33
-R47
+DEx4 work 4 org2 0 22 JRk_J;=P2[3FhjKXmTI_61
+l32
+L31
+V[d?3d16EeHadTLlcll1cS1
+!s100 h5_AzR3TdRA0a_K=dQ>mI2
+R10
+32
+R11
 !i10b 1
+R12
 R48
 R49
-R50
-!i113 0
-R14
+!i113 1
 R15
-Eorg2
 R16
-R5
-R6
-!i122 -1
-R0
-Z51 8U:/CPRE 381/381proj/MultiplierParts/org2.vhd
-Z52 FU:/CPRE 381/381proj/MultiplierParts/org2.vhd
-l0
-L23
-V0FzB9ATDX9TV=M:n@=VB83
-!s100 bGQ1F9eW^Q17OoL9h4g7z2
-R9
-33
-Z53 !s110 1583507692
-!i10b 1
-R40
-Z54 !s90 -reportprogress|300|-work|work|U:/CPRE 381/381proj/MultiplierParts/org2.vhd|
-Z55 !s107 U:/CPRE 381/381proj/MultiplierParts/org2.vhd|
-!i113 0
-R14
-R15
-Adataflow
-R5
-R6
-DEx4 work 4 org2 0 22 0FzB9ATDX9TV=M:n@=VB83
-!i122 -1
-l32
-L31
-V0JC>N7cRXc=9bni@>dg7o3
-!s100 h5_AzR3TdRA0a_K=dQ>mI2
-R9
-33
-R53
-!i10b 1
-R40
-R54
-R55
-!i113 0
-R14
-R15
 Exorg2
-R16
+R45
 R5
 R6
-!i122 -1
-R0
-Z56 8U:/CPRE 381/381proj/MultiplierParts/xorg2.vhd
-Z57 FU:/CPRE 381/381proj/MultiplierParts/xorg2.vhd
+R7
+Z50 8C:/Users/adnan/Documents/GitHub/381proj/MultiplierParts/xorg2.vhd
+Z51 FC:/Users/adnan/Documents/GitHub/381proj/MultiplierParts/xorg2.vhd
 l0
 L23
-VV6C:miP5l_oAXXFV_WP4`3
+VK@e^LV@NIoQEFG<>mYGML0
 !s100 [hI[mXFH4_j16U;>U1Lfn2
-R9
-33
-R53
+R10
+32
+R11
 !i10b 1
-Z58 !s108 1583507692.000000
-Z59 !s90 -reportprogress|300|-work|work|U:/CPRE 381/381proj/MultiplierParts/xorg2.vhd|
-Z60 !s107 U:/CPRE 381/381proj/MultiplierParts/xorg2.vhd|
-!i113 0
-R14
+R12
+Z52 !s90 -reportprogress|300|-work|work|C:/Users/adnan/Documents/GitHub/381proj/MultiplierParts/xorg2.vhd|
+Z53 !s107 C:/Users/adnan/Documents/GitHub/381proj/MultiplierParts/xorg2.vhd|
+!i113 1
 R15
+R16
 Adataflow
 R5
 R6
-DEx4 work 5 xorg2 0 22 V6C:miP5l_oAXXFV_WP4`3
-!i122 -1
+Z54 DEx4 work 5 xorg2 0 22 K@e^LV@NIoQEFG<>mYGML0
 l32
 L31
-V0<8Ik`hGa2ooIj9K`Y3Wc0
-!s100 Z6[FAPS4fBLB`F?OO<AY72
-R9
-33
-R53
+Z55 VNhjJam]<eOn>h_SB`YlEa0
+Z56 !s100 Z6[FAPS4fBLB`F?OO<AY72
+R10
+32
+R11
 !i10b 1
-R58
-R59
-R60
-!i113 0
-R14
+R12
+R52
+R53
+!i113 1
 R15
+R16
