@@ -276,7 +276,7 @@ BEGIN
   PORT MAP(
     i_CLK => iCLK,
     i_RST => iRST,
-    i_WE => '1', -- TODO: this might need some control signal to allow the PC register to change its value
+    i_WE => '1',
     i_D => s_nextPC,
     o_Q => s_NextInstAddr
   );
@@ -296,7 +296,7 @@ BEGIN
     i_S => s_JR,
     i_D0 => s_oPC,
     i_D1 => s_Rs,
-    o_O => s_Mux5
+    o_O => s_nextPC
   );
 
   controlUnit : control
@@ -461,16 +461,5 @@ BEGIN
     i_D0 => s_Mux0,
     i_D1 => "11111",
     o_O => s_RegWrAddr
-  );
-
-  s_JAL_address <= s_Inst(25 DOWNTO 0) & "00";
-
-  mux8 : mux2t1_N
-  GENERIC MAP(N => 32)
-  PORT MAP(
-    i_S => s_JAL,
-    i_D0 => s_Mux5,
-    i_D1 => s_Inst(31 downto 28) & s_JAL_address,
-    o_O => s_nextPC
   );
 END structure;

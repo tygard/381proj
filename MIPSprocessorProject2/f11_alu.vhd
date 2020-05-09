@@ -99,7 +99,7 @@ architecture structural of f_alu is
   end component;
 
 --multu
- component m_N_bit is
+ component finaltest is
 	port(
   	i_A         : in std_logic_vector(N-1 downto 0);
 	i_B         : in std_logic_vector(N-1 downto 0);
@@ -215,7 +215,7 @@ g_32t1mux: mux32t1 --SUM OUTPUT MUX
 		i_D4   => x"00000000",	-- srlv
 		i_D5   => x"00000000",	-- srav
 		i_D6   => i_A,		-- jr
-		i_D7   => s_multu_last,	-- multu
+		i_D7   => s_multu(31 downto 0),	-- multu
 		
 		i_D8   => s_add,	-- add
 		i_D9   => s_add,	-- addu
@@ -305,7 +305,7 @@ g_32t1mux: mux32t1 --SUM OUTPUT MUX
         o_Q     =>  o_Overflow);
 
 --mult-------------------------------
-g_mult: m_N_bit
+g_mult: finaltest
 		port MAP(i_A     =>  i_A,
 				i_B	     =>  i_B,
 				o_S      =>    s_multu,
@@ -317,7 +317,7 @@ g_mult: m_N_bit
 	s_multu(31 downto 0) <= s_multu_last;
 	
 	
-	  o_C     <=  s_multu_first;
+	  o_C     <=  s_multu(63 downto 32);
 
 --s_add,----------------------------				
 g_add: add_sub_N_bit
