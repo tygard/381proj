@@ -99,7 +99,7 @@ architecture structural of f_alu is
   end component;
 
 --multu
- component m_N_bit is
+ component finaltest is
 	port(
   	i_A         : in std_logic_vector(N-1 downto 0);
 	i_B         : in std_logic_vector(N-1 downto 0);
