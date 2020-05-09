@@ -70,23 +70,18 @@ add $t0,$zero,$zero #counter1( i )=0
 loop1:
 addi $t0,$t0,1 #i++
 bgt $t0,$a1,endloop1 #if t0 < a1 break;
-
 add $t1,$a1,$zero #counter2=size=6
+
 loop2:
-
 bge $t0,$t1,loop1 #j < = i
-
 addi $t1,$t1,-1 #j--
-
 mul $t4,$t1,4 #t4+a0=table[j]
 addi $t3,$t4,-4 #t3+a0=table[j-1]
 add $t7,$t4,$a0 #t7=table[j]
 add $t8,$t3,$a0 #t8=table[j-1]
 lw $t5,0($t7)
 lw $t6,0($t8)
-
 bgt $t5,$t6,loop2
-
 sw $t5,0($t8) #switch t5,t6
 sw $t6,0($t7)
 j loop2
