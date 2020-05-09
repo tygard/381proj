@@ -663,24 +663,24 @@ BEGIN
 				--o_Multu <= '0';
 
 			ELSIF s_FN = "011001" THEN --multu
-			o_immSign <= '0';
-			o_MemToReg <= '0';
-			o_sub <= '0';
-			o_imm <= '0';
-			o_lui <= '0';
-			o_ALUOp <= s_OP;
-			o_shift <= '0';
-			o_leftShift <= '0';
-			o_arithShift <= '0';
-			o_MemWrite <= '0';
-			o_shiftReg <= '0';
-			o_DestReg <= '0';
-			o_jump <= '0';
-			o_branch <= '0';
-			o_RegWrite <= '0';
-			o_JR <= '0';
-			o_JAL <= '0';
-			--o_Multu <= '0';
+				o_immSign <= '0';
+				o_MemToReg <= '0';
+				o_sub <= '0';
+				o_imm <= '0';
+				o_lui <= '0';
+				o_ALUOp <= s_OP;
+				o_shift <= '0';
+				o_leftShift <= '0';
+				o_arithShift <= '0';
+				o_MemWrite <= '0';
+				o_shiftReg <= '0';
+				o_DestReg <= '0';
+				o_jump <= '0';
+				o_branch <= '0';
+				o_RegWrite <= '0';
+				o_JR <= '0';
+				o_JAL <= '0';
+				--o_Multu <= '0';
 			END IF;
 
 		END IF;
