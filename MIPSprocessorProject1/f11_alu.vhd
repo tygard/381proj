@@ -305,7 +305,7 @@ g_32t1mux: mux32t1 --SUM OUTPUT MUX
         o_Q     =>  o_Overflow);
 
 --mult-------------------------------
-g_mult: m_N_bit
+g_mult: finaltest
 		port MAP(i_A     =>  i_A,
 				i_B	     =>  i_B,
 				o_S      =>    s_multu,
