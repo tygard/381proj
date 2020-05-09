@@ -318,8 +318,8 @@ BEGIN
 
 	-- de concatenate multiplier parts
 
-	s_multu(63 DOWNTO 32) <= s_multu_first;
-	s_multu(31 DOWNTO 0) <= s_multu_last;
+	s_multu_first <= s_multu(63 DOWNTO 32);
+	s_multu_last <= s_multu(31 DOWNTO 0);
 	o_C <= s_multu(63 DOWNTO 32);
 
 	--s_add,----------------------------				
