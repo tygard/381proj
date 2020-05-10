@@ -12,6 +12,7 @@ ENTITY mem_wb IS
 
 		i_MemtoReg : IN std_logic_vector(0 DOWNTO 0);
 		i_Mux4 : IN std_logic_vector(31 DOWNTO 0);
+		i_Mux0 : IN std_logic_vector(31 DOWNTO 0);
 		i_DMemOut : IN std_logic_vector(31 DOWNTO 0);
 		i_Inst : IN std_logic_vector(31 DOWNTO 0);
 
@@ -19,6 +20,7 @@ ENTITY mem_wb IS
 
 		o_MemtoReg : OUT std_logic_vector(0 DOWNTO 0);
 		o_Mux4 : OUT std_logic_vector(31 DOWNTO 0);
+		o_Mux0 : OUT std_logic_vector(31 DOWNTO 0);
 		o_DMemOut : OUT std_logic_vector(31 DOWNTO 0);
 		o_Inst : OUT std_logic_vector(31 DOWNTO 0)
 	);
@@ -84,6 +86,17 @@ BEGIN
 		i_WE => i_WE,
 		i_D => i_Inst,
 		o_Q => o_Inst
+	);
+
+	--reg-------------------------------
+	Inst : nbit_Reg
+	GENERIC MAP(N => 32)
+	PORT MAP(
+		i_CLK => i_CLK,
+		i_RST => i_RST,
+		i_WE => i_WE,
+		i_D => i_Mux0,
+		o_Q => o_Mux0
 	);
 
 END structural;
