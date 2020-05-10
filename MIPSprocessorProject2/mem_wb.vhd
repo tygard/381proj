@@ -89,7 +89,7 @@ BEGIN
 	);
 
 	--reg-------------------------------
-	Inst : nbit_Reg
+	Mux0 : nbit_Reg
 	GENERIC MAP(N => 32)
 	PORT MAP(
 		i_CLK => i_CLK,
