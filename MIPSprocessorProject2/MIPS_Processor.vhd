@@ -650,7 +650,7 @@ BEGIN
     o_ALUresult => s_MEM_ALUresult
   );
 
-  s_DMemAddr <= s_MEM_ALUresult;
+  s_DMemAddr <= s_MEM_ALUresult(31 DOWNTO 0);
   s_DMemData <= s_MEM_Rt;
   s_DMemWr <= s_MEM_MemWrite;
 
