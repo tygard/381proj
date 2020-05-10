@@ -276,7 +276,7 @@ BEGIN
   PORT MAP(
     i_CLK => iCLK,
     i_RST => iRST,
-    i_WE => '1', -- TODO: this might need some control signal to allow the PC register to change its value
+    i_WE => '1',
     i_D => s_nextPC,
     o_Q => s_NextInstAddr
   );
