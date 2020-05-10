@@ -628,7 +628,7 @@ BEGIN
     i_Inst => s_MEM_Inst,
     o_MemtoReg(0) => s_WB_MemtoReg,
     o_Mux4 => s_WB_Mux4,
-    o_Mux0 => s_RegWrAddr -- dictated by outline,
+    o_Mux0 => s_RegWrAddr, -- dictated by outline,
     o_DMemOut => s_WB_DMemOut,
     o_Inst => s_WB_Inst
 
