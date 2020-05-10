@@ -298,34 +298,22 @@ ARCHITECTURE structure OF MIPS_Processor IS
       i_CLK : IN std_logic;
       i_RST : IN std_logic;
       i_WE : IN std_logic;
-      i_DestReg : IN std_logic_vector(0 DOWNTO 0);
-      i_Jump : IN std_logic_vector(0 DOWNTO 0);
-      i_Branch : IN std_logic_vector(0 DOWNTO 0);
       i_MemtoReg : IN std_logic_vector(0 DOWNTO 0);
       i_ALUOp : IN std_logic_vector(5 DOWNTO 0);
       i_MemWrite : IN std_logic_vector(0 DOWNTO 0);
       i_immEn : IN std_logic_vector(0 DOWNTO 0);
-      i_JR : IN std_logic_vector(0 DOWNTO 0);
-      i_JAL : IN std_logic_vector(0 DOWNTO 0);
       i_Rs : IN std_logic_vector(31 DOWNTO 0);
       i_Rt : IN std_logic_vector(31 DOWNTO 0);
       i_SEout : IN std_logic_vector(31 DOWNTO 0);
       i_Inst : IN std_logic_vector(31 DOWNTO 0);
-      i_NextInstAddr : IN std_logic_vector(31 DOWNTO 0);
-      o_DestReg : OUT std_logic_vector(0 DOWNTO 0);
-      o_Jump : OUT std_logic_vector(0 DOWNTO 0);
-      o_Branch : OUT std_logic_vector(0 DOWNTO 0);
       o_MemtoReg : OUT std_logic_vector(0 DOWNTO 0);
       o_ALUOp : OUT std_logic_vector(5 DOWNTO 0);
       o_MemWrite : OUT std_logic_vector(0 DOWNTO 0);
       o_immEn : OUT std_logic_vector(0 DOWNTO 0);
-      o_JR : OUT std_logic_vector(0 DOWNTO 0);
-      o_JAL : OUT std_logic_vector(0 DOWNTO 0);
       o_Rs : OUT std_logic_vector(31 DOWNTO 0);
       o_Rt : OUT std_logic_vector(31 DOWNTO 0);
       o_SEout : OUT std_logic_vector(31 DOWNTO 0);
-      o_Inst : OUT std_logic_vector(31 DOWNTO 0);
-      o_NextInstAddr : OUT std_logic_vector(31 DOWNTO 0)
+      o_Inst : OUT std_logic_vector(31 DOWNTO 0)
     );
   END COMPONENT;
 
@@ -334,31 +322,17 @@ ARCHITECTURE structure OF MIPS_Processor IS
       i_CLK : IN std_logic;
       i_RST : IN std_logic;
       i_WE : IN std_logic;
-      i_DestReg : IN std_logic_vector(0 DOWNTO 0);
-      i_Jump : IN std_logic_vector(0 DOWNTO 0);
-      i_BandO : IN std_logic_vector(0 DOWNTO 0);
       i_MemtoReg : IN std_logic_vector(0 DOWNTO 0);
       i_MemWrite : IN std_logic_vector(0 DOWNTO 0);
-      i_JR : IN std_logic_vector(0 DOWNTO 0);
-      i_JAL : IN std_logic_vector(0 DOWNTO 0);
-      i_Rs : IN std_logic_vector(31 DOWNTO 0);
       i_Rt : IN std_logic_vector(31 DOWNTO 0);
       i_Mux4 : IN std_logic_vector(31 DOWNTO 0);
       i_Inst : IN std_logic_vector(31 DOWNTO 0);
-      i_NextInstAddr : IN std_logic_vector(31 DOWNTO 0);
       i_ALUresult : IN std_logic_vector(63 DOWNTO 0);
-      o_DestReg : OUT std_logic_vector(0 DOWNTO 0);
-      o_Jump : OUT std_logic_vector(0 DOWNTO 0);
-      o_BandO : OUT std_logic_vector(0 DOWNTO 0);
       o_MemtoReg : OUT std_logic_vector(0 DOWNTO 0);
       o_MemWrite : OUT std_logic_vector(0 DOWNTO 0);
-      o_JR : OUT std_logic_vector(0 DOWNTO 0);
-      o_JAL : OUT std_logic_vector(0 DOWNTO 0);
-      o_Rs : OUT std_logic_vector(31 DOWNTO 0);
       o_Rt : OUT std_logic_vector(31 DOWNTO 0);
       o_Mux4 : OUT std_logic_vector(31 DOWNTO 0);
       o_Inst : OUT std_logic_vector(31 DOWNTO 0);
-      o_NextInstAddr : OUT std_logic_vector(31 DOWNTO 0);
       o_ALUresult : OUT std_logic_vector(63 DOWNTO 0)
     );
   END COMPONENT;
@@ -368,28 +342,14 @@ ARCHITECTURE structure OF MIPS_Processor IS
       i_CLK : IN std_logic;
       i_RST : IN std_logic;
       i_WE : IN std_logic;
-      i_DestReg : IN std_logic_vector(0 DOWNTO 0);
-      i_Jump : IN std_logic_vector(0 DOWNTO 0);
-      i_BandO : IN std_logic_vector(0 DOWNTO 0);
       i_MemtoReg : IN std_logic_vector(0 DOWNTO 0);
-      i_JR : IN std_logic_vector(0 DOWNTO 0);
-      i_JAL : IN std_logic_vector(0 DOWNTO 0);
-      i_Rs : IN std_logic_vector(31 DOWNTO 0);
       i_Mux4 : IN std_logic_vector(31 DOWNTO 0);
       i_DMemOut : IN std_logic_vector(31 DOWNTO 0);
       i_Inst : IN std_logic_vector(31 DOWNTO 0);
-      i_NextInstAddr : IN std_logic_vector(31 DOWNTO 0);
-      o_DestReg : OUT std_logic_vector(0 DOWNTO 0);
-      o_Jump : OUT std_logic_vector(0 DOWNTO 0);
-      o_BandO : OUT std_logic_vector(0 DOWNTO 0);
       o_MemtoReg : OUT std_logic_vector(0 DOWNTO 0);
-      o_JR : OUT std_logic_vector(0 DOWNTO 0);
-      o_JAL : OUT std_logic_vector(0 DOWNTO 0);
-      o_Rs : OUT std_logic_vector(31 DOWNTO 0);
       o_Mux4 : OUT std_logic_vector(31 DOWNTO 0);
       o_DMemOut : OUT std_logic_vector(31 DOWNTO 0);
-      o_Inst : OUT std_logic_vector(31 DOWNTO 0);
-      o_NextInstAddr : OUT std_logic_vector(31 DOWNTO 0)
+      o_Inst : OUT std_logic_vector(31 DOWNTO 0)
     );
   END COMPONENT;
 
@@ -426,13 +386,6 @@ BEGIN
   -- TODO: Ensure that s_Ovfl is connected to the overflow output of your ALU
 
   -- TODO: Implement the rest of your processor below this comment! 
-
-  -------------------------------------------------TODO: implement the halt during the WB stage--------------------------------------------
-  -- WITH s_Inst(31 DOWNTO 26) SELECT
-  -- s_Halt <=
-  --   '1' WHEN "010100",
-  --   '0' WHEN OTHERS;
-  ----------------------------------------------------------------------------------------------------------------------------
 
   fetch : fetch_logic
   PORT MAP(
@@ -521,34 +474,22 @@ BEGIN
     i_CLK => NOT iCLK,
     i_RST => iRST,
     i_WE => '1',
-    i_DestReg(0) => s_RegDst,
-    i_Jump(0) => s_Jump,
-    i_Branch(0) => s_Branch,
     i_MemtoReg(0) => s_MemtoReg,
     i_ALUOp => s_ALUOp,
     i_MemWrite(0) => s_MemWrite,
     i_immEn(0) => s_ALUsrc,
-    i_JR(0) => s_JR,
-    i_JAL(0) => s_JAL,
     i_Rs => s_Rs,
     i_Rt => s_Rt,
     i_SEout => s_Imm,
     i_Inst => s_ID_Inst,
-    i_NextInstAddr => s_ID_NextInstAddr,
-    o_DestReg(0) => s_EX_DestReg,
-    o_Jump(0) => s_EX_Jump,
-    o_Branch(0) => s_EX_Branch,
     o_MemtoReg(0) => s_EX_MemtoReg,
     o_ALUOp => s_EX_ALUOp,
     o_MemWrite(0) => s_EX_MemWrite,
     o_immEn(0) => s_EX_immEn,
-    o_JR(0) => s_EX_JR,
-    o_JAL(0) => s_EX_JAL,
     o_Rs => s_EX_Rs,
     o_Rt => s_EX_Rt,
     o_SEout => s_EX_SEout,
-    o_Inst => s_EX_Inst,
-    o_NextInstAddr => s_EX_NextInstAddr
+    o_Inst => s_EX_Inst
   );
 
   mux1 : mux2t1_N
@@ -622,31 +563,17 @@ BEGIN
     i_CLK => NOT iCLK,
     i_RST => iRST,
     i_WE => '1',
-    i_DestReg(0) => s_EX_DestReg,
-    i_Jump(0) => s_EX_Jump,
-    i_BandO(0) => s_EX_Branch AND s_Zero,
     i_MemtoReg(0) => s_EX_MemtoReg,
     i_MemWrite(0) => s_EX_MemWrite,
-    i_JR(0) => s_EX_JR,
-    i_JAL(0) => S_EX_JAL,
-    i_Rs => s_EX_Rs,
     i_Rt => s_EX_Rt,
     i_Mux4 => s_Mux4,
     i_Inst => s_EX_Inst,
-    i_NextInstAddr => s_EX_NextInstAddr,
     i_ALUresult => s_wholeALUout,
-    o_DestReg(0) => s_MEM_DestReg,
-    o_Jump(0) => s_MEM_Jump,
-    o_BandO(0) => s_MEM_BandO,
     o_MemtoReg(0) => s_MEM_MemtoReg,
     o_MemWrite(0) => s_MEM_MemWrite,
-    o_JR(0) => s_MEM_JR,
-    o_JAL(0) => s_MEM_JAL,
-    o_Rs => s_MEM_Rs,
     o_Rt => s_MEM_Rt,
     o_Mux4 => s_MEM_Mux4,
     o_Inst => s_MEM_Inst,
-    o_NextInstAddr => s_MEM_NextInstAddr,
     o_ALUresult => s_MEM_ALUresult
   );
 
@@ -659,28 +586,15 @@ BEGIN
     i_CLK => NOT iCLK,
     i_RST => iRST,
     i_WE => '1',
-    i_DestReg(0) => s_MEM_DestReg,
-    i_Jump(0) => s_MEM_Jump,
-    i_BandO(0) => s_MEM_BandO,
     i_MemtoReg(0) => s_MEM_MemtoReg,
-    i_JR(0) => s_MEM_JR,
-    i_JAL(0) => s_MEM_JAL,
-    i_Rs => s_MEM_Rs,
     i_Mux4 => s_MEM_Mux4,
     i_DMemOut => s_DMemOut,
     i_Inst => s_MEM_Inst,
-    i_NextInstAddr => s_MEM_NextInstAddr,
-    o_DestReg(0) => s_WB_DestReg,
-    o_Jump(0) => s_WB_Jump,
-    o_BandO(0) => s_WB_BandO,
     o_MemtoReg(0) => s_WB_MemtoReg,
-    o_JR(0) => s_WB_JR,
-    o_JAL(0) => s_WB_JAL,
-    o_Rs => s_WB_Rs,
     o_Mux4 => s_WB_Mux4,
     o_DMemOut => s_WB_DMemOut,
-    o_Inst => s_WB_Inst,
-    o_NextInstAddr => s_WB_NextInstAddr
+    o_Inst => s_WB_Inst
+
   );
 
   Adder0 : adder_N_bit
@@ -731,5 +645,5 @@ BEGIN
   );
 
   s_Halt <= '1' when s_WB_Inst(31 downto 26) = "010100" else '0';
-  
+
 END structure;
