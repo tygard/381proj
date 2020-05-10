@@ -618,7 +618,7 @@ BEGIN
   );
 
   stage2 : ex_mem
-  PORT map(
+  PORT MAP(
     i_CLK => NOT iCLK,
     i_RST => iRST,
     i_WE => '1',
