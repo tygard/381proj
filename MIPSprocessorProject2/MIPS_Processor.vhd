@@ -236,41 +236,159 @@ ARCHITECTURE structure OF MIPS_Processor IS
       o_C : OUT std_logic_vector(31 DOWNTO 0); --carry output
       o_Overflow : OUT std_logic);
   END COMPONENT;
+
+  COMPONENT if_id IS
+    PORT (
+      i_CLK : IN std_logic;
+      i_RST : IN std_logic;
+      i_WE : IN std_logic;
+      i_Inst : IN std_logic_vector(31 DOWNTO 0);
+      i_NextInstAddr : IN std_logic_vector(31 DOWNTO 0);
+      o_Inst : OUT std_logic_vector(31 DOWNTO 0);
+      o_NextInstAddr : OUT std_logic_vector(31 DOWNTO 0)
+    );
+  END COMPONENT;
+
+  COMPONENT id_ex IS
+    PORT (
+      i_CLK : IN std_logic;
+      i_RST : IN std_logic;
+      i_WE : IN std_logic;
+      i_DestReg : IN std_logic_vector(0 DOWNTO 0);
+      i_Jump : IN std_logic_vector(0 DOWNTO 0);
+      i_Branch : IN std_logic_vector(0 DOWNTO 0);
+      i_MemtoReg : IN std_logic_vector(0 DOWNTO 0);
+      i_ALUOp : IN std_logic_vector(5 DOWNTO 0);
+      i_MemWrite : IN std_logic_vector(0 DOWNTO 0);
+      i_immEn : IN std_logic_vector(0 DOWNTO 0);
+      i_JR : IN std_logic_vector(0 DOWNTO 0);
+      i_JAL : IN std_logic_vector(0 DOWNTO 0);
+      i_Rs : IN std_logic_vector(31 DOWNTO 0);
+      i_Rt : IN std_logic_vector(31 DOWNTO 0);
+      i_SEout : IN std_logic_vector(31 DOWNTO 0);
+      i_Inst : IN std_logic_vector(31 DOWNTO 0);
+      i_NextInstAddr : IN std_logic_vector(31 DOWNTO 0);
+      o_DestReg : OUT std_logic_vector(0 DOWNTO 0);
+      o_Jump : OUT std_logic_vector(0 DOWNTO 0);
+      o_Branch : OUT std_logic_vector(0 DOWNTO 0);
+      o_MemtoReg : OUT std_logic_vector(0 DOWNTO 0);
+      o_ALUOp : OUT std_logic_vector(5 DOWNTO 0);
+      o_MemWrite : OUT std_logic_vector(0 DOWNTO 0);
+      o_immEn : OUT std_logic_vector(0 DOWNTO 0);
+      o_JR : OUT std_logic_vector(0 DOWNTO 0);
+      o_JAL : OUT std_logic_vector(0 DOWNTO 0);
+      o_Rs : OUT std_logic_vector(31 DOWNTO 0);
+      o_Rt : OUT std_logic_vector(31 DOWNTO 0);
+      o_SEout : OUT std_logic_vector(31 DOWNTO 0);
+      o_Inst : OUT std_logic_vector(31 DOWNTO 0);
+      o_NextInstAddr : OUT std_logic_vector(31 DOWNTO 0)
+    );
+  END COMPONENT;
+
+  COMPONENT ex_mem IS
+    PORT (
+      i_CLK : IN std_logic;
+      i_RST : IN std_logic;
+      i_WE : IN std_logic;
+      i_DestReg : IN std_logic_vector(0 DOWNTO 0);
+      i_Jump : IN std_logic_vector(0 DOWNTO 0);
+      i_BandO : IN std_logic_vector(0 DOWNTO 0);
+      i_MemtoReg : IN std_logic_vector(0 DOWNTO 0);
+      i_MemWrite : IN std_logic_vector(0 DOWNTO 0);
+      i_JR : IN std_logic_vector(0 DOWNTO 0);
+      i_JAL : IN std_logic_vector(0 DOWNTO 0);
+      i_Rs : IN std_logic_vector(31 DOWNTO 0);
+      i_Rt : IN std_logic_vector(31 DOWNTO 0);
+      i_Mux4 : IN std_logic_vector(31 DOWNTO 0);
+      i_Inst : IN std_logic_vector(31 DOWNTO 0);
+      i_NextInstAddr : IN std_logic_vector(31 DOWNTO 0);
+      i_ALUresult : IN std_logic_vector(63 DOWNTO 0);
+      o_DestReg : OUT std_logic_vector(0 DOWNTO 0);
+      o_Jump : OUT std_logic_vector(0 DOWNTO 0);
+      o_BandO : OUT std_logic_vector(0 DOWNTO 0);
+      o_MemtoReg : OUT std_logic_vector(0 DOWNTO 0);
+      o_MemWrite : OUT std_logic_vector(0 DOWNTO 0);
+      o_JR : OUT std_logic_vector(0 DOWNTO 0);
+      o_JAL : OUT std_logic_vector(0 DOWNTO 0);
+      o_Rs : OUT std_logic_vector(31 DOWNTO 0);
+      o_Rt : OUT std_logic_vector(31 DOWNTO 0);
+      o_Mux4 : IN std_logic_vector(31 DOWNTO 0);
+      o_Inst : OUT std_logic_vector(31 DOWNTO 0);
+      o_NextInstAddr : OUT std_logic_vector(31 DOWNTO 0);
+      o_ALUresult : OUT std_logic_vector(63 DOWNTO 0)
+    );
+  END COMPONENT;
+
+  COMPONENT mem_wb IS
+    PORT (
+      i_CLK : IN std_logic;
+      i_RST : IN std_logic;
+      i_WE : IN std_logic;
+      i_DestReg : IN std_logic_vector(0 DOWNTO 0);
+      i_Jump : IN std_logic_vector(0 DOWNTO 0);
+      i_BandO : IN std_logic_vector(0 DOWNTO 0);
+      i_MemtoReg : IN std_logic_vector(0 DOWNTO 0);
+      i_JR : IN std_logic_vector(0 DOWNTO 0);
+      i_JAL : IN std_logic_vector(0 DOWNTO 0);
+      i_Rs : IN std_logic_vector(31 DOWNTO 0);
+      i_Mux4 : IN std_logic_vector(31 DOWNTO 0);
+      i_DMemOut : IN std_logic_vector(31 DOWNTO 0);
+      i_Inst : IN std_logic_vector(31 DOWNTO 0);
+      i_NextInstAddr : IN std_logic_vector(31 DOWNTO 0);
+      o_DestReg : OUT std_logic_vector(0 DOWNTO 0);
+      o_Jump : OUT std_logic_vector(0 DOWNTO 0);
+      o_BandO : OUT std_logic_vector(0 DOWNTO 0);
+      o_MemtoReg : OUT std_logic_vector(0 DOWNTO 0);
+      o_JR : OUT std_logic_vector(0 DOWNTO 0);
+      o_JAL : OUT std_logic_vector(0 DOWNTO 0);
+      o_Rs : OUT std_logic_vector(31 DOWNTO 0);
+      o_Mux4 : OUT std_logic_vector(31 DOWNTO 0);
+      o_DMemOut : OUT std_logic_vector(31 DOWNTO 0);
+      o_Inst : OUT std_logic_vector(31 DOWNTO 0);
+      o_NextInstAddr : OUT std_logic_vector(31 DOWNTO 0)
+    );
+  END COMPONENT;
+
 BEGIN
 
   -- TODO: This is required to be your final input to your instruction memory. This provides a feasible method to externally load the memory module which means that the synthesis tool must assume it knows 
   --        nothing about the values stored in the instruction memory. If this is not included, much, if not all of the design is optimized out because the synthesis tool will believe the memory to be all zeros.
-  with iInstLd select
-    s_IMemAddr <= s_NextInstAddr when '0',
-      iInstAddr when others;
+  WITH iInstLd SELECT
+    s_IMemAddr <= s_NextInstAddr WHEN '0',
+    iInstAddr WHEN OTHERS;
+  IMem : mem
+  GENERIC MAP(
+    ADDR_WIDTH => 10,
+    DATA_WIDTH => N)
+  PORT MAP(
+    clk => iCLK,
+    addr => s_IMemAddr(11 DOWNTO 2),
+    data => iInstExt,
+    we => iInstLd,
+    q => s_Inst);
 
-
-  IMem: mem
-    generic map(ADDR_WIDTH => 10,
-                DATA_WIDTH => N)
-    port map(clk  => iCLK,
-             addr => s_IMemAddr(11 downto 2),
-             data => iInstExt,
-             we   => iInstLd,
-             q    => s_Inst);
-  
-  DMem: mem
-    generic map(ADDR_WIDTH => 10,
-                DATA_WIDTH => N)
-    port map(clk  => iCLK,
-             addr => s_DMemAddr(11 downto 2),
-             data => s_DMemData,
-             we   => s_DMemWr,
-             q    => s_DMemOut);
+  DMem : mem
+  GENERIC MAP(
+    ADDR_WIDTH => 10,
+    DATA_WIDTH => N)
+  PORT MAP(
+    clk => iCLK,
+    addr => s_DMemAddr(11 DOWNTO 2),
+    data => s_DMemData,
+    we => s_DMemWr,
+    q => s_DMemOut);
 
   -- TODO: Ensure that s_Halt is connected to an output control signal produced from decoding the Halt instruction (Opcode: 01 0100)
   -- TODO: Ensure that s_Ovfl is connected to the overflow output of your ALU
 
   -- TODO: Implement the rest of your processor below this comment! 
-  WITH s_Inst(31 DOWNTO 26) SELECT
-  s_Halt <=
-  '1' WHEN "010100",
-  '0' WHEN OTHERS;
+
+  -------------------------------------------------TODO: implement the halt during the WB stage--------------------------------------------
+  -- WITH s_Inst(31 DOWNTO 26) SELECT
+  -- s_Halt <=
+  --   '1' WHEN "010100",
+  --   '0' WHEN OTHERS;
+  ----------------------------------------------------------------------------------------------------------------------------
 
   PC : PC_reg
   PORT MAP(
@@ -279,15 +397,6 @@ BEGIN
     i_WE => '1',
     i_D => s_nextPC,
     o_Q => s_NextInstAddr
-  );
-
-  fetch : fetch_logic
-  PORT MAP(
-    i_Branch => s_BranchAndZero,
-    i_Jump => s_Jump,
-    i_instr => s_Inst,
-    i_PC => s_NextInstAddr,
-    o_PC => s_oPC
   );
 
   mux5 : mux2t1_N
@@ -299,9 +408,20 @@ BEGIN
     o_O => s_nextPC
   );
 
+  stage0 : if_id
+  PORT MAP(
+    i_CLK => NOT iCLK,
+    i_RST => iRST,
+    i_WE => '1',
+    i_Inst => s_Inst,
+    i_NextInstAddr => s_NextInstAddr,
+    o_Inst => s_ID_Inst,
+    o_NextInstAddr => s_ID_NextInstAddr
+  );
+
   controlUnit : control
   PORT MAP(
-    i_instruction => s_Inst,
+    i_instruction => s_ID_Inst,
     o_immSign => s_Signed,
     o_MemToReg => s_MemtoReg,
     o_sub => OPEN,
@@ -311,7 +431,7 @@ BEGIN
     o_Shift => OPEN,
     o_leftShift => OPEN,
     o_arithShift => OPEN,
-    o_MemWrite => s_DMemWr,
+    o_MemWrite => s_MemWrite,
     o_shiftReg => OPEN,
     o_DestReg => s_RegDst,
     o_jump => s_Jump,
@@ -321,22 +441,13 @@ BEGIN
     o_JAL => s_JAL
   );
 
-  mux0 : mux2t1_N
-  GENERIC MAP(N => 5)
-  PORT MAP(
-    i_S => s_RegDst,
-    i_D0 => s_Inst(20 DOWNTO 16),
-    i_D1 => s_Inst(15 DOWNTO 11),
-    o_O => s_Mux0
-  );
-
   registers : RegFile
   GENERIC MAP(N => 32)
   PORT MAP(
     i_WA => s_RegWrAddr,
     i_WD => s_RegWrData,
-    i_RA0 => s_Inst(25 DOWNTO 21),
-    i_RA1 => s_Inst(20 DOWNTO 16),
+    i_RA0 => s_ID_Inst(25 DOWNTO 21),
+    i_RA1 => s_ID_Inst(20 DOWNTO 16),
     i_WE => s_RegWr,
     i_RST => iRST,
     i_CLK => iCLK,
@@ -344,30 +455,85 @@ BEGIN
     o_q1 => s_Rt
   );
 
-  s_DMemData <= s_Rt;
-
   SignExtender : extender
   GENERIC MAP(Y => 16)
   PORT MAP(
-    input => s_Inst(15 DOWNTO 0),
-    sign => s_Inst(15) AND s_Signed,
+    input => s_ID_Inst(15 DOWNTO 0),
+    sign => s_ID_Inst(15) AND s_Signed,
     output => s_Imm
+  );
+
+  stage1 : id_ex
+  PORT MAP(
+    i_CLK => NOT iCLK,
+    i_RST => iRST,
+    i_WE => '1'
+    i_DestReg => s_RegDst,
+    i_Jump => s_Jump,
+    i_Branch => s_Branch,
+    i_MemtoReg => s_MemtoReg,
+    i_ALUOp => s_ALUOp,
+    i_MemWrite => s_MemWrite,
+    i_immEn => s_Signed,
+    i_JR => s_JR,
+    i_JAL => s_JAL,
+    i_Rs => s_Rs,
+    i_Rt => s_Rt,
+    i_SEout => s_Imm
+    i_Inst => s_ID_Inst,
+    i_NextInstAddr => s_ID_NextInstAddr,
+    o_DestReg => s_EX_DestReg,
+    o_Jump => s_EX_Jump,
+    o_Branch => s_EX_Branch,
+    o_MemtoReg => s_EX_MemtoReg,
+    o_ALUOp => s_EX_ALUOp,
+    o_MemWrite => s_EX_ALUOp,
+    o_immEn => s_EX_immEn,
+    o_JR => s_EX_JR,
+    o_JAL => s_EX_JAL,
+    o_Rs => s_EX_Rs,
+    o_Rt => s_EX_Rt,
+    o_SEout => s_EX_SEout,
+    o_Inst => s_EX_Inst,
+    o_NextInstAddr => s_EX_NextInstAddr
   );
 
   mux1 : mux2t1_N
   GENERIC MAP(N => 32)
   PORT MAP(
-    i_S => s_ALUsrc,
-    i_D0 => s_Rt,
-    i_D1 => s_Imm,
+    i_S => s_EX_immEn,
+    i_D0 => s_EX_Rt,
+    i_D1 => s_EX_SEout,
     o_O => s_Mux1
   );
 
+  ALU : f_alu
+  GENERIC MAP(N => 32)
+  PORT MAP(
+    i_A => s_EX_Rs,
+    i_B => s_Mux1,
+    i_C => s_ALUctrl,
+    o_S => s_wholeALUout(31 DOWNTO 0),
+    o_C => s_wholeALUout(63 DOWNTO 32),
+    o_Overflow => s_Ovfl
+  );
+  s_Zero <= s_wholeALUout(0);
+  oALUout <= s_wholeALUout(31 DOWNTO 0); -- dictated by outline
+
   ALU_control : alucontrol
   PORT MAP(
-    i_OP => s_ALUOp,
-    i_FI => s_Inst(5 DOWNTO 0),
+    i_OP => s_EX_ALUOp,
+    i_FI => s_EX_Inst(5 DOWNTO 0),
     o_F => s_ALUctrl
+  );
+
+  mux3 : mux2t1_N
+  GENERIC MAP(N => 5)
+  PORT MAP(
+    i_S => s_VarEn,
+    i_D0 => s_EX_Inst(10 DOWNTO 6),
+    i_D1 => s_EX_Rs(4 DOWNTO 0),
+    o_O => s_SHAMT
   );
 
   b_decoder : barrel_decoder
@@ -375,44 +541,19 @@ BEGIN
     i_ALUctrl => s_ALUctrl,
     o_D => s_D,
     o_T => s_T,
-    o_VarEn => s_VArEn,
+    o_VarEn => s_VarEn,
     o_ShiftEn => s_ShiftEn
   );
 
-  mux3 : mux2t1_N
-  GENERIC MAP(N => 5)
-  PORT MAP(
-    i_S => s_VarEn,
-    i_D0 => s_Inst(10 DOWNTO 6),
-    i_D1 => s_Rs(4 DOWNTO 0),
-    o_O => s_SHAMT
-  );
-
   barrel_shifter : barrelshift_32
-  GENERIC MAP(N => 32) -- Generic of type integer for input/output data width. Default value is 32.
+  GENERIC MAP(N => 32)
   PORT MAP(
     i_SHAMT => s_SHAMT,
     i_D => s_D,
     i_T => s_T,
-    i_X => s_Rt,
+    i_X => s_EX_Rt,
     o_Y => s_Y
   );
-
-  ALU : f_alu
-  GENERIC MAP(N => 32)
-  PORT MAP(
-    i_A => s_Rs,
-    i_B => s_Mux1,
-    i_C => s_ALUctrl,
-    o_S => s_wholeALUout(31 DOWNTO 0),
-    o_C => s_wholeALUout(63 DOWNTO 32),
-    o_Overflow => s_Ovfl
-  );
-
-  s_Zero <= s_wholeALUout(0);
-
-  oALUout <= s_wholeALUout(31 DOWNTO 0); -- dictated by outline
-  s_DMEmAddr <= s_wholeALUout(31 DOWNTO 0); -- dictated by outline
 
   mux4 : mux2t1_N
   GENERIC MAP(N => 32)
@@ -423,43 +564,75 @@ BEGIN
     o_O => s_Mux4
   );
 
-  s_BranchAndZero <= s_Branch AND s_Zero;
-
-  mux2 : mux2t1_N
-  GENERIC MAP(N => 32)
-  PORT MAP(
-    i_S => s_MemtoReg,
-    i_D0 => s_Mux4,
-    i_D1 => s_DMemOut,
-    o_O => s_Mux2
+  stage2 : ex_mem
+  PORT (
+    i_CLK => not iCLK,
+    i_RST => iRST,
+    i_WE => '1',
+    i_DestReg => s_EX_DestReg,
+    i_Jump => s_EX_Jump,
+    i_BandO => s_EX_Branch AND s_Zero,
+    i_MemtoReg => s_EX_MemtoReg,
+    i_MemWrite => s_EX_MemWrite,
+    i_JR => s_EX_JR,
+    i_JAL => S_EX_JAL,
+    i_Rs => s_EX_Rs,
+    i_Rt => s_EX_Rt,
+    i_Mux4 => s_Mux4,
+    i_Inst => s_EX_Inst,
+    i_NextInstAddr => s_EX_NextInstAddr,
+    i_ALUresult => s_wholeALUout,
+    o_DestReg => s_MEM_DestReg,
+    o_Jump => s_MEM_Jump,
+    o_BandO => s_MEM_BandO,
+    o_MemtoReg => s_MEM_MemtoReg,
+    o_MemWrite => s_MEM_MemWrite,
+    o_JR => s_MEM_JR,
+    o_JAL => s_MEM_JAL,
+    o_Rs => s_MEM_Rs,
+    o_Rt => s_MEM_Rt,
+    o_Mux4 => s_MEM_Mux4,
+    o_Inst => s_MEM_Inst,
+    o_NextInstAddr => s_MEM_NextInstAddr,
+    o_ALUresult => s_MEM_ALUresult
   );
 
-  Adder0 : adder_N_bit
-  GENERIC MAP(N => 32)
-  PORT MAP(
-    i_A => s_NextInstAddr,
-    i_B => x"00000004",
-    i_Cin => '0',
-    o_S => s_Adder0,
-    o_Cout => OPEN,
-    o_Ovfl => OPEN
-  );
+s_DMemAddr => s_MEM_ALUresult;
+s_DMemData => s_MEM_Rt;
+s_DMemWr => s_MEM_MemWrite;
 
-  mux6 : mux2t1_N
-  GENERIC MAP(N => 32)
-  PORT MAP(
-    i_S => s_JAL,
-    i_D0 => s_Mux2,
-    i_D1 => s_Adder0,
-    o_O => s_RegWrData
-  );
+stage3 : mem_wb
+    PORT map(
+      i_CLK : not iCLK,
+      i_RST => iRST,
+      i_WE => '1',
+      i_DestReg => s_MEM_DestReg
+      i_Jump => s_MEM_Jump
+      i_BandO => s_MEM_BandO
+      i_MemtoReg => s_MEM_MemtoReg
+      i_JR => s_MEM_JR
+      i_JAL => s_MEM_JAL
+      i_Rs => s_MEM_Rs
+      i_Mux4 => s_MEM_Mux4
+      i_DMemOut => s_DMemOut
+      i_Inst => s_MEM_Inst
+      i_NextInstAddr => s_MEM_NextInstAddr
+      o_DestReg => s_WB_DestReg
+      o_Jump => s_WB_Jump
+      o_BandO => s_WB_BandO
+      o_MemtoReg => s_WB_MemtoReg
+      o_JR => s_WB_JR
+      o_JAL => s_WB_JAL
+      o_Rs => s_WB_Rs
+      o_Mux4 => s_WB_Mux4
+      o_DMemOut => s_WB_DMemOut
+      o_Inst => s_WB_Inst
+      o_NextInstAddr => s_WB_NextInstAddr
+    );
 
-  mux7 : mux2t1_N
-  GENERIC MAP(N => 5)
-  PORT MAP(
-    i_S => s_JAL,
-    i_D0 => s_Mux0,
-    i_D1 => "11111",
-    o_O => s_RegWrAddr
-  );
+
+
+
+
+
 END structure;
