@@ -64,46 +64,90 @@ ARCHITECTURE structure OF MIPS_Processor IS
   --       requires below this comment
 
   -- signals -----------------------------------------------------------
-  -- this list is not complete, these are just the big ones that I thought needed to be written down
 
-  SIGNAL s_wholeALUout : std_logic_vector(63 DOWNTO 0);
-
-  SIGNAL s_Rs : std_logic_vector(31 DOWNTO 0);
-  SIGNAL s_Rt : std_logic_vector(31 DOWNTO 0);
-  SIGNAL s_nextPC : std_logic_vector(31 DOWNTO 0);
+  ----------------------IF----------------------
   SIGNAL s_oPC : std_logic_vector(31 DOWNTO 0);
+  SIGNAL s_nextPC : std_logic_vector(31 DOWNTO 0);
   SIGNAL s_Mux5 : std_logic_vector(31 DOWNTO 0);
-  SIGNAL s_Mux4 : std_logic_vector(31 DOWNTO 0);
-  SIGNAL s_Mux2 : std_logic_vector(31 DOWNTO 0);
-  SIGNAL s_Mux1 : std_logic_vector(31 DOWNTO 0);
-  SIGNAL s_Imm : std_logic_vector(31 DOWNTO 0);
-  SIGNAL s_Adder0 : std_logic_vector(31 DOWNTO 0);
 
-  SIGNAL s_JAL_address : std_logic_vector(27 DOWNTO 0);
-
+  ----------------------ID----------------------
+  SIGNAL s_ID_Inst : std_logic_vector(31 DOWNTO 0);
+  SIGNAL s_ID_NextInstAddr : std_logic_vector(31 DOWNTO 0);
+  SIGNAL s_Signed : std_logic;
+  SIGNAL s_MemtoReg : std_logic;
+  SIGNAL s_ALUsrc : std_logic;
   SIGNAL s_ALUOp : std_logic_vector(5 DOWNTO 0);
-  SIGNAL s_ALUctrl : std_logic_vector(4 DOWNTO 0);
-  SIGNAL s_Mux0 : std_logic_vector(4 DOWNTO 0);
-
+  SIGNAL s_MemWrite : std_logic;
   SIGNAL s_RegDst : std_logic;
   SIGNAL s_Jump : std_logic;
   SIGNAL s_Branch : std_logic;
-  SIGNAL s_MemRead : std_logic;
-  SIGNAL s_MemtoReg : std_logic;
-  SIGNAL s_ALUsrc : std_logic;
+  SIGNAL s_JR : std_logic;
+  SIGNAL s_JAL : std_logic;
+  SIGNAL s_Rs : std_logic_vector(31 DOWNTO 0);
+  SIGNAL s_Rt : std_logic_vector(31 DOWNTO 0);
+  SIGNAL s_Imm : std_logic_vector(31 DOWNTO 0);
 
+  ----------------------EX----------------------
+  SIGNAL s_EX_DestReg : std_logic;
+  SIGNAL s_EX_Jump : std_logic;
+  SIGNAL s_EX_Branch : std_logic;
+  SIGNAL s_EX_MemtoReg : std_logic;
+  SIGNAL s_EX_ALUOp : std_logic_vector(5 DOWNTO 0);
+  SIGNAL s_EX_MemWrite : std_logic;
+  SIGNAL s_EX_immEn : std_logic;
+  SIGNAL s_EX_JR : std_logic;
+  SIGNAL s_EX_JAL : std_logic;
+  SIGNAL s_EX_Rs : std_logic_vector(31 DOWNTO 0);
+  SIGNAL s_EX_Rt : std_logic_vector(31 DOWNTO 0);
+  SIGNAL s_EX_SEout : std_logic_vector(31 DOWNTO 0);
+  SIGNAL s_EX_Inst : std_logic_vector(31 DOWNTO 0);
+  SIGNAL s_EX_NextInstAddr : std_logic_vector(31 DOWNTO 0);
+  SIGNAL s_Mux1 : std_logic_vector(31 DOWNTO 0);
+  SIGNAL s_ALUctrl : std_logic_vector(4 DOWNTO 0);
+  SIGNAL s_wholeALUout : std_logic_vector(63 DOWNTO 0);
+  SIGNAL s_Zero : std_logic;
   SIGNAL s_SHAMT : std_logic_vector(4 DOWNTO 0);
   SIGNAL s_ShiftEn : std_logic;
   SIGNAL s_VarEn : std_logic;
   SIGNAL s_D : std_logic;
   SIGNAL s_T : std_logic;
-  SIGNAL s_Zero : std_logic;
-  SIGNAL s_BranchAndZero : std_logic;
-  SIGNAL s_Signed : std_logic;
-  SIGNAL s_JR : std_logic;
-  SIGNAL s_JAL : std_logic;
-
   SIGNAL s_Y : std_logic_vector(31 DOWNTO 0);
+  SIGNAL s_Mux4 : std_logic_vector(31 DOWNTO 0);
+
+  ----------------------MEM----------------------
+  SIGNAL s_MEM_DestReg : std_logic;
+  SIGNAL s_MEM_Jump : std_logic;
+  SIGNAL s_MEM_BandO : std_logic;
+  SIGNAL s_MEM_MemtoReg : std_logic;
+  SIGNAL s_MEM_MemWrite : std_logic;
+  SIGNAL s_MEM_JR : std_logic;
+  SIGNAL s_MEM_JAL : std_logic;
+  SIGNAL s_MEM_Rs : std_logic_vector(31 DOWNTO 0);
+  SIGNAL s_MEM_Rt : std_logic_vector(31 DOWNTO 0);
+  SIGNAL s_MEM_Mux4 : std_logic_vector(31 DOWNTO 0);
+  SIGNAL s_MEM_Inst : std_logic_vector(31 DOWNTO 0);
+  SIGNAL s_MEM_NextInstAddr : std_logic_vector(31 DOWNTO 0);
+  SIGNAL s_MEM_ALUresult : std_logic_vector(63 DOWNTO 0);
+
+  ----------------------WB----------------------
+
+  SIGNAL s_WB_DestReg : std_logic;
+  SIGNAL s_WB_Jump : std_logic;
+  SIGNAL s_WB_BandO : std_logic;
+  SIGNAL s_WB_MemtoReg : std_logic;
+  SIGNAL s_WB_JR : std_logic;
+  SIGNAL s_WB_JAL : std_logic;
+  SIGNAL s_WB_Rs : std_logic_vector(31 DOWNTO 0);
+  SIGNAL s_WB_Mux4 : std_logic_vector(31 DOWNTO 0);
+  SIGNAL s_WB_DMemOut : std_logic_vector(31 DOWNTO 0);
+  SIGNAL s_WB_Inst : std_logic_vector(31 DOWNTO 0);
+  SIGNAL s_WB_NextInstAddr : std_logic_vector(31 DOWNTO 0);
+  SIGNAL s_Adder0 : std_logic_vector(31 DOWNTO 0);
+  SIGNAL s_Mux2 : std_logic_vector(31 DOWNTO 0);
+  SIGNAL s_Mux0 : std_logic_vector(4 DOWNTO 0);
+
+  ----------------------------------------------
+
   -- components -----------------------------------------------------------
 
   COMPONENT fetch_logic IS
@@ -390,6 +434,15 @@ BEGIN
   --   '0' WHEN OTHERS;
   ----------------------------------------------------------------------------------------------------------------------------
 
+  fetch : fetch_logic
+  PORT MAP(
+    i_Branch => s_WB_BandO,
+    i_Jump => s_WB_Jump,
+    i_instr => s_WB_Inst,
+    i_PC => s_NextInstAddr,
+    o_PC => s_oPC
+  );
+
   PC : PC_reg
   PORT MAP(
     i_CLK => iCLK,
@@ -467,30 +520,30 @@ BEGIN
   PORT MAP(
     i_CLK => NOT iCLK,
     i_RST => iRST,
-    i_WE => '1'
-    i_DestReg => s_RegDst,
-    i_Jump => s_Jump,
-    i_Branch => s_Branch,
-    i_MemtoReg => s_MemtoReg,
+    i_WE => '1',
+    i_DestReg(0) => s_RegDst,
+    i_Jump(0) => s_Jump,
+    i_Branch(0) => s_Branch,
+    i_MemtoReg(0) => s_MemtoReg,
     i_ALUOp => s_ALUOp,
-    i_MemWrite => s_MemWrite,
-    i_immEn => s_Signed,
-    i_JR => s_JR,
-    i_JAL => s_JAL,
+    i_MemWrite(0) => s_MemWrite,
+    i_immEn(0) => s_ALUsrc,
+    i_JR(0) => s_JR,
+    i_JAL(0) => s_JAL,
     i_Rs => s_Rs,
     i_Rt => s_Rt,
-    i_SEout => s_Imm
+    i_SEout => s_Imm,
     i_Inst => s_ID_Inst,
     i_NextInstAddr => s_ID_NextInstAddr,
-    o_DestReg => s_EX_DestReg,
-    o_Jump => s_EX_Jump,
-    o_Branch => s_EX_Branch,
-    o_MemtoReg => s_EX_MemtoReg,
+    o_DestReg(0) => s_EX_DestReg,
+    o_Jump(0) => s_EX_Jump,
+    o_Branch(0) => s_EX_Branch,
+    o_MemtoReg(0) => s_EX_MemtoReg,
     o_ALUOp => s_EX_ALUOp,
-    o_MemWrite => s_EX_ALUOp,
-    o_immEn => s_EX_immEn,
-    o_JR => s_EX_JR,
-    o_JAL => s_EX_JAL,
+    o_MemWrite(0) => s_EX_MemWrite,
+    o_immEn(0) => s_EX_immEn,
+    o_JR(0) => s_EX_JR,
+    o_JAL(0) => s_EX_JAL,
     o_Rs => s_EX_Rs,
     o_Rt => s_EX_Rt,
     o_SEout => s_EX_SEout,
@@ -565,30 +618,30 @@ BEGIN
   );
 
   stage2 : ex_mem
-  PORT (
-    i_CLK => not iCLK,
+  PORT map(
+    i_CLK => NOT iCLK,
     i_RST => iRST,
     i_WE => '1',
-    i_DestReg => s_EX_DestReg,
-    i_Jump => s_EX_Jump,
-    i_BandO => s_EX_Branch AND s_Zero,
-    i_MemtoReg => s_EX_MemtoReg,
-    i_MemWrite => s_EX_MemWrite,
-    i_JR => s_EX_JR,
-    i_JAL => S_EX_JAL,
+    i_DestReg(0) => s_EX_DestReg,
+    i_Jump(0) => s_EX_Jump,
+    i_BandO(0) => s_EX_Branch AND s_Zero,
+    i_MemtoReg(0) => s_EX_MemtoReg,
+    i_MemWrite(0) => s_EX_MemWrite,
+    i_JR(0) => s_EX_JR,
+    i_JAL(0) => S_EX_JAL,
     i_Rs => s_EX_Rs,
     i_Rt => s_EX_Rt,
     i_Mux4 => s_Mux4,
     i_Inst => s_EX_Inst,
     i_NextInstAddr => s_EX_NextInstAddr,
     i_ALUresult => s_wholeALUout,
-    o_DestReg => s_MEM_DestReg,
-    o_Jump => s_MEM_Jump,
-    o_BandO => s_MEM_BandO,
-    o_MemtoReg => s_MEM_MemtoReg,
-    o_MemWrite => s_MEM_MemWrite,
-    o_JR => s_MEM_JR,
-    o_JAL => s_MEM_JAL,
+    o_DestReg(0) => s_MEM_DestReg,
+    o_Jump(0) => s_MEM_Jump,
+    o_BandO(0) => s_MEM_BandO,
+    o_MemtoReg(0) => s_MEM_MemtoReg,
+    o_MemWrite(0) => s_MEM_MemWrite,
+    o_JR(0) => s_MEM_JR,
+    o_JAL(0) => s_MEM_JAL,
     o_Rs => s_MEM_Rs,
     o_Rt => s_MEM_Rt,
     o_Mux4 => s_MEM_Mux4,
@@ -597,42 +650,83 @@ BEGIN
     o_ALUresult => s_MEM_ALUresult
   );
 
-s_DMemAddr => s_MEM_ALUresult;
-s_DMemData => s_MEM_Rt;
-s_DMemWr => s_MEM_MemWrite;
+  s_DMemAddr <= s_MEM_ALUresult;
+  s_DMemData <= s_MEM_Rt;
+  s_DMemWr <= s_MEM_MemWrite;
 
-stage3 : mem_wb
-    PORT map(
-      i_CLK : not iCLK,
-      i_RST => iRST,
-      i_WE => '1',
-      i_DestReg => s_MEM_DestReg
-      i_Jump => s_MEM_Jump
-      i_BandO => s_MEM_BandO
-      i_MemtoReg => s_MEM_MemtoReg
-      i_JR => s_MEM_JR
-      i_JAL => s_MEM_JAL
-      i_Rs => s_MEM_Rs
-      i_Mux4 => s_MEM_Mux4
-      i_DMemOut => s_DMemOut
-      i_Inst => s_MEM_Inst
-      i_NextInstAddr => s_MEM_NextInstAddr
-      o_DestReg => s_WB_DestReg
-      o_Jump => s_WB_Jump
-      o_BandO => s_WB_BandO
-      o_MemtoReg => s_WB_MemtoReg
-      o_JR => s_WB_JR
-      o_JAL => s_WB_JAL
-      o_Rs => s_WB_Rs
-      o_Mux4 => s_WB_Mux4
-      o_DMemOut => s_WB_DMemOut
-      o_Inst => s_WB_Inst
-      o_NextInstAddr => s_WB_NextInstAddr
-    );
+  stage3 : mem_wb
+  PORT MAP(
+    i_CLK => NOT iCLK,
+    i_RST => iRST,
+    i_WE => '1',
+    i_DestReg(0) => s_MEM_DestReg,
+    i_Jump(0) => s_MEM_Jump,
+    i_BandO(0) => s_MEM_BandO,
+    i_MemtoReg(0) => s_MEM_MemtoReg,
+    i_JR(0) => s_MEM_JR,
+    i_JAL(0) => s_MEM_JAL,
+    i_Rs => s_MEM_Rs,
+    i_Mux4 => s_MEM_Mux4,
+    i_DMemOut => s_DMemOut,
+    i_Inst => s_MEM_Inst,
+    i_NextInstAddr => s_MEM_NextInstAddr,
+    o_DestReg(0) => s_WB_DestReg,
+    o_Jump(0) => s_WB_Jump,
+    o_BandO(0) => s_WB_BandO,
+    o_MemtoReg(0) => s_WB_MemtoReg,
+    o_JR(0) => s_WB_JR,
+    o_JAL(0) => s_WB_JAL,
+    o_Rs => s_WB_Rs,
+    o_Mux4 => s_WB_Mux4,
+    o_DMemOut => s_WB_DMemOut,
+    o_Inst => s_WB_Inst,
+    o_NextInstAddr => s_WB_NextInstAddr
+  );
 
+  Adder0 : adder_N_bit
+  GENERIC MAP(N => 32)
+  PORT MAP(
+    i_A => s_WB_NextInstAddr,
+    i_B => x"00000004",
+    i_Cin => '0',
+    o_S => s_Adder0,
+    o_Cout => OPEN,
+    o_Ovfl => OPEN
+  );
 
+  mux2 : mux2t1_N
+  GENERIC MAP(N => 32)
+  PORT MAP(
+    i_S => s_WB_MemtoReg,
+    i_D0 => s_WB_Mux4,
+    i_D1 => s_WB_DMemOut,
+    o_O => s_Mux2
+  );
 
+  mux6 : mux2t1_N
+  GENERIC MAP(N => 32)
+  PORT MAP(
+    i_S => s_WB_JAL,
+    i_D0 => s_Mux2,
+    i_D1 => s_Adder0,
+    o_O => s_RegWrData
+  );
 
+  mux0 : mux2t1_N
+  GENERIC MAP(N => 5)
+  PORT MAP(
+    i_S => s_WB_DestReg,
+    i_D0 => s_WB_Inst(20 DOWNTO 16),
+    i_D1 => s_WB_Inst(15 DOWNTO 11),
+    o_O => s_Mux0
+  );
 
-
+  mux7 : mux2t1_N
+  GENERIC MAP(N => 5)
+  PORT MAP(
+    i_S => s_WB_JAL,
+    i_D0 => s_Mux0,
+    i_D1 => "11111",
+    o_O => s_RegWrAddr
+  );
 END structure;

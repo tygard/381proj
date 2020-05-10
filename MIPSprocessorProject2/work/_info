@@ -372,11 +372,11 @@ VZNKNH]EHD2UL9OSk?6SAi3
 !s100 WDSHeEIe]^dY8=?mNV`]F2
 R6
 33
-Z56 !s110 1589072919
+Z56 !s110 1589079647
 !i10b 1
-R32
-Z57 !s90 -reportprogress|300|-work|work|C:/School/CPRE381/381proj/MIPSprocessorProject2/control.vhd|
-Z58 !s107 C:/School/CPRE381/381proj/MIPSprocessorProject2/control.vhd|
+Z57 !s108 1589079647.000000
+Z58 !s90 -reportprogress|30|-work|work|C:/School/CPRE381/381proj/MIPSprocessorProject2/control.vhd|
+Z59 !s107 C:/School/CPRE381/381proj/MIPSprocessorProject2/control.vhd|
 !i113 1
 R11
 R12
@@ -392,9 +392,9 @@ R6
 33
 R56
 !i10b 1
-R32
 R57
 R58
+R59
 !i113 1
 R11
 R12
@@ -403,19 +403,19 @@ R13
 R2
 R3
 R0
-Z59 8C:/School/CPRE381/381proj/MIPSprocessorProject2/dataflow21mux.vhd
-Z60 FC:/School/CPRE381/381proj/MIPSprocessorProject2/dataflow21mux.vhd
+Z60 8C:/School/CPRE381/381proj/MIPSprocessorProject2/dataflow21mux.vhd
+Z61 FC:/School/CPRE381/381proj/MIPSprocessorProject2/dataflow21mux.vhd
 l0
 L4
 V4GQ00V?V7D2ijIGPPlGf@3
 !s100 DTcBPcoRGKJ]HmNLBF;Wa0
 R6
 33
-R56
+Z62 !s110 1589072919
 !i10b 1
-Z61 !s108 1589072919.000000
-Z62 !s90 -reportprogress|30|-work|work|C:/School/CPRE381/381proj/MIPSprocessorProject2/dataflow21mux.vhd|
-Z63 !s107 C:/School/CPRE381/381proj/MIPSprocessorProject2/dataflow21mux.vhd|
+Z63 !s108 1589072919.000000
+Z64 !s90 -reportprogress|30|-work|work|C:/School/CPRE381/381proj/MIPSprocessorProject2/dataflow21mux.vhd|
+Z65 !s107 C:/School/CPRE381/381proj/MIPSprocessorProject2/dataflow21mux.vhd|
 !i113 1
 R11
 R12
@@ -429,11 +429,11 @@ VFWW0kUX_COVTEL[V=keOA3
 !s100 2YSATbG7Hz9>cHQbmm;[f2
 R6
 33
-R56
-!i10b 1
-R61
 R62
+!i10b 1
 R63
+R64
+R65
 !i113 1
 R11
 R12
@@ -442,19 +442,19 @@ R13
 R2
 R3
 R0
-Z64 8C:/School/CPRE381/381proj/MIPSprocessorProject2/Decoder.vhd
-Z65 FC:/School/CPRE381/381proj/MIPSprocessorProject2/Decoder.vhd
+Z66 8C:/School/CPRE381/381proj/MIPSprocessorProject2/Decoder.vhd
+Z67 FC:/School/CPRE381/381proj/MIPSprocessorProject2/Decoder.vhd
 l0
 L4
 VJhKeF9N@NNHJHjVd@0PXC3
 !s100 hhn]jdUXhjW:I3@_<=C0E1
 R6
 33
-R56
+R62
 !i10b 1
-R61
-Z66 !s90 -reportprogress|30|-work|work|C:/School/CPRE381/381proj/MIPSprocessorProject2/Decoder.vhd|
-Z67 !s107 C:/School/CPRE381/381proj/MIPSprocessorProject2/Decoder.vhd|
+R63
+Z68 !s90 -reportprogress|30|-work|work|C:/School/CPRE381/381proj/MIPSprocessorProject2/Decoder.vhd|
+Z69 !s107 C:/School/CPRE381/381proj/MIPSprocessorProject2/Decoder.vhd|
 !i113 1
 R11
 R12
@@ -468,11 +468,11 @@ VDD`A_hAmHj_MYEfb>:6`B1
 !s100 iG]EnlY1d?NScP@Y3Pjle3
 R6
 33
-R56
+R62
 !i10b 1
-R61
-R66
-R67
+R63
+R68
+R69
 !i113 1
 R11
 R12
@@ -481,19 +481,19 @@ R13
 R2
 R3
 R0
-Z68 8C:/School/CPRE381/381proj/MIPSprocessorProject2/dffg.vhd
-Z69 FC:/School/CPRE381/381proj/MIPSprocessorProject2/dffg.vhd
+Z70 8C:/School/CPRE381/381proj/MIPSprocessorProject2/dffg.vhd
+Z71 FC:/School/CPRE381/381proj/MIPSprocessorProject2/dffg.vhd
 l0
 L23
 V]Vh50IP377n7Y;=^ndT]a3
 !s100 T4gcXQGMCgKJbn8XhBM;b0
 R6
 33
-R56
+R62
 !i10b 1
-R61
-Z70 !s90 -reportprogress|30|-work|work|C:/School/CPRE381/381proj/MIPSprocessorProject2/dffg.vhd|
-Z71 !s107 C:/School/CPRE381/381proj/MIPSprocessorProject2/dffg.vhd|
+R63
+Z72 !s90 -reportprogress|30|-work|work|C:/School/CPRE381/381proj/MIPSprocessorProject2/dffg.vhd|
+Z73 !s107 C:/School/CPRE381/381proj/MIPSprocessorProject2/dffg.vhd|
 !i113 1
 R11
 R12
@@ -507,32 +507,32 @@ V`ECk5KO>gBeLzYQVA<k>c0
 !s100 iOdlTUid@@]UimFK_53^C1
 R6
 33
-R56
+R62
 !i10b 1
-R61
-R70
-R71
+R63
+R72
+R73
 !i113 1
 R11
 R12
 Edffgreset1
-Z72 w1588326327
+Z74 w1588326327
 R2
 R3
 R0
-Z73 8C:/School/CPRE381/381proj/MIPSprocessorProject2/dffgReset1.vhd
-Z74 FC:/School/CPRE381/381proj/MIPSprocessorProject2/dffgReset1.vhd
+Z75 8C:/School/CPRE381/381proj/MIPSprocessorProject2/dffgReset1.vhd
+Z76 FC:/School/CPRE381/381proj/MIPSprocessorProject2/dffgReset1.vhd
 l0
 L23
 VYi3PiFgFIa@QNnf]N0>h20
 !s100 U_XDIJ7YE[Fa;0TdOQASF2
 R6
 33
-R56
+R62
 !i10b 1
-R61
-Z75 !s90 -reportprogress|30|-work|work|C:/School/CPRE381/381proj/MIPSprocessorProject2/dffgReset1.vhd|
-Z76 !s107 C:/School/CPRE381/381proj/MIPSprocessorProject2/dffgReset1.vhd|
+R63
+Z77 !s90 -reportprogress|30|-work|work|C:/School/CPRE381/381proj/MIPSprocessorProject2/dffgReset1.vhd|
+Z78 !s107 C:/School/CPRE381/381proj/MIPSprocessorProject2/dffgReset1.vhd|
 !i113 1
 R11
 R12
@@ -546,32 +546,32 @@ VL:=zW?5fTDi?JgYfZ25780
 !s100 Xzn9>2LCPT2T?SAec`8I;3
 R6
 33
-R56
+R62
 !i10b 1
-R61
-R75
-R76
+R63
+R77
+R78
 !i113 1
 R11
 R12
 Eex_mem
-Z77 w1589074164
+Z79 w1589074164
 R2
 R3
 R0
-Z78 8C:/School/CPRE381/381proj/MIPSprocessorProject2/ex_mem.vhd
-Z79 FC:/School/CPRE381/381proj/MIPSprocessorProject2/ex_mem.vhd
+Z80 8C:/School/CPRE381/381proj/MIPSprocessorProject2/ex_mem.vhd
+Z81 FC:/School/CPRE381/381proj/MIPSprocessorProject2/ex_mem.vhd
 l0
 L4
 Veg6S@0a`dO21]XUi1ZT2i2
 !s100 fh@Qe_3lYmKki:nlA86Dc0
 R6
 33
-Z80 !s110 1589074171
+Z82 !s110 1589079646
 !i10b 1
-Z81 !s108 1589074171.000000
-Z82 !s90 -reportprogress|300|-work|work|C:/School/CPRE381/381proj/MIPSprocessorProject2/ex_mem.vhd|
-Z83 !s107 C:/School/CPRE381/381proj/MIPSprocessorProject2/ex_mem.vhd|
+Z83 !s108 1589079646.000000
+Z84 !s90 -reportprogress|30|-work|work|C:/School/CPRE381/381proj/MIPSprocessorProject2/ex_mem.vhd|
+Z85 !s107 C:/School/CPRE381/381proj/MIPSprocessorProject2/ex_mem.vhd|
 !i113 1
 R11
 R12
@@ -585,11 +585,11 @@ VCMcj1WOj?>9b]iQW]VM;H3
 !s100 a79?zI>n;4HcVk2Em2Ii:3
 R6
 33
-R80
-!i10b 1
-R81
 R82
+!i10b 1
 R83
+R84
+R85
 !i113 1
 R11
 R12
@@ -598,19 +598,19 @@ R13
 R2
 R3
 R0
-Z84 8C:/School/CPRE381/381proj/MIPSprocessorProject2/extender.vhd
-Z85 FC:/School/CPRE381/381proj/MIPSprocessorProject2/extender.vhd
+Z86 8C:/School/CPRE381/381proj/MIPSprocessorProject2/extender.vhd
+Z87 FC:/School/CPRE381/381proj/MIPSprocessorProject2/extender.vhd
 l0
 L5
 V?nHdN4e_aIJzPQE@JP6Mm3
 !s100 Zf_LJ^=Nkg:1N]Sj>b7[<0
 R6
 33
-Z86 !s110 1589072920
+Z88 !s110 1589072920
 !i10b 1
-Z87 !s108 1589072920.000000
-Z88 !s90 -reportprogress|30|-work|work|C:/School/CPRE381/381proj/MIPSprocessorProject2/extender.vhd|
-Z89 !s107 C:/School/CPRE381/381proj/MIPSprocessorProject2/extender.vhd|
+Z89 !s108 1589072920.000000
+Z90 !s90 -reportprogress|30|-work|work|C:/School/CPRE381/381proj/MIPSprocessorProject2/extender.vhd|
+Z91 !s107 C:/School/CPRE381/381proj/MIPSprocessorProject2/extender.vhd|
 !i113 1
 R11
 R12
@@ -624,32 +624,32 @@ Va3ADoLaeD=^Jb_c1o14mm2
 !s100 ZG]X^gl7F^GU0S2JlnKVa0
 R6
 33
-R86
-!i10b 1
-R87
 R88
+!i10b 1
 R89
+R90
+R91
 !i113 1
 R11
 R12
 Ef_alu
-Z90 w1589068147
+Z92 w1589068147
 R2
 R3
 R0
-Z91 8C:/School/CPRE381/381proj/MIPSprocessorProject2/f11_alu.vhd
-Z92 FC:/School/CPRE381/381proj/MIPSprocessorProject2/f11_alu.vhd
+Z93 8C:/School/CPRE381/381proj/MIPSprocessorProject2/f11_alu.vhd
+Z94 FC:/School/CPRE381/381proj/MIPSprocessorProject2/f11_alu.vhd
 l0
 L9
 V39G8nIDdbfV>XP9nnYKH>0
 !s100 5`Z]zB7POWn2k?M0BabIU1
 R6
 33
-R86
+R56
 !i10b 1
-R87
-Z93 !s90 -reportprogress|30|-work|work|C:/School/CPRE381/381proj/MIPSprocessorProject2/f11_alu.vhd|
-Z94 !s107 C:/School/CPRE381/381proj/MIPSprocessorProject2/f11_alu.vhd|
+R57
+Z95 !s90 -reportprogress|30|-work|work|C:/School/CPRE381/381proj/MIPSprocessorProject2/f11_alu.vhd|
+Z96 !s107 C:/School/CPRE381/381proj/MIPSprocessorProject2/f11_alu.vhd|
 !i113 1
 R11
 R12
@@ -663,32 +663,32 @@ VJPiYJQoj@<DNkQ3]VX`7M2
 !s100 41kM:DInc[Z1::?[BI<701
 R6
 33
-R86
+R56
 !i10b 1
-R87
-R93
-R94
+R57
+R95
+R96
 !i113 1
 R11
 R12
 Efetch_logic
-Z95 w1588340010
+Z97 w1588340010
 R2
 R3
 R0
-Z96 8C:/School/CPRE381/381proj/MIPSprocessorProject2/fetch_logic.vhd
-Z97 FC:/School/CPRE381/381proj/MIPSprocessorProject2/fetch_logic.vhd
+Z98 8C:/School/CPRE381/381proj/MIPSprocessorProject2/fetch_logic.vhd
+Z99 FC:/School/CPRE381/381proj/MIPSprocessorProject2/fetch_logic.vhd
 l0
 L14
 Vf2CA6@zDn?>TMh?e90]M[3
 !s100 <;2[kB`QD]2_E@J36KVj<1
 R6
 33
-R86
+R88
 !i10b 1
-R87
-Z98 !s90 -reportprogress|30|-work|work|C:/School/CPRE381/381proj/MIPSprocessorProject2/fetch_logic.vhd|
-Z99 !s107 C:/School/CPRE381/381proj/MIPSprocessorProject2/fetch_logic.vhd|
+R89
+Z100 !s90 -reportprogress|30|-work|work|C:/School/CPRE381/381proj/MIPSprocessorProject2/fetch_logic.vhd|
+Z101 !s107 C:/School/CPRE381/381proj/MIPSprocessorProject2/fetch_logic.vhd|
 !i113 1
 R11
 R12
@@ -702,32 +702,32 @@ VC<i?m:bHafb3zOR3RQ^EX0
 !s100 UnRjSZQBWoFBb1fG^[9j51
 R6
 33
-R86
+R88
 !i10b 1
-R87
-R98
-R99
+R89
+R100
+R101
 !i113 1
 R11
 R12
 Efinaltest
-Z100 w1584392625
+Z102 w1584392625
 R2
 R3
 R0
-Z101 8C:/School/CPRE381/381proj/MIPSprocessorProject2/final_test.vhd
-Z102 FC:/School/CPRE381/381proj/MIPSprocessorProject2/final_test.vhd
+Z103 8C:/School/CPRE381/381proj/MIPSprocessorProject2/final_test.vhd
+Z104 FC:/School/CPRE381/381proj/MIPSprocessorProject2/final_test.vhd
 l0
 L4
 V8S`OgiZ5Fid7=@59K^ec_1
 !s100 A9M<@lg2@8eWLE9[[=_7D2
 R6
 33
-Z103 !s110 1589072921
+Z105 !s110 1589072921
 !i10b 1
-Z104 !s108 1589072921.000000
-Z105 !s90 -reportprogress|30|-work|work|C:/School/CPRE381/381proj/MIPSprocessorProject2/final_test.vhd|
-Z106 !s107 C:/School/CPRE381/381proj/MIPSprocessorProject2/final_test.vhd|
+Z106 !s108 1589072921.000000
+Z107 !s90 -reportprogress|30|-work|work|C:/School/CPRE381/381proj/MIPSprocessorProject2/final_test.vhd|
+Z108 !s107 C:/School/CPRE381/381proj/MIPSprocessorProject2/final_test.vhd|
 !i113 1
 R11
 R12
@@ -741,32 +741,32 @@ Vj8m1Kc8Z;_NUoe@o??n[z1
 !s100 CV@h>[cHC7S3K5hzB>_6E2
 R6
 33
-R103
-!i10b 1
-R104
 R105
+!i10b 1
 R106
+R107
+R108
 !i113 1
 R11
 R12
 Eid_ex
-Z107 w1589074003
+Z109 w1589074003
 R2
 R3
 R0
-Z108 8C:/School/CPRE381/381proj/MIPSprocessorProject2/id_ex.vhd
-Z109 FC:/School/CPRE381/381proj/MIPSprocessorProject2/id_ex.vhd
+Z110 8C:/School/CPRE381/381proj/MIPSprocessorProject2/id_ex.vhd
+Z111 FC:/School/CPRE381/381proj/MIPSprocessorProject2/id_ex.vhd
 l0
 L4
 VdYg>j5E`KRmHkUhzO8`_z2
 !s100 Ub??k@7KmKXOGTgS>?HHU2
 R6
 33
-R80
+R82
 !i10b 1
-R81
-Z110 !s90 -reportprogress|30|-work|work|C:/School/CPRE381/381proj/MIPSprocessorProject2/id_ex.vhd|
-Z111 !s107 C:/School/CPRE381/381proj/MIPSprocessorProject2/id_ex.vhd|
+R83
+Z112 !s90 -reportprogress|30|-work|work|C:/School/CPRE381/381proj/MIPSprocessorProject2/id_ex.vhd|
+Z113 !s107 C:/School/CPRE381/381proj/MIPSprocessorProject2/id_ex.vhd|
 !i113 1
 R11
 R12
@@ -780,30 +780,30 @@ VLIhNZOREEJ[V9oMkG<_mZ3
 !s100 UnTS[`^L=<BLSNWch_@6j2
 R6
 33
-R80
+R82
 !i10b 1
-R81
-R110
-R111
+R83
+R112
+R113
 !i113 1
 R11
 R12
 Eif_id
-Z112 w1589073731
+Z114 w1589073731
 R2
 R3
 R0
-Z113 8C:/School/CPRE381/381proj/MIPSprocessorProject2/if_id.vhd
-Z114 FC:/School/CPRE381/381proj/MIPSprocessorProject2/if_id.vhd
+Z115 8C:/School/CPRE381/381proj/MIPSprocessorProject2/if_id.vhd
+Z116 FC:/School/CPRE381/381proj/MIPSprocessorProject2/if_id.vhd
 l0
 L4
 Volf8CBz>>TPeY38_S>8>G1
 !s100 JMFJOB:`25BeQoBF_>CLA1
 R6
 33
-Z115 !s110 1589074172
+R56
 !i10b 1
-Z116 !s108 1589074172.000000
+R83
 Z117 !s90 -reportprogress|30|-work|work|C:/School/CPRE381/381proj/MIPSprocessorProject2/if_id.vhd|
 Z118 !s107 C:/School/CPRE381/381proj/MIPSprocessorProject2/if_id.vhd|
 !i113 1
@@ -812,16 +812,16 @@ R12
 Astructural
 R2
 R3
-Z119 DEx4 work 5 if_id 0 22 olf8CBz>>TPeY38_S>8>G1
+DEx4 work 5 if_id 0 22 olf8CBz>>TPeY38_S>8>G1
 l36
 L23
-Z120 VTDJQOgY^EiR8Eml]6UCzZ1
-Z121 !s100 V12ZM=nzCbL;=>`VoS5FM0
+VTDJQOgY^EiR8Eml]6UCzZ1
+!s100 V12ZM=nzCbL;=>`VoS5FM0
 R6
 33
-R115
+R56
 !i10b 1
-R116
+R83
 R117
 R118
 !i113 1
@@ -832,19 +832,19 @@ R28
 R2
 R3
 R0
-Z122 8C:/School/CPRE381/381proj/MIPSprocessorProject2/invg.vhd
-Z123 FC:/School/CPRE381/381proj/MIPSprocessorProject2/invg.vhd
+Z119 8C:/School/CPRE381/381proj/MIPSprocessorProject2/invg.vhd
+Z120 FC:/School/CPRE381/381proj/MIPSprocessorProject2/invg.vhd
 l0
 L23
 VWZ[Qn6Kne3hC>F]U><dbL1
 !s100 _XK?_^5z0Rm1<k12?;5R?2
 R6
 33
-R103
+R105
 !i10b 1
-R104
-Z124 !s90 -reportprogress|30|-work|work|C:/School/CPRE381/381proj/MIPSprocessorProject2/invg.vhd|
-Z125 !s107 C:/School/CPRE381/381proj/MIPSprocessorProject2/invg.vhd|
+R106
+Z121 !s90 -reportprogress|30|-work|work|C:/School/CPRE381/381proj/MIPSprocessorProject2/invg.vhd|
+Z122 !s107 C:/School/CPRE381/381proj/MIPSprocessorProject2/invg.vhd|
 !i113 1
 R11
 R12
@@ -858,32 +858,32 @@ VLMc_0NKW6cKCF[BQ[<N=z3
 !s100 bk7I76o8e1LURdoZEQb8H0
 R6
 33
-R103
+R105
 !i10b 1
-R104
-R124
-R125
+R106
+R121
+R122
 !i113 1
 R11
 R12
 Einvg32
-Z126 w1588332067
+Z123 w1588332067
 R2
 R3
 R0
-Z127 8C:/School/CPRE381/381proj/MIPSprocessorProject2/invg32.vhd
-Z128 FC:/School/CPRE381/381proj/MIPSprocessorProject2/invg32.vhd
+Z124 8C:/School/CPRE381/381proj/MIPSprocessorProject2/invg32.vhd
+Z125 FC:/School/CPRE381/381proj/MIPSprocessorProject2/invg32.vhd
 l0
 L4
 VU]ml@;GdBONkAMXUN^DNK1
 !s100 dVGEnAgbg8dJ3o_dYD7[H3
 R6
 33
-Z129 !s110 1589072922
+Z126 !s110 1589072922
 !i10b 1
-Z130 !s108 1589072922.000000
-Z131 !s90 -reportprogress|30|-work|work|C:/School/CPRE381/381proj/MIPSprocessorProject2/invg32.vhd|
-Z132 !s107 C:/School/CPRE381/381proj/MIPSprocessorProject2/invg32.vhd|
+Z127 !s108 1589072922.000000
+Z128 !s90 -reportprogress|30|-work|work|C:/School/CPRE381/381proj/MIPSprocessorProject2/invg32.vhd|
+Z129 !s107 C:/School/CPRE381/381proj/MIPSprocessorProject2/invg32.vhd|
 !i113 1
 R11
 R12
@@ -897,11 +897,11 @@ V]33?cSG1c]0FKRE`K__6d0
 !s100 ]`7f;z4zOTG6SC25a9hDd3
 R6
 33
-R129
+R126
 !i10b 1
-R130
-R131
-R132
+R127
+R128
+R129
 !i113 1
 R11
 R12
@@ -910,19 +910,19 @@ R13
 R2
 R3
 R0
-Z133 8C:/School/CPRE381/381proj/MIPSprocessorProject2/final_mult.vhd
-Z134 FC:/School/CPRE381/381proj/MIPSprocessorProject2/final_mult.vhd
+Z130 8C:/School/CPRE381/381proj/MIPSprocessorProject2/final_mult.vhd
+Z131 FC:/School/CPRE381/381proj/MIPSprocessorProject2/final_mult.vhd
 l0
 L4
 Vh8?:mKiW`MEoI9ndoQbjk3
 !s100 EmhTPVfgI0FN0Y4e6i=5`3
 R6
 33
-R103
+R105
 !i10b 1
-R87
-Z135 !s90 -reportprogress|30|-work|work|C:/School/CPRE381/381proj/MIPSprocessorProject2/final_mult.vhd|
-Z136 !s107 C:/School/CPRE381/381proj/MIPSprocessorProject2/final_mult.vhd|
+R89
+Z132 !s90 -reportprogress|30|-work|work|C:/School/CPRE381/381proj/MIPSprocessorProject2/final_mult.vhd|
+Z133 !s107 C:/School/CPRE381/381proj/MIPSprocessorProject2/final_mult.vhd|
 !i113 1
 R11
 R12
@@ -936,38 +936,38 @@ V_kzBhO9RT5kj3:KKQgRKS2
 !s100 4IEfTe<^M=gkf0^IXCk092
 R6
 33
-R103
+R105
 !i10b 1
-R87
-R135
-R136
+R89
+R132
+R133
 !i113 1
 R11
 R12
 Emem
 R13
-Z137 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+Z134 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
 R2
 R3
 R0
-Z138 8C:/School/CPRE381/381proj/MIPSprocessorProject2/mem.vhd
-Z139 FC:/School/CPRE381/381proj/MIPSprocessorProject2/mem.vhd
+Z135 8C:/School/CPRE381/381proj/MIPSprocessorProject2/mem.vhd
+Z136 FC:/School/CPRE381/381proj/MIPSprocessorProject2/mem.vhd
 l0
 L8
 V3U<eXk^P<<cJDhJJEG@TQ0
 !s100 fRlcaiTJZJ1H;nZh;8=LI3
 R6
 33
-Z140 !s110 1589073136
+Z137 !s110 1589073136
 !i10b 1
-Z141 !s108 1589073135.000000
-Z142 !s90 -reportprogress|30|-work|work|C:/School/CPRE381/381proj/MIPSprocessorProject2/mem.vhd|
-Z143 !s107 C:/School/CPRE381/381proj/MIPSprocessorProject2/mem.vhd|
+Z138 !s108 1589073135.000000
+Z139 !s90 -reportprogress|30|-work|work|C:/School/CPRE381/381proj/MIPSprocessorProject2/mem.vhd|
+Z140 !s107 C:/School/CPRE381/381proj/MIPSprocessorProject2/mem.vhd|
 !i113 1
 R11
 R12
 Artl
-R137
+R134
 R2
 R3
 DEx4 work 3 mem 0 22 3U<eXk^P<<cJDhJJEG@TQ0
@@ -977,32 +977,32 @@ VU3i4_j<mEB[0b3=JHS1=S3
 !s100 OI8_3><BhDkT3l3n8`OXd3
 R6
 33
-R140
+R137
 !i10b 1
-R141
-R142
-R143
+R138
+R139
+R140
 !i113 1
 R11
 R12
 Emem_wb
-Z144 w1589074041
+Z141 w1589074041
 R2
 R3
 R0
-Z145 8C:/School/CPRE381/381proj/MIPSprocessorProject2/mem_wb.vhd
-Z146 FC:/School/CPRE381/381proj/MIPSprocessorProject2/mem_wb.vhd
+Z142 8C:/School/CPRE381/381proj/MIPSprocessorProject2/mem_wb.vhd
+Z143 FC:/School/CPRE381/381proj/MIPSprocessorProject2/mem_wb.vhd
 l0
 L4
 VCddd@hiU8LbagJ]2e_M6a3
 !s100 jTV6f<YjMLhVEn0R8VYHS2
 R6
 33
-R80
+R82
 !i10b 1
-R81
-Z147 !s90 -reportprogress|30|-work|work|C:/School/CPRE381/381proj/MIPSprocessorProject2/mem_wb.vhd|
-Z148 !s107 C:/School/CPRE381/381proj/MIPSprocessorProject2/mem_wb.vhd|
+R83
+Z144 !s90 -reportprogress|30|-work|work|C:/School/CPRE381/381proj/MIPSprocessorProject2/mem_wb.vhd|
+Z145 !s107 C:/School/CPRE381/381proj/MIPSprocessorProject2/mem_wb.vhd|
 !i113 1
 R11
 R12
@@ -1016,50 +1016,50 @@ VJ:dC1^:PGQ0_dohIc;7Xg0
 !s100 j[6m@IeTUAEKGfbQhJ8ii3
 R6
 33
-R80
+R82
 !i10b 1
-R81
-R147
-R148
+R83
+R144
+R145
 !i113 1
 R11
 R12
 Emips_processor
-Z149 w1589074135
+Z146 w1589082511
 R2
 R3
 R0
-Z150 8C:/School/CPRE381/381proj/MIPSprocessorProject2/MIPS_Processor.vhd
-Z151 FC:/School/CPRE381/381proj/MIPSprocessorProject2/MIPS_Processor.vhd
+Z147 8C:/School/CPRE381/381proj/MIPSprocessorProject2/MIPS_Processor.vhd
+Z148 FC:/School/CPRE381/381proj/MIPSprocessorProject2/MIPS_Processor.vhd
 l0
 L16
 VOGN^ddeLBaeK1o:I?BY^30
 !s100 57zKY28KRjL_GcGjlaRiY0
 R6
 33
-R80
+Z149 !s110 1589082514
 !i10b 1
-R81
-Z152 !s90 -reportprogress|300|-work|work|C:/School/CPRE381/381proj/MIPSprocessorProject2/MIPS_Processor.vhd|
-Z153 !s107 C:/School/CPRE381/381proj/MIPSprocessorProject2/MIPS_Processor.vhd|
+Z150 !s108 1589082514.000000
+Z151 !s90 -reportprogress|300|-work|work|C:/School/CPRE381/381proj/MIPSprocessorProject2/MIPS_Processor.vhd|
+Z152 !s107 C:/School/CPRE381/381proj/MIPSprocessorProject2/MIPS_Processor.vhd|
 !i113 1
 R11
 R12
 Astructure
 R2
 R3
-DEx4 work 14 mips_processor 0 22 OGN^ddeLBaeK1o:I?BY^30
-l352
+Z153 DEx4 work 14 mips_processor 0 22 OGN^ddeLBaeK1o:I?BY^30
+l396
 L27
-VzZJ=cT:n8Sd?PkG3FKV@I2
-!s100 [V[gWeW>0[CoSP<P0h;;M3
+VeYP1`KU4nK?bj01Cb_[^i2
+!s100 9C1mm>:[QOGS:MK9LATWS1
 R6
 33
-R80
+R149
 !i10b 1
-R81
+R150
+R151
 R152
-R153
 !i113 1
 R11
 R12
@@ -1533,7 +1533,7 @@ R11
 R12
 Eregfile
 Z210 w1588300380
-R137
+R134
 R2
 R3
 R0
@@ -1554,7 +1554,7 @@ Z214 !s107 C:/School/CPRE381/381proj/MIPSprocessorProject2/RegFile.vhd|
 R11
 R12
 Astructural
-R137
+R134
 R2
 R3
 DEx4 work 7 regfile 0 22 Dmf3]7mClGCi2:eQdRLEX1
