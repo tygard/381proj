@@ -12,6 +12,7 @@ ENTITY id_ex IS
 		i_MemtoReg : IN std_logic_vector(0 DOWNTO 0);
 		i_ALUOp : IN std_logic_vector(5 DOWNTO 0);
 		i_MemWrite : IN std_logic_vector(0 DOWNTO 0);
+		i_RegWrite : IN std_logic_vector(0 DOWNTO 0);
 		i_immEn : IN std_logic_vector(0 DOWNTO 0);
 		i_Rs : IN std_logic_vector(31 DOWNTO 0);
 		i_Rt : IN std_logic_vector(31 DOWNTO 0);
@@ -24,6 +25,7 @@ ENTITY id_ex IS
 		o_MemtoReg : OUT std_logic_vector(0 DOWNTO 0);
 		o_ALUOp : OUT std_logic_vector(5 DOWNTO 0);
 		o_MemWrite : OUT std_logic_vector(0 DOWNTO 0);
+		o_RegWrite : OUT std_logic_vector(0 DOWNTO 0);
 		o_immEn : OUT std_logic_vector(0 DOWNTO 0);
 		o_Rs : OUT std_logic_vector(31 DOWNTO 0);
 		o_Rt : OUT std_logic_vector(31 DOWNTO 0);
@@ -82,6 +84,17 @@ BEGIN
 		i_WE => i_WE,
 		i_D => i_MemWrite,
 		o_Q => o_MemWrite
+	);
+
+	--reg-------------------------------
+	RegWrite : nbit_Reg
+	GENERIC MAP(N => 1)
+	PORT MAP(
+		i_CLK => i_CLK,
+		i_RST => i_RST,
+		i_WE => i_WE,
+		i_D => i_RegWrite,
+		o_Q => o_RegWrite
 	);
 
 	--reg-------------------------------

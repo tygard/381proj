@@ -77,6 +77,7 @@ ARCHITECTURE structure OF MIPS_Processor IS
   SIGNAL s_ID_ImmEn : std_logic;
   SIGNAL s_ID_ALUOp : std_logic_vector(5 DOWNTO 0);
   SIGNAL s_ID_MemWrite : std_logic;
+  SIGNAL s_ID_RegWrite : std_logic;
   SIGNAL s_ID_DestReg : std_logic;
   SIGNAL s_ID_Jump : std_logic;
   SIGNAL s_ID_Branch : std_logic;
@@ -95,6 +96,7 @@ ARCHITECTURE structure OF MIPS_Processor IS
   SIGNAL s_EX_MemtoReg : std_logic;
   SIGNAL s_EX_ALUOp : std_logic_vector(5 DOWNTO 0);
   SIGNAL s_EX_MemWrite : std_logic;
+  SIGNAL s_EX_RegWrite : std_logic;
   SIGNAL s_EX_immEn : std_logic;
   SIGNAL s_EX_Rs : std_logic_vector(31 DOWNTO 0);
   SIGNAL s_EX_Rt : std_logic_vector(31 DOWNTO 0);
@@ -115,7 +117,7 @@ ARCHITECTURE structure OF MIPS_Processor IS
   ----------------------MEM----------------------
   SIGNAL s_MEM_MemtoReg : std_logic;
   SIGNAL s_MEM_MemWrite : std_logic;
-  SIGNAL s_MEM_Rs : std_logic_vector(31 DOWNTO 0);
+  SIGNAL s_MEM_RegWrite : std_logic;
   SIGNAL s_MEM_Rt : std_logic_vector(31 DOWNTO 0);
   SIGNAL s_MEM_Mux4 : std_logic_vector(31 DOWNTO 0);
   SIGNAL s_MEM_Mux0 : std_logic_vector(4 DOWNTO 0);
@@ -124,7 +126,7 @@ ARCHITECTURE structure OF MIPS_Processor IS
 
   ----------------------WB----------------------
   SIGNAL s_WB_MemtoReg : std_logic;
-  SIGNAL s_WB_Rs : std_logic_vector(31 DOWNTO 0);
+  SIGNAL s_WB_RegWrite : std_logic;
   SIGNAL s_WB_Mux4 : std_logic_vector(31 DOWNTO 0);
   SIGNAL s_WB_DMemOut : std_logic_vector(31 DOWNTO 0);
   SIGNAL s_WB_Inst : std_logic_vector(31 DOWNTO 0);
@@ -295,6 +297,7 @@ ARCHITECTURE structure OF MIPS_Processor IS
       i_MemtoReg : IN std_logic_vector(0 DOWNTO 0);
       i_ALUOp : IN std_logic_vector(5 DOWNTO 0);
       i_MemWrite : IN std_logic_vector(0 DOWNTO 0);
+      i_RegWrite : IN std_logic_vector(0 DOWNTO 0);
       i_immEn : IN std_logic_vector(0 DOWNTO 0);
       i_Rs : IN std_logic_vector(31 DOWNTO 0);
       i_Rt : IN std_logic_vector(31 DOWNTO 0);
@@ -304,6 +307,7 @@ ARCHITECTURE structure OF MIPS_Processor IS
       o_MemtoReg : OUT std_logic_vector(0 DOWNTO 0);
       o_ALUOp : OUT std_logic_vector(5 DOWNTO 0);
       o_MemWrite : OUT std_logic_vector(0 DOWNTO 0);
+      o_RegWrite : OUT std_logic_vector(0 DOWNTO 0);
       o_immEn : OUT std_logic_vector(0 DOWNTO 0);
       o_Rs : OUT std_logic_vector(31 DOWNTO 0);
       o_Rt : OUT std_logic_vector(31 DOWNTO 0);
@@ -320,6 +324,7 @@ ARCHITECTURE structure OF MIPS_Processor IS
       i_WE : IN std_logic;
       i_MemtoReg : IN std_logic_vector(0 DOWNTO 0);
       i_MemWrite : IN std_logic_vector(0 DOWNTO 0);
+      i_RegWrite : IN std_logic_vector(0 DOWNTO 0);
       i_Rt : IN std_logic_vector(31 DOWNTO 0);
       i_Mux4 : IN std_logic_vector(31 DOWNTO 0);
       i_Mux0 : IN std_logic_vector(4 DOWNTO 0);
@@ -327,6 +332,7 @@ ARCHITECTURE structure OF MIPS_Processor IS
       i_ALUresult : IN std_logic_vector(63 DOWNTO 0);
       o_MemtoReg : OUT std_logic_vector(0 DOWNTO 0);
       o_MemWrite : OUT std_logic_vector(0 DOWNTO 0);
+      o_RegWrite : OUT std_logic_vector(0 DOWNTO 0);
       o_Rt : OUT std_logic_vector(31 DOWNTO 0);
       o_Mux4 : OUT std_logic_vector(31 DOWNTO 0);
       o_Mux0 : OUT std_logic_vector(4 DOWNTO 0);
@@ -341,11 +347,13 @@ ARCHITECTURE structure OF MIPS_Processor IS
       i_RST : IN std_logic;
       i_WE : IN std_logic;
       i_MemtoReg : IN std_logic_vector(0 DOWNTO 0);
+      i_RegWrite : IN std_logic_vector(0 DOWNTO 0);
       i_Mux4 : IN std_logic_vector(31 DOWNTO 0);
       i_Mux0 : IN std_logic_vector(4 DOWNTO 0);
       i_DMemOut : IN std_logic_vector(31 DOWNTO 0);
       i_Inst : IN std_logic_vector(31 DOWNTO 0);
       o_MemtoReg : OUT std_logic_vector(0 DOWNTO 0);
+      o_RegWrite : OUT std_logic_vector(0 DOWNTO 0);
       o_Mux4 : OUT std_logic_vector(31 DOWNTO 0);
       o_Mux0 : OUT std_logic_vector(4 DOWNTO 0);
       o_DMemOut : OUT std_logic_vector(31 DOWNTO 0);
@@ -442,7 +450,7 @@ BEGIN
     o_DestReg => s_ID_DestReg,
     o_jump => s_ID_Jump,
     o_branch => s_ID_Branch,
-    o_RegWrite => s_RegWr, -- dictated by outline
+    o_RegWrite => s_ID_RegWrite,
     o_JR => s_ID_JR,
     o_JAL => s_ID_JAL
   );
@@ -509,6 +517,7 @@ BEGIN
     i_MemtoReg(0) => s_ID_MemtoReg,
     i_ALUOp => s_ID_ALUOp,
     i_MemWrite(0) => s_ID_MemWrite,
+    i_RegWrite(0) => s_ID_RegWrite,
     i_immEn(0) => s_ID_ImmEn,
     i_Rs => s_ID_Rs,
     i_Rt => s_ID_Rt,
@@ -516,6 +525,7 @@ BEGIN
     i_Inst => s_ID_Inst,
     i_Mux0 => s_ID_Mux0,
     o_MemtoReg(0) => s_EX_MemtoReg,
+    o_RegWrite(0) => s_EX_RegWrite,
     o_ALUOp => s_EX_ALUOp,
     o_MemWrite(0) => s_EX_MemWrite,
     o_immEn(0) => s_EX_immEn,
@@ -598,6 +608,7 @@ BEGIN
     i_WE => '1',
     i_MemtoReg(0) => s_EX_MemtoReg,
     i_MemWrite(0) => s_EX_MemWrite,
+    i_RegWrite(0) => s_EX_RegWrite,
     i_Rt => s_EX_Rt,
     i_Mux4 => s_EX_Mux4,
     i_Mux0 => s_EX_Mux0,
@@ -605,6 +616,7 @@ BEGIN
     i_ALUresult => s_wholeALUout,
     o_MemtoReg(0) => s_MEM_MemtoReg,
     o_MemWrite(0) => s_MEM_MemWrite,
+    o_RegWrite(0) => s_MEM_RegWrite,
     o_Rt => s_MEM_Rt,
     o_Mux4 => s_MEM_Mux4,
     o_Mux0 => s_MEM_Mux0,
@@ -622,11 +634,13 @@ BEGIN
     i_RST => iRST,
     i_WE => '1',
     i_MemtoReg(0) => s_MEM_MemtoReg,
+    i_RegWrite(0) => s_MEM_RegWrite,
     i_Mux4 => s_MEM_Mux4,
     i_Mux0 => s_MEM_Mux0,
     i_DMemOut => s_DMemOut, -- dicatated by outline
     i_Inst => s_MEM_Inst,
     o_MemtoReg(0) => s_WB_MemtoReg,
+    o_RegWrite(0) => s_RegWr, -- dictated by outline
     o_Mux4 => s_WB_Mux4,
     o_Mux0 => s_RegWrAddr, -- dictated by outline,
     o_DMemOut => s_WB_DMemOut,
