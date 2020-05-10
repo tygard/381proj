@@ -88,7 +88,7 @@ ARCHITECTURE structure OF MIPS_Processor IS
   SIGNAL s_ID_Rt : std_logic_vector(31 DOWNTO 0);
   SIGNAL s_ID_SEout : std_logic_vector(31 DOWNTO 0);
   SIGNAL s_Adder0 : std_logic_vector(31 DOWNTO 0);
-  SIGNAL s_ID_Mux0 : std_logic_vector(31 DOWNTO 0);
+  SIGNAL s_ID_Mux0 : std_logic_vector(4 DOWNTO 0);
 
 
   ----------------------EX----------------------
@@ -101,7 +101,7 @@ ARCHITECTURE structure OF MIPS_Processor IS
   SIGNAL s_EX_SEout : std_logic_vector(31 DOWNTO 0);
   SIGNAL s_EX_Inst : std_logic_vector(31 DOWNTO 0);
   SIGNAL s_Mux1 : std_logic_vector(31 DOWNTO 0);
-  SIGNAL s_EX_Mux0 : std_logic_vector(31 DOWNTO 0);
+  SIGNAL s_EX_Mux0 : std_logic_vector(4 DOWNTO 0);
   SIGNAL s_ALUctrl : std_logic_vector(4 DOWNTO 0);
   SIGNAL s_wholeALUout : std_logic_vector(63 DOWNTO 0);
   SIGNAL s_SHAMT : std_logic_vector(4 DOWNTO 0);
@@ -118,7 +118,7 @@ ARCHITECTURE structure OF MIPS_Processor IS
   SIGNAL s_MEM_Rs : std_logic_vector(31 DOWNTO 0);
   SIGNAL s_MEM_Rt : std_logic_vector(31 DOWNTO 0);
   SIGNAL s_MEM_Mux4 : std_logic_vector(31 DOWNTO 0);
-  SIGNAL s_MEM_Mux0 : std_logic_vector(31 DOWNTO 0);
+  SIGNAL s_MEM_Mux0 : std_logic_vector(4 DOWNTO 0);
   SIGNAL s_MEM_Inst : std_logic_vector(31 DOWNTO 0);
   SIGNAL s_MEM_ALUresult : std_logic_vector(63 DOWNTO 0);
 
@@ -300,7 +300,7 @@ ARCHITECTURE structure OF MIPS_Processor IS
       i_Rt : IN std_logic_vector(31 DOWNTO 0);
       i_SEout : IN std_logic_vector(31 DOWNTO 0);
       i_Inst : IN std_logic_vector(31 DOWNTO 0);
-      i_Mux0 : IN std_logic_vector(31 DOWNTO 0);
+      i_Mux0 : IN std_logic_vector(4 DOWNTO 0);
       o_MemtoReg : OUT std_logic_vector(0 DOWNTO 0);
       o_ALUOp : OUT std_logic_vector(5 DOWNTO 0);
       o_MemWrite : OUT std_logic_vector(0 DOWNTO 0);
@@ -309,7 +309,7 @@ ARCHITECTURE structure OF MIPS_Processor IS
       o_Rt : OUT std_logic_vector(31 DOWNTO 0);
       o_SEout : OUT std_logic_vector(31 DOWNTO 0);
       o_Inst : OUT std_logic_vector(31 DOWNTO 0);
-      o_Mux0 : OUT std_logic_vector(31 DOWNTO 0)
+      o_Mux0 : OUT std_logic_vector(4 DOWNTO 0)
     );
   END COMPONENT;
 
@@ -322,14 +322,14 @@ ARCHITECTURE structure OF MIPS_Processor IS
       i_MemWrite : IN std_logic_vector(0 DOWNTO 0);
       i_Rt : IN std_logic_vector(31 DOWNTO 0);
       i_Mux4 : IN std_logic_vector(31 DOWNTO 0);
-      i_Mux0 : IN std_logic_vector(31 DOWNTO 0);
+      i_Mux0 : IN std_logic_vector(4 DOWNTO 0);
       i_Inst : IN std_logic_vector(31 DOWNTO 0);
       i_ALUresult : IN std_logic_vector(63 DOWNTO 0);
       o_MemtoReg : OUT std_logic_vector(0 DOWNTO 0);
       o_MemWrite : OUT std_logic_vector(0 DOWNTO 0);
       o_Rt : OUT std_logic_vector(31 DOWNTO 0);
       o_Mux4 : OUT std_logic_vector(31 DOWNTO 0);
-      o_Mux0 : OUT std_logic_vector(31 DOWNTO 0);
+      o_Mux0 : OUT std_logic_vector(4 DOWNTO 0);
       o_Inst : OUT std_logic_vector(31 DOWNTO 0);
       o_ALUresult : OUT std_logic_vector(63 DOWNTO 0)
     );
@@ -342,12 +342,12 @@ ARCHITECTURE structure OF MIPS_Processor IS
       i_WE : IN std_logic;
       i_MemtoReg : IN std_logic_vector(0 DOWNTO 0);
       i_Mux4 : IN std_logic_vector(31 DOWNTO 0);
-      i_Mux0 : IN std_logic_vector(31 DOWNTO 0);
+      i_Mux0 : IN std_logic_vector(4 DOWNTO 0);
       i_DMemOut : IN std_logic_vector(31 DOWNTO 0);
       i_Inst : IN std_logic_vector(31 DOWNTO 0);
       o_MemtoReg : OUT std_logic_vector(0 DOWNTO 0);
       o_Mux4 : OUT std_logic_vector(31 DOWNTO 0);
-      o_Mux0 : OUT std_logic_vector(31 DOWNTO 0);
+      o_Mux0 : OUT std_logic_vector(4 DOWNTO 0);
       o_DMemOut : OUT std_logic_vector(31 DOWNTO 0);
       o_Inst : OUT std_logic_vector(31 DOWNTO 0)
     );

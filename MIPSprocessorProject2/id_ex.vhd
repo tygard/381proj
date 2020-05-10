@@ -17,7 +17,7 @@ ENTITY id_ex IS
 		i_Rt : IN std_logic_vector(31 DOWNTO 0);
 		i_SEout : IN std_logic_vector(31 DOWNTO 0);
 		i_Inst : IN std_logic_vector(31 DOWNTO 0);
-		i_Mux0 : IN std_logic_vector(31 DOWNTO 0);
+		i_Mux0 : IN std_logic_vector(4 DOWNTO 0);
 
 		--------------------------------------------------------------
 
@@ -29,7 +29,7 @@ ENTITY id_ex IS
 		o_Rt : OUT std_logic_vector(31 DOWNTO 0);
 		o_SEout : OUT std_logic_vector(31 DOWNTO 0);
 		o_Inst : OUT std_logic_vector(31 DOWNTO 0);
-		o_Mux0 : OUT std_logic_vector(31 DOWNTO 0)
+		o_Mux0 : OUT std_logic_vector(4 DOWNTO 0)
 	);
 
 END id_ex;
@@ -141,7 +141,7 @@ BEGIN
 
 	--reg-------------------------------
 	Mux0 : nbit_Reg
-	GENERIC MAP(N => 32)
+	GENERIC MAP(N => 5)
 	PORT MAP(
 		i_CLK => i_CLK,
 		i_RST => i_RST,
