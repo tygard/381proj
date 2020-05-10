@@ -9,26 +9,26 @@ z2
 cModel Technology
 Z0 dC:/School/CPRE381/381proj/alu
 Eandg32
-Z1 w1587669631
+Z1 w1588284273
 Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
 Z3 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
-R0
-Z4 8C:/School/CPRE381/381proj/alu/and32.vhd
-Z5 FC:/School/CPRE381/381proj/alu/and32.vhd
+Z4 dC:/Users/adnan/Documents/GitHub/381proj/alu
+Z5 8C:/Users/adnan/Documents/GitHub/381proj/alu/and32.vhd
+Z6 FC:/Users/adnan/Documents/GitHub/381proj/alu/and32.vhd
 l0
 L4
 VK0[DRJC?@72c;7WhJP2@;2
 !s100 ?4iko^J8=z^^5zW6J11iS2
-Z6 OP;C;10.4a;61
+Z7 OP;C;10.4a;61
 32
-Z7 !s110 1589060089
+Z8 !s110 1589073927
 !i10b 1
-Z8 !s108 1589060088.000000
-Z9 !s90 -reportprogress|300|-work|work|C:/School/CPRE381/381proj/alu/and32.vhd|
-Z10 !s107 C:/School/CPRE381/381proj/alu/and32.vhd|
+Z9 !s108 1589073927.000000
+Z10 !s90 -reportprogress|300|-work|work|C:/Users/adnan/Documents/GitHub/381proj/alu/and32.vhd|
+Z11 !s107 C:/Users/adnan/Documents/GitHub/381proj/alu/and32.vhd|
 !i113 1
-Z11 o-work work -O0
-Z12 tExplicit 1
+Z12 o-work work -O0
+Z13 tExplicit 1
 Adataflow
 R2
 R3
@@ -37,37 +37,37 @@ l13
 L12
 VQ<UIlNYNaHGz2]jO`KPBN2
 !s100 S8=z@2`4]4A`[zmb5@[Yd3
-R6
-32
 R7
-!i10b 1
+32
 R8
+!i10b 1
 R9
 R10
-!i113 1
 R11
+!i113 1
 R12
+R13
 Ebeq
-Z13 w1587608921
+R1
 R2
 R3
-R0
-Z14 8C:/School/CPRE381/381proj/alu/beq.vhd
-Z15 FC:/School/CPRE381/381proj/alu/beq.vhd
+R4
+Z14 8C:/Users/adnan/Documents/GitHub/381proj/alu/beq.vhd
+Z15 FC:/Users/adnan/Documents/GitHub/381proj/alu/beq.vhd
 l0
 L6
 V_9E0NLHCX<Y]gCWi2]:nA1
 !s100 5TaVF4A8eD[VRD5^LDoCV2
-R6
-32
 R7
+32
+R8
 !i10b 1
-Z16 !s108 1589060089.000000
-Z17 !s90 -reportprogress|300|-work|work|C:/School/CPRE381/381proj/alu/beq.vhd|
-Z18 !s107 C:/School/CPRE381/381proj/alu/beq.vhd|
+R9
+Z16 !s90 -reportprogress|300|-work|work|C:/Users/adnan/Documents/GitHub/381proj/alu/beq.vhd|
+Z17 !s107 C:/Users/adnan/Documents/GitHub/381proj/alu/beq.vhd|
 !i113 1
-R11
 R12
+R13
 Adataflow
 R2
 R3
@@ -76,37 +76,37 @@ l15
 L14
 V6A@fJVSEWZH6GcPCebTRF2
 !s100 nMjiH;gbIz>T9^c:0FIN^3
-R6
-32
 R7
+32
+R8
 !i10b 1
+R9
 R16
 R17
-R18
 !i113 1
-R11
 R12
+R13
 Ef_alu
-Z19 w1589058885
+Z18 w1589065955
 R2
 R3
-R0
-Z20 8C:/School/CPRE381/381proj/alu/f11_alu.vhd
-Z21 FC:/School/CPRE381/381proj/alu/f11_alu.vhd
+R4
+8C:/Users/adnan/Documents/GitHub/381proj/alu/f11_alu.vhd
+FC:/Users/adnan/Documents/GitHub/381proj/alu/f11_alu.vhd
 l0
 L9
 V^ZaMJ6[oGSH^CeE_o[ag^1
 !s100 R?2F1@DZA_MiF?AfO>FU22
-R6
-32
 R7
+32
+!s110 1589073945
 !i10b 1
-R16
-Z22 !s90 -reportprogress|300|-work|work|C:/School/CPRE381/381proj/alu/f11_alu.vhd|
-Z23 !s107 C:/School/CPRE381/381proj/alu/f11_alu.vhd|
+!s108 1589073945.000000
+!s90 -reportprogress|300|-work|work|C:/Users/adnan/Documents/GitHub/381proj/alu/f11_alu.vhd|
+!s107 C:/Users/adnan/Documents/GitHub/381proj/alu/f11_alu.vhd|
 !i113 1
-R11
 R12
+R13
 Astructural
 R2
 R3
@@ -115,37 +115,40 @@ l199
 L19
 V[QfG5THI_3RlUGHFBdFcK2
 !s100 ?M76aXZ9fJ:IgT?ldcdLn0
-R6
+R7
 32
 !s110 1587856132
 !i10b 1
 !s108 1587856132.000000
-R22
-R23
+!s90 -reportprogress|300|-work|work|C:/School/CPRE381/381proj/alu/f11_alu.vhd|
+!s107 C:/School/CPRE381/381proj/alu/f11_alu.vhd|
 !i113 1
-R11
 R12
+R13
+R0
+FC:/School/CPRE381/381proj/alu/f11_alu.vhd
+8C:/School/CPRE381/381proj/alu/f11_alu.vhd
 Einvg
 R1
 R2
 R3
-R0
-Z24 8C:/School/CPRE381/381proj/alu/invg32.vhd
-Z25 FC:/School/CPRE381/381proj/alu/invg32.vhd
+R4
+Z19 8C:/Users/adnan/Documents/GitHub/381proj/alu/invg32.vhd
+Z20 FC:/Users/adnan/Documents/GitHub/381proj/alu/invg32.vhd
 l0
 L4
 V5kW7K=L0Q@9QOf?G_B;kz0
 !s100 O>=2?6oUUGf;IHla>RA]i2
-R6
-32
 R7
+32
+R8
 !i10b 1
-R16
-Z26 !s90 -reportprogress|30|-work|work|C:/School/CPRE381/381proj/alu/invg32.vhd|
-Z27 !s107 C:/School/CPRE381/381proj/alu/invg32.vhd|
+R9
+Z21 !s90 -reportprogress|30|-work|work|C:/Users/adnan/Documents/GitHub/381proj/alu/invg32.vhd|
+Z22 !s107 C:/Users/adnan/Documents/GitHub/381proj/alu/invg32.vhd|
 !i113 1
-R11
 R12
+R13
 Adataflow
 R2
 R3
@@ -154,37 +157,76 @@ l12
 L11
 V[9028gWF^kZ>@?hAaDW>^0
 !s100 z>TRmS5Vb@I5me`cGFTM33
-R6
-32
 R7
+32
+R8
 !i10b 1
-R16
-R26
-R27
+R9
+R21
+R22
 !i113 1
-R11
 R12
-Emux32t1
-Z28 w1587695290
+R13
+Em_n_bit
+R18
 R2
 R3
-R0
-Z29 8C:/School/CPRE381/381proj/alu/32t1mux32bit.vhd
-Z30 FC:/School/CPRE381/381proj/alu/32t1mux32bit.vhd
+R4
+Z23 8C:/Users/adnan/Documents/GitHub/381proj/alu/final_mult.vhd
+Z24 FC:/Users/adnan/Documents/GitHub/381proj/alu/final_mult.vhd
+l0
+L4
+VOJW<W?kJJVGfEV_=J?SnI2
+!s100 EmhTPVfgI0FN0Y4e6i=5`3
+R7
+32
+R8
+!i10b 1
+R9
+Z25 !s90 -reportprogress|30|-work|work|C:/Users/adnan/Documents/GitHub/381proj/alu/final_mult.vhd|
+Z26 !s107 C:/Users/adnan/Documents/GitHub/381proj/alu/final_mult.vhd|
+!i113 1
+R12
+R13
+Astructural
+R2
+R3
+DEx4 work 7 m_n_bit 0 22 OJW<W?kJJVGfEV_=J?SnI2
+l41
+L13
+VkjS<[Gbhgg3I;2Sfe]S`S0
+!s100 4IEfTe<^M=gkf0^IXCk092
+R7
+32
+R8
+!i10b 1
+R9
+R25
+R26
+!i113 1
+R12
+R13
+Emux32t1
+R1
+R2
+R3
+R4
+Z27 8C:/Users/adnan/Documents/GitHub/381proj/alu/32t1mux32bit.vhd
+Z28 FC:/Users/adnan/Documents/GitHub/381proj/alu/32t1mux32bit.vhd
 l0
 L4
 VS_m3oGHN3SQbhF3Z[d0Y92
 !s100 oiSPEanA@E_0_9li8AP^G2
-R6
+R7
 32
-Z31 !s110 1589060088
-!i10b 1
 R8
-Z32 !s90 -reportprogress|300|-work|work|C:/School/CPRE381/381proj/alu/32t1mux32bit.vhd|
-Z33 !s107 C:/School/CPRE381/381proj/alu/32t1mux32bit.vhd|
+!i10b 1
+R9
+Z29 !s90 -reportprogress|300|-work|work|C:/Users/adnan/Documents/GitHub/381proj/alu/32t1mux32bit.vhd|
+Z30 !s107 C:/Users/adnan/Documents/GitHub/381proj/alu/32t1mux32bit.vhd|
 !i113 1
-R11
 R12
+R13
 Adataflow
 R2
 R3
@@ -193,37 +235,37 @@ l46
 L43
 VOz_C2o5hfQcWa^bhNl4813
 !s100 l63UKX2dm64JPmlfmN;F72
-R6
+R7
 32
-R31
-!i10b 1
 R8
-R32
-R33
+!i10b 1
+R9
+R29
+R30
 !i113 1
-R11
 R12
+R13
 Emux32t1bit1wide
-Z34 w1587854644
+R1
 R2
 R3
-R0
-Z35 8C:/School/CPRE381/381proj/alu/mux32t1bit1wide.vhd
-Z36 FC:/School/CPRE381/381proj/alu/mux32t1bit1wide.vhd
+R4
+Z31 8C:/Users/adnan/Documents/GitHub/381proj/alu/mux32t1bit1wide.vhd
+Z32 FC:/Users/adnan/Documents/GitHub/381proj/alu/mux32t1bit1wide.vhd
 l0
 L4
 VF3_gXmMA<WNd0YbRSKV=J3
 !s100 Q^Sj2HO3Zf`n597:mEg^T0
-R6
-32
 R7
+32
+R8
 !i10b 1
-R16
-Z37 !s90 -reportprogress|30|-work|work|C:/School/CPRE381/381proj/alu/mux32t1bit1wide.vhd|
-Z38 !s107 C:/School/CPRE381/381proj/alu/mux32t1bit1wide.vhd|
+R9
+Z33 !s90 -reportprogress|30|-work|work|C:/Users/adnan/Documents/GitHub/381proj/alu/mux32t1bit1wide.vhd|
+Z34 !s107 C:/Users/adnan/Documents/GitHub/381proj/alu/mux32t1bit1wide.vhd|
 !i113 1
-R11
 R12
+R13
 Adataflow
 R2
 R3
@@ -232,37 +274,37 @@ l46
 L43
 VU4A2BJ7T]ihR8[Id@KN==3
 !s100 Og<6NIJke3nAgB[hI3dJI0
-R6
-32
 R7
+32
+R8
 !i10b 1
-R16
-R37
-R38
+R9
+R33
+R34
 !i113 1
-R11
 R12
+R13
 Enorg2
-Z39 w1587608167
+Z35 w1587608167
 R2
 R3
 R0
-Z40 8C:/School/CPRE381/381proj/alu/norg2.vhd
-Z41 FC:/School/CPRE381/381proj/alu/norg2.vhd
+Z36 8C:/School/CPRE381/381proj/alu/norg2.vhd
+Z37 FC:/School/CPRE381/381proj/alu/norg2.vhd
 l0
 L23
 VkW2aX[olL7NkggIWLIkl=3
 !s100 n]@EFF]IP5V]ibmNoZeC51
-R6
+R7
 32
-Z42 !s110 1587608640
+Z38 !s110 1587608640
 !i10b 1
-Z43 !s108 1587608640.000000
-Z44 !s90 -reportprogress|300|-work|work|C:/School/CPRE381/381proj/alu/norg2.vhd|
-Z45 !s107 C:/School/CPRE381/381proj/alu/norg2.vhd|
+Z39 !s108 1587608640.000000
+Z40 !s90 -reportprogress|300|-work|work|C:/School/CPRE381/381proj/alu/norg2.vhd|
+Z41 !s107 C:/School/CPRE381/381proj/alu/norg2.vhd|
 !i113 1
-R11
 R12
+R13
 Adataflow
 R2
 R3
@@ -271,37 +313,37 @@ l32
 L31
 VhOKDnFz[T`J^S>7za@OVT3
 !s100 haZ6UXNa9mnZ03P;LLGHA2
-R6
+R7
 32
-R42
+R38
 !i10b 1
-R43
-R44
-R45
+R39
+R40
+R41
 !i113 1
-R11
 R12
+R13
 Enorg32
 R1
 R2
 R3
-R0
-R40
-R41
+R4
+Z42 8C:/Users/adnan/Documents/GitHub/381proj/alu/norg2.vhd
+Z43 FC:/Users/adnan/Documents/GitHub/381proj/alu/norg2.vhd
 l0
 L23
 VN1l0A0:0[lM]NjjS@b=HC2
 !s100 FFK;<X67U:f]Q6iCe25[N1
-R6
+R7
 32
-Z46 !s110 1589060090
+R8
 !i10b 1
-Z47 !s108 1589060090.000000
-Z48 !s90 -reportprogress|30|-work|work|C:/School/CPRE381/381proj/alu/norg2.vhd|
-R45
+R9
+Z44 !s90 -reportprogress|30|-work|work|C:/Users/adnan/Documents/GitHub/381proj/alu/norg2.vhd|
+Z45 !s107 C:/Users/adnan/Documents/GitHub/381proj/alu/norg2.vhd|
 !i113 1
-R11
 R12
+R13
 Adataflow
 R2
 R3
@@ -310,37 +352,37 @@ l32
 L31
 VG@o?C0HME1MnI<Z?m>elX2
 !s100 Q:GHoNEdQQ8O;Lamn7Pk23
-R6
+R7
 32
-R46
+R8
 !i10b 1
-R47
-R48
+R9
+R44
 R45
 !i113 1
-R11
 R12
+R13
 Eorg32
 R1
 R2
 R3
-R0
-Z49 8C:/School/CPRE381/381proj/alu/org32.vhd
-Z50 FC:/School/CPRE381/381proj/alu/org32.vhd
+R4
+Z46 8C:/Users/adnan/Documents/GitHub/381proj/alu/org32.vhd
+Z47 FC:/Users/adnan/Documents/GitHub/381proj/alu/org32.vhd
 l0
 L4
 Vb7[dS6ek56O@;B0j4CC8d3
 !s100 FIh;[:of[h0FXFSAf<D>e1
-R6
+R7
 32
-R46
+R8
 !i10b 1
-R47
-Z51 !s90 -reportprogress|30|-work|work|C:/School/CPRE381/381proj/alu/org32.vhd|
-Z52 !s107 C:/School/CPRE381/381proj/alu/org32.vhd|
+R9
+Z48 !s90 -reportprogress|30|-work|work|C:/Users/adnan/Documents/GitHub/381proj/alu/org32.vhd|
+Z49 !s107 C:/Users/adnan/Documents/GitHub/381proj/alu/org32.vhd|
 !i113 1
-R11
 R12
+R13
 Adataflow
 R2
 R3
@@ -349,52 +391,52 @@ l13
 L12
 VQjcF9[gEUVzidcX;WSL;l0
 !s100 :[=:ckMWa^X;NVR<LO@OD1
-R6
+R7
 32
-R46
+R8
 !i10b 1
-R47
-R51
-R52
+R9
+R48
+R49
 !i113 1
-R11
 R12
+R13
 Eslt
-R39
+R1
 R2
 R3
-R0
-Z53 8C:/School/CPRE381/381proj/alu/slt.vhd
-Z54 FC:/School/CPRE381/381proj/alu/slt.vhd
+R4
+Z50 8C:/Users/adnan/Documents/GitHub/381proj/alu/slt.vhd
+Z51 FC:/Users/adnan/Documents/GitHub/381proj/alu/slt.vhd
 l0
 L6
 V]dSYLT`9m[M6m;P`<MjeL0
 !s100 G3k8NVAjdKmD1=Ymc>Ae70
-R6
+R7
 32
-R46
+R8
 !i10b 1
-R47
-Z55 !s90 -reportprogress|30|-work|work|C:/School/CPRE381/381proj/alu/slt.vhd|
-Z56 !s107 C:/School/CPRE381/381proj/alu/slt.vhd|
+R9
+Z52 !s90 -reportprogress|30|-work|work|C:/Users/adnan/Documents/GitHub/381proj/alu/slt.vhd|
+Z53 !s107 C:/Users/adnan/Documents/GitHub/381proj/alu/slt.vhd|
 !i113 1
-R11
 R12
+R13
 Adataflow
 R2
 R3
-Z57 DEx4 work 3 slt 0 22 ]dSYLT`9m[M6m;P`<MjeL0
+DEx4 work 3 slt 0 22 ]dSYLT`9m[M6m;P`<MjeL0
 l15
 L14
-Z58 VV]On2LMZN]0T]LmQz5lbA0
-Z59 !s100 0[dHfRS:5J8Ic9YgbAaJ33
-R6
+VV]On2LMZN]0T]LmQz5lbA0
+!s100 0[dHfRS:5J8Ic9YgbAaJ33
+R7
 32
-R46
+R8
 !i10b 1
-R47
-R55
-R56
+R9
+R52
+R53
 !i113 1
-R11
 R12
+R13
