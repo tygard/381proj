@@ -23,7 +23,7 @@ ENTITY id_ex IS
 		o_MemtoReg : OUT std_logic_vector(0 DOWNTO 0);
 		o_ALUOp : OUT std_logic_vector(5 DOWNTO 0);
 		o_MemWrite : OUT std_logic_vector(0 DOWNTO 0);
-		o_immEn : OUT std_logic_vector(0 DOWNTO 0);;
+		o_immEn : OUT std_logic_vector(0 DOWNTO 0);
 		o_Rs : OUT std_logic_vector(31 DOWNTO 0);
 		o_Rt : OUT std_logic_vector(31 DOWNTO 0);
 		o_SEout : OUT std_logic_vector(31 DOWNTO 0);
