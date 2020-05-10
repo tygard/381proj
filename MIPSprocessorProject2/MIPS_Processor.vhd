@@ -729,4 +729,7 @@ BEGIN
     i_D1 => "11111",
     o_O => s_RegWrAddr
   );
+
+  s_Halt <= '1' when s_WB_Inst(31 downto 26) = "010100" else '0';
+  
 END structure;
