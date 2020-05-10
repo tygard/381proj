@@ -160,12 +160,6 @@ ARCHITECTURE structural OF f_alu IS
 	END COMPONENT;
 
 	--beq
-	COMPONENT beq IS
-		PORT (
-			i_A : IN std_logic_vector(31 DOWNTO 0);
-			i_B : IN std_logic_vector(31 DOWNTO 0);
-			o_F : OUT std_logic);
-	END COMPONENT;
 
 	--bne
 	--(just an inverted beq)
@@ -203,11 +197,6 @@ ARCHITECTURE structural OF f_alu IS
 	SIGNAL s_slt : std_logic_vector(N - 1 DOWNTO 0);
 	SIGNAL s_sltu : std_logic_vector(N - 1 DOWNTO 0);
 
-	SIGNAL s_beq : std_logic_vector(N - 1 DOWNTO 0);
-	SIGNAL s_bne : std_logic_vector(N - 1 DOWNTO 0);
-	SIGNAL s_beq_bit : std_logic;
-	SIGNAL s_bne_bit : std_logic;
-
 BEGIN
 
 	--arch:
@@ -242,8 +231,8 @@ BEGIN
 		i_D18 => x"00000000", -- j
 		i_D19 => x"00000000", -- jal
 
-		i_D20 => s_beq, -- beq
-		i_D21 => s_bne, -- bne
+		i_D20 => x"00000000", -- beq
+		i_D21 => x"00000000", -- bne
 		i_D22 => s_add, -- addi
 		i_D23 => s_add, -- addiu
 
@@ -371,28 +360,8 @@ BEGIN
 		o_F => s_nor);
 
 	--s_slt,---------------------------- 
-	-- g_slt: slt
-	-- 		port MAP(i_A   =>  i_A,
-	-- 				i_B	   =>  i_B,
-	-- 				o_F  =>    s_slt_bit);
-	-- 				s_slt <= x"0000000" & "000" & s_slt_bit;
 	s_slt <= x"0000000" & "000" & s_sub(31);
 	s_sltu <= x"0000000" & "000" & NOT s_sub_carry;
-
-	--s_beq,------------------------- 
-	g_beq : beq
-	PORT MAP(
-		i_A => i_A,
-		i_B => i_B,
-		o_F => s_beq_bit);
-	s_beq <= x"0000000" & "000" & s_beq_bit;
-
-	--s_bne,-------------------------
-	-- g_invg: invg32
-	-- 		port MAP( i_A  =>    s_beq,
-	-- 				o_F    =>    s_bne);
-	s_bne_bit <= NOT s_beq_bit;
-	s_bne <= x"0000000" & "000" & s_bne_bit;
 
 	----------------------------
 END structural;
