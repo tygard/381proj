@@ -356,7 +356,7 @@ ARCHITECTURE structure OF MIPS_Processor IS
       o_JAL : OUT std_logic_vector(0 DOWNTO 0);
       o_Rs : OUT std_logic_vector(31 DOWNTO 0);
       o_Rt : OUT std_logic_vector(31 DOWNTO 0);
-      o_Mux4 : IN std_logic_vector(31 DOWNTO 0);
+      o_Mux4 : OUT std_logic_vector(31 DOWNTO 0);
       o_Inst : OUT std_logic_vector(31 DOWNTO 0);
       o_NextInstAddr : OUT std_logic_vector(31 DOWNTO 0);
       o_ALUresult : OUT std_logic_vector(63 DOWNTO 0)
