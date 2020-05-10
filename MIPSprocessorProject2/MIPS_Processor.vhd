@@ -66,86 +66,64 @@ ARCHITECTURE structure OF MIPS_Processor IS
   -- signals -----------------------------------------------------------
 
   ----------------------IF----------------------
-  SIGNAL s_oPC : std_logic_vector(31 DOWNTO 0);
-  SIGNAL s_nextPC : std_logic_vector(31 DOWNTO 0);
-  SIGNAL s_Mux5 : std_logic_vector(31 DOWNTO 0);
+  SIGNAL s_IF_oPC : std_logic_vector(31 DOWNTO 0);
+  SIGNAL s_IF_nextPC : std_logic_vector(31 DOWNTO 0);
 
   ----------------------ID----------------------
   SIGNAL s_ID_Inst : std_logic_vector(31 DOWNTO 0);
   SIGNAL s_ID_NextInstAddr : std_logic_vector(31 DOWNTO 0);
-  SIGNAL s_Signed : std_logic;
-  SIGNAL s_MemtoReg : std_logic;
-  SIGNAL s_ALUsrc : std_logic;
-  SIGNAL s_ALUOp : std_logic_vector(5 DOWNTO 0);
-  SIGNAL s_MemWrite : std_logic;
-  SIGNAL s_RegDst : std_logic;
-  SIGNAL s_Jump : std_logic;
-  SIGNAL s_Branch : std_logic;
-  SIGNAL s_JR : std_logic;
-  SIGNAL s_JAL : std_logic;
-  SIGNAL s_Rs : std_logic_vector(31 DOWNTO 0);
-  SIGNAL s_Rt : std_logic_vector(31 DOWNTO 0);
-  SIGNAL s_Imm : std_logic_vector(31 DOWNTO 0);
+  SIGNAL s_ID_Signed : std_logic;
+  SIGNAL s_ID_MemtoReg : std_logic;
+  SIGNAL s_ID_ImmEn : std_logic;
+  SIGNAL s_ID_ALUOp : std_logic_vector(5 DOWNTO 0);
+  SIGNAL s_ID_MemWrite : std_logic;
+  SIGNAL s_ID_DestReg : std_logic;
+  SIGNAL s_ID_Jump : std_logic;
+  SIGNAL s_ID_Branch : std_logic;
+  SIGNAL s_ID_Equality : std_logic;
+  SIGNAL s_ID_BandEq : std_logic;
+  SIGNAL s_ID_JR : std_logic;
+  SIGNAL s_ID_JAL : std_logic;
+  SIGNAL s_ID_Rs : std_logic_vector(31 DOWNTO 0);
+  SIGNAL s_ID_Rt : std_logic_vector(31 DOWNTO 0);
+  SIGNAL s_ID_SEout : std_logic_vector(31 DOWNTO 0);
+  SIGNAL s_Adder0 : std_logic_vector(31 DOWNTO 0);
 
   ----------------------EX----------------------
-  SIGNAL s_EX_DestReg : std_logic;
-  SIGNAL s_EX_Jump : std_logic;
-  SIGNAL s_EX_Branch : std_logic;
   SIGNAL s_EX_MemtoReg : std_logic;
   SIGNAL s_EX_ALUOp : std_logic_vector(5 DOWNTO 0);
   SIGNAL s_EX_MemWrite : std_logic;
   SIGNAL s_EX_immEn : std_logic;
-  SIGNAL s_EX_JR : std_logic;
-  SIGNAL s_EX_JAL : std_logic;
   SIGNAL s_EX_Rs : std_logic_vector(31 DOWNTO 0);
   SIGNAL s_EX_Rt : std_logic_vector(31 DOWNTO 0);
   SIGNAL s_EX_SEout : std_logic_vector(31 DOWNTO 0);
   SIGNAL s_EX_Inst : std_logic_vector(31 DOWNTO 0);
-  SIGNAL s_EX_NextInstAddr : std_logic_vector(31 DOWNTO 0);
   SIGNAL s_Mux1 : std_logic_vector(31 DOWNTO 0);
   SIGNAL s_ALUctrl : std_logic_vector(4 DOWNTO 0);
   SIGNAL s_wholeALUout : std_logic_vector(63 DOWNTO 0);
-  SIGNAL s_Zero : std_logic;
   SIGNAL s_SHAMT : std_logic_vector(4 DOWNTO 0);
   SIGNAL s_ShiftEn : std_logic;
   SIGNAL s_VarEn : std_logic;
   SIGNAL s_D : std_logic;
   SIGNAL s_T : std_logic;
   SIGNAL s_Y : std_logic_vector(31 DOWNTO 0);
-  SIGNAL s_Mux4 : std_logic_vector(31 DOWNTO 0);
+  SIGNAL s_EX_Mux4 : std_logic_vector(31 DOWNTO 0);
 
   ----------------------MEM----------------------
-  SIGNAL s_MEM_DestReg : std_logic;
-  SIGNAL s_MEM_Jump : std_logic;
-  SIGNAL s_MEM_BandO : std_logic;
   SIGNAL s_MEM_MemtoReg : std_logic;
   SIGNAL s_MEM_MemWrite : std_logic;
-  SIGNAL s_MEM_JR : std_logic;
-  SIGNAL s_MEM_JAL : std_logic;
   SIGNAL s_MEM_Rs : std_logic_vector(31 DOWNTO 0);
   SIGNAL s_MEM_Rt : std_logic_vector(31 DOWNTO 0);
   SIGNAL s_MEM_Mux4 : std_logic_vector(31 DOWNTO 0);
   SIGNAL s_MEM_Inst : std_logic_vector(31 DOWNTO 0);
-  SIGNAL s_MEM_NextInstAddr : std_logic_vector(31 DOWNTO 0);
   SIGNAL s_MEM_ALUresult : std_logic_vector(63 DOWNTO 0);
 
   ----------------------WB----------------------
-
-  SIGNAL s_WB_DestReg : std_logic;
-  SIGNAL s_WB_Jump : std_logic;
-  SIGNAL s_WB_BandO : std_logic;
   SIGNAL s_WB_MemtoReg : std_logic;
-  SIGNAL s_WB_JR : std_logic;
-  SIGNAL s_WB_JAL : std_logic;
   SIGNAL s_WB_Rs : std_logic_vector(31 DOWNTO 0);
   SIGNAL s_WB_Mux4 : std_logic_vector(31 DOWNTO 0);
   SIGNAL s_WB_DMemOut : std_logic_vector(31 DOWNTO 0);
   SIGNAL s_WB_Inst : std_logic_vector(31 DOWNTO 0);
-  SIGNAL s_WB_NextInstAddr : std_logic_vector(31 DOWNTO 0);
-  SIGNAL s_Adder0 : std_logic_vector(31 DOWNTO 0);
-  SIGNAL s_Mux2 : std_logic_vector(31 DOWNTO 0);
-  SIGNAL s_Mux0 : std_logic_vector(4 DOWNTO 0);
-
   ----------------------------------------------
 
   -- components -----------------------------------------------------------
@@ -202,11 +180,14 @@ ARCHITECTURE structure OF MIPS_Processor IS
   COMPONENT RegFile IS
     GENERIC (N : INTEGER := 32);
     PORT (
-      i_WA : IN std_logic_vector(4 DOWNTO 0);
-      i_WD : IN std_logic_vector(31 DOWNTO 0);
+      i_WA0 : IN std_logic_vector(4 DOWNTO 0);
+      i_WA1 : IN std_logic_vector(4 DOWNTO 0);
+      i_WD0 : IN std_logic_vector(31 DOWNTO 0);
+      i_WD1 : IN std_logic_vector(31 DOWNTO 0);
       i_RA0 : IN std_logic_vector(4 DOWNTO 0);
       i_RA1 : IN std_logic_vector(4 DOWNTO 0);
-      i_WE : IN std_logic;
+      i_WE0 : IN std_logic;
+      i_WE1 : IN std_logic;
       i_RST : IN std_logic;
       i_CLK : IN std_logic;
       o_q0 : OUT std_logic_vector(31 DOWNTO 0);
@@ -220,6 +201,15 @@ ARCHITECTURE structure OF MIPS_Processor IS
       input : IN std_logic_vector(Y - 1 DOWNTO 0);
       sign : IN std_logic;
       output : OUT std_logic_vector(31 DOWNTO 0));
+  END COMPONENT;
+
+  COMPONENT beq IS
+    PORT (
+      i_A : IN std_logic_vector(31 DOWNTO 0);
+      i_B : IN std_logic_vector(31 DOWNTO 0);
+      o_F : OUT std_logic
+    );
+
   END COMPONENT;
 
   COMPONENT mux2t1_N IS
@@ -389,11 +379,11 @@ BEGIN
 
   fetch : fetch_logic
   PORT MAP(
-    i_Branch => s_WB_BandO,
-    i_Jump => s_WB_Jump,
-    i_instr => s_WB_Inst,
+    i_Branch => s_ID_BandEq,
+    i_Jump => s_ID_Jump,
+    i_instr => s_ID_Inst,
     i_PC => s_NextInstAddr,
-    o_PC => s_oPC
+    o_PC => s_IF_oPC
   );
 
   PC : PC_reg
@@ -401,17 +391,17 @@ BEGIN
     i_CLK => iCLK,
     i_RST => iRST,
     i_WE => '1',
-    i_D => s_nextPC,
-    o_Q => s_NextInstAddr
+    i_D => s_IF_nextPC,
+    o_Q => s_NextInstAddr -- dictated by outline
   );
 
   mux5 : mux2t1_N
   GENERIC MAP(N => 32)
   PORT MAP(
-    i_S => s_JR,
-    i_D0 => s_oPC,
-    i_D1 => s_Rs,
-    o_O => s_nextPC
+    i_S => s_ID_JR,
+    i_D0 => s_IF_oPC,
+    i_D1 => s_ID_Rs,
+    o_O => s_IF_nextPC
   );
 
   stage0 : if_id
@@ -428,59 +418,91 @@ BEGIN
   controlUnit : control
   PORT MAP(
     i_instruction => s_ID_Inst,
-    o_immSign => s_Signed,
-    o_MemToReg => s_MemtoReg,
+    o_immSign => s_ID_Signed,
+    o_MemToReg => s_ID_MemtoReg,
     o_sub => OPEN,
-    o_imm => s_ALUsrc,
+    o_imm => s_ID_ImmEn,
     o_lui => OPEN,
-    o_ALUOp => s_ALUOp,
+    o_ALUOp => s_ID_ALUOp,
     o_Shift => OPEN,
     o_leftShift => OPEN,
     o_arithShift => OPEN,
-    o_MemWrite => s_MemWrite,
+    o_MemWrite => s_ID_MemWrite,
     o_shiftReg => OPEN,
-    o_DestReg => s_RegDst,
-    o_jump => s_Jump,
-    o_branch => s_Branch,
-    o_RegWrite => s_RegWr,
-    o_JR => s_JR,
-    o_JAL => s_JAL
+    o_DestReg => s_ID_DestReg,
+    o_jump => s_ID_Jump,
+    o_branch => s_ID_Branch,
+    o_RegWrite => s_RegWr, -- dictated by outline
+    o_JR => s_ID_JR,
+    o_JAL => s_ID_JAL
   );
 
-  registers : RegFile
+  mux0 : mux2t1_N
+  GENERIC MAP(N => 5)
+  PORT MAP(
+    i_S => s_ID_DestReg,
+    i_D0 => s_ID_Inst(20 DOWNTO 16),
+    i_D1 => s_ID_Inst(15 DOWNTO 11),
+    o_O => s_RegWrAddr -- dictated by outline
+  );
+
+  Adder0 : adder_N_bit
   GENERIC MAP(N => 32)
   PORT MAP(
-    i_WA => s_RegWrAddr,
-    i_WD => s_RegWrData,
-    i_RA0 => s_ID_Inst(25 DOWNTO 21),
-    i_RA1 => s_ID_Inst(20 DOWNTO 16),
-    i_WE => s_RegWr,
-    i_RST => iRST,
-    i_CLK => iCLK,
-    o_q0 => s_Rs,
-    o_q1 => s_Rt
+    i_A => s_ID_NextInstAddr,
+    i_B => x"00000004",
+    i_Cin => '0',
+    o_S => s_Adder0,
+    o_Cout => OPEN,
+    o_Ovfl => OPEN
   );
 
   SignExtender : extender
   GENERIC MAP(Y => 16)
   PORT MAP(
     input => s_ID_Inst(15 DOWNTO 0),
-    sign => s_ID_Inst(15) AND s_Signed,
-    output => s_Imm
+    sign => s_ID_Inst(15) AND s_ID_Signed,
+    output => s_ID_SEout
   );
+
+  registers : RegFile
+  GENERIC MAP(N => 32)
+  PORT MAP(
+    i_WA0 => s_RegWrAddr,
+    i_WA1 => "11111", -- hardcoded to write to Reg31 for JAL in same cycle as other register write insts
+    i_WD0 => s_RegWrData,
+    i_WD1 => s_Adder0,
+    i_RA0 => s_ID_Inst(25 DOWNTO 21),
+    i_RA1 => s_ID_Inst(20 DOWNTO 16),
+    i_WE0 => s_RegWr, -- dictated by outline
+    i_WE1 => s_ID_JAL,
+    i_RST => iRST,
+    i_CLK => iCLK,
+    o_q0 => s_ID_Rs,
+    o_q1 => s_ID_Rt
+  );
+
+  RsEqRt : beq
+  PORT MAP(
+    i_A => s_ID_Rs,
+    i_B => s_ID_Rt,
+    o_F => s_ID_Equality
+  );
+
+  s_ID_BandEq <= s_ID_Branch AND S_ID_Equality;
 
   stage1 : id_ex
   PORT MAP(
     i_CLK => NOT iCLK,
     i_RST => iRST,
     i_WE => '1',
-    i_MemtoReg(0) => s_MemtoReg,
-    i_ALUOp => s_ALUOp,
-    i_MemWrite(0) => s_MemWrite,
-    i_immEn(0) => s_ALUsrc,
-    i_Rs => s_Rs,
-    i_Rt => s_Rt,
-    i_SEout => s_Imm,
+    i_MemtoReg(0) => s_ID_MemtoReg,
+    i_ALUOp => s_ID_ALUOp,
+    i_MemWrite(0) => s_ID_MemWrite,
+    i_immEn(0) => s_ID_ImmEn,
+    i_Rs => s_ID_Rs,
+    i_Rt => s_ID_Rt,
+    i_SEout => s_ID_SEout,
     i_Inst => s_ID_Inst,
     o_MemtoReg(0) => s_EX_MemtoReg,
     o_ALUOp => s_EX_ALUOp,
@@ -495,7 +517,7 @@ BEGIN
   mux1 : mux2t1_N
   GENERIC MAP(N => 32)
   PORT MAP(
-    i_S => s_EX_immEn,
+    i_S => s_EX_ImmEn,
     i_D0 => s_EX_Rt,
     i_D1 => s_EX_SEout,
     o_O => s_Mux1
@@ -511,7 +533,6 @@ BEGIN
     o_C => s_wholeALUout(63 DOWNTO 32),
     o_Overflow => s_Ovfl
   );
-  s_Zero <= s_wholeALUout(0);
   oALUout <= s_wholeALUout(31 DOWNTO 0); -- dictated by outline
 
   ALU_control : alucontrol
@@ -555,7 +576,7 @@ BEGIN
     i_S => s_ShiftEn,
     i_D0 => s_wholeALUout(31 DOWNTO 0),
     i_D1 => s_Y,
-    o_O => s_Mux4
+    o_O => s_EX_Mux4
   );
 
   stage2 : ex_mem
@@ -566,7 +587,7 @@ BEGIN
     i_MemtoReg(0) => s_EX_MemtoReg,
     i_MemWrite(0) => s_EX_MemWrite,
     i_Rt => s_EX_Rt,
-    i_Mux4 => s_Mux4,
+    i_Mux4 => s_EX_Mux4,
     i_Inst => s_EX_Inst,
     i_ALUresult => s_wholeALUout,
     o_MemtoReg(0) => s_MEM_MemtoReg,
@@ -588,7 +609,7 @@ BEGIN
     i_WE => '1',
     i_MemtoReg(0) => s_MEM_MemtoReg,
     i_Mux4 => s_MEM_Mux4,
-    i_DMemOut => s_DMemOut,
+    i_DMemOut => s_DMemOut, -- dicatated by outline
     i_Inst => s_MEM_Inst,
     o_MemtoReg(0) => s_WB_MemtoReg,
     o_Mux4 => s_WB_Mux4,
@@ -597,53 +618,16 @@ BEGIN
 
   );
 
-  Adder0 : adder_N_bit
-  GENERIC MAP(N => 32)
-  PORT MAP(
-    i_A => s_WB_NextInstAddr,
-    i_B => x"00000004",
-    i_Cin => '0',
-    o_S => s_Adder0,
-    o_Cout => OPEN,
-    o_Ovfl => OPEN
-  );
-
   mux2 : mux2t1_N
   GENERIC MAP(N => 32)
   PORT MAP(
     i_S => s_WB_MemtoReg,
     i_D0 => s_WB_Mux4,
     i_D1 => s_WB_DMemOut,
-    o_O => s_Mux2
+    o_O => s_RegWrData -- dictated by outline
   );
 
-  mux6 : mux2t1_N
-  GENERIC MAP(N => 32)
-  PORT MAP(
-    i_S => s_WB_JAL,
-    i_D0 => s_Mux2,
-    i_D1 => s_Adder0,
-    o_O => s_RegWrData
-  );
-
-  mux0 : mux2t1_N
-  GENERIC MAP(N => 5)
-  PORT MAP(
-    i_S => s_WB_DestReg,
-    i_D0 => s_WB_Inst(20 DOWNTO 16),
-    i_D1 => s_WB_Inst(15 DOWNTO 11),
-    o_O => s_Mux0
-  );
-
-  mux7 : mux2t1_N
-  GENERIC MAP(N => 5)
-  PORT MAP(
-    i_S => s_WB_JAL,
-    i_D0 => s_Mux0,
-    i_D1 => "11111",
-    o_O => s_RegWrAddr
-  );
-
-  s_Halt <= '1' when s_WB_Inst(31 downto 26) = "010100" else '0';
+  s_Halt <= '1' WHEN s_WB_Inst(31 DOWNTO 26) = "010100" ELSE
+    '0';
 
 END structure;
