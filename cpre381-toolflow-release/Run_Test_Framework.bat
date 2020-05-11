@@ -3,7 +3,7 @@ cls
 @pushd %~dp0
 
 :: Path to Python 3.7 on both lab computers and VDI
-set lab_path="C:\Program Files (x86)\Python37-32\python.exe"
+set lab_path="C:\Program Files (x86)\Python38-32\python.exe"
 set vdi_path="C:\Python\python.exe"
 
 ::Check which python location exists and then set python_path to that location

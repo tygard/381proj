@@ -7,7 +7,7 @@ import time
 # used to see if output may have timed out but outputted correctly (meaning no halt signal)
 expected_firstline = re.compile(r'In clock cycle: (?P<cycle>[0-9]+)')
 
-modelsim_path = r'C:\Program Files\modeltech64_2019.3\win64'
+modelsim_path = r'C:\Modeltech_pe_edu_10.4a\win32pe_edu'
 
 def compile():
     '''
