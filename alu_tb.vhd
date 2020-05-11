@@ -35,14 +35,13 @@ begin
 
   DUT0: f_alu
   generic map(N => N)
-  port map(
-  i_A => s_i_A,
+  port map(i_A => s_i_A,
   i_B => s_i_B,
-  i_C => s_i_c);
-  -- port map( i_S      => s_i_S,
-         -- -- i_D0     => s_i_D0,
-         -- -- i_D1     => s_i_D1,
-         -- -- o_O      => s_o_O);
+  i_C => s_i_c,
+  o_S => s_o_S,
+  o_C => s_o_C,
+  o_Overflow => s_o_Overflow);
+ 
   
   
   P_TEST_CASES: process
@@ -102,21 +101,21 @@ wait for 100 ns;
 s_i_A  <=  X"0000000A";
 s_i_B  <=  X"0000000B";
 s_i_C  <= "01111"; --nor
---answer should be FFFFFFF4?
+--answer should be FFFFFFF4
 
 wait for 100 ns;
   
 s_i_A  <=  X"0000000F";
 s_i_B  <=  X"0000000E";
 s_i_C  <= "10000"; --slt
---answer should be 1 because A is greater than B.
+--answer should be 0
 
 wait for 100 ns;
   
 s_i_A  <=  X"0000000F";
 s_i_B  <=  X"00000FF0";
 s_i_C  <= "10001"; --sltu
---answer should be 0 because B is greater
+--answer should be 1
 
 wait for 100 ns;
   
@@ -137,14 +136,14 @@ wait for 100 ns;
 s_i_A  <=  X"0000000F";
 s_i_B  <=  X"00000001";
 s_i_C  <= "11000"; --slti
---answer should be 1 because A is greater than B
+--answer should be 0
 
 wait for 100 ns;
   
 s_i_A  <=  X"00000000";
 s_i_B  <=  X"0000000A";
 s_i_C  <= "11001"; --sltiu
---answer should be 0 because B is greater than A
+--answer should be 1
 
 wait for 100 ns;
   
@@ -167,33 +166,7 @@ s_i_B  <=  X"000000F0";
 s_i_C  <= "11100"; --xori
 --answer should be 00000FFF
 
-wait for 100 ns;
-  
-s_i_A  <=  X"00000001";
-s_i_B  <=  X"00000002";
-s_i_C  <= "00000"; --sll
---answer should be 00000004
 
-wait for 100 ns;
-  
-s_i_A  <=  X"00000004";
-s_i_B  <=  X"00000001";
-s_i_C  <= "00001"; --srl
---answer should be 00000002
-
-wait for 100 ns;
-  
-s_i_A  <=  X"00000004";
-s_i_B  <=  X"00000001";
-s_i_C  <= "00010"; --sra
---answer should be 00000002
-
-wait for 100 ns;
-  
-s_i_A  <=  X"00000004";
-s_i_B  <=  X"00000002";
-s_i_C  <= "00011"; --sllv
---answer should be 00000010
 
 wait for 100 ns;
   
@@ -202,12 +175,7 @@ s_i_B  <=  X"00000002";
 s_i_C  <= "00100"; --xor
 --answer should be 00000001
 
-wait for 100 ns;
-  
-s_i_A  <=  X"0000000C";
-s_i_B  <=  X"00000002";
-s_i_C  <= "00101"; --srav
---answer should be 00000003
+
 
 wait for 100 ns;
   
