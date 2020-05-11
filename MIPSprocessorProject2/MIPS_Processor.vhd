@@ -90,8 +90,6 @@ ARCHITECTURE structure OF MIPS_Processor IS
   SIGNAL s_ID_SEout : std_logic_vector(31 DOWNTO 0);
   SIGNAL s_Adder0 : std_logic_vector(31 DOWNTO 0);
   SIGNAL s_ID_Mux0 : std_logic_vector(4 DOWNTO 0);
-
-
   ----------------------EX----------------------
   SIGNAL s_EX_MemtoReg : std_logic;
   SIGNAL s_EX_ALUOp : std_logic_vector(5 DOWNTO 0);
@@ -366,8 +364,8 @@ BEGIN
   -- TODO: This is required to be your final input to your instruction memory. This provides a feasible method to externally load the memory module which means that the synthesis tool must assume it knows 
   --        nothing about the values stored in the instruction memory. If this is not included, much, if not all of the design is optimized out because the synthesis tool will believe the memory to be all zeros.
   WITH iInstLd SELECT
-    s_IMemAddr <= s_NextInstAddr WHEN '0',
-    iInstAddr WHEN OTHERS;
+  s_IMemAddr <= s_NextInstAddr WHEN '0',
+  iInstAddr WHEN OTHERS;
   IMem : mem
   GENERIC MAP(
     ADDR_WIDTH => 10,
@@ -507,7 +505,10 @@ BEGIN
     o_F => s_ID_Equality
   );
 
-  s_ID_BandEq <= s_ID_Branch AND S_ID_Equality;
+  s_ID_BandEq <=
+  (s_ID_Branch AND s_ID_Equality) WHEN (s_ID_Inst(31 DOWNTO 26) = "000100") ELSE
+  (s_ID_Branch AND (NOT s_ID_Equality)) WHEN (s_ID_Inst(31 DOWNTO 26) = "000101") ELSE
+  '0';
 
   stage1 : id_ex
   PORT MAP(
@@ -658,6 +659,6 @@ BEGIN
   );
 
   s_Halt <= '1' WHEN s_WB_Inst(31 DOWNTO 26) = "010100" ELSE
-    '0';
+  '0';
 
 END structure;
