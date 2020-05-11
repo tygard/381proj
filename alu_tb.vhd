@@ -173,7 +173,7 @@ wait for 100 ns;
 s_i_A  <=  X"00000004";
 s_i_B  <=  X"00000002";
 s_i_C  <= "00100"; --xor
---answer should be 00000001
+--answer should be 00000000
 
 
 
@@ -182,7 +182,7 @@ wait for 100 ns;
 s_i_A  <=  X"00000002";
 s_i_B  <=  X"00000002";
 s_i_C  <= "00111"; --multu
---answer should be 00000004
+--answer should be 00000004 - comonent works on own
 
 
 
