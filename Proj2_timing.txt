@@ -1,0 +1,163 @@
+
+#
+# CprE 381 toolflow Timing dump
+#
+
+FMax: 23.57mhz Clk Constraint: 20.00ns Slack: -22.43ns
+
+The path is given below
+
+ ===================================================================
+ From Node    : id_ex:stage1|nbit_Reg:immEn|dffg:\G_nbit_Reg:0:RegI|s_Q
+ To Node      : ex_mem:stage2|nbit_Reg:Mux4|dffg:\G_nbit_Reg:31:RegI|s_Q
+ Launch Clock : iCLK (INVERTED)
+ Latch Clock  : iCLK (INVERTED)
+ Data Arrival Path:
+ Total (ns)  Incr (ns)     Type  Element
+ ==========  ========= ==  ====  ===================================
+     10.000     10.000           launch edge time
+     13.161      3.161  F        clock network delay
+     13.393      0.232     uTco  id_ex:stage1|nbit_Reg:immEn|dffg:\G_nbit_Reg:0:RegI|s_Q
+     13.393      0.000 FF  CELL  stage1|immEn|\G_nbit_Reg:0:RegI|s_Q|q
+     13.927      0.534 FF    IC  mux1|\G_NBit_MUX:0:MUXI|g_FINALoR1|o_F~0|datab
+     14.352      0.425 FF  CELL  mux1|\G_NBit_MUX:0:MUXI|g_FINALoR1|o_F~0|combout
+     14.814      0.462 FF    IC  ALU|g_mult|r0EC|g_part2|g_andBandSelect1|o_F|dataa
+     15.167      0.353 FF  CELL  ALU|g_mult|r0EC|g_part2|g_andBandSelect1|o_F|combout
+     15.479      0.312 FF    IC  ALU|g_mult|ADDER2|g_part2|g_andBandSelect1|o_F|dataa
+     15.879      0.400 FF  CELL  ALU|g_mult|ADDER2|g_part2|g_andBandSelect1|o_F|combout
+     16.335      0.456 FF    IC  ALU|g_mult|ADDER2|\g_part3:1:adder_1_bit_i|g_FINALoR1|o_F~0|dataa
+     16.735      0.400 FF  CELL  ALU|g_mult|ADDER2|\g_part3:1:adder_1_bit_i|g_FINALoR1|o_F~0|combout
+     17.123      0.388 FF    IC  ALU|g_mult|ADDER2|\g_part3:2:adder_1_bit_i|g_FINALoR1|o_F~0|datad
+     17.248      0.125 FF  CELL  ALU|g_mult|ADDER2|\g_part3:2:adder_1_bit_i|g_FINALoR1|o_F~0|combout
+     17.486      0.238 FF    IC  ALU|g_mult|ADDER2|\g_part3:3:adder_1_bit_i|g_FINALoR1|o_F~0|datad
+     17.611      0.125 FF  CELL  ALU|g_mult|ADDER2|\g_part3:3:adder_1_bit_i|g_FINALoR1|o_F~0|combout
+     17.867      0.256 FF    IC  ALU|g_mult|ADDER2|\g_part3:4:adder_1_bit_i|g_xor2|o_F|datac
+     18.148      0.281 FF  CELL  ALU|g_mult|ADDER2|\g_part3:4:adder_1_bit_i|g_xor2|o_F|combout
+     18.380      0.232 FF    IC  ALU|g_mult|ADDER3|\g_part3:3:adder_1_bit_i|g_FINALoR1|o_F~0|datac
+     18.661      0.281 FF  CELL  ALU|g_mult|ADDER3|\g_part3:3:adder_1_bit_i|g_FINALoR1|o_F~0|combout
+     19.057      0.396 FF    IC  ALU|g_mult|ADDER3|\g_part3:4:adder_1_bit_i|g_FINALoR1|o_F~0|datac
+     19.338      0.281 FF  CELL  ALU|g_mult|ADDER3|\g_part3:4:adder_1_bit_i|g_FINALoR1|o_F~0|combout
+     19.628      0.290 FF    IC  ALU|g_mult|ADDER3|\g_part3:5:adder_1_bit_i|g_xor2|o_F|datab
+     20.053      0.425 FF  CELL  ALU|g_mult|ADDER3|\g_part3:5:adder_1_bit_i|g_xor2|o_F|combout
+     20.297      0.244 FF    IC  ALU|g_mult|ADDER4|\g_part3:4:adder_1_bit_i|g_FINALoR1|o_F~0|datac
+     20.578      0.281 FF  CELL  ALU|g_mult|ADDER4|\g_part3:4:adder_1_bit_i|g_FINALoR1|o_F~0|combout
+     20.999      0.421 FF    IC  ALU|g_mult|ADDER4|\g_part3:5:adder_1_bit_i|g_FINALoR1|o_F~0|datac
+     21.280      0.281 FF  CELL  ALU|g_mult|ADDER4|\g_part3:5:adder_1_bit_i|g_FINALoR1|o_F~0|combout
+     21.528      0.248 FF    IC  ALU|g_mult|ADDER4|\g_part3:6:adder_1_bit_i|g_xor2|o_F|datac
+     21.809      0.281 FF  CELL  ALU|g_mult|ADDER4|\g_part3:6:adder_1_bit_i|g_xor2|o_F|combout
+     22.056      0.247 FF    IC  ALU|g_mult|ADDER5|\g_part3:5:adder_1_bit_i|g_xor2|o_F|datac
+     22.337      0.281 FF  CELL  ALU|g_mult|ADDER5|\g_part3:5:adder_1_bit_i|g_xor2|o_F|combout
+     23.233      0.896 FF    IC  ALU|g_mult|ADDER6|\g_part3:4:adder_1_bit_i|g_FINALoR1|o_F~0|datac
+     23.514      0.281 FF  CELL  ALU|g_mult|ADDER6|\g_part3:4:adder_1_bit_i|g_FINALoR1|o_F~0|combout
+     23.759      0.245 FF    IC  ALU|g_mult|ADDER6|\g_part3:5:adder_1_bit_i|g_FINALoR1|o_F~0|datac
+     24.040      0.281 FF  CELL  ALU|g_mult|ADDER6|\g_part3:5:adder_1_bit_i|g_FINALoR1|o_F~0|combout
+     24.331      0.291 FF    IC  ALU|g_mult|ADDER6|\g_part3:6:adder_1_bit_i|g_xor2|o_F|datab
+     24.756      0.425 FF  CELL  ALU|g_mult|ADDER6|\g_part3:6:adder_1_bit_i|g_xor2|o_F|combout
+     25.012      0.256 FF    IC  ALU|g_mult|ADDER7|\g_part3:5:adder_1_bit_i|g_FINALoR1|o_F~0|datac
+     25.293      0.281 FF  CELL  ALU|g_mult|ADDER7|\g_part3:5:adder_1_bit_i|g_FINALoR1|o_F~0|combout
+     25.935      0.642 FF    IC  ALU|g_mult|ADDER7|\g_part3:6:adder_1_bit_i|g_xor2|o_F|datac
+     26.216      0.281 FF  CELL  ALU|g_mult|ADDER7|\g_part3:6:adder_1_bit_i|g_xor2|o_F|combout
+     26.459      0.243 FF    IC  ALU|g_mult|ADDER8|\g_part3:5:adder_1_bit_i|g_xor2|o_F|datac
+     26.740      0.281 FF  CELL  ALU|g_mult|ADDER8|\g_part3:5:adder_1_bit_i|g_xor2|o_F|combout
+     26.983      0.243 FF    IC  ALU|g_mult|ADDER9|\g_part3:4:adder_1_bit_i|g_xor2|o_F|datac
+     27.264      0.281 FF  CELL  ALU|g_mult|ADDER9|\g_part3:4:adder_1_bit_i|g_xor2|o_F|combout
+     27.671      0.407 FF    IC  ALU|g_mult|ADDER10|\g_part3:3:adder_1_bit_i|g_xor2|o_F|datac
+     27.952      0.281 FF  CELL  ALU|g_mult|ADDER10|\g_part3:3:adder_1_bit_i|g_xor2|o_F|combout
+     28.715      0.763 FF    IC  ALU|g_mult|ADDER11|\g_part3:2:adder_1_bit_i|g_xor2|o_F|datac
+     28.996      0.281 FF  CELL  ALU|g_mult|ADDER11|\g_part3:2:adder_1_bit_i|g_xor2|o_F|combout
+     29.254      0.258 FF    IC  ALU|g_mult|ADDER12|\g_part3:1:adder_1_bit_i|g_FINALoR1|o_F~0|datad
+     29.379      0.125 FF  CELL  ALU|g_mult|ADDER12|\g_part3:1:adder_1_bit_i|g_FINALoR1|o_F~0|combout
+     29.625      0.246 FF    IC  ALU|g_mult|ADDER12|\g_part3:2:adder_1_bit_i|g_FINALoR1|o_F~0|datac
+     29.906      0.281 FF  CELL  ALU|g_mult|ADDER12|\g_part3:2:adder_1_bit_i|g_FINALoR1|o_F~0|combout
+     30.609      0.703 FF    IC  ALU|g_mult|ADDER12|\g_part3:3:adder_1_bit_i|g_FINALoR1|o_F~0|datac
+     30.890      0.281 FF  CELL  ALU|g_mult|ADDER12|\g_part3:3:adder_1_bit_i|g_FINALoR1|o_F~0|combout
+     31.139      0.249 FF    IC  ALU|g_mult|ADDER12|\g_part3:4:adder_1_bit_i|g_xor2|o_F|datac
+     31.420      0.281 FF  CELL  ALU|g_mult|ADDER12|\g_part3:4:adder_1_bit_i|g_xor2|o_F|combout
+     32.145      0.725 FF    IC  ALU|g_mult|ADDER13|\g_part3:3:adder_1_bit_i|g_FINALoR1|o_F~0|datac
+     32.426      0.281 FF  CELL  ALU|g_mult|ADDER13|\g_part3:3:adder_1_bit_i|g_FINALoR1|o_F~0|combout
+     33.131      0.705 FF    IC  ALU|g_mult|ADDER13|\g_part3:4:adder_1_bit_i|g_FINALoR1|o_F~0|datac
+     33.412      0.281 FF  CELL  ALU|g_mult|ADDER13|\g_part3:4:adder_1_bit_i|g_FINALoR1|o_F~0|combout
+     33.657      0.245 FF    IC  ALU|g_mult|ADDER13|\g_part3:5:adder_1_bit_i|g_FINALoR1|o_F~0|datac
+     33.938      0.281 FF  CELL  ALU|g_mult|ADDER13|\g_part3:5:adder_1_bit_i|g_FINALoR1|o_F~0|combout
+     34.228      0.290 FF    IC  ALU|g_mult|ADDER13|\g_part3:6:adder_1_bit_i|g_FINALoR1|o_F~0|dataa
+     34.628      0.400 FF  CELL  ALU|g_mult|ADDER13|\g_part3:6:adder_1_bit_i|g_FINALoR1|o_F~0|combout
+     35.267      0.639 FF    IC  ALU|g_mult|ADDER13|\g_part3:8:adder_1_bit_i|g_xor2|o_F~1|datad
+     35.392      0.125 FF  CELL  ALU|g_mult|ADDER13|\g_part3:8:adder_1_bit_i|g_xor2|o_F~1|combout
+     35.630      0.238 FF    IC  ALU|g_mult|ADDER13|\g_part3:8:adder_1_bit_i|g_xor2|o_F|datad
+     35.780      0.150 FR  CELL  ALU|g_mult|ADDER13|\g_part3:8:adder_1_bit_i|g_xor2|o_F|combout
+     36.741      0.961 RR    IC  ALU|g_mult|ADDER14|\g_part3:7:adder_1_bit_i|g_xor2|o_F|datac
+     37.028      0.287 RR  CELL  ALU|g_mult|ADDER14|\g_part3:7:adder_1_bit_i|g_xor2|o_F|combout
+     37.238      0.210 RR    IC  ALU|g_mult|ADDER15|\g_part3:6:adder_1_bit_i|g_xor2|o_F|datac
+     37.525      0.287 RR  CELL  ALU|g_mult|ADDER15|\g_part3:6:adder_1_bit_i|g_xor2|o_F|combout
+     37.736      0.211 RR    IC  ALU|g_mult|ADDER16|\g_part3:5:adder_1_bit_i|g_FINALoR1|o_F~0|datad
+     37.891      0.155 RR  CELL  ALU|g_mult|ADDER16|\g_part3:5:adder_1_bit_i|g_FINALoR1|o_F~0|combout
+     38.537      0.646 RR    IC  ALU|g_mult|ADDER16|\g_part3:6:adder_1_bit_i|g_xor2|o_F|datac
+     38.824      0.287 RR  CELL  ALU|g_mult|ADDER16|\g_part3:6:adder_1_bit_i|g_xor2|o_F|combout
+     39.441      0.617 RR    IC  ALU|g_mult|ADDER17|\g_part3:5:adder_1_bit_i|g_xor2|o_F|datac
+     39.711      0.270 RF  CELL  ALU|g_mult|ADDER17|\g_part3:5:adder_1_bit_i|g_xor2|o_F|combout
+     39.956      0.245 FF    IC  ALU|g_mult|ADDER18|\g_part3:4:adder_1_bit_i|g_xor2|o_F|datac
+     40.237      0.281 FF  CELL  ALU|g_mult|ADDER18|\g_part3:4:adder_1_bit_i|g_xor2|o_F|combout
+     40.879      0.642 FF    IC  ALU|g_mult|ADDER19|\g_part3:3:adder_1_bit_i|g_FINALoR1|o_F~0|datad
+     41.004      0.125 FF  CELL  ALU|g_mult|ADDER19|\g_part3:3:adder_1_bit_i|g_FINALoR1|o_F~0|combout
+     41.249      0.245 FF    IC  ALU|g_mult|ADDER19|\g_part3:4:adder_1_bit_i|g_FINALoR1|o_F~0|datac
+     41.530      0.281 FF  CELL  ALU|g_mult|ADDER19|\g_part3:4:adder_1_bit_i|g_FINALoR1|o_F~0|combout
+     41.775      0.245 FF    IC  ALU|g_mult|ADDER19|\g_part3:5:adder_1_bit_i|g_xor2|o_F|datac
+     42.056      0.281 FF  CELL  ALU|g_mult|ADDER19|\g_part3:5:adder_1_bit_i|g_xor2|o_F|combout
+     42.301      0.245 FF    IC  ALU|g_mult|ADDER20|\g_part3:4:adder_1_bit_i|g_FINALoR1|o_F~0|datac
+     42.582      0.281 FF  CELL  ALU|g_mult|ADDER20|\g_part3:4:adder_1_bit_i|g_FINALoR1|o_F~0|combout
+     43.214      0.632 FF    IC  ALU|g_mult|ADDER20|\g_part3:5:adder_1_bit_i|g_FINALoR1|o_F~0|datac
+     43.495      0.281 FF  CELL  ALU|g_mult|ADDER20|\g_part3:5:adder_1_bit_i|g_FINALoR1|o_F~0|combout
+     43.741      0.246 FF    IC  ALU|g_mult|ADDER20|\g_part3:6:adder_1_bit_i|g_FINALoR1|o_F~0|datac
+     44.022      0.281 FF  CELL  ALU|g_mult|ADDER20|\g_part3:6:adder_1_bit_i|g_FINALoR1|o_F~0|combout
+     44.739      0.717 FF    IC  ALU|g_mult|ADDER20|\g_part3:7:adder_1_bit_i|g_FINALoR1|o_F~0|datac
+     45.020      0.281 FF  CELL  ALU|g_mult|ADDER20|\g_part3:7:adder_1_bit_i|g_FINALoR1|o_F~0|combout
+     45.266      0.246 FF    IC  ALU|g_mult|ADDER20|\g_part3:8:adder_1_bit_i|g_xor2|o_F|datac
+     45.547      0.281 FF  CELL  ALU|g_mult|ADDER20|\g_part3:8:adder_1_bit_i|g_xor2|o_F|combout
+     46.252      0.705 FF    IC  ALU|g_mult|ADDER21|\g_part3:7:adder_1_bit_i|g_xor2|o_F|datac
+     46.533      0.281 FF  CELL  ALU|g_mult|ADDER21|\g_part3:7:adder_1_bit_i|g_xor2|o_F|combout
+     46.778      0.245 FF    IC  ALU|g_mult|ADDER22|\g_part3:6:adder_1_bit_i|g_xor2|o_F|datac
+     47.059      0.281 FF  CELL  ALU|g_mult|ADDER22|\g_part3:6:adder_1_bit_i|g_xor2|o_F|combout
+     47.295      0.236 FF    IC  ALU|g_mult|ADDER23|\g_part3:5:adder_1_bit_i|g_FINALoR1|o_F~0|datad
+     47.420      0.125 FF  CELL  ALU|g_mult|ADDER23|\g_part3:5:adder_1_bit_i|g_FINALoR1|o_F~0|combout
+     48.125      0.705 FF    IC  ALU|g_mult|ADDER23|\g_part3:6:adder_1_bit_i|g_xor2|o_F|datad
+     48.275      0.150 FR  CELL  ALU|g_mult|ADDER23|\g_part3:6:adder_1_bit_i|g_xor2|o_F|combout
+     49.036      0.761 RR    IC  ALU|g_mult|ADDER24|\g_part3:5:adder_1_bit_i|g_xor2|o_F|datad
+     49.175      0.139 RF  CELL  ALU|g_mult|ADDER24|\g_part3:5:adder_1_bit_i|g_xor2|o_F|combout
+     49.420      0.245 FF    IC  ALU|g_mult|ADDER25|\g_part3:4:adder_1_bit_i|g_FINALoR1|o_F~0|datac
+     49.701      0.281 FF  CELL  ALU|g_mult|ADDER25|\g_part3:4:adder_1_bit_i|g_FINALoR1|o_F~0|combout
+     50.419      0.718 FF    IC  ALU|g_mult|ADDER25|\g_part3:5:adder_1_bit_i|g_xor2|o_F|datad
+     50.569      0.150 FR  CELL  ALU|g_mult|ADDER25|\g_part3:5:adder_1_bit_i|g_xor2|o_F|combout
+     51.319      0.750 RR    IC  ALU|g_mult|ADDER26|\g_part3:4:adder_1_bit_i|g_xor2|o_F|datad
+     51.458      0.139 RF  CELL  ALU|g_mult|ADDER26|\g_part3:4:adder_1_bit_i|g_xor2|o_F|combout
+     51.700      0.242 FF    IC  ALU|g_mult|ADDER27|\g_part3:3:adder_1_bit_i|g_xor2|o_F|datad
+     51.850      0.150 FR  CELL  ALU|g_mult|ADDER27|\g_part3:3:adder_1_bit_i|g_xor2|o_F|combout
+     52.062      0.212 RR    IC  ALU|g_mult|ADDER28|\g_part3:2:adder_1_bit_i|g_xor2|o_F|datad
+     52.217      0.155 RR  CELL  ALU|g_mult|ADDER28|\g_part3:2:adder_1_bit_i|g_xor2|o_F|combout
+     52.437      0.220 RR    IC  ALU|g_mult|r0EC2|g_part2|g_xor1|o_F~29|datad
+     52.592      0.155 RR  CELL  ALU|g_mult|r0EC2|g_part2|g_xor1|o_F~29|combout
+     53.295      0.703 RR    IC  ALU|g_mult|r0EC2|g_part2|g_xor1|o_F~30|datad
+     53.434      0.139 RF  CELL  ALU|g_mult|r0EC2|g_part2|g_xor1|o_F~30|combout
+     53.659      0.225 FF    IC  ALU|g_mult|r0EC2|g_part2|g_xor1|o_F|datad
+     53.809      0.150 FR  CELL  ALU|g_mult|r0EC2|g_part2|g_xor1|o_F|combout
+     54.012      0.203 RR    IC  ALU|g_32t1mux|Mux0~2|datad
+     54.167      0.155 RR  CELL  ALU|g_32t1mux|Mux0~2|combout
+     54.371      0.204 RR    IC  ALU|g_32t1mux|Mux0~3|datad
+     54.526      0.155 RR  CELL  ALU|g_32t1mux|Mux0~3|combout
+     54.730      0.204 RR    IC  ALU|g_32t1mux|Mux0~5|datad
+     54.885      0.155 RR  CELL  ALU|g_32t1mux|Mux0~5|combout
+     55.089      0.204 RR    IC  ALU|g_32t1mux|Mux0~6|datad
+     55.244      0.155 RR  CELL  ALU|g_32t1mux|Mux0~6|combout
+     55.471      0.227 RR    IC  stage2|Mux4|\G_nbit_Reg:31:RegI|s_Q|asdata
+     55.877      0.406 RR  CELL  ex_mem:stage2|nbit_Reg:Mux4|dffg:\G_nbit_Reg:31:RegI|s_Q
+ Data Required Path:
+ Total (ns)  Incr (ns)     Type  Element
+ ==========  ========= ==  ====  ===================================
+     30.000     30.000           latch edge time
+     33.441      3.441  F        clock network delay
+     33.449      0.008           clock pessimism removed
+     33.429     -0.020           clock uncertainty
+     33.447      0.018     uTsu  ex_mem:stage2|nbit_Reg:Mux4|dffg:\G_nbit_Reg:31:RegI|s_Q
+ Data Arrival Time  :    55.877
+ Data Required Time :    33.447
+ Slack              :   -22.430 (VIOLATED)
+ ===================================================================

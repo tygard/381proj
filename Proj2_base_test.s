@@ -1,6 +1,17 @@
 addi 	$s0, $t0, -1			#$s0: 0xFFFFFFFF
 addiu 	$s1, $zero, 1			#$s1: 0x00000001
-xori	$t0, $zero, 16843009		#$t0: 0x01010101
+#xori	$t0, $zero, 16843009		#$t0: 0x01010101
+lui		$at, 257
+nop
+nop
+nop
+nop
+ori 	$at, $at, 257
+nop
+nop
+nop
+nop
+xor 	$t0, $zero, $at
 nop
 nop
 addu	$s4, $s0, $s0			#$s4: 0xFFFFFFFE - should not cause exception for overflow
