@@ -101,21 +101,21 @@ wait for 100 ns;
 s_i_A  <=  X"0000000A";
 s_i_B  <=  X"0000000B";
 s_i_C  <= "01111"; --nor
---answer should be FFFFFFF4?
+--answer should be FFFFFFF4
 
 wait for 100 ns;
   
 s_i_A  <=  X"0000000F";
 s_i_B  <=  X"0000000E";
 s_i_C  <= "10000"; --slt
---answer should be 1 because A is greater than B.
+--answer should be 0
 
 wait for 100 ns;
   
 s_i_A  <=  X"0000000F";
 s_i_B  <=  X"00000FF0";
 s_i_C  <= "10001"; --sltu
---answer should be 0 because B is greater
+--answer should be 1
 
 wait for 100 ns;
   
@@ -136,14 +136,14 @@ wait for 100 ns;
 s_i_A  <=  X"0000000F";
 s_i_B  <=  X"00000001";
 s_i_C  <= "11000"; --slti
---answer should be 1 because A is greater than B
+--answer should be 0
 
 wait for 100 ns;
   
 s_i_A  <=  X"00000000";
 s_i_B  <=  X"0000000A";
 s_i_C  <= "11001"; --sltiu
---answer should be 0 because B is greater than A
+--answer should be 1
 
 wait for 100 ns;
   
@@ -166,54 +166,23 @@ s_i_B  <=  X"000000F0";
 s_i_C  <= "11100"; --xori
 --answer should be 00000FFF
 
-wait for 100 ns;
-  
-s_i_A  <=  X"00000001";
-s_i_B  <=  X"00000002";
-s_i_C  <= "00000"; --sll
---answer should be 00000004
 
-wait for 100 ns;
-  
-s_i_A  <=  X"00000004";
-s_i_B  <=  X"00000001";
-s_i_C  <= "00001"; --srl
---answer should be 00000002
-
-wait for 100 ns;
-  
-s_i_A  <=  X"00000004";
-s_i_B  <=  X"00000001";
-s_i_C  <= "00010"; --sra
---answer should be 00000002
-
-wait for 100 ns;
-  
-s_i_A  <=  X"00000004";
-s_i_B  <=  X"00000002";
-s_i_C  <= "00011"; --sllv
---answer should be 00000010
 
 wait for 100 ns;
   
 s_i_A  <=  X"00000004";
 s_i_B  <=  X"00000002";
 s_i_C  <= "00100"; --xor
---answer should be 00000001
+--answer should be 00000000
 
-wait for 100 ns;
-  
-s_i_A  <=  X"0000000C";
-s_i_B  <=  X"00000002";
-s_i_C  <= "00101"; --srav
---answer should be 00000003
+
 
 wait for 100 ns;
   
 s_i_A  <=  X"00000002";
 s_i_B  <=  X"00000002";
 s_i_C  <= "00111"; --multu
---answer should be 00000004
+--answer should be 00000004 - comonent works on own
 
 
 
