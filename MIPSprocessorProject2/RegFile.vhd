@@ -151,153 +151,153 @@ ARCHITECTURE structural OF RegFile IS
 BEGIN
 
 	s_WD_Reg1 <=
-		i_WD0 WHEN (s_Data0(1) AND i_WE0) ELSE
-		i_WD1 WHEN (s_Data1(1) AND i_WE1) ELSE
+		i_WD0 WHEN ((s_Data0(1) = '1') AND (i_WE0 = '1')) ELSE
+		i_WD1 WHEN ((s_Data1(1) = '1') and (i_WE1 = '1')) ELSE
 		x"00000BAD"; -- should map the WD to the proper port, or helpful signal 0xBAD if something bad happens
 
 	s_WD_Reg2 <=
-		i_WD0 WHEN (s_Data0(2) AND i_WE0) ELSE
-		i_WD1 WHEN (s_Data1(2) AND i_WE1) ELSE
+		i_WD0 WHEN (s_Data0(2) And (i_WE0 = '1')) ELSE
+		i_WD1 WHEN ((s_Data1(((2)) = '1')) = '1') and (i_WE1 = '1')) ELSE
 		x"00000BAD";
 
 	s_WD_Reg3 <=
-		i_WD0 WHEN (s_Data0(3) AND i_WE0) ELSE
-		i_WD1 WHEN (s_Data1(3) AND i_WE1) ELSE
+		i_WD0 WHEN (s_Data0(3) And (i_WE0 = '1')) ELSE
+		i_WD1 WHEN ((s_Data1(3) = '1') and (i_WE1 = '1')) ELSE
 		x"00000BAD";
 
 	s_WD_Reg4 <=
-		i_WD0 WHEN (s_Data0(4) AND i_WE0) ELSE
-		i_WD1 WHEN (s_Data1(4) AND i_WE1) ELSE
+		i_WD0 WHEN (s_Data0(4) And (i_WE0 = '1')) ELSE
+		i_WD1 WHEN ((s_Data1(4) = '1') and (i_WE1 = '1')) ELSE
 		x"00000BAD";
 
 	s_WD_Reg5 <=
-		i_WD0 WHEN (s_Data0(5) AND i_WE0) ELSE
-		i_WD1 WHEN (s_Data1(5) AND i_WE1) ELSE
+		i_WD0 WHEN (s_Data0(5) And (i_WE0 = '1')) ELSE
+		i_WD1 WHEN ((s_Data1(5) = '1')  and (i_WE1 = '1')) ELSE
 		x"00000BAD";
 
 	s_WD_Reg6 <=
-		i_WD0 WHEN (s_Data0(7) AND i_WE0) ELSE
-		i_WD1 WHEN (s_Data1(7) AND i_WE1) ELSE
+		i_WD0 WHEN (s_Data0(7) And (i_WE0 = '1')) ELSE
+		i_WD1 WHEN ((s_Data1(7) = '1') and (i_WE1 = '1')) ELSE
 		x"00000BAD";
 
 	s_WD_Reg7 <=
-		i_WD0 WHEN (s_Data0(8) AND i_WE0) ELSE
-		i_WD1 WHEN (s_Data1(8) AND i_WE1) ELSE
+		i_WD0 WHEN ((s_Data0(8) = '1') and (i_WE0 = '1')) ELSE
+		i_WD1 WHEN ((s_Data1(8) = '1') and (i_WE1 = '1')) ELSE
 		x"00000BAD";
 
 	s_WD_Reg8 <=
-		i_WD0 WHEN (s_Data0(9) AND i_WE0) ELSE
-		i_WD1 WHEN (s_Data1(9) AND i_WE1) ELSE
+		i_WD0 WHEN ((s_Data0(9) = '1') and (i_WE0 = '1')) ELSE
+		i_WD1 WHEN ((s_Data1(9) = '1') and (i_WE1 = '1')) ELSE
 		x"00000BAD";
 
 	s_WD_Reg9 <=
-		i_WD0 WHEN (s_Data0(10) AND i_WE0) ELSE
-		i_WD1 WHEN (s_Data1(10) AND i_WE1) ELSE
+		i_WD0 WHEN ((s_Data0(10) = '1') and (i_WE0 = '1')) ELSE
+		i_WD1 WHEN ((s_Data1(10) = '1') and (i_WE1 = '1')) ELSE
 		x"00000BAD";
 
 	s_WD_Reg10 <=
-		i_WD0 WHEN (s_Data0(11) AND i_WE0) ELSE
-		i_WD1 WHEN (s_Data1(11) AND i_WE1) ELSE
+		i_WD0 WHEN ((s_Data0(11) = '1') and (i_WE0 = '1')) ELSE
+		i_WD1 WHEN ((s_Data1(11) = '1') and (i_WE1 = '1')) ELSE
 		x"00000BAD";
 
 	s_WD_Reg11 <=
-		i_WD0 WHEN (s_Data0(12) AND i_WE0) ELSE
-		i_WD1 WHEN (s_Data1(12) AND i_WE1) ELSE
+		i_WD0 WHEN ((s_Data0(12) = '1') and (i_WE0 = '1')) ELSE
+		i_WD1 WHEN ((s_Data1(12) = '1') and (i_WE1 = '1')) ELSE
 		x"00000BAD";
 
 	s_WD_Reg12 <=
-		i_WD0 WHEN (s_Data0(13) AND i_WE0) ELSE
-		i_WD1 WHEN (s_Data1(13) AND i_WE1) ELSE
+		i_WD0 WHEN ((s_Data0(13) = '1') and (i_WE0 = '1')) ELSE
+		i_WD1 WHEN ((s_Data1(13) = '1') and (i_WE1 = '1')) ELSE
 		x"00000BAD";
 
 	s_WD_Reg13 <=
-		i_WD0 WHEN (s_Data0(14) AND i_WE0) ELSE
-		i_WD1 WHEN (s_Data1(14) AND i_WE1) ELSE
+		i_WD0 WHEN ((s_Data0(14) = '1') and (i_WE0 = '1')) ELSE
+		i_WD1 WHEN ((s_Data1(14) = '1') and (i_WE1 = '1')) ELSE
 		x"00000BAD";
 
 	s_WD_Reg14 <=
-		i_WD0 WHEN (s_Data0(15) AND i_WE0) ELSE
-		i_WD1 WHEN (s_Data1(15) AND i_WE1) ELSE
+		i_WD0 WHEN ((s_Data0(15) = '1') and (i_WE0 = '1')) ELSE
+		i_WD1 WHEN ((s_Data1(15) = '1') and (i_WE1 = '1')) ELSE
 		x"00000BAD";
 
 	s_WD_Reg15 <=
-		i_WD0 WHEN (s_Data0(16) AND i_WE0) ELSE
-		i_WD1 WHEN (s_Data1(16) AND i_WE1) ELSE
+		i_WD0 WHEN ((s_Data0(16) = '1') and (i_WE0 = '1')) ELSE
+		i_WD1 WHEN ((s_Data1(16) = '1') and (i_WE1 = '1')) ELSE
 		x"00000BAD";
 
 	s_WD_Reg17 <=
-		i_WD0 WHEN (s_Data0(17) AND i_WE0) ELSE
-		i_WD1 WHEN (s_Data1(17) AND i_WE1) ELSE
+		i_WD0 WHEN ((s_Data0(17) = '1') and (i_WE0 = '1')) ELSE
+		i_WD1 WHEN ((s_Data1(17) = '1') and (i_WE1 = '1')) ELSE
 		x"00000BAD";
 
 	s_WD_Reg18 <=
-		i_WD0 WHEN (s_Data0(18) AND i_WE0) ELSE
-		i_WD1 WHEN (s_Data1(18) AND i_WE1) ELSE
+		i_WD0 WHEN ((s_Data0(18) = '1') and (i_WE0 = '1')) ELSE
+		i_WD1 WHEN ((s_Data1(18) = '1') and (i_WE1 = '1')) ELSE
 		x"00000BAD";
 
 	s_WD_Reg19 <=
-		i_WD0 WHEN (s_Data0(19) AND i_WE0) ELSE
-		i_WD1 WHEN (s_Data1(19) AND i_WE1) ELSE
+		i_WD0 WHEN ((s_Data0(19) = '1') and (i_WE0 = '1')) ELSE
+		i_WD1 WHEN ((s_Data1(19) = '1') and (i_WE1 = '1')) ELSE
 		x"00000BAD";
 
 	s_WD_Reg20 <=
-		i_WD0 WHEN (s_Data0(20) AND i_WE0) ELSE
-		i_WD1 WHEN (s_Data1(20) AND i_WE1) ELSE
+		i_WD0 WHEN ((s_Data0(20) = '1') and (i_WE0 = '1')) ELSE
+		i_WD1 WHEN ((s_Data1(20) = '1') and (i_WE1 = '1')) ELSE
 		x"00000BAD";
 
 	s_WD_Reg21 <=
-		i_WD0 WHEN (s_Data0(21) AND i_WE0) ELSE
-		i_WD1 WHEN (s_Data1(21) AND i_WE1) ELSE
+		i_WD0 WHEN ((s_Data0(21) = '1') and (i_WE0 = '1')) ELSE
+		i_WD1 WHEN ((s_Data1(21) = '1') and (i_WE1 = '1')) ELSE
 		x"00000BAD";
 
 	s_WD_Reg22 <=
-		i_WD0 WHEN (s_Data0(22) AND i_WE0) ELSE
-		i_WD1 WHEN (s_Data1(22) AND i_WE1) ELSE
+		i_WD0 WHEN ((s_Data0(22) = '1') and (i_WE0 = '1')) ELSE
+		i_WD1 WHEN ((s_Data1(22) = '1') and (i_WE1 = '1')) ELSE
 		x"00000BAD";
 
 	s_WD_Reg23 <=
-		i_WD0 WHEN (s_Data0(23) AND i_WE0) ELSE
-		i_WD1 WHEN (s_Data1(23) AND i_WE1) ELSE
+		i_WD0 WHEN ((s_Data0(23) = '1') and (i_WE0 = '1')) ELSE
+		i_WD1 WHEN ((s_Data1(23) = '1') and (i_WE1 = '1')) ELSE
 		x"00000BAD";
 
 	s_WD_Reg24 <=
-		i_WD0 WHEN (s_Data0(24) AND i_WE0) ELSE
-		i_WD1 WHEN (s_Data1(24) AND i_WE1) ELSE
+		i_WD0 WHEN ((s_Data0(24) = '1') and (i_WE0 = '1')) ELSE
+		i_WD1 WHEN ((s_Data1(24) = '1') and (i_WE1 = '1')) ELSE
 		x"00000BAD";
 
 	s_WD_Reg25 <=
-		i_WD0 WHEN (s_Data0(25) AND i_WE0) ELSE
-		i_WD1 WHEN (s_Data1(25) AND i_WE1) ELSE
+		i_WD0 WHEN ((s_Data0(25) = '1') and (i_WE0 = '1')) ELSE
+		i_WD1 WHEN ((s_Data1(25) = '1') and (i_WE1 = '1')) ELSE
 		x"00000BAD";
 
 	s_WD_Reg26 <=
-		i_WD0 WHEN (s_Data0(26) AND i_WE0) ELSE
-		i_WD1 WHEN (s_Data1(26) AND i_WE1) ELSE
+		i_WD0 WHEN ((s_Data0(26) = '1') and (i_WE0 = '1')) ELSE
+		i_WD1 WHEN ((s_Data1(26) = '1') and (i_WE1 = '1')) ELSE
 		x"00000BAD";
 
 	s_WD_Reg27 <=
-		i_WD0 WHEN (s_Data0(27) AND i_WE0) ELSE
-		i_WD1 WHEN (s_Data1(27) AND i_WE1) ELSE
+		i_WD0 WHEN ((s_Data0(27) = '1') and (i_WE0 = '1')) ELSE
+		i_WD1 WHEN ((s_Data1(27) = '1') and (i_WE1 = '1')) ELSE
 		x"00000BAD";
 
 	s_WD_Reg28 <=
-		i_WD0 WHEN (s_Data0(28) AND i_WE0) ELSE
-		i_WD1 WHEN (s_Data1(28) AND i_WE1) ELSE
+		i_WD0 WHEN ((s_Data0(28) = '1') and (i_WE0 = '1')) ELSE
+		i_WD1 WHEN ((s_Data1(28) = '1') and (i_WE1 = '1')) ELSE
 		x"00000BAD";
 
 	s_WD_Reg29 <=
-		i_WD0 WHEN (s_Data0(29) AND i_WE0) ELSE
-		i_WD1 WHEN (s_Data1(29) AND i_WE1) ELSE
+		i_WD0 WHEN ((s_Data0(29) = '1') and (i_WE0 = '1')) ELSE
+		i_WD1 WHEN ((s_Data1(29) = '1') and (i_WE1 = '1')) ELSE
 		x"00000BAD";
 
 	s_WD_Reg30 <=
-		i_WD0 WHEN (s_Data0(30) AND i_WE0) ELSE
-		i_WD1 WHEN (s_Data1(30) AND i_WE1) ELSE
+		i_WD0 WHEN ((s_Data0(30) = '1') and (i_WE0 = '1')) ELSE
+		i_WD1 WHEN ((s_Data1(30) = '1') and (i_WE1 = '1')) ELSE
 		x"00000BAD";
 
 	s_WD_Reg31 <=
-		i_WD0 WHEN (s_Data0(31) AND i_WE0) ELSE
-		i_WD1 WHEN (s_Data1(31) AND i_WE1) ELSE
+		i_WD0 WHEN ((s_Data0(31) = '1') and (i_WE0 = '1')) ELSE
+		i_WD1 WHEN ((s_Data1(31) = '1') and (i_WE1 = '1')) ELSE
 		x"00000BAD";
 
 	decode0 : Decoder
@@ -326,7 +326,7 @@ BEGIN
 	PORT MAP(
 		i_CLK => i_CLK,
 		i_RST => i_RST,
-		i_WE => (s_Data0(1) AND i_WE0) OR (s_Data1(1) AND i_WE1),
+		i_WE => (s_Data0(1) And (i_WE0 = '1')) OR ((s_Data1((1)) = '1') and (i_WE1 = '1')),
 		i_d => s_WD_Reg1,
 		o_q => s_D1
 	);
@@ -335,7 +335,7 @@ BEGIN
 	PORT MAP(
 		i_CLK => i_CLK,
 		i_RST => i_RST,
-		i_WE => (s_Data0(2) AND i_WE0) OR (s_Data1(2) AND i_WE1),
+		i_WE => (s_Data0(2) And (i_WE0 = '1')) OR ((s_Data1((2)) = '1') and (i_WE1 = '1')),
 		i_d => s_WD_Reg2,
 		o_q => s_D2
 	);
@@ -344,7 +344,7 @@ BEGIN
 	PORT MAP(
 		i_CLK => i_CLK,
 		i_RST => i_RST,
-		i_WE => (s_Data0(3) AND i_WE0) OR (s_Data1(3) AND i_WE1),
+		i_WE => (s_Data0(3) And (i_WE0 = '1')) OR ((s_Data1((3)) = '1') and (i_WE1 = '1')),
 		i_d => s_WD_Reg3,
 		o_q => s_D3
 	);
@@ -353,7 +353,7 @@ BEGIN
 	PORT MAP(
 		i_CLK => i_CLK,
 		i_RST => i_RST,
-		i_WE => (s_Data0(1) AND i_WE0) OR (s_Data1(1) AND i_WE1),
+		i_WE => (s_Data0(1) And (i_WE0 = '1')) OR ((s_Data1((1)) = '1') and (i_WE1 = '1')),
 		i_d => s_WD_Reg4,
 		o_q => s_D4
 	);
@@ -362,7 +362,7 @@ BEGIN
 	PORT MAP(
 		i_CLK => i_CLK,
 		i_RST => i_RST,
-		i_WE => (s_Data0((5)) AND i_WE0) OR (s_Data1((5)) AND i_WE1),
+		i_WE => (s_Data0((5)) And (i_WE0 = '1')) OR ((s_Data1(((5))) = '1') and (i_WE1 = '1')),
 		i_d => s_WD_Reg5,
 		o_q => s_D5
 	);
@@ -371,7 +371,7 @@ BEGIN
 	PORT MAP(
 		i_CLK => i_CLK,
 		i_RST => i_RST,
-		i_WE => (s_Data0((6)) AND i_WE0) OR (s_Data1((6)) AND i_WE1),
+		i_WE => (s_Data0((6)) And (i_WE0 = '1')) OR ((s_Data1(((6))) = '1') and (i_WE1 = '1')),
 		i_d => s_WD_Reg6,
 		o_q => s_D6
 	);
@@ -380,7 +380,7 @@ BEGIN
 	PORT MAP(
 		i_CLK => i_CLK,
 		i_RST => i_RST,
-		i_WE => (s_Data0((7)) AND i_WE0) OR (s_Data1((7)) AND i_WE1),
+		i_WE => (s_Data0((7)) And (i_WE0 = '1')) OR ((s_Data1(((7))) = '1') and (i_WE1 = '1')),
 		i_d => s_WD_Reg7,
 		o_q => s_D7
 	);
@@ -389,7 +389,7 @@ BEGIN
 	PORT MAP(
 		i_CLK => i_CLK,
 		i_RST => i_RST,
-		i_WE => (s_Data0((8)) AND i_WE0) OR (s_Data1((8)) AND i_WE1),
+		i_WE => (s_Data0((8)) And (i_WE0 = '1')) OR ((s_Data1(((8))) = '1') and (i_WE1 = '1')),
 		i_d => s_WD_Reg8,
 		o_q => s_D8
 	);
@@ -398,7 +398,7 @@ BEGIN
 	PORT MAP(
 		i_CLK => i_CLK,
 		i_RST => i_RST,
-		i_WE => (s_Data0((9)) AND i_WE0) OR (s_Data1((9)) AND i_WE1),
+		i_WE => (s_Data0((9)) And (i_WE0 = '1')) OR ((s_Data1(((9))) = '1') and (i_WE1 = '1')),
 		i_d => s_WD_Reg9,
 		o_q => s_D9
 	);
@@ -407,7 +407,7 @@ BEGIN
 	PORT MAP(
 		i_CLK => i_CLK,
 		i_RST => i_RST,
-		i_WE => (s_Data0((10)) AND i_WE0) OR (s_Data1((10)) AND i_WE1),
+		i_WE => (s_Data0((10)) And (i_WE0 = '1')) OR ((s_Data1(((10))) = '1') and (i_WE1 = '1')),
 		i_d => s_WD_Reg10,
 		o_q => s_D10
 	);
@@ -416,7 +416,7 @@ BEGIN
 	PORT MAP(
 		i_CLK => i_CLK,
 		i_RST => i_RST,
-		i_WE => (s_Data0((11)) AND i_WE0) OR (s_Data1((11)) AND i_WE1),
+		i_WE => (s_Data0((11)) And (i_WE0 = '1')) OR ((s_Data1(((11))) = '1') and (i_WE1 = '1')),
 		i_d => s_WD_Reg11,
 		o_q => s_D11
 	);
@@ -425,7 +425,7 @@ BEGIN
 	PORT MAP(
 		i_CLK => i_CLK,
 		i_RST => i_RST,
-		i_WE => (s_Data0((12)) AND i_WE0) OR (s_Data1((12)) AND i_WE1),
+		i_WE => (s_Data0((12)) And (i_WE0 = '1')) OR ((s_Data1(((12))) = '1') and (i_WE1 = '1')),
 		i_d => s_WD_Reg12,
 		o_q => s_D12
 	);
@@ -434,7 +434,7 @@ BEGIN
 	PORT MAP(
 		i_CLK => i_CLK,
 		i_RST => i_RST,
-		i_WE => (s_Data0((13)) AND i_WE0) OR (s_Data1((13)) AND i_WE1),
+		i_WE => (s_Data0((13)) And (i_WE0 = '1')) OR ((s_Data1(((13))) = '1') and (i_WE1 = '1')),
 		i_d => s_WD_Reg13,
 		o_q => s_D13
 	);
@@ -443,7 +443,7 @@ BEGIN
 	PORT MAP(
 		i_CLK => i_CLK,
 		i_RST => i_RST,
-		i_WE => (s_Data0((14)) AND i_WE0) OR (s_Data1((14)) AND i_WE1),
+		i_WE => (s_Data0((14)) And (i_WE0 = '1')) OR ((s_Data1(((14))) = '1') and (i_WE1 = '1')),
 		i_d => s_WD_Reg14,
 		o_q => s_D14
 	);
@@ -452,7 +452,7 @@ BEGIN
 	PORT MAP(
 		i_CLK => i_CLK,
 		i_RST => i_RST,
-		i_WE => (s_Data0((15)) AND i_WE0) OR (s_Data1((15)) AND i_WE1),
+		i_WE => (s_Data0((15)) And (i_WE0 = '1')) OR ((s_Data1(((15))) = '1') and (i_WE1 = '1')),
 		i_d => s_WD_Reg15,
 		o_q => s_D15
 	);
@@ -461,7 +461,7 @@ BEGIN
 	PORT MAP(
 		i_CLK => i_CLK,
 		i_RST => i_RST,
-		i_WE => (s_Data0((16)) AND i_WE0) OR (s_Data1((16)) AND i_WE1),
+		i_WE => (s_Data0((16)) And (i_WE0 = '1')) OR ((s_Data1(((16))) = '1') and (i_WE1 = '1')),
 		i_d => s_WD_Reg16,
 		o_q => s_D16
 	);
@@ -470,7 +470,7 @@ BEGIN
 	PORT MAP(
 		i_CLK => i_CLK,
 		i_RST => i_RST,
-		i_WE => (s_Data0((17)) AND i_WE0) OR (s_Data1((17)) AND i_WE1),
+		i_WE => (s_Data0((17)) And (i_WE0 = '1')) OR ((s_Data1(((17))) = '1') and (i_WE1 = '1')),
 		i_d => s_WD_Reg17,
 		o_q => s_D17
 	);
@@ -479,7 +479,7 @@ BEGIN
 	PORT MAP(
 		i_CLK => i_CLK,
 		i_RST => i_RST,
-		i_WE => (s_Data0((18)) AND i_WE0) OR (s_Data1((18)) AND i_WE1),
+		i_WE => (s_Data0((18)) And (i_WE0 = '1')) OR ((s_Data1(((18))) = '1') and (i_WE1 = '1')),
 		i_d => s_WD_Reg18,
 		o_q => s_D18
 	);
@@ -488,7 +488,7 @@ BEGIN
 	PORT MAP(
 		i_CLK => i_CLK,
 		i_RST => i_RST,
-		i_WE => (s_Data0((19)) AND i_WE0) OR (s_Data1((19)) AND i_WE1),
+		i_WE => (s_Data0((19)) And (i_WE0 = '1')) OR ((s_Data1(((19))) = '1') and (i_WE1 = '1')),
 		i_d => s_WD_Reg19,
 		o_q => s_D19
 	);
@@ -497,7 +497,7 @@ BEGIN
 	PORT MAP(
 		i_CLK => i_CLK,
 		i_RST => i_RST,
-		i_WE => (s_Data0((20)) AND i_WE0) OR (s_Data1((20)) AND i_WE1),
+		i_WE => (s_Data0((20)) And (i_WE0 = '1')) OR ((s_Data1(((20))) = '1') and (i_WE1 = '1')),
 		i_d => s_WD_Reg20,
 		o_q => s_D20
 	);
@@ -506,7 +506,7 @@ BEGIN
 	PORT MAP(
 		i_CLK => i_CLK,
 		i_RST => i_RST,
-		i_WE => (s_Data0((21)) AND i_WE0) OR (s_Data1((21)) AND i_WE1),
+		i_WE => (s_Data0((21)) And (i_WE0 = '1')) OR ((s_Data1(((21))) = '1') and (i_WE1 = '1')),
 		i_d => s_WD_Reg21,
 		o_q => s_D21
 	);
@@ -515,7 +515,7 @@ BEGIN
 	PORT MAP(
 		i_CLK => i_CLK,
 		i_RST => i_RST,
-		i_WE => (s_Data0((22)) AND i_WE0) OR (s_Data1((22)) AND i_WE1),
+		i_WE => (s_Data0((22)) And (i_WE0 = '1')) OR ((s_Data1(((22))) = '1') and (i_WE1 = '1')),
 		i_d => s_WD_Reg22,
 		o_q => s_D22
 	);
@@ -524,7 +524,7 @@ BEGIN
 	PORT MAP(
 		i_CLK => i_CLK,
 		i_RST => i_RST,
-		i_WE => (s_Data0((23)) AND i_WE0) OR (s_Data1((23)) AND i_WE1),
+		i_WE => (s_Data0((23)) And (i_WE0 = '1')) OR ((s_Data1(((23))) = '1') and (i_WE1 = '1')),
 		i_d => s_WD_Reg23,
 		o_q => s_D23
 	);
@@ -533,7 +533,7 @@ BEGIN
 	PORT MAP(
 		i_CLK => i_CLK,
 		i_RST => i_RST,
-		i_WE => (s_Data0((24)) AND i_WE0) OR (s_Data1((24)) AND i_WE1),
+		i_WE => (s_Data0((24)) And (i_WE0 = '1')) OR ((s_Data1(((24))) = '1') and (i_WE1 = '1')),
 		i_d => s_WD_Reg24,
 		o_q => s_D24
 	);
@@ -542,7 +542,7 @@ BEGIN
 	PORT MAP(
 		i_CLK => i_CLK,
 		i_RST => i_RST,
-		i_WE => (s_Data0((25)) AND i_WE0) OR (s_Data1((25)) AND i_WE1),
+		i_WE => (s_Data0((25)) And (i_WE0 = '1')) OR ((s_Data1(((25))) = '1') and (i_WE1 = '1')),
 		i_d => s_WD_Reg25,
 		o_q => s_D25
 	);
@@ -551,7 +551,7 @@ BEGIN
 	PORT MAP(
 		i_CLK => i_CLK,
 		i_RST => i_RST,
-		i_WE => (s_Data0((26)) AND i_WE0) OR (s_Data1((26)) AND i_WE1),
+		i_WE => (s_Data0((26)) And (i_WE0 = '1')) OR ((s_Data1(((26))) = '1') and (i_WE1 = '1')),
 		i_d => s_WD_Reg26,
 		o_q => s_D26
 	);
@@ -560,7 +560,7 @@ BEGIN
 	PORT MAP(
 		i_CLK => i_CLK,
 		i_RST => i_RST,
-		i_WE => (s_Data0((27)) AND i_WE0) OR (s_Data1((27)) AND i_WE1),
+		i_WE => (s_Data0((27)) And (i_WE0 = '1')) OR ((s_Data1(((27))) = '1') and (i_WE1 = '1')),
 		i_d => s_WD_Reg27,
 		o_q => s_D27
 	);
@@ -569,7 +569,7 @@ BEGIN
 	PORT MAP(
 		i_CLK => i_CLK,
 		i_RST => i_RST,
-		i_WE => (s_Data0((28)) AND i_WE0) OR (s_Data1((28)) AND i_WE1),
+		i_WE => (s_Data0((28)) And (i_WE0 = '1')) OR ((s_Data1(((28))) = '1') and (i_WE1 = '1')),
 		i_d => s_WD_Reg28,
 		o_q => s_D28
 	);
@@ -578,7 +578,7 @@ BEGIN
 	PORT MAP(
 		i_CLK => i_CLK,
 		i_RST => i_RST,
-		i_WE => (s_Data0((29)) AND i_WE0) OR (s_Data1((29)) AND i_WE1),
+		i_WE => (s_Data0((29)) And (i_WE0 = '1')) OR ((s_Data1(((29))) = '1') and (i_WE1 = '1')),
 		i_d => s_WD_Reg29,
 		o_q => s_D29
 	);
@@ -587,7 +587,7 @@ BEGIN
 	PORT MAP(
 		i_CLK => i_CLK,
 		i_RST => i_RST,
-		i_WE => (s_Data0((30)) AND i_WE0) OR (s_Data1((30)) AND i_WE1),
+		i_WE => (s_Data0((30)) And (i_WE0 = '1')) OR ((s_Data1(((30))) = '1') and (i_WE1 = '1')),
 		i_d => s_WD_Reg30,
 		o_q => s_D30
 	);
@@ -596,7 +596,7 @@ BEGIN
 	PORT MAP(
 		i_CLK => i_CLK,
 		i_RST => i_RST,
-		i_WE => (s_Data0((31)) AND i_WE0) OR (s_Data1((31)) AND i_WE1),
+		i_WE => (s_Data0((31)) And (i_WE0 = '1')) OR ((s_Data1(((31))) = '1') and (i_WE1 = '1')),
 		i_d => s_WD_Reg31,
 		o_q => s_D31
 	);
