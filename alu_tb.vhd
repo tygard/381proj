@@ -35,14 +35,13 @@ begin
 
   DUT0: f_alu
   generic map(N => N)
-  port map(
-  i_A => s_i_A,
+  port map(i_A => s_i_A,
   i_B => s_i_B,
-  i_C => s_i_c);
-  -- port map( i_S      => s_i_S,
-         -- -- i_D0     => s_i_D0,
-         -- -- i_D1     => s_i_D1,
-         -- -- o_O      => s_o_O);
+  i_C => s_i_c,
+  o_S => s_o_S,
+  o_C => s_o_C,
+  o_Overflow => s_o_Overflow);
+ 
   
   
   P_TEST_CASES: process
