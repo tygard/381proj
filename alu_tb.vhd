@@ -24,12 +24,12 @@ generic(N : integer := 32);
 end component;
 
 
-signal s_i_A   : std_logic;
+signal s_i_A   : std_logic_vector(N-1 downto 0);
 signal s_i_B  : std_logic_vector(N-1 downto 0);
-signal s_i_C  : std_logic_vector(N-1 downto 0);
+signal s_i_C  : std_logic_vector(4 downto 0);
 signal s_o_S   : std_logic_vector(N-1 downto 0);
 signal s_o_C   : std_logic_vector(N-1 downto 0);
-signal s_o_Overflow   : std_logic_vector(N-1 downto 0);
+signal s_o_Overflow   : std_logic;
 
 begin
 
