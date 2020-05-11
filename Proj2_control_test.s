@@ -7,13 +7,21 @@ bne		$t1, $zero, initialcall
 j 		end
 addandshift:
 #add 1 to $a0, then shift it left by 2 bit positions if it is not a multiple of four or by 4 if it is exactly 4
+nop
+nop
 addiu	$a0, $a0, 1
 sw 		$ra, 0($sp)
 jal 	fourcheck
 lw		$ra, 0($sp)
 jr		$ra
 fourcheck:
+nop
+nop
 xori	$t0, $a0, 4294967291
+nop
+nop
+nop
+nop
 beq		$t0, $zero, fourchecknotfour
 sll		$a0, $a0, 4
 j fourcheckend
