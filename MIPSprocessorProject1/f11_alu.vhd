@@ -362,7 +362,7 @@ BEGIN
 	-- 	i_A => i_A,
 	-- 	i_B => i_B,
 	-- 	o_F => s_xor);
-	s_xor => i_A xor i_B;
+	s_xor <= i_A xor i_B;
 
 	--s_nor,----------------------------- CHANGE TO 32
 	g_nor : norg32
