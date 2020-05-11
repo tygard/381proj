@@ -157,7 +157,7 @@ BEGIN
 
 	s_WD_Reg2 <=
 		i_WD0 WHEN (s_Data0(2) And (i_WE0 = '1')) ELSE
-		i_WD1 WHEN ((s_Data1(((2)) = '1')) = '1') and (i_WE1 = '1')) ELSE
+		i_WD1 WHEN ((s_Data1(2) = '1') and (i_WE1 = '1')) ELSE
 		x"00000BAD";
 
 	s_WD_Reg3 <=
